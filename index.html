@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WolveStack — Research-Backed Peptide Guides & Protocols</title>
+<meta name="description" content="Unbiased, research-backed guides on BPC-157, TB-500, the Wolverine Stack, and other peptides. Compare top suppliers. Educational use only."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0f2240;
+    --teal: #0d7377;
+    --teal-light: #14bdac;
+    --teal-pale: #e8f4f5;
+    --accent: #f0a500;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-600: #475569;
+    --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.6; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo {
+    font-family: var(--font-display); font-size: 22px; font-weight: 700;
+    color: var(--white); text-decoration: none; letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta {
+    background: var(--teal); color: var(--white);
+    padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--teal-light); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
+    padding: 100px 24px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 1;
+  }
+  .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4);
+    color: var(--teal-light); padding: 6px 16px; border-radius: 100px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 28px;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--teal-light); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+  .hero h1 {
+    font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700; color: var(--white); line-height: 1.15;
+    letter-spacing: -1.5px; margin-bottom: 20px;
+  }
+  .hero h1 em { color: var(--teal-light); font-style: normal; }
+  .hero p {
+    font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.72);
+    max-width: 640px; margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal-light); color: var(--navy);
+    padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 700;
+    text-decoration: none; transition: all .2s; display: inline-block;
+  }
+  .btn-primary:hover { background: #11d4c0; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(20,189,172,0.35); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600;
+    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.3); transition: all .2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+  .hero-stats {
+    display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+    margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--teal-light); }
+  .stat-label { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 4px; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 16px 24px; }
+  .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-600); font-weight: 500; }
+  .trust-icon { width: 18px; height: 18px; color: var(--teal); }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .section-sub { font-size: 17px; color: var(--gray-600); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+
+  /* FEATURED GUIDES */
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .guide-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 16px; padding: 28px; transition: all .25s;
+    text-decoration: none; color: inherit; display: block;
+    position: relative; overflow: hidden;
+  }
+  .guide-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+  .guide-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: var(--teal); }
+  .guide-tag {
+    display: inline-block; background: var(--teal-pale); color: var(--teal);
+    padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600;
+    margin-bottom: 16px; letter-spacing: 0.3px;
+  }
+  .guide-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+  .guide-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; }
+  .guide-meta { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--gray-400); }
+  .guide-meta span { display: flex; align-items: center; gap: 4px; }
+  .read-more { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--teal); margin-top: 20px; }
+  .read-more::after { content: '→'; transition: transform .2s; }
+  .guide-card:hover .read-more::after { transform: translateX(4px); }
+
+  /* FEATURED / HERO CARD */
+  .guide-card.featured {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 100%);
+    border-color: var(--teal);
+    grid-column: span 2;
+  }
+  @media (max-width: 768px) { .guide-card.featured { grid-column: span 1; } }
+  .guide-card.featured .guide-tag { background: rgba(13,115,119,0.4); color: var(--teal-light); }
+  .guide-card.featured h3 { color: var(--white); font-size: 26px; }
+  .guide-card.featured p { color: rgba(255,255,255,0.7); }
+  .guide-card.featured .guide-meta { color: rgba(255,255,255,0.4); }
+  .guide-card.featured .read-more { color: var(--teal-light); }
+
+  /* VENDOR TABLE */
+  .vendors { background: var(--gray-50); }
+  .vendor-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .vendor-table th { background: var(--navy); color: var(--white); padding: 16px 20px; text-align: left; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .vendor-table td { padding: 18px 20px; border-bottom: 1px solid var(--gray-100); font-size: 14px; color: var(--gray-600); vertical-align: middle; }
+  .vendor-table tr:last-child td { border-bottom: none; }
+  .vendor-table tr:hover td { background: var(--gray-50); }
+  .vendor-name { font-weight: 700; color: var(--navy); font-size: 15px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .badge-top { background: #d1fae5; color: #065f46; }
+  .badge-good { background: var(--teal-pale); color: var(--teal); }
+  .badge-ok { background: #fef3c7; color: #92400e; }
+  .stars { color: var(--accent); letter-spacing: 2px; }
+  .vendor-cta {
+    display: inline-block; background: var(--teal); color: var(--white);
+    padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: background .2s; white-space: nowrap;
+  }
+  .vendor-cta:hover { background: var(--teal-light); }
+  .table-disclaimer { font-size: 12px; color: var(--gray-400); margin-top: 16px; }
+
+  /* STACKS */
+  .stacks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .stack-card {
+    border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px;
+    background: var(--white);
+  }
+  .stack-icon { font-size: 36px; margin-bottom: 16px; }
+  .stack-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .stack-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; }
+  .stack-peptides { display: flex; flex-wrap: wrap; gap: 8px; }
+  .peptide-chip { background: var(--teal-pale); color: var(--teal); padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+
+  /* EMAIL CAPTURE */
+  .email-section {
+    background: linear-gradient(135deg, var(--navy) 0%, #083248 50%, #0a4a48 100%);
+    position: relative; overflow: hidden;
+  }
+  .email-section::before {
+    content: ''; position: absolute; right: -200px; top: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(13,115,119,0.2) 0%, transparent 70%);
+  }
+  .email-inner { max-width: 680px; margin: 0 auto; text-align: center; position: relative; }
+  .email-inner .section-tag { color: var(--teal-light); }
+  .email-inner .section-title { color: var(--white); }
+  .email-inner .section-sub { color: rgba(255,255,255,0.65); max-width: 100%; }
+  .email-form { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+  .email-form input {
+    flex: 1; min-width: 240px; padding: 14px 20px;
+    border: 1.5px solid rgba(255,255,255,0.2); border-radius: 8px;
+    background: rgba(255,255,255,0.08); color: var(--white);
+    font-size: 15px; font-family: var(--font-main); outline: none;
+    transition: border-color .2s;
+  }
+  .email-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .email-form input:focus { border-color: var(--teal-light); }
+  .email-form button {
+    background: var(--teal-light); color: var(--navy);
+    padding: 14px 28px; border-radius: 8px; border: none;
+    font-size: 15px; font-weight: 700; cursor: pointer; font-family: var(--font-main);
+    transition: all .2s; white-space: nowrap;
+  }
+  .email-form button:hover { background: #11d4c0; transform: translateY(-1px); }
+  .email-perks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .email-perk { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .email-perk::before { content: '✓'; color: var(--teal-light); font-weight: 700; }
+  .lead-magnet-box {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(20,189,172,0.3);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 32px;
+    display: flex; align-items: center; gap: 16px; text-align: left;
+  }
+  .lead-magnet-icon { font-size: 40px; flex-shrink: 0; }
+  .lead-magnet-text h4 { color: var(--white); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .lead-magnet-text p { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5; }
+
+  /* HOW IT WORKS */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 48px; }
+  .how-step { text-align: center; }
+  .step-num {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--white); font-family: var(--font-display); font-size: 20px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+  }
+  .how-step h4 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .how-step p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #fffbeb; border-top: 3px solid var(--accent);
+    padding: 24px;
+  }
+  .disclaimer-inner { max-width: 1200px; margin: 0 auto; }
+  .disclaimer p { font-size: 13px; color: #78350f; line-height: 1.6; }
+  .disclaimer strong { color: #92400e; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 48px 24px 32px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+  .footer-brand p { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7; margin-top: 12px; max-width: 280px; }
+  .footer-col h5 { color: var(--white); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color .2s; }
+  .footer-col ul a:hover { color: var(--teal-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 16px; }
+  .footer-copy { color: rgba(255,255,255,0.35); font-size: 13px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: rgba(255,255,255,0.35); font-size: 13px; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-light); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 70px 24px 56px; }
+    .hero-stats { gap: 24px; }
+    section { padding: 56px 24px; }
+    .vendor-table { display: block; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Wolve<span>Stack</span></a>
+    <ul class="nav-links">
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#stacks">Stacks</a></li>
+      <li><a href="#vendors">Vendors</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#signup" class="nav-cta">Free Protocol Guide →</a>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Research-Backed Peptide Education</div>
+    <h1>The Research Behind<br/><em>Peptide Protocols</em></h1>
+    <p>Independent, science-first guides on BPC-157, TB-500, the Wolverine Stack, and more. No hype. No sales tactics. Just what the research actually says.</p>
+    <div class="hero-actions">
+      <a href="#guides" class="btn-primary">Explore the Guides</a>
+      <a href="#signup" class="btn-secondary">Get the Free Protocol PDF</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Peptide Guides</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">PubMed Citations</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Vendors Reviewed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Weekly</div>
+        <div class="stat-label">Research Updates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg class="trust-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      PubMed-cited research only
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      No direct health claims
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      Educational purpose only
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+      Updated weekly
+    </div>
+  </div>
+</div>
+
+<!-- GUIDES -->
+<section id="guides">
+  <div class="section-inner">
+    <div class="section-tag">Featured Guides</div>
+    <h2 class="section-title">Start Here</h2>
+    <p class="section-sub">Our most comprehensive, research-backed peptide guides. Each one built from primary literature and updated regularly.</p>
+    <div class="guides-grid">
+
+      <!-- FEATURED CARD -->
+      <a href="#" class="guide-card featured">
+        <span class="guide-tag">⚡ Most Popular</span>
+        <h3>The Wolverine Stack: BPC-157 + TB-500 Complete Protocol Guide</h3>
+        <p>The most-researched peptide combination in the biohacker community. We break down what the science actually says about BPC-157 and TB-500 used in combination, typical dosage ranges studied in research, and what to look for in quality suppliers.</p>
+        <div class="guide-meta">
+          <span>📖 18 min read</span>
+          <span>🔬 18 PubMed citations</span>
+          <span>🔄 Updated Feb 2026</span>
+        </div>
+        <div class="read-more">Read the Full Guide</div>
+      </a>
+
+      <a href="#" class="guide-card">
+        <span class="guide-tag">Injury & Recovery</span>
+        <h3>BPC-157: What the Research Actually Says</h3>
+        <p>Body Protection Compound 157 is one of the most studied synthetic peptides. We cover mechanism of action, rodent model findings, dosage ranges used in studies, and supplier quality criteria.</p>
+        <div class="guide-meta">
+          <span>📖 14 min read</span>
+          <span>🔬 18 citations</span>
+        </div>
+        <div class="read-more">Read the Guide</div>
+      </a>
+
+      <a href="#" class="guide-card">
+        <span class="guide-tag">Recovery & Performance</span>
+        <h3>TB-500 (Thymosin Beta-4): Research Overview</h3>
+        <p>TB-500 is a synthetic version of Thymosin Beta-4, a peptide naturally present in nearly all human and animal cells. Here's what researchers have found in preclinical studies.</p>
+        <div class="guide-meta">
+          <span>📖 12 min read</span>
+          <span>🔬 15 citations</span>
+        </div>
+        <div class="read-more">Read the Guide</div>
+      </a>
+
+      <a href="#" class="guide-card">
+        <span class="guide-tag">Growth Hormone</span>
+        <h3>CJC-1295 vs. Sermorelin: A Research Comparison</h3>
+        <p>Both are growth hormone releasing peptides with distinct half-lives and research profiles. We compare what the literature shows about each and how researchers have approached dosing.</p>
+        <div class="guide-meta">
+          <span>📖 11 min read</span>
+          <span>🔬 12 citations</span>
+        </div>
+        <div class="read-more">Read the Guide</div>
+      </a>
+
+      <a href="#" class="guide-card">
+        <span class="guide-tag">Skin & Longevity</span>
+        <h3>GHK-Cu: The Copper Peptide Research Roundup</h3>
+        <p>GHK-Cu has been studied for decades in the context of wound healing and collagen synthesis. One of the more established peptide research areas — here's what the science shows.</p>
+        <div class="guide-meta">
+          <span>📖 10 min read</span>
+          <span>🔬 14 citations</span>
+        </div>
+        <div class="read-more">Read the Guide</div>
+      </a>
+
+      <a href="#" class="guide-card">
+        <span class="guide-tag">Weight & Metabolism</span>
+        <h3>GLP-1 Peptides: The Research Behind the Trend</h3>
+        <p>Semaglutide, tirzepatide, and related GLP-1 receptor agonists have dominated wellness conversations. We explain the mechanism, the clinical data, and the regulatory landscape.</p>
+        <div class="guide-meta">
+          <span>📖 16 min read</span>
+          <span>🔬 22 citations</span>
+        </div>
+        <div class="read-more">Read the Guide</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- STACKS -->
+<section id="stacks" style="background: var(--gray-50);">
+  <div class="section-inner">
+    <div class="section-tag">Protocol Overviews</div>
+    <h2 class="section-title">Research-Based Stacks</h2>
+    <p class="section-sub">These are the peptide combinations most frequently studied together or discussed in the research community.</p>
+    <div class="stacks-grid">
+      <div class="stack-card">
+        <div class="stack-icon">🐺</div>
+        <h3>The Wolverine Stack</h3>
+        <p>The most popular combination in the injury recovery research space. Studied for synergistic effects on tissue repair in preclinical models.</p>
+        <div class="stack-peptides">
+          <span class="peptide-chip">BPC-157</span>
+          <span class="peptide-chip">TB-500</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-icon">✨</div>
+        <h3>The Glow Protocol</h3>
+        <p>Skin-focused peptides with the strongest body of collagen and wound healing research. Popular in aesthetic medicine research circles.</p>
+        <div class="stack-peptides">
+          <span class="peptide-chip">GHK-Cu</span>
+          <span class="peptide-chip">BPC-157</span>
+          <span class="peptide-chip">KPV</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-icon">⏳</div>
+        <h3>The Longevity Stack</h3>
+        <p>Combines peptides with research in mitochondrial function, immune modulation, and cellular repair pathways studied in aging models.</p>
+        <div class="stack-peptides">
+          <span class="peptide-chip">NAD+</span>
+          <span class="peptide-chip">MOTS-C</span>
+          <span class="peptide-chip">Thymosin Alpha-1</span>
+          <span class="peptide-chip">Sermorelin</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-icon">💪</div>
+        <h3>The GH Secretagogue Stack</h3>
+        <p>Growth hormone releasing peptides studied for their effects on natural GH pulsatility in research subjects. Frequently combined in clinical research.</p>
+        <div class="stack-peptides">
+          <span class="peptide-chip">CJC-1295</span>
+          <span class="peptide-chip">Ipamorelin</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENDORS -->
+<section id="vendors">
+  <div class="section-inner">
+    <div class="section-tag">Supplier Comparison</div>
+    <h2 class="section-title">Top Peptide Suppliers Reviewed</h2>
+    <p class="section-sub">We independently evaluate suppliers on purity testing, GMP compliance, pricing, and shipping. Updated quarterly. We may earn a commission if you purchase through our links.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="vendor-table">
+        <thead>
+          <tr>
+            <th>Supplier</th>
+            <th>Purity Testing</th>
+            <th>GMP Status</th>
+            <th>Shipping</th>
+            <th>Our Rating</th>
+            <th>Commission</th>
+            <th>Visit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="vendor-name">Ascension Peptides</div>
+              <span class="badge badge-top">⭐ Top Pick</span>
+            </td>
+            <td>HPLC + Mass Spec COA</td>
+            <td><span class="badge badge-top">GMP Certified</span></td>
+            <td>2–4 days US</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td>20% + lifetime</td>
+            <td><a href="#" class="vendor-cta">Visit →</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="vendor-name">Apollo Peptide Sciences</div>
+              <span class="badge badge-good">Highly Rated</span>
+            </td>
+            <td>HPLC COA included</td>
+            <td><span class="badge badge-good">GMP Compliant</span></td>
+            <td>3–5 days US</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td>20% base</td>
+            <td><a href="#" class="vendor-cta">Visit →</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="vendor-name">Limitless Biotech</div>
+              <span class="badge badge-good">Editor's Choice</span>
+            </td>
+            <td>Third-party COA</td>
+            <td><span class="badge badge-good">GMP Compliant</span></td>
+            <td>3–5 days US</td>
+            <td><span class="stars">★★★★☆</span></td>
+            <td>Disclosed on apply</td>
+            <td><a href="#" class="vendor-cta">Visit →</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="vendor-name">Particle Peptides</div>
+              <span class="badge badge-ok">EU Focus</span>
+            </td>
+            <td>HPLC COA included</td>
+            <td><span class="badge badge-ok">Research Grade</span></td>
+            <td>EU / International</td>
+            <td><span class="stars">★★★★☆</span></td>
+            <td>15% / 10% repeat</td>
+            <td><a href="#" class="vendor-cta">Visit →</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="vendor-name">XL Peptides</div>
+              <span class="badge">Budget Option</span>
+            </td>
+            <td>COA on request</td>
+            <td><span class="badge">Research Grade</span></td>
+            <td>5–7 days US</td>
+            <td><span class="stars">★★★☆☆</span></td>
+            <td>5%</td>
+            <td><a href="#" class="vendor-cta">Visit →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-disclaimer">⚠️ Affiliate disclosure: We may receive a commission on purchases made through our links, at no extra cost to you. This does not influence our ratings. All products listed are for research use only and are not intended for human consumption.</p>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section id="signup" class="email-section">
+  <div class="section-inner">
+    <div class="email-inner">
+      <div class="section-tag">Free Download</div>
+      <h2 class="section-title">Get the Wolverine Stack Protocol Guide</h2>
+      <p class="section-sub" style="margin: 0 auto 32px;">Our most downloaded resource. A plain-English breakdown of how researchers have approached BPC-157 + TB-500 in combination — including dosage ranges, timing, and sourcing criteria.</p>
+
+      <div class="lead-magnet-box">
+        <div class="lead-magnet-icon">📋</div>
+        <div class="lead-magnet-text">
+          <h4>The Wolverine Stack: Complete Research Guide (PDF)</h4>
+          <p>8 pages · Covers mechanism, research findings, dosage ranges studied, supplier criteria, and FAQ. Delivered immediately to your inbox.</p>
+        </div>
+      </div>
+
+      <form class="email-form" onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="your@email.com" required id="email-input"/>
+        <button type="submit">Send Me the Guide →</button>
+      </form>
+
+      <div class="email-perks">
+        <span class="email-perk">Free, no credit card</span>
+        <span class="email-perk">Weekly research digest</span>
+        <span class="email-perk">Unsubscribe anytime</span>
+        <span class="email-perk">No spam, ever</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="about">
+  <div class="section-inner">
+    <div style="text-align:center;">
+      <div class="section-tag">Our Methodology</div>
+      <h2 class="section-title">How We Review & Research</h2>
+      <p class="section-sub" style="margin: 0 auto 0;">We don't have a product to sell you. Every guide and vendor review follows the same process.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <h4>PubMed First</h4>
+        <p>Every guide starts with a systematic search of PubMed for peer-reviewed research. We cite every claim to a primary source.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <h4>Vendor Testing</h4>
+        <p>We review COAs (certificates of analysis), GMP certifications, and third-party test results for every supplier we recommend.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <h4>Community Input</h4>
+        <p>We monitor r/peptides and biohacker forums to incorporate real-world observations alongside the formal research literature.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">4</div>
+        <h4>Quarterly Updates</h4>
+        <p>Guides and vendor tables are reviewed and updated quarterly — or immediately when significant regulatory or research news breaks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <p><strong>Research Use Only Disclaimer:</strong> All content on WolveStack is for educational and informational purposes only. Nothing on this site constitutes medical advice, diagnosis, or treatment recommendations. Peptides referenced throughout this site are sold for research use only and are not intended for human consumption. Always consult a qualified healthcare provider before making any health-related decisions. WolveStack may earn affiliate commissions from supplier links, which does not influence our editorial content. Research findings discussed are primarily from preclinical (animal) studies and may not translate to human outcomes.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">Wolve<span>Stack</span></a>
+        <p>Independent, research-backed peptide education. No products, no agenda — just the science.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Guides</h5>
+        <ul>
+          <li><a href="#">BPC-157</a></li>
+          <li><a href="#">TB-500</a></li>
+          <li><a href="#">Wolverine Stack</a></li>
+          <li><a href="#">GLP-1 / Semaglutide</a></li>
+          <li><a href="#">Sermorelin</a></li>
+          <li><a href="#">GHK-Cu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Vendor Comparison</a></li>
+          <li><a href="#">Stack Protocols</a></li>
+          <li><a href="#">Dosage Research</a></li>
+          <li><a href="#">Regulatory Updates</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliate Disclosure</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 WolveStack. All rights reserved. For educational purposes only.</span>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    const input = document.getElementById('email-input');
+    btn.textContent = '✓ Check your inbox!';
+    btn.style.background = '#065f46';
+    btn.style.color = '#fff';
+    input.value = '';
+    input.placeholder = 'Thanks! Guide is on its way.';
+    setTimeout(() => {
+      btn.textContent = 'Send Me the Guide →';
+      btn.style.background = '';
+      btn.style.color = '';
+      input.placeholder = 'your@email.com';
+    }, 4000);
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+  </script>
+</body>
+</html>
