@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BPC-157 Complete Guide: Research, Protocols & What the Studies Actually Say | WolveStack</title>
+<meta name="description" content="An honest, research-first look at BPC-157 — the rat studies, the dosing debates, the oral vs injectable question, and what the peptide community has actually learned from years of experimentation."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+    --teal-pale: #e8f4f5; --accent: #f0a500;
+    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  .article-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
+    padding: 64px 24px 56px; position: relative; overflow: hidden;
+  }
+  .article-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
+  .breadcrumb span { color: rgba(255,255,255,0.3); }
+  .breadcrumb .current { color: rgba(255,255,255,0.75); }
+  .article-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4);
+    color: var(--teal-light); padding: 5px 14px; border-radius: 100px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px;
+  }
+  .article-hero h1 {
+    font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px);
+    font-weight: 700; color: var(--white); line-height: 1.2;
+    letter-spacing: -1px; margin-bottom: 16px;
+  }
+  .article-hero h1 em { color: var(--teal-light); font-style: normal; }
+  .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
+  .article-meta span { font-size: 13px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 6px; }
+
+  .article-layout {
+    max-width: 1100px; margin: 0 auto; padding: 64px 24px;
+    display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start;
+  }
+  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+  .article-body { min-width: 0; }
+  .article-body h2 {
+    font-family: var(--font-display); font-size: 26px; font-weight: 700;
+    color: var(--navy); margin: 48px 0 16px; line-height: 1.3;
+    padding-top: 8px; border-top: 2px solid var(--teal-pale);
+  }
+  .article-body h2:first-child { margin-top: 0; border-top: none; }
+  .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+  .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+  .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+  .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
+  .article-body strong { color: var(--navy); font-weight: 600; }
+  .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+
+  .callout {
+    background: var(--teal-pale); border-left: 4px solid var(--teal);
+    padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0;
+  }
+  .callout.warning { background: #fef3c7; border-color: #f59e0b; }
+  .callout.research { background: #eff6ff; border-color: #3b82f6; }
+  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout.warning .callout-label { color: #92400e; }
+  .callout.research .callout-label { color: #1d4ed8; }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .sidebar { position: sticky; top: 84px; }
+  .toc {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 24px;
+  }
+  .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 10px; }
+  .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
+  .toc a:hover { color: var(--teal); }
+  .sidebar-card {
+    background: linear-gradient(135deg, var(--navy), #0a3d5c);
+    border-radius: 12px; padding: 24px; margin-top: 24px; color: white;
+  }
+  .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
+  .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
+  .sidebar-card a:hover { background: var(--teal-light); }
+
+  .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
+  .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13px; color: var(--gray-600); }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Wolve<span>Stack</span></a>
+    <ul class="nav-links">
+      <li><a href="/bpc-157-guide.html">BPC-157</a></li>
+      <li><a href="/tb-500-guide.html">TB-500</a></li>
+      <li><a href="/wolverine-stack.html">Stacks</a></li>
+      <li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+    </ul>
+    <a href="/peptide-beginners-guide.html" class="nav-cta">Start Here →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/">Guides</a>
+      <span>/</span>
+      <span class="current">BPC-157</span>
+    </div>
+    <div class="article-tag">Deep Dive · Research Peptide</div>
+    <h1>BPC-157: <em>What the Research Actually Shows</em></h1>
+    <p style="color:rgba(255,255,255,0.72); font-size:18px; margin-top:16px; line-height:1.7;">
+      A thorough breakdown of Body Protection Compound 157 — the studies, the gaps, the dosing debates, and why this peptide has captured the attention of researchers and the biohacking community alike.
+    </p>
+    <div class="article-meta">
+      <span>📖 14 min read</span>
+      <span>🔬 Research & Education</span>
+      <span>⚠️ Not medical advice</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="callout warning">
+      <div class="callout-label">⚠️ Disclaimer</div>
+      <p>BPC-157 is a research compound. It is not approved by the FDA or any regulatory body for human use. This article is for educational and informational purposes only. Nothing here constitutes medical advice. Consult a qualified physician before considering any peptide use.</p>
+    </div>
+
+    <h2 id="what-is">What Is BPC-157?</h2>
+
+    <p>Body Protection Compound 157 — BPC-157 for short — is a synthetic pentadecapeptide, meaning it's a chain of 15 amino acids. What makes it interesting is its origin: it was isolated from a protein found in human gastric juice. The "157" refers to where in the gastric protein sequence it was derived from.</p>
+
+    <p>The compound was first studied in the early 1990s by researchers at the University of Zagreb, Croatia, primarily under Dr. Predrag Sikiric. His team spent decades documenting the effects of BPC-157 in animal models — and the breadth of what they observed is, to put it mildly, striking. Tendons healing faster. Gut tissue repairing itself. Nerve injury recovery. Angiogenesis. Blood pressure modulation. The list kept growing in ways that seemed almost implausible for a single compound.</p>
+
+    <p>That's where the skepticism is warranted, and where this guide is going to try to be honest with you: almost all of this data is from rodent models. The jump from rat to human is a significant one. BPC-157 has not completed any published phase II or phase III human clinical trials. That's the inconvenient truth sitting at the center of all the enthusiasm.</p>
+
+    <h2 id="mechanism">How BPC-157 Is Thought to Work</h2>
+
+    <p>Mechanistically, BPC-157 appears to act through several pathways simultaneously — which might explain both its broad effects and why researchers find it so hard to pin down:</p>
+
+    <h3>VEGFR2 and Angiogenesis</h3>
+    <p>One of the most replicated findings is BPC-157's interaction with vascular endothelial growth factor receptor 2 (VEGFR2). It appears to upregulate this receptor and stimulate angiogenesis — the formation of new blood vessels. This is particularly relevant for tendon and ligament healing, which are notoriously poorly vascularized tissues. When you tear a tendon, part of why it heals slowly is the limited blood supply. BPC-157's ability to drive new vessel formation into damaged tissue may be a core mechanism behind its healing effects.</p>
+
+    <h3>Nitric Oxide Modulation</h3>
+    <p>BPC-157 interacts with the nitric oxide (NO) system, which governs vascular tone and has downstream effects on inflammation, blood pressure, and tissue perfusion. Interestingly, studies suggest BPC-157 can both upregulate and normalize NO depending on context — which is unusual for a single compound and explains some of its seemingly paradoxical effects on blood pressure.</p>
+
+    <h3>Growth Hormone Receptor Sensitization</h3>
+    <p>There's evidence BPC-157 may sensitize tissues to growth hormone through the FKBP12 pathway, independent of IGF-1. This is distinct from peptides that simply stimulate GH release (like CJC-1295 or ipamorelin). It doesn't raise GH levels — it may make the GH signal more effective at the tissue level.</p>
+
+    <h3>Gut-Brain Axis Effects</h3>
+    <p>Given BPC-157's origin in gastric secretion, it's perhaps unsurprising that it shows activity in the gut-brain axis. Studies in rats show effects on dopamine and serotonin systems, which may relate to the anecdotal reports of mood stabilization some users describe. Whether this translates to humans is, as always, unknown.</p>
+
+    <div class="callout research">
+      <div class="callout-label">📚 Key Research</div>
+      <p>A 2018 paper by Sikiric et al. in <em>Current Pharmaceutical Design</em> provides one of the most comprehensive reviews of BPC-157's mechanisms. The breadth of the review is genuinely impressive, though critics note the research is heavily concentrated in Sikiric's own lab — independent replication is limited.</p>
+    </div>
+
+    <h2 id="studies">What the Animal Studies Show</h2>
+
+    <p>Let's go through the main areas of research, with a realistic assessment of the strength of the evidence.</p>
+
+    <h3>Tendon and Ligament Healing</h3>
+    <p>This is probably the strongest area of BPC-157 research. Multiple studies — including from independent groups — have shown accelerated healing of Achilles tendon injuries in rats following BPC-157 administration. The 2010 study by Pevec et al. showed improved structural healing at the histological level, not just functional tests. A 2013 study on ruptured medial collateral ligaments showed similar results.</p>
+
+    <p>The mechanism here is well-supported: local injection appears to recruit fibroblasts and stimulate collagen deposition while also driving angiogenesis into the wound site. The effect size in rats is large — often cited as 30-50% improvement in healing speed depending on the endpoint measured.</p>
+
+    <p>Does this translate to humans? We genuinely don't know. But it's why BPC-157 has become so popular in the peptide community among people dealing with chronic tendinopathies and post-surgical recovery.</p>
+
+    <h3>Gastrointestinal Healing</h3>
+    <p>BPC-157 was originally studied for gut-related conditions, and here the evidence base is also reasonably robust. Studies have shown protective effects against NSAID-induced gastric lesions, healing of Crohn's-like lesions, fistula repair in the colon, and esophageal healing. One noteworthy detail: oral administration appears effective for gut-specific effects, while systemic injection is used for musculoskeletal applications.</p>
+
+    <p>This oral bioavailability for gut effects is mechanistically plausible — the peptide doesn't need to survive systemic circulation if it's acting locally on the intestinal epithelium. This is why you'll see some people using BPC-157 capsules specifically for gut issues like IBS or leaky gut, though none of this is clinically validated in humans.</p>
+
+    <h3>Bone Healing</h3>
+    <p>Several studies have shown enhanced bone healing in rat models of fractures and bone defects. The compound appears to work synergistically with bone's natural healing cascade rather than directly stimulating bone remodeling. Interesting — but again, animal data only.</p>
+
+    <h3>Neurological Effects</h3>
+    <p>Some of the more speculative research involves neuroprotection. BPC-157 has shown promise in rat models of nerve transection, traumatic brain injury, and spinal cord injury. It may counteract some glutamate toxicity and has been studied in the context of drug withdrawal symptoms — particularly opioid, SSRI, and alcohol withdrawal in animal models. Whether this translates to clinical application is unknown, but it's an area attracting growing interest.</p>
+
+    <h2 id="dosing">Dosing — The Community Debate</h2>
+
+    <p>Here's where things get genuinely complicated. There's no established human dosing. What exists is: rat study dosages extrapolated to human body weight, combined with years of community experimentation shared on forums like r/Peptides and various biohacking communities.</p>
+
+    <p>The most commonly discussed dosing ranges:</p>
+
+    <table class="data-table">
+      <thead><tr><th>Purpose</th><th>Common Range</th><th>Route</th><th>Frequency</th></tr></thead>
+      <tbody>
+        <tr><td>General healing / systemic</td><td>200–400 mcg/day</td><td>Subcutaneous or IM</td><td>Once or twice daily</td></tr>
+        <tr><td>Localized injury</td><td>250–500 mcg</td><td>Injection near injury site</td><td>Once daily</td></tr>
+        <tr><td>Gut health</td><td>250–500 mcg</td><td>Oral (capsule or dissolved)</td><td>Once or twice daily</td></tr>
+        <tr><td>Neurological / mood</td><td>200–400 mcg/day</td><td>Subcutaneous</td><td>Once daily</td></tr>
+      </tbody>
+    </table>
+
+    <p>The split dosing (twice daily) question comes up often. BPC-157 has a relatively short half-life — estimated at 4 hours or less — which would argue for split dosing if you're trying to maintain consistent plasma levels. However, some researchers argue that BPC-157's effects aren't strictly concentration-dependent and that once-daily dosing triggers sufficient downstream signaling. There's no definitive answer here.</p>
+
+    <h3>Cycle Length</h3>
+    <p>Community consensus tends to land on 4–12 weeks depending on the indication. Most anecdotal reports of injury healing come from 6–8 week cycles. People cycling for general health or gut issues sometimes run longer, though there's essentially no safety data on long-term human use.</p>
+
+    <div class="callout">
+      <div class="callout-label">💡 Community Insight</div>
+      <p>On r/Peptides, you'll frequently see the "around the injury" injection technique discussed for localized issues — injecting subcutaneously in multiple spots surrounding an injured tendon or joint rather than directly into it. The logic is improving local vascularization throughout the affected area. Whether this is superior to a single site injection is entirely anecdotal.</p>
+    </div>
+
+    <h2 id="oral-vs-injectable">Oral vs. Injectable: The Ongoing Debate</h2>
+
+    <p>This is probably the most contested topic in the BPC-157 community. The peptide community generally leans injectable for systemic effects, oral for gut-specific effects. But oral advocates have become more vocal in recent years, and there's at least some scientific basis for the argument.</p>
+
+    <p><strong>The injectable case:</strong> Subcutaneous or intramuscular injection bypasses digestive breakdown. Peptides are chains of amino acids — stomach acid and proteolytic enzymes can cleave them before they reach systemic circulation. Injectable BPC-157 delivers the intact peptide into circulation directly.</p>
+
+    <p><strong>The oral case:</strong> BPC-157 may be unusual among peptides in being partially resistant to gastric degradation. Its origin in stomach protein suggests it evolved to survive the gastric environment. Some studies have administered BPC-157 orally in rats and still observed systemic effects — not just local gut effects. The 2015 Sikiric paper specifically compared routes of administration and found that oral BPC-157 in drinking water still produced systemic healing effects in rats, though arguably less potent than injected.</p>
+
+    <p>The honest answer: for anything systemic (tendons, ligaments, brain), injectable is the more evidence-supported route. For gut-specific issues, oral is mechanistically reasonable and far more convenient.</p>
+
+    <h2 id="side-effects">Side Effects and Safety Profile</h2>
+
+    <p>In animal studies, BPC-157 has an extremely clean safety profile. Doses far exceeding those used for therapeutic effect have been administered without observed toxicity. There's no evidence of organ damage, hormonal disruption, or carcinogenicity in rodent models.</p>
+
+    <p>In human anecdotal reports, the most commonly mentioned side effects are:</p>
+    <ul>
+      <li><strong>Injection site reactions</strong> — redness, mild irritation (common with any subcutaneous injection)</li>
+      <li><strong>Fatigue or lethargy</strong> — reported by some users, particularly early in a cycle</li>
+      <li><strong>Vivid dreams or altered sleep</strong> — occasionally mentioned, mechanism unclear</li>
+      <li><strong>Mild nausea</strong> — more common with oral use</li>
+      <li><strong>Temporary blood pressure fluctuation</strong> — BPC-157 affects the NO system; some users report transient changes</li>
+    </ul>
+
+    <p>What doesn't appear to happen, based on available data: hormonal disruption, liver toxicity, suppression of natural systems, or anything resembling the side effect profiles of anabolic steroids or exogenous hormones. That said — this is all extrapolated from animal data and uncontrolled human anecdotes. The absence of reported problems is not the same as a confirmed safety record.</p>
+
+    <div class="callout warning">
+      <div class="callout-label">⚠️ Cancer Concern — Worth Addressing</div>
+      <p>Because BPC-157 promotes angiogenesis, a question comes up: could it accelerate tumor growth? Tumors rely heavily on angiogenesis to sustain themselves. This is a legitimate theoretical concern. In animal studies, no pro-tumor effects have been observed — but these are typically short-term studies in healthy animals. Anyone with a personal or family history of cancer should be especially cautious and consult an oncologist before considering BPC-157.</p>
+    </div>
+
+    <h2 id="sourcing">Sourcing and Quality</h2>
+
+    <p>BPC-157 is sold as a research chemical, typically as a lyophilized (freeze-dried) powder in vials of 5mg. The peptide market has significant quality variation. Third-party purity testing (via HPLC and mass spectrometry) is the gold standard — look for vendors who publish certificate of analysis (CoA) data from independent labs, not just their own testing.</p>
+
+    <p>The unfortunate reality is that a meaningful percentage of peptides sold online are underdosed, mislabeled, or contaminated. Bacteriostatic water purity, sterile reconstitution practice, and proper storage (refrigerated after reconstitution) all matter for safety and efficacy.</p>
+
+    <p>See our <a href="/peptide-sourcing-guide.html">vendor comparison guide</a> for a breakdown of current reputable sources with testing data.</p>
+
+    <h2 id="stacking">Stacking with TB-500</h2>
+
+    <p>BPC-157 is often stacked with TB-500 (Thymosin Beta-4 fragment) — this combination is known as the <a href="/wolverine-stack.html">Wolverine Stack</a>. The rationale is complementary mechanisms: BPC-157 promotes localized healing and angiogenesis, while TB-500 works systemically to upregulate actin, reduce inflammation, and promote cell migration. Together, they're thought to cover more healing pathways than either alone.</p>
+
+    <p>This combination has become the de facto "serious injury recovery" protocol in peptide communities and has been discussed by sports medicine practitioners operating in a research context. See the full Wolverine Stack guide for a detailed breakdown of the combined protocol.</p>
+
+    <h2 id="bottom-line">The Bottom Line</h2>
+
+    <p>BPC-157 is one of the most fascinating research compounds to emerge in the last 30 years. The breadth of its effects in animal models is genuinely unusual, and the mechanistic explanations are increasingly well-understood. The safety profile in animals is reassuring.</p>
+
+    <p>But here's the honest assessment: we don't have good human data. The gap between "works in rats" and "works in humans" is large and well-documented — most preclinical compounds never succeed in clinical translation. BPC-157 may be different because of its plausible mechanisms, its derivation from a human protein, and its apparently benign profile. Or it may not translate as well as rodent studies suggest.</p>
+
+    <p>What we can say is this: the research warrants serious attention, and it would benefit enormously from properly designed human trials. Until those exist, anyone using BPC-157 is doing so based on animal data and community experience — and should approach it with that understanding.</p>
+
+    <div class="callout">
+      <div class="callout-label">📖 Continue Reading</div>
+      <p>Next: <a href="/wolverine-stack.html">The Wolverine Stack — BPC-157 + TB-500 Combined Protocol</a> or <a href="/tb-500-guide.html">TB-500 Complete Guide</a>.</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <nav class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#what-is">What Is BPC-157?</a></li>
+        <li><a href="#mechanism">How It Works</a></li>
+        <li><a href="#studies">Animal Study Evidence</a></li>
+        <li><a href="#dosing">Dosing Protocols</a></li>
+        <li><a href="#oral-vs-injectable">Oral vs. Injectable</a></li>
+        <li><a href="#side-effects">Side Effects & Safety</a></li>
+        <li><a href="#sourcing">Sourcing & Quality</a></li>
+        <li><a href="#stacking">Stacking with TB-500</a></li>
+        <li><a href="#bottom-line">Bottom Line</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-card">
+      <h4>Wolverine Stack Protocol</h4>
+      <p>BPC-157 + TB-500 combined is considered the gold standard for injury recovery in the peptide community.</p>
+      <a href="/wolverine-stack.html">View Full Protocol →</a>
+    </div>
+    <div class="sidebar-card" style="margin-top:16px;">
+      <h4>New to Peptides?</h4>
+      <p>Start with our beginner's guide before diving into specific compounds.</p>
+      <a href="/peptide-beginners-guide.html">Beginner's Guide →</a>
+    </div>
+  </aside>
+</div>
+
+<section class="related-articles">
+  <div class="related-inner">
+    <h3>Related Guides</h3>
+    <div class="related-grid">
+      <a href="/tb-500-guide.html" class="related-card">
+        <div class="tag">Research Peptide</div>
+        <h4>TB-500: Complete Guide to Thymosin Beta-4</h4>
+        <p>How TB-500 works, what makes it different from BPC-157, and the evidence behind it.</p>
+      </a>
+      <a href="/wolverine-stack.html" class="related-card">
+        <div class="tag">Protocol</div>
+        <h4>The Wolverine Stack: BPC-157 + TB-500 Protocol</h4>
+        <p>The complete combined protocol used for serious injury recovery and healing optimization.</p>
+      </a>
+      <a href="/peptide-sourcing-guide.html" class="related-card">
+        <div class="tag">Sourcing</div>
+        <h4>Where to Buy Research Peptides</h4>
+        <p>Vendor comparison, quality testing, red flags to avoid, and how to verify purity.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+  BPC-157 and other peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+  <a href="/">Home</a> · <a href="/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/peptide-sourcing-guide.html">Vendors</a><br/><br/>
+  © 2025 WolveStack. For research and educational purposes only.</p>
+</footer>
+
+</body>
+</html>

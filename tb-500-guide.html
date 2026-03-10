@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TB-500 Guide: Thymosin Beta-4, Research Evidence & Protocols | WolveStack</title>
+<meta name="description" content="A detailed breakdown of TB-500 (Thymosin Beta-4 fragment) — the clinical research, how it differs from BPC-157, dosing protocols, and what the evidence actually shows."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+    --teal-pale: #e8f4f5; --accent: #f0a500;
+    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(13,115,119,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .nav-cta:hover { background: var(--teal-light); }
+  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 64px 24px 56px; position: relative; overflow: hidden; }
+  .article-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb span { color: rgba(255,255,255,0.3); }
+  .breadcrumb .current { color: rgba(255,255,255,0.75); }
+  .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px; }
+  .article-hero h1 { font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -1px; margin-bottom: 16px; }
+  .article-hero h1 em { color: var(--teal-light); font-style: normal; }
+  .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
+  .article-meta span { font-size: 13px; color: rgba(255,255,255,0.5); }
+  .article-layout { max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .article-body { min-width: 0; }
+  .article-body h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin: 48px 0 16px; line-height: 1.3; padding-top: 8px; border-top: 2px solid var(--teal-pale); }
+  .article-body h2:first-child { margin-top: 0; border-top: none; }
+  .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+  .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+  .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+  .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
+  .article-body strong { color: var(--navy); font-weight: 600; }
+  .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+  .callout { background: var(--teal-pale); border-left: 4px solid var(--teal); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0; }
+  .callout.warning { background: #fef3c7; border-color: #f59e0b; }
+  .callout.research { background: #eff6ff; border-color: #3b82f6; }
+  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout.warning .callout-label { color: #92400e; }
+  .callout.research .callout-label { color: #1d4ed8; }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+  .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; }
+  .compare-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); font-size: 15px; vertical-align: top; }
+  .compare-table td:first-child { font-weight: 600; color: var(--navy); width: 180px; }
+  .compare-table .bpc { color: var(--teal); }
+  .compare-table .tb { color: #7c3aed; }
+  .sidebar { position: sticky; top: 84px; }
+  .toc { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; }
+  .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 10px; }
+  .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
+  .toc a:hover { color: var(--teal); }
+  .sidebar-card { background: linear-gradient(135deg, var(--navy), #0a3d5c); border-radius: 12px; padding: 24px; margin-top: 24px; color: white; }
+  .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
+  .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
+  .sidebar-card a:hover { background: var(--teal-light); }
+  .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
+  .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13px; color: var(--gray-600); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Wolve<span>Stack</span></a>
+    <ul class="nav-links">
+      <li><a href="/bpc-157-guide.html">BPC-157</a></li>
+      <li><a href="/tb-500-guide.html">TB-500</a></li>
+      <li><a href="/wolverine-stack.html">Stacks</a></li>
+      <li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+    </ul>
+    <a href="/peptide-beginners-guide.html" class="nav-cta">Start Here →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/">Guides</a><span>/</span><span class="current">TB-500</span>
+    </div>
+    <div class="article-tag">Deep Dive · Research Peptide</div>
+    <h1>TB-500: <em>Thymosin Beta-4 and What the Research Shows</em></h1>
+    <p style="color:rgba(255,255,255,0.72); font-size:18px; margin-top:16px; line-height:1.7;">
+      TB-500 has more legitimate clinical research behind it than almost any other peptide in the community's toolkit. Here's what that research actually says — and where the gaps still are.
+    </p>
+    <div class="article-meta">
+      <span>📖 12 min read</span>
+      <span>🔬 Research & Education</span>
+      <span>⚠️ Not medical advice</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="callout warning">
+      <div class="callout-label">⚠️ Disclaimer</div>
+      <p>TB-500 is sold as a research chemical and is not approved for human use by the FDA or equivalent regulatory bodies. This article is educational only. Consult a qualified physician before considering any peptide use.</p>
+    </div>
+
+    <h2 id="what-is">TB-500 vs. Thymosin Beta-4 — What's the Difference?</h2>
+
+    <p>This distinction matters and gets muddled constantly in online discussions. Let's clear it up.</p>
+
+    <p><strong>Thymosin Beta-4 (Tβ4)</strong> is a naturally occurring, 43-amino acid protein found in virtually every cell in the human body. It plays a central role in regulating actin — a structural protein essential to cell movement, shape, and signaling. It's one of the most abundant proteins in the body and has been studied since the 1960s.</p>
+
+    <p><strong>TB-500</strong> is the name commonly used for a synthetic fragment of Tβ4 — specifically the 17-amino acid peptide sequence (Ac-LKKTETQ) that corresponds to the actin-binding domain. This is the region believed responsible for most of Thymosin Beta-4's healing and regenerative effects.</p>
+
+    <p>Here's the catch most people don't discuss: what's sold online as "TB-500" is almost certainly a synthetic version of the full Tβ4 sequence or the active fragment, and quality control issues mean you rarely know exactly what you're getting. The term TB-500 has effectively become industry shorthand for "research Thymosin Beta-4," whether that's the full protein or the fragment.</p>
+
+    <p>The distinction matters because some published clinical research uses the full Tβ4 protein (particularly the cardiac research), while the peptide community typically assumes TB-500 refers to the shorter actin-binding fragment. Understanding which you're reading about is important for interpreting the evidence.</p>
+
+    <h2 id="research">The Clinical Research — More Than You Might Expect</h2>
+
+    <p>TB-500 / Tβ4 has something most research peptides lack: actual human clinical trial data. Not a lot, but some — and it significantly raises the compound's credibility profile compared to BPC-157, which has no human trials.</p>
+
+    <h3>Cardiac Research — The Most Developed Area</h3>
+    <p>Thymosin Beta-4 entered clinical development through cardiology. RegeneRx Biopharmaceuticals ran phase I and phase II trials on a topical formulation (RGN-352) for acute myocardial infarction in the early 2010s. The compound was shown safe in human subjects, and the phase II trial suggested some benefit on cardiac function post-MI, though the results were not statistically definitive.</p>
+
+    <p>More importantly, the preclinical cardiac research is compelling. Tβ4 has been shown to promote cardiomyocyte survival after ischemic injury, stimulate epicardial progenitor cell differentiation, and reduce scar formation following heart attacks in multiple animal models. The mechanism appears to involve Akt activation and reduced apoptosis in cardiac tissue.</p>
+
+    <p>This cardiac research is largely separate from the wound healing and musculoskeletal applications the peptide community is interested in, but it established a human safety profile that's genuinely useful context.</p>
+
+    <h3>Wound Healing</h3>
+    <p>RegeneRx also ran trials on topical Tβ4 for wound healing — specifically a dry eye formulation (RGN-259) for neurotrophic keratopathy (a corneal condition). Phase III trial data published in 2018 showed statistically significant improvement in healing rates vs. placebo. This is one of the more rigorous pieces of evidence in the Tβ4 literature and represents actual human data showing the wound healing mechanism works in humans, at least in corneal tissue.</p>
+
+    <h3>Musculoskeletal — Mostly Animal Data</h3>
+    <p>For the application most community members are interested in — tendon, muscle, and ligament healing — the research is primarily animal-based. Studies have shown:</p>
+    <ul>
+      <li>Accelerated tendon healing in rat models with reduced adhesion formation</li>
+      <li>Improved skeletal muscle repair after crush injury</li>
+      <li>Reduced inflammation and fibrosis in injured tissue</li>
+      <li>Enhanced satellite cell activity (the cells responsible for muscle regeneration)</li>
+    </ul>
+
+    <p>The mechanisms are well-understood: by sequestering G-actin, Tβ4 promotes cell migration into wounded tissue, reduces the inflammatory cascade, and facilitates the reorganization of the extracellular matrix. This is mechanistically distinct from BPC-157's angiogenesis-driven healing, which is why the two compounds are considered complementary.</p>
+
+    <div class="callout research">
+      <div class="callout-label">📚 Notable Research</div>
+      <p>The 2012 study by Hinkel et al. in <em>Journal of the American College of Cardiology</em> showed that Tβ4 treatment improved cardiac function and survival in pigs following myocardial infarction — a large animal model that better predicts human outcomes than rodent studies. This level of evidence is unusual for peptides in this space.</p>
+    </div>
+
+    <h2 id="mechanism">Mechanism: Why Actin Sequestration Matters</h2>
+
+    <p>Understanding why TB-500 does what it does requires a brief primer on actin biology.</p>
+
+    <p>Actin exists in two forms: G-actin (globular, monomeric, free) and F-actin (filamentous, polymerized). The balance between these forms controls cell motility — how well cells can move through tissue. Thymosin Beta-4 is one of the primary proteins that binds and sequesters G-actin, effectively regulating how much free actin is available for polymerization.</p>
+
+    <p>When tissue is injured, cells need to migrate into the wound to repair it. This migration is actin-dependent. By modulating the G-actin pool, Tβ4 enhances the ability of fibroblasts, keratinocytes, and other repair cells to move into the damage zone. Think of it as making the cellular repair crew more mobile and responsive.</p>
+
+    <p>Beyond actin, Tβ4 also has direct anti-inflammatory effects, inhibiting NFkB activity and reducing pro-inflammatory cytokines at the wound site. And it has angiogenic properties of its own, though generally considered secondary to those of BPC-157.</p>
+
+    <h2 id="tb-vs-bpc">TB-500 vs. BPC-157: How They Compare</h2>
+
+    <table class="compare-table">
+      <thead><tr><th>Property</th><th class="bpc">BPC-157</th><th class="tb">TB-500</th></tr></thead>
+      <tbody>
+        <tr><td>Origin</td><td>Derived from gastric protein</td><td>Fragment of endogenous Tβ4 protein</td></tr>
+        <tr><td>Human trials</td><td>None published</td><td>Phase I/II/III (topical, cardiac, corneal)</td></tr>
+        <tr><td>Primary mechanism</td><td>VEGFR2 / angiogenesis / NO</td><td>Actin sequestration / cell migration</td></tr>
+        <tr><td>Half-life</td><td>~4 hours (short)</td><td>~30 minutes (very short, but upstream effects last longer)</td></tr>
+        <tr><td>Best route</td><td>SubQ injection (or oral for gut)</td><td>SubQ or IM injection</td></tr>
+        <tr><td>Gut healing</td><td>Strongly supported</td><td>Less studied in gut</td></tr>
+        <tr><td>Systemic healing</td><td>Good evidence (animal)</td><td>Good evidence (animal + some human)</td></tr>
+        <tr><td>Cardiac effects</td><td>Not well-studied</td><td>Significant research base</td></tr>
+        <tr><td>Typical dose</td><td>200–500 mcg/day</td><td>2–5 mg/week</td></tr>
+        <tr><td>Cycle length</td><td>4–12 weeks</td><td>4–6 weeks loading, maintenance optional</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="dosing">Dosing Protocols</h2>
+
+    <p>TB-500 dosing is notably different from BPC-157 in an important way: the community largely uses it in a loading/maintenance structure rather than daily dosing. This comes from the cardiac trial protocols and the recognition that the compound's downstream effects persist longer than its plasma half-life.</p>
+
+    <h3>Loading Phase (Weeks 1–4 or 1–6)</h3>
+    <p>Typical loading doses range from <strong>2–5 mg per week</strong>, usually split into two injections (e.g., 2mg twice weekly). The loading phase is intended to establish an adequate tissue level and kick off the healing cascade.</p>
+
+    <h3>Maintenance Phase (Optional)</h3>
+    <p>Some protocols call for a reduced maintenance dose of 1–2mg per week after the loading phase, continuing for several additional weeks. Others stop after loading and allow the downstream effects to continue. Whether maintenance dosing provides additional benefit over stopping after loading is genuinely unknown.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Phase</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr><td>Loading</td><td>2–2.5 mg</td><td>Twice weekly</td><td>4–6 weeks</td></tr>
+        <tr><td>Maintenance</td><td>1–2 mg</td><td>Once weekly</td><td>4–8 weeks (optional)</td></tr>
+        <tr><td>Acute injury</td><td>5 mg/week</td><td>Split over 2–3 injections</td><td>4 weeks</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="callout-label">💡 Injection Site</div>
+      <p>TB-500 is generally considered to have more systemic reach than BPC-157. While BPC-157 is sometimes injected near the injury site for localized effect, TB-500 is typically injected subcutaneously anywhere (abdomen, thigh) and is believed to distribute systemically. Some practitioners still recommend proximity injection for TB-500 out of habit, but the systemic distribution argument has good mechanistic support.</p>
+    </div>
+
+    <h2 id="side-effects">Side Effects and Safety</h2>
+
+    <p>The human clinical trial data actually helps here. In the RegeneRx trials, Tβ4 showed a very clean safety profile — the main adverse events were mild injection site reactions and, in some cardiac patients, transient fatigue. No serious adverse events were attributed to the compound itself.</p>
+
+    <p>In the community, reported side effects are similarly mild:</p>
+    <ul>
+      <li><strong>Injection site irritation</strong> — the most commonly reported, typically resolves in hours</li>
+      <li><strong>Head rush or lightheadedness</strong> — sometimes reported immediately after injection, passing quickly</li>
+      <li><strong>Fatigue</strong> — a minority of users report feeling tired in the first few days of use</li>
+      <li><strong>Very rarely: flu-like symptoms</strong> — occasionally reported, mechanism unclear</li>
+    </ul>
+
+    <p>The theoretical cancer concern that applies to BPC-157 (angiogenesis promoting tumor growth) applies less directly to TB-500 since its pro-angiogenic effects are more secondary. However, as with any compound that promotes cell migration and tissue remodeling, caution in patients with active malignancies is prudent.</p>
+
+    <h2 id="sport">WADA Prohibition and Sport</h2>
+
+    <p>TB-500 is explicitly prohibited by the World Anti-Doping Agency under the S2 Peptide Hormone category. It appears on the WADA prohibited list as a banned substance for competitive athletes. This is worth noting both for ethical and practical reasons — TB-500 is detectable in urine and blood samples, and testing has improved significantly in recent years.</p>
+
+    <p>If you compete in any sport with anti-doping testing, this is not a gray area. TB-500 is prohibited. Full stop.</p>
+
+    <h2 id="stacking">Stacking with BPC-157</h2>
+
+    <p>The <a href="/wolverine-stack.html">Wolverine Stack</a> — BPC-157 and TB-500 combined — has become the community's go-to for serious injury recovery precisely because the two compounds work through different mechanisms. BPC-157 drives angiogenesis and activates growth hormone receptor sensitivity locally. TB-500 promotes cell migration and reduces inflammation systemically. The overlap is minimal, the complementarity is real.</p>
+
+    <p>Whether the combination is strictly better than either alone has never been tested directly. But the mechanistic rationale is solid, and the anecdotal evidence from the community is overwhelmingly positive for the combination.</p>
+
+    <h2 id="bottom-line">The Bottom Line on TB-500</h2>
+
+    <p>TB-500 occupies a genuinely interesting position in the peptide landscape. It has more credible human data than almost any other research peptide the community uses — thanks to RegeneRx's clinical program — and its mechanisms are well-understood at a cellular level. The cardiac and corneal research is legitimate science.</p>
+
+    <p>The gap is the direct extrapolation to musculoskeletal healing in humans. We can infer the mechanisms should apply — actin regulation and cell migration are fundamental biology — but that inference still needs controlled human trials to confirm.</p>
+
+    <p>It's a compound worth taking seriously. It's also one that warrants serious sourcing standards and sensible dosing, given that what's available on the research chemical market varies enormously in quality.</p>
+
+    <div class="callout">
+      <div class="callout-label">📖 Continue Reading</div>
+      <p><a href="/wolverine-stack.html">The Wolverine Stack: BPC-157 + TB-500 Combined Protocol</a> — the full combined injury recovery guide.</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <nav class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#what-is">TB-500 vs. Thymosin Beta-4</a></li>
+        <li><a href="#research">Clinical Research</a></li>
+        <li><a href="#mechanism">How It Works</a></li>
+        <li><a href="#tb-vs-bpc">TB-500 vs. BPC-157</a></li>
+        <li><a href="#dosing">Dosing Protocols</a></li>
+        <li><a href="#side-effects">Side Effects & Safety</a></li>
+        <li><a href="#sport">WADA & Sport</a></li>
+        <li><a href="#stacking">Stacking with BPC-157</a></li>
+        <li><a href="#bottom-line">Bottom Line</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-card">
+      <h4>The Wolverine Stack</h4>
+      <p>BPC-157 + TB-500 together — the most researched combination protocol for injury recovery.</p>
+      <a href="/wolverine-stack.html">Full Protocol →</a>
+    </div>
+    <div class="sidebar-card" style="margin-top:16px;">
+      <h4>BPC-157 Guide</h4>
+      <p>How BPC-157 compares, its mechanisms, and where its evidence base is strongest.</p>
+      <a href="/bpc-157-guide.html">Read Guide →</a>
+    </div>
+  </aside>
+</div>
+
+<section class="related-articles">
+  <div class="related-inner">
+    <h3>Related Guides</h3>
+    <div class="related-grid">
+      <a href="/bpc-157-guide.html" class="related-card">
+        <div class="tag">Research Peptide</div>
+        <h4>BPC-157 Complete Guide</h4>
+        <p>The full breakdown of BPC-157 — evidence, mechanisms, dosing, and the oral vs. injectable debate.</p>
+      </a>
+      <a href="/wolverine-stack.html" class="related-card">
+        <div class="tag">Protocol</div>
+        <h4>The Wolverine Stack Protocol</h4>
+        <p>BPC-157 + TB-500 combined — the full protocol with rationale and community-tested dosing.</p>
+      </a>
+      <a href="/peptide-reconstitution-guide.html" class="related-card">
+        <div class="tag">Practical Guide</div>
+        <h4>How to Reconstitute Peptides</h4>
+        <p>Step-by-step reconstitution, storage, and dosing guide for lyophilized peptides.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>WolveStack is an independent educational resource. Nothing here constitutes medical advice.<br/>
+  TB-500 and peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+  <a href="/">Home</a> · <a href="/bpc-157-guide.html">BPC-157</a> · <a href="/wolverine-stack.html">Wolverine Stack</a> · <a href="/peptide-sourcing-guide.html">Vendors</a><br/><br/>
+  © 2025 WolveStack. For research and educational purposes only.</p>
+</footer>
+
+</body>
+</html>
