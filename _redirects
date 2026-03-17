@@ -1,0 +1,2 @@
+# Redirect old /peptide-daily-content/ paths to root
+/peptide-daily-content/*  /:splat  301
