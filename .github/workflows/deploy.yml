@@ -4,6 +4,17 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  permissions:
+  contents: read
+```
+
+**2.** Change line 15 from:
+```
+run: npx wrangler@3 pages deploy ...
+```
+to:
+```
+run: npx wrangler@3.114.17 pages deploy ...
 
 jobs:
   deploy:
