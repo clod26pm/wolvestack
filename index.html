@@ -782,14 +782,14 @@
           </tr>
           <tr>
             <td>
-              <div class="vendor-name">Limitless Biotech</div>
+              <div class="vendor-name">Limitless Life Nootropics</div>
               <span class="badge badge-good">Editor's Choice</span>
             </td>
             <td>Third-party COA</td>
             <td><span class="badge badge-good">GMP Compliant</span></td>
             <td>3–5 days US</td>
             <td><span class="stars">★★★★☆</span></td>
-            <td><a href="#" class="vendor-cta">Visit →</a></td>
+            <td><a href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704" class="vendor-cta" target="_blank" rel="noopener">Visit →</a></td>
           </tr>
           <tr>
             <td>
@@ -800,7 +800,7 @@
             <td><span class="badge badge-good">GMP Production Line</span></td>
             <td>EU / International</td>
             <td><span class="stars">★★★★★</span></td>
-            <td><a href="#" class="vendor-cta">Visit →</a></td>
+            <td><a href="https://particlepeptides.com/en/?refs=25135" class="vendor-cta" target="_blank" rel="noopener">Visit →</a></td>
           </tr>
           <tr>
             <td>
@@ -941,21 +941,51 @@
 </footer>
 
 <script>
-  function handleSubmit(e) {
+  // REPLACE YOUR_SUBDOMAIN with your actual Cloudflare Workers subdomain
+  const WORKER_URL = 'https://wolvestack-email.clod26.workers.dev';
+
+  async function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button');
     const input = document.getElementById('email-input');
-    btn.textContent = '✓ Check your inbox!';
-    btn.style.background = '#065f46';
-    btn.style.color = '#fff';
-    input.value = '';
-    input.placeholder = 'Thanks! Guide is on its way.';
+    const email = input.value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'homepage-cta', page: location.pathname }),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        btn.textContent = '✓ Check your inbox!';
+        btn.style.background = '#065f46';
+        btn.style.color = '#fff';
+        input.value = '';
+        input.placeholder = 'Guide sent! Check your email.';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.style.background = '#b91c1c';
+        console.error('Worker error:', data);
+      }
+    } catch (err) {
+      btn.textContent = 'Network error — try again';
+      btn.style.background = '#b91c1c';
+      console.error('Fetch error:', err);
+    }
+
+    btn.disabled = false;
     setTimeout(() => {
       btn.textContent = 'Send Me the Guide →';
       btn.style.background = '';
       btn.style.color = '';
       input.placeholder = 'your@email.com';
-    }, 4000);
+    }, 5000);
   }
 
   // Smooth scroll for anchor links

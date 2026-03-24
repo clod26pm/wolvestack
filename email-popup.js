@@ -91,16 +91,14 @@
     localStorage.setItem('ws_subscribers', JSON.stringify(subs));
     localStorage.setItem('ws_popup_dismissed', 'subscribed');
 
-    // Send to webhook if configured (replace URL with your email service endpoint)
-    // Supports Formspree, Mailchimp, ConvertKit, etc.
-    var WEBHOOK_URL = ''; // Set your endpoint here
-    if (WEBHOOK_URL) {
-      fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify({email: email, source: 'wolvestack-popup', page: location.pathname})
-      }).catch(function(){});
-    }
+    // Send to Cloudflare Worker → Resend email with PDF
+    // REPLACE YOUR_SUBDOMAIN with your actual Cloudflare Workers subdomain
+    var WORKER_URL = 'https://wolvestack-email.clod26.workers.dev';
+    fetch(WORKER_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, source: 'wolvestack-popup', page: location.pathname})
+    }).catch(function(err){ console.error('Email worker error:', err); });
 
     // Show success
     document.getElementById('ws-email-form').style.display = 'none';
