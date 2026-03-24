@@ -176,7 +176,34 @@
     .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
     .limitless-btn:hover { background: #0891b2 !important; }
     .limitless-btn.limitless-primary { background: #0891b2; }
-  </style>
+  
+  .quick-answer {
+    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+    border: 2px solid var(--teal, #0d7377);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 32px 0;
+    position: relative;
+  }
+  .quick-answer::before {
+    content: '⚡ Quick Answer';
+    display: block;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #0d7377);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .quick-answer p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #1e293b !important;
+    margin-bottom: 0 !important;
+  }
+
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -330,6 +357,12 @@
       <div class="callout-label">⚠️ Disclaimer</div>
       <p>Research peptides are not approved for human consumption by the FDA. This guide is for educational and informational purposes only. It does not constitute medical advice. Reconstitution and use of peptides for research purposes should comply with all applicable laws and regulations in your jurisdiction. Consult a qualified healthcare professional before considering any peptide use.</p>
     </div>
+
+<div class="quick-answer">
+      <p>BPC-157 reconstitution involves adding sterile bacteriostatic water to the lyophilized powder vial. For a typical 5mg vial, add 2mL of BAC water to create a 2.5mg/mL concentration. Swab the vial top with 70% alcohol, then slowly inject the water at a 45-degree angle down the side of the vial.</p>
+    </div>
+
+
 
     <h2 id="what-is-lyophilization">What Is Lyophilization and Why Peptides Come as Powder</h2>
 
@@ -626,7 +659,7 @@
 
     <p>That's everything you need. Nothing complex, but all essential.</p>
 
-    <h2 id="bottom-line">The Bottom Line</h2>
+    <h2 id="bottom-line">What Is the Bottom Line on How to?</h2>
 
     <p>Peptide reconstitution is straightforward once you understand the principles: use bacteriostatic water, inject slowly at an angle to avoid foaming, measure doses accurately using simple math, store in the cold immediately, and keep everything sterile. The most common failures come from impatience (shaking instead of swirling), poor storage (room temperature), or calculation errors (mixing up concentrations).</p>
 

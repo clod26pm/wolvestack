@@ -137,7 +137,34 @@
     .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
     .limitless-btn:hover { background: #0891b2 !important; }
     .limitless-btn.limitless-primary { background: #0891b2; }
-  </style>
+  
+  .quick-answer {
+    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+    border: 2px solid var(--teal, #0d7377);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 32px 0;
+    position: relative;
+  }
+  .quick-answer::before {
+    content: '⚡ Quick Answer';
+    display: block;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #0d7377);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .quick-answer p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #1e293b !important;
+    margin-bottom: 0 !important;
+  }
+
+</style>
 </head>
 <body>
 
@@ -175,6 +202,12 @@
       <p><strong>Research context only.</strong> The peptides discussed on WolveStack are research chemicals not approved for human use by the FDA. Nothing on this page constitutes medical advice. Consult a qualified healthcare professional before use.</p>
     </div>
 
+<div class="quick-answer">
+      <p>Everything about bacteriostatic water for peptide reconstitution: what it is, why it's used over sterile water, how much to add, storage rules, and common mistakes.</p>
+    </div>
+
+
+
     <div class="section-card">
       <h2>BAC Water vs Sterile Water: Key Differences</h2>
       <p>Sterile water for injection (SWFI) is pyrogen-free water in a sealed vial — sterile at manufacture but without any antimicrobial preservative. Once the vial is punctured, sterile water is at risk of bacterial contamination with each subsequent needle insertion. It is appropriate for single-use reconstitutions — use the entire vial at once and discard. Multi-dose use of SWFI is not recommended.</p><p>Bacteriostatic water contains 0.9% benzyl alcohol, which inhibits bacterial proliferation even after the vial has been opened and punctured multiple times. This allows safe multi-dose use of a reconstituted peptide vial over weeks. For research peptides that are reconstituted and then used in small aliquots over 4–6 weeks, BAC water is the appropriate choice. Benzyl alcohol is safe at the concentrations present in BAC water for injection use in adults, though it is contraindicated in neonates (benzyl alcohol toxicity risk in premature infants).</p>
@@ -184,7 +217,7 @@
       <p>The volume of BAC water to add per vial is not a fixed rule — it depends on how you want to dose from the vial. The reconstitution calculation: (peptide amount in mg) ÷ (desired concentration in mg/mL) = volume of BAC water in mL.</p><p>Example: 5 mg peptide vial, desired concentration 1 mg/mL → add 5 mL BAC water. Desired 0.5 mg/mL → add 10 mL. For most peptides dosed in micrograms (mcg), working with 1 mg/mL or 2 mg/mL concentrations simplifies dose calculation. A 5 mg vial at 1 mg/mL (add 5 mL = 50 units on a 50-unit insulin syringe) gives 1 mg per 10 units — making 250 mcg = 2.5 units, 500 mcg = 5 units. Calculate your target concentration before reconstituting to avoid under- or over-diluting.</p>
     </div>
     <div class="section-card">
-      <h2>Reconstitution Technique</h2>
+      <h2>How Do You Reconstitute Bacteriostatic Water?</h2>
       <p>Proper reconstitution prevents peptide degradation and maintains sterility. Step by step: (1) Allow the lyophilised peptide vial and BAC water vial to reach room temperature. (2) Swab both vial tops with a fresh alcohol swab and allow to dry. (3) Draw up the calculated BAC water volume into your syringe. (4) Insert the needle into the peptide vial and aim the BAC water stream at the glass wall of the vial — do not inject directly onto the lyophilised powder as this can shear peptide structure. (5) Allow BAC water to run down the vial wall onto the powder slowly. (6) Do not shake the vial. Gently swirl or roll between palms if needed. Allow several minutes for complete dissolution. (7) The solution should be clear and colourless (or very slightly yellow for some peptides). Do not use if cloudy, particulate, or deeply coloured.</p>
     </div>
     <div class="section-card">

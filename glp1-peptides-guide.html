@@ -157,7 +157,34 @@
     .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
     .limitless-btn:hover { background: #0891b2 !important; }
     .limitless-btn.limitless-primary { background: #0891b2; }
-  </style>
+  
+  .quick-answer {
+    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+    border: 2px solid var(--teal, #0d7377);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 32px 0;
+    position: relative;
+  }
+  .quick-answer::before {
+    content: '⚡ Quick Answer';
+    display: block;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #0d7377);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .quick-answer p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #1e293b !important;
+    margin-bottom: 0 !important;
+  }
+
+</style>
 </head>
 <body>
 
@@ -188,7 +215,12 @@
 <div class="container">
   <div class="content">
 
-    <p>Few peptides have crossed from research niche into mainstream cultural conversation as dramatically as the GLP-1 receptor agonists. Semaglutide and tirzepatide aren't just drugs anymore — they've become social phenomena, showing up in earnings calls, celebrity interviews, and congressional hearings. That visibility is both a strength and a problem: actual data gets buried under commentary.</p>
+    
+<div class="quick-answer">
+      <p>GLP-1 (glucagon-like peptide-1) receptor agonists are a class of drugs that mimic the effects of the naturally occurring incretin hormone GLP-1. They bind to GLP-1 receptors in the pancreas, gut, brain, and heart, producing effects that include increased insulin secretion, decreased glucagon release, slowed gastric emptying, and importantly, significant appetite suppression and weight reduction. Approved examples include semaglutide (Ozempic, Wegovy), tirzepatide (Mounjaro, Zepbound), and liraglutide (Victoza, Saxenda).</p>
+    </div>
+
+<p>Few peptides have crossed from research niche into mainstream cultural conversation as dramatically as the GLP-1 receptor agonists. Semaglutide and tirzepatide aren't just drugs anymore — they've become social phenomena, showing up in earnings calls, celebrity interviews, and congressional hearings. That visibility is both a strength and a problem: actual data gets buried under commentary.</p>
 
     <p>This guide strips that back. Here's what the clinical trials actually showed, where the genuine scientific uncertainty lies, and why the GLP-1 class matters to anyone interested in the broader peptide research landscape.</p>
 

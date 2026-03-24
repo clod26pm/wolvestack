@@ -137,7 +137,34 @@
     .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
     .limitless-btn:hover { background: #0891b2 !important; }
     .limitless-btn.limitless-primary { background: #0891b2; }
-  </style>
+  
+  .quick-answer {
+    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+    border: 2px solid var(--teal, #0d7377);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 32px 0;
+    position: relative;
+  }
+  .quick-answer::before {
+    content: '⚡ Quick Answer';
+    display: block;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #0d7377);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .quick-answer p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #1e293b !important;
+    margin-bottom: 0 !important;
+  }
+
+</style>
 </head>
 <body>
 
@@ -175,6 +202,12 @@
       <p><strong>Research context only.</strong> The peptides discussed on WolveStack are research chemicals not approved for human use by the FDA. Nothing on this page constitutes medical advice. Consult a qualified healthcare professional before use.</p>
     </div>
 
+<div class="quick-answer">
+      <p>Research peptides targeting insulin sensitivity: GLP-1 agonists, MOTS-c, humanin, BPC-157, and others. Evidence review for metabolic syndrome and pre-diabetes.</p>
+    </div>
+
+
+
     <div class="section-card">
       <h2>GLP-1 Agonists: The Established Standard</h2>
       <p>GLP-1 (glucagon-like peptide-1) agonists represent the most clinically validated peptide approach to insulin sensitivity. Semaglutide and tirzepatide work by stimulating insulin secretion in a glucose-dependent manner (avoiding hypoglycemia), suppressing glucagon, slowing gastric emptying, and — through central mechanisms — significantly reducing caloric intake. The resulting weight loss independently improves insulin sensitivity through reduced adipose tissue-driven inflammation and lipotoxicity.</p><p>For individuals with pre-diabetes or early metabolic syndrome, GLP-1 agonists produce profound improvements in insulin sensitivity and beta cell function. The SUSTAIN and STEP trial series demonstrate meaningful HbA1c reductions and, critically, long-term cardiovascular outcome improvements — effects beyond simple glucose lowering. As research peptides, semaglutide and tirzepatide are available without prescription but are also FDA-approved drugs for which medical supervision is appropriate.</p>
@@ -192,7 +225,7 @@
       <p>Humanin (a mitochondria-derived peptide) has shown direct pancreatic beta cell protective effects in multiple animal studies — reducing beta cell apoptosis, improving insulin secretion capacity, and attenuating diet-induced diabetes progression. Its mechanism involves binding to the formyl peptide receptor family and activating downstream STAT3 signalling, reducing ER stress-induced beta cell death that is a key driver of type 2 diabetes progression.</p><p>Human serum Humanin levels are inversely correlated with insulin resistance and type 2 diabetes — lower Humanin is associated with worse metabolic status. Exogenous Humanin administration in animal models restores metabolic function even after diabetes onset. Clinical trials in humans are limited; research dosing is typically 1–3 mg subcutaneously 3 times per week.</p>
     </div>
     <div class="section-card">
-      <h2>Peptides for Insulin Sensitivity — Mechanism Overview</h2>
+      <h2>How Does Peptides for Work?</h2>
       <table>
   <thead><tr><th>Peptide</th><th>Dose</th><th>Route</th><th>Frequency</th><th>Notes</th></tr></thead>
   <tbody><tr><td>Semaglutide (GLP-1 S)</td><td>0.25–2.4 mg/week</td><td>SubQ weekly</td><td>Direct GLP-1 axis; weight loss</td><td>Best clinical evidence base</td></tr>
