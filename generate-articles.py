@@ -1118,6 +1118,38 @@ def build_body(peptide, pdata, angle, article_type, title, keyword, vendors_str)
 # FAQ SCHEMA BUILDER — angle-specific FAQ answers
 # ============================================================
 
+def build_visible_faq(peptide, pdata, angle, title):
+    """Build visible FAQ HTML that users can actually see on the page."""
+    p = peptide
+    if not pdata:
+        pdata = dict(DEFAULT_PEPTIDE_DATA)
+        pdata.update({"full_name": p, "class": "research peptide", "key_benefits": "various applications",
+                      "dosage_range": "varies", "frequency": "per protocol", "route": "subcutaneous injection",
+                      "half_life": "varies", "cycle_length": "4-12 weeks", "origin": "Synthetic peptide"})
+    d = pdata
+
+    # Build FAQ pairs — the questions match the JSON-LD schema
+    faqs = [
+        (f"What is {p}?",
+         f"{p} ({d.get('full_name', p)}) is a {d.get('class', 'research peptide')}. {d.get('origin', '')}. It is researched for {d.get('key_benefits', 'various applications')}."),
+        (f"What is the recommended {p} dosage?",
+         f"Common dosages: {d.get('dosage_range', 'varies')} administered {d.get('frequency', 'per protocol')} via {d.get('route', 'injection')}. Cycle length: {d.get('cycle_length', 'varies')}. Half-life: {d.get('half_life', 'varies')}. Use our <a href='/peptide-calculator.html'>peptide calculator</a> for exact reconstitution math."),
+        (f"What are the side effects of {p}?",
+         d.get("side_effects", DEFAULT_PEPTIDE_DATA["side_effects"])),
+        (f"Is {p} safe?",
+         f"{p} has shown a {'favorable' if 'well-tolerated' in d.get('side_effects','').lower() else 'preliminary'} safety profile in research. {d.get('legal_status', DEFAULT_PEPTIDE_DATA['legal_status'])} All research should follow appropriate safety protocols."),
+    ]
+
+    html_parts = []
+    for q, a in faqs:
+        html_parts.append(f'''<div style="border-bottom: 1px solid var(--gray-200, #e2e8f0); padding: 20px 0;">
+      <h3 style="font-size: 17px; font-weight: 700; color: var(--navy, #0f2240); margin-bottom: 10px;">{q}</h3>
+      <p style="font-size: 15px; color: #374151; line-height: 1.75; margin: 0;">{a}</p>
+    </div>''')
+
+    return "\n    ".join(html_parts)
+
+
 def build_faq_answers(peptide, pdata, angle, title):
     """Generate angle-specific FAQ answers for JSON-LD schema."""
     if not pdata:
@@ -1286,6 +1318,10 @@ def generate_article(article_data, template):
     if '/peptide-calculator.html' not in body_content:
         calc_cta = _calc_cta(peptide)
         html = html.replace('<!-- Affiliate CTA -->', calc_cta + '\n\n    <!-- Affiliate CTA -->')
+
+    # Build visible FAQ content for the bottom of the page
+    visible_faq = build_visible_faq(peptide, pdata, angle, title)
+    html = html.replace("{{VISIBLE_FAQ}}", visible_faq)
 
     return html
 
