@@ -14,6 +14,7 @@ from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MATRIX_FILE = os.path.join(SCRIPT_DIR, "new-articles-todo.json")
+LONGTAIL_MATRIX_FILE = os.path.join(SCRIPT_DIR, "longtail-articles-todo.json")
 TEMPLATE_FILE = os.path.join(SCRIPT_DIR, "ARTICLE-TEMPLATE.html")
 OUTPUT_DIR = SCRIPT_DIR
 DATE_TODAY = datetime.now().strftime("%Y-%m-%d")
@@ -56,15 +57,26 @@ ANGLE_PATTERNS = [
     ("legal", ["-legal."]),
 ]
 
-def detect_angle(filename, title):
-    """Detect the article angle from filename and title."""
+def detect_angle(filename, title, article_type=""):
+    """Detect the article angle from filename, title, and article type."""
     fn = filename.lower()
     tl = title.lower()
+
+    # Long-tail type overrides — check article_type first
+    if article_type == "Condition-Specific":
+        return "condition-specific"
+    if article_type == "Single Peptide" and "-and-" in fn:
+        return "interaction"
+
+    # Comparison: peptide vs mainstream treatment (not peptide vs peptide)
+    if article_type == "Comparison" and "-vs-" in fn:
+        return "vs-treatment"
+
     for angle, patterns in ANGLE_PATTERNS:
         for p in patterns:
             if p in fn or p in tl:
                 return angle
-    # Condition-specific detection
+    # Condition-specific detection (general categories)
     for condition in ["healing", "weight-loss", "fat-loss", "muscle", "hair",
                       "anti-aging", "aging", "skin", "gut", "sleep", "brain",
                       "cognitive", "anxiety", "depression", "inflammation",
@@ -73,6 +85,30 @@ def detect_angle(filename, title):
         if condition in fn:
             return "condition"
     return "guide"  # default comprehensive guide angle
+
+
+def extract_condition(filename, peptide):
+    """Extract the specific condition/injury from a condition-specific filename."""
+    slug = slugify(peptide)
+    # e.g. bpc-157-for-rotator-cuff.html → rotator cuff
+    suffix = filename.replace(".html", "").replace(slug + "-for-", "")
+    return suffix.replace("-", " ").strip().title()
+
+
+def extract_interacting_substance(filename, peptide):
+    """Extract the drug/supplement from an interaction filename."""
+    slug = slugify(peptide)
+    # e.g. bpc-157-and-ibuprofen.html → Ibuprofen
+    suffix = filename.replace(".html", "").replace(slug + "-and-", "")
+    return suffix.replace("-", " ").strip().title()
+
+
+def extract_treatment(filename, peptide):
+    """Extract the mainstream treatment from a vs-treatment filename."""
+    slug = slugify(peptide)
+    # e.g. bpc-157-vs-cortisone-injection.html → Cortisone Injection
+    suffix = filename.replace(".html", "").replace(slug + "-vs-", "")
+    return suffix.replace("-", " ").strip().title()
 
 
 # ============================================================
@@ -157,6 +193,7 @@ def reading_time(angle, article_type):
         "mechanism": "8", "research": "9", "where-to-buy": "7", "injection": "7",
         "women": "8", "men": "8", "reviews": "8", "faq": "6", "storage": "5",
         "legal": "6", "condition": "8",
+        "condition-specific": "9", "interaction": "8", "vs-treatment": "10",
     }
     type_override = {"Comparison": "10", "Roundup": "12"}
     return type_override.get(article_type, times.get(angle, "8"))
@@ -242,6 +279,29 @@ def quick_answer_for(peptide, pdata, angle, title):
         return (f"<strong>{p}</strong> is <strong>{pdata['legal_status']}</strong> "
                 f"Regulations vary by country, and the legal landscape for peptides is evolving. "
                 f"This guide covers the current legal status and what researchers need to know.")
+    elif angle == "condition-specific":
+        condition = extract_condition(title.lower().replace(" ", "-").replace(":", ""), p)
+        if condition == "various applications":
+            # Fallback: parse from title
+            parts = title.split(" for ", 1)
+            condition = parts[1].split(":")[0].strip() if len(parts) > 1 else "this condition"
+        return (f"<strong>{p}</strong> is being actively researched for <strong>{condition.lower()}</strong>. "
+                f"{pdata['mechanism'][:150]}. "
+                f"Researchers typically use {pdata['dosage_range']} {pdata['frequency']} via {pdata['route']} for this application, "
+                f"with cycles running {pdata['cycle_length']}.")
+    elif angle == "interaction":
+        # Extract the interacting substance from the title
+        parts = title.split(" and ", 1)
+        substance = parts[1].split(":")[0].strip() if len(parts) > 1 else "this substance"
+        return (f"Combining <strong>{p}</strong> with <strong>{substance}</strong> is a common question in the research community. "
+                f"While direct interaction studies are limited, understanding each compound's mechanism helps assess compatibility. "
+                f"{p} works as a {pdata['class']} while {substance} operates through its own pathways — the key concern is whether they interfere, compete, or complement each other.")
+    elif angle == "vs-treatment":
+        parts = title.split(" vs ", 1)
+        treatment = parts[1].split(":")[0].strip() if len(parts) > 1 else "this treatment"
+        return (f"<strong>{p}</strong> and <strong>{treatment}</strong> represent different approaches to the same underlying problem. "
+                f"{treatment} is an established mainstream option, while {p} is a research compound — {pdata['class']} — studied for "
+                f"{pdata['key_benefits'].split(',')[0].strip()}. This guide compares their mechanisms, evidence, costs, and practical considerations.")
     elif angle == "condition":
         # Extract condition from title
         condition = "various applications"
@@ -917,6 +977,556 @@ def build_condition_body(p, d, title):
     return "\n\n    ".join(sections)
 
 
+def build_condition_specific_body(p, d, title, filename):
+    """CONDITION-SPECIFIC long-tail: peptide + specific injury/condition (e.g. BPC-157 for Rotator Cuff)."""
+    condition = extract_condition(filename, p)
+    condition_lower = condition.lower()
+    # Build a knowledge-based body section about the specific injury + peptide
+    sections = []
+
+    sections.append(_section("overview", f"Can {p} Help With {condition}?",
+        f"{condition} is a common issue that affects millions of people annually. Standard treatments range from rest and physical therapy to medication and surgery, depending on severity. <strong>{p}</strong>, a {d['class']}, has attracted research interest for this specific application because of its mechanism of action.",
+        f"{d['mechanism']}",
+        f"The question researchers ask is whether these mechanisms translate to meaningful outcomes for {condition_lower} specifically. Below, we examine the evidence."
+    ))
+
+    sections.append(_section("how-it-works", f"How Might {p} Address {condition}?",
+        f"To understand why {p} is being investigated for {condition_lower}, consider what's happening at the tissue level. {condition} typically involves damage to connective tissue, inflammation, and impaired healing — all areas where {p}'s mechanism is relevant.",
+        f"{p} ({d['full_name']}) is known for its effects on {d['key_benefits']}. For {condition_lower}, the most relevant pathways include promoting angiogenesis (new blood vessel formation), modulating inflammatory signaling, and supporting tissue remodeling.",
+        f"Unlike many standard treatments that address symptoms (pain, swelling), {p}'s proposed mechanism targets the underlying repair process itself — which is why it has generated interest among researchers looking at {condition_lower} recovery."
+    ))
+
+    sections.append(_section("research", f"What Does the Research Say About {p} and {condition}?",
+        f"{d['research_summary']}",
+        f"While much of the published research on {p} involves general injury models rather than {condition_lower} specifically, the biological mechanisms are relevant. Studies on tendon, ligament, and soft tissue healing demonstrate effects that would logically extend to {condition_lower}.",
+        f"<strong>Important caveat:</strong> most {p} studies are preclinical (animal models). Human clinical trials specific to {condition_lower} are limited or ongoing. Extrapolating from animal data requires caution — effective doses, timelines, and outcomes may differ significantly in humans."
+    ))
+
+    sections.append(_section("protocol", f"What Protocol Do Researchers Use for {condition}?",
+        f"For {condition_lower} applications, researchers typically follow the standard {p} protocol: <strong>{d['dosage_range']}</strong> administered <strong>{d['frequency']}</strong> via <strong>{d['route']}</strong>.",
+        f"Some protocols for localized conditions like {condition_lower} involve injecting as close to the affected area as possible (subcutaneously near the site), based on the theory that local concentration may improve outcomes. However, systemic administration (e.g., abdominal subcutaneous) is also used with reported effects.",
+        f"Cycle length: <strong>{d['cycle_length']}</strong>. For {condition_lower}, some researchers extend beyond the standard cycle if improvement is ongoing but incomplete — though this should be evaluated on a case-by-case basis."
+    ))
+
+    sections.append(_calc_cta(p))
+
+    sections.append(_section("timeline", f"What Results Timeline Can You Expect for {condition}?",
+        f"Based on community reports and the general {p} research timeline, here's what researchers typically describe for {condition_lower}-related applications:",
+        f"<strong>Weeks 1-2:</strong> Reduced inflammation and pain may be noticeable. The compound is building to therapeutic levels. Don't expect structural healing yet.",
+        f"<strong>Weeks 3-5:</strong> The primary therapeutic window. Improvements in mobility, pain reduction, and functional recovery are most commonly reported in this phase.",
+        f"<strong>Weeks 6-8+:</strong> Continued improvement for more severe or chronic cases. Some {condition_lower} cases (particularly chronic or degenerative) may require the full cycle length or even a second cycle after a washout period.",
+        f"Individual results vary significantly based on severity, age, concurrent treatment (physical therapy, etc.), and the specific nature of the {condition_lower}."
+    ))
+
+    sections.append(_section("complementary", f"What Else Helps With {condition} Alongside {p}?",
+        f"{d.get('stacking', f'{p} can be combined with complementary peptides for enhanced effects.')}",
+        f"Beyond peptide stacking, researchers addressing {condition_lower} often combine {p} with conventional rehabilitation — physical therapy, targeted exercises, and proper rest. {p} is not a replacement for these foundational treatments but may complement them.",
+        f"Nutrition also plays a role: adequate protein, vitamin C, zinc, and collagen support the tissue repair processes that {p} targets."
+    ))
+
+    sections.append(_section("side-effects", f"What Are the Side Effects and Risks?",
+        f"{d['side_effects']}",
+        f"For {condition_lower} applications specifically, the injection-site side effects (redness, swelling) may be slightly more noticeable when injecting near the affected area, but these typically resolve within hours.",
+        f"{p} is {d['legal_status'].lower()}"
+    ))
+
+    sections.append(_section("bottom-line", f"Bottom Line: {p} for {condition}",
+        f"<strong>{p}</strong> shows research potential for {condition_lower} based on its mechanism of action involving {d['key_benefits'].split(',')[0].strip()}. The standard protocol ({d['dosage_range']}, {d['frequency']}, {d['cycle_length']}) applies, with some researchers opting for local injection near the affected area.",
+        f"This is a research compound — not an FDA-approved treatment. It works best as part of a comprehensive approach that includes proper rehabilitation, nutrition, and medical guidance. Source from vendors with third-party COA testing, and consult a healthcare provider before beginning any protocol."
+    ))
+
+    sections.append(_related_reading(p, d, "condition-specific"))
+    return "\n\n    ".join(sections)
+
+
+def build_interaction_body(p, d, title, filename):
+    """INTERACTION long-tail: peptide + drug/supplement (e.g. BPC-157 and Ibuprofen)."""
+    substance = extract_interacting_substance(filename, p)
+    substance_lower = substance.lower()
+    sections = []
+
+    # Build detailed substance-specific knowledge
+    substance_info = _get_substance_info(substance_lower)
+
+    sections.append(_section("overview", f"Can You Use {p} and {substance} Together?",
+        f"Combining <strong>{p}</strong> with <strong>{substance}</strong> is one of the most common questions in the peptide research community. The short answer: direct interaction studies between {p} and {substance_lower} are extremely limited, so most guidance comes from understanding each compound's mechanism and pharmacology.",
+        f"<strong>{p}</strong> is a {d['class']}. {d['mechanism'][:200]}.",
+        f"<strong>{substance}</strong> {substance_info['description']}"
+    ))
+
+    sections.append(_section("mechanisms", f"How Do {p} and {substance} Work Differently?",
+        f"Understanding the mechanisms helps assess potential interactions:",
+        f"<strong>{p} mechanism:</strong> {d['mechanism']}",
+        f"<strong>{substance} mechanism:</strong> {substance_info['mechanism']}",
+        f"The key question is whether these mechanisms conflict, compete for the same pathways, or work independently. In most cases, peptides and {substance_info['class']} operate through sufficiently different biological pathways that direct pharmacological interaction is unlikely — but this doesn't mean timing and context don't matter."
+    ))
+
+    sections.append(_section("concerns", f"What Are the Potential Concerns?",
+        f"{substance_info['interaction_concern']}",
+        f"From a pharmacokinetic perspective, {p} (administered via {d['route']}) and {substance_lower} (typically {substance_info['route']}) enter the body through different routes and are metabolized differently, reducing the likelihood of direct metabolic competition.",
+        f"However, pharmacodynamic interactions — where two compounds affect the same biological process from different angles — are theoretically possible. For example, if both compounds affect inflammation, the combined effect could be either synergistic or counterproductive depending on timing."
+    ))
+
+    sections.append(_section("timing", f"How Should You Time {p} and {substance}?",
+        f"When researchers choose to use both compounds, timing is often the primary consideration:",
+        f"<strong>General principle:</strong> Separate administration by at least 30-60 minutes when possible. This reduces any potential for direct chemical interaction at the injection/absorption site.",
+        f"<strong>For {substance_lower} specifically:</strong> {substance_info['timing_advice']}",
+        f"The half-life of {p} is {d['half_life']}, while {substance_lower}'s effects typically last {substance_info['duration']}. Understanding these windows helps researchers plan dosing schedules that minimize overlap if desired."
+    ))
+
+    sections.append(_section("protocol", f"What Protocol Do Researchers Follow?",
+        f"For {p}, the standard protocol remains: <strong>{d['dosage_range']}</strong> administered <strong>{d['frequency']}</strong> via <strong>{d['route']}</strong> for <strong>{d['cycle_length']}</strong>.",
+        f"When using {substance_lower} concurrently, most researchers don't modify their {p} protocol. Instead, they maintain the standard {p} dosing and manage {substance_lower} usage according to its own guidelines.",
+        f"<strong>What some researchers avoid:</strong> {substance_info['what_to_avoid']}"
+    ))
+
+    sections.append(_calc_cta(p))
+
+    sections.append(_section("research", f"What Does the Research Say?",
+        f"Direct studies examining the {p} + {substance_lower} combination are {substance_info['research_status']}. Most of what we know comes from understanding each compound independently:",
+        f"<strong>{p} research:</strong> {d['research_summary']}",
+        f"Without controlled studies on the combination, recommendations are based on mechanistic reasoning and community experience rather than clinical evidence. This is an important limitation to acknowledge."
+    ))
+
+    sections.append(_section("side-effects", f"What Are the Combined Side Effect Risks?",
+        f"<strong>{p} side effects:</strong> {d['side_effects']}",
+        f"<strong>{substance} side effects:</strong> {substance_info['side_effects']}",
+        f"When combining compounds, the general principle is that side effect profiles are additive. If both compounds affect the same system (e.g., both affect GI function), the combined risk for that specific side effect may be higher than either alone."
+    ))
+
+    sections.append(_section("bottom-line", f"Bottom Line: {p} and {substance}",
+        f"Direct evidence on the {p} + {substance_lower} combination is limited. Based on mechanistic analysis, {substance_info['bottom_line']}",
+        f"As always, consult a qualified healthcare provider before combining any compounds. {p} is a research compound ({d['legal_status'].lower()}), and this information is for educational purposes only."
+    ))
+
+    sections.append(_related_reading(p, d, "interaction"))
+    return "\n\n    ".join(sections)
+
+
+def _get_substance_info(substance):
+    """Get structured info about a drug/supplement for interaction articles."""
+    substance_lower = substance.lower().strip()
+
+    # Comprehensive substance database for high-quality interaction content
+    substances = {
+        "ibuprofen": {
+            "description": "is a non-steroidal anti-inflammatory drug (NSAID) that reduces pain, fever, and inflammation by inhibiting cyclooxygenase (COX-1 and COX-2) enzymes.",
+            "mechanism": "Ibuprofen blocks prostaglandin synthesis by inhibiting COX enzymes. This reduces inflammation and pain at the tissue level but also impairs some natural healing processes that depend on the inflammatory cascade.",
+            "class": "NSAIDs",
+            "route": "oral",
+            "duration": "4-6 hours",
+            "interaction_concern": "The primary theoretical concern with combining peptides and NSAIDs is that NSAIDs suppress inflammation — which is part of the body's natural healing response. Some researchers argue that suppressing inflammation during the early healing phase could reduce the effectiveness of healing-focused peptides. However, others note that excessive inflammation is itself detrimental to healing.",
+            "timing_advice": "Some researchers avoid taking ibuprofen during the first 2-3 days of a peptide cycle to allow the initial inflammatory signaling to occur. After the acute phase, moderate NSAID use for pain management is generally considered acceptable.",
+            "what_to_avoid": "Chronic high-dose NSAID use during peptide cycles — this creates sustained suppression of the inflammatory cascade that healing peptides rely on.",
+            "research_status": "essentially non-existent as controlled studies",
+            "side_effects": "GI upset, increased bleeding risk, kidney stress with chronic use, potential cardiovascular effects with long-term use.",
+            "bottom_line": "the two compounds likely don't directly interfere pharmacologically, but the anti-inflammatory action of ibuprofen could theoretically reduce the effectiveness of healing-focused peptides. Many researchers use them concurrently but try to minimize NSAID use during active peptide cycles."
+        },
+        "nsaids": {
+            "description": "are a class of anti-inflammatory drugs (including ibuprofen, naproxen, aspirin) that reduce inflammation by blocking COX enzymes.",
+            "mechanism": "NSAIDs inhibit cyclooxygenase enzymes (COX-1 and COX-2), reducing prostaglandin synthesis. This lowers inflammation but also affects platelet function and GI protective mechanisms.",
+            "class": "anti-inflammatory drugs",
+            "route": "oral",
+            "duration": "4-12 hours (varies by specific NSAID)",
+            "interaction_concern": "The concern is the same as with individual NSAIDs: suppressing the inflammatory cascade may interfere with the healing processes that certain peptides target. The degree of concern depends on which NSAID, the dose, and the duration of use.",
+            "timing_advice": "If using NSAIDs for pain management during a peptide cycle, consider using them only as needed (PRN) rather than on a fixed schedule. This allows natural inflammatory signaling to occur between doses.",
+            "what_to_avoid": "Scheduled, high-dose NSAID regimens during the first week of a healing peptide cycle. If pain management is essential, consider acetaminophen (Tylenol) as an alternative — it provides pain relief without significant anti-inflammatory effects.",
+            "research_status": "largely absent in the context of peptide combination therapy",
+            "side_effects": "GI bleeding risk, kidney damage with chronic use, cardiovascular effects, impaired platelet function.",
+            "bottom_line": "moderate, as-needed NSAID use during peptide cycles is common and generally considered acceptable by researchers. However, some prefer to minimize NSAID use during the initial healing phase."
+        },
+        "alcohol": {
+            "description": "is a central nervous system depressant that affects liver metabolism, hydration, inflammation, and growth hormone secretion.",
+            "mechanism": "Alcohol is metabolized primarily by the liver via alcohol dehydrogenase and CYP2E1. It impairs protein synthesis, increases systemic inflammation, suppresses growth hormone release, and dehydrates tissues.",
+            "class": "recreational substances",
+            "route": "oral",
+            "duration": "2-6 hours (varies with amount consumed)",
+            "interaction_concern": "Alcohol creates a broadly catabolic environment that opposes many of the processes peptides target. It suppresses GH release (directly counteracting GH-related peptides), impairs protein synthesis (reducing healing potential), and increases inflammation.",
+            "timing_advice": "Most researchers recommend avoiding alcohol entirely during peptide cycles. If that's unrealistic, separating peptide administration and alcohol consumption by at least 3-4 hours minimizes direct interference, though systemic effects persist longer.",
+            "what_to_avoid": "Heavy drinking during any peptide cycle — it fundamentally opposes the biological processes peptides are designed to enhance.",
+            "research_status": "very limited in the peptide context, though the negative effects of alcohol on healing and growth hormone are well-established independently",
+            "side_effects": "Liver stress, dehydration, impaired recovery, suppressed GH release, increased cortisol, systemic inflammation.",
+            "bottom_line": "alcohol is generally counterproductive to peptide research goals. It suppresses GH, impairs healing, and increases inflammation. While occasional moderate consumption is unlikely to completely negate peptide effects, it does reduce their efficacy."
+        },
+        "creatine": {
+            "description": "is a naturally occurring compound used as a supplement to enhance athletic performance, muscle strength, and cellular energy production via the phosphocreatine system.",
+            "mechanism": "Creatine increases intracellular phosphocreatine stores, enabling faster ATP regeneration during high-intensity activity. It also draws water into muscle cells (cell volumization) and may support protein synthesis.",
+            "class": "sports supplements",
+            "route": "oral",
+            "duration": "ongoing (saturated with daily dosing)",
+            "interaction_concern": "There are essentially no known concerns about combining creatine with peptides. They operate through entirely different mechanisms — creatine affects energy metabolism while peptides typically affect signaling pathways. The combination is commonly used.",
+            "timing_advice": "No special timing considerations. Creatine is taken daily regardless of peptide timing. Both can be used on the same day without adjustment.",
+            "what_to_avoid": "No specific combination risks identified. Standard creatine usage guidelines apply (adequate hydration, standard loading/maintenance dosing).",
+            "research_status": "non-existent as a specific combination, but neither compound is known to interact with the other's pathways",
+            "side_effects": "Water retention, GI upset at high doses, minimal other concerns. Creatine is one of the most thoroughly researched supplements.",
+            "bottom_line": "no known interaction exists. Creatine and peptides work through completely different mechanisms and are commonly used together without issues."
+        },
+        "caffeine": {
+            "description": "is a central nervous system stimulant that blocks adenosine receptors, increases alertness, and has mild thermogenic and performance-enhancing effects.",
+            "mechanism": "Caffeine blocks adenosine A1 and A2A receptors, preventing the normal sleep-promoting signal. It also increases catecholamine release and modestly boosts metabolic rate.",
+            "class": "stimulants",
+            "route": "oral",
+            "duration": "3-7 hours (half-life ~5 hours)",
+            "interaction_concern": "Minimal direct concern. Caffeine and peptides operate through different pathways. One consideration: caffeine can temporarily elevate cortisol, which could theoretically oppose some anabolic peptide effects. However, this effect is modest and transient.",
+            "timing_advice": "For GH-related peptides (e.g., MK-677, CJC-1295), avoid caffeine within 1-2 hours of dosing since elevated cortisol can blunt GH release. For healing peptides, no special timing is needed.",
+            "what_to_avoid": "Excessive caffeine intake (>400mg/day) during peptide cycles, as chronically elevated cortisol can impair healing and recovery.",
+            "research_status": "essentially non-existent as a specific combination study",
+            "side_effects": "Anxiety, insomnia, increased heart rate, GI upset, cortisol elevation with chronic high intake.",
+            "bottom_line": "caffeine and peptides don't directly interact. Moderate caffeine use is fine during peptide cycles. Researchers using GH-related peptides may want to time caffeine away from peptide doses."
+        },
+    }
+
+    # Return specific info if available, otherwise generate reasonable defaults
+    if substance_lower in substances:
+        return substances[substance_lower]
+
+    # Intelligent defaults based on common categories
+    return {
+        "description": f"is a compound that may be encountered alongside peptide research. Its specific interactions with peptides have not been extensively studied.",
+        "mechanism": f"{substance.title()} works through its own pharmacological pathways. Understanding the specific mechanism is important for assessing any potential interaction.",
+        "class": "pharmaceutical or supplement compounds",
+        "route": "varies by formulation",
+        "duration": "varies",
+        "interaction_concern": f"Direct interaction data between peptides and {substance_lower} is limited. The primary considerations are whether the two compounds affect overlapping biological pathways and whether they are metabolized through the same systems.",
+        "timing_advice": f"As a general precaution, separating administration of {substance_lower} and peptide doses by 30-60 minutes is a reasonable approach until more data is available.",
+        "what_to_avoid": f"Avoid making assumptions about safety based on the absence of reported problems. The lack of interaction data means caution is warranted.",
+        "research_status": "essentially non-existent as controlled combination studies",
+        "side_effects": f"Side effects of {substance_lower} should be evaluated independently. When combining with peptides, monitor for any unusual or amplified effects.",
+        "bottom_line": f"insufficient data exists to make definitive claims about the {substance_lower} combination. Researchers should proceed with caution, monitor for unexpected effects, and consult healthcare professionals."
+    }
+
+
+def build_vs_treatment_body(p, d, title, filename):
+    """VS-TREATMENT long-tail: peptide vs mainstream treatment (e.g. BPC-157 vs Cortisone)."""
+    treatment = extract_treatment(filename, p)
+    treatment_lower = treatment.lower()
+    treatment_info = _get_treatment_info(treatment_lower)
+    sections = []
+
+    sections.append(_section("overview", f"How Do {p} and {treatment} Compare?",
+        f"<strong>{p}</strong> and <strong>{treatment}</strong> represent fundamentally different approaches. {treatment} is {treatment_info['status']} — an established option with clinical data behind it. {p} is a {d['class']}, a research compound studied for {d['key_benefits']}.",
+        f"This comparison isn't about declaring a winner. It's about understanding the trade-offs so researchers can make informed decisions about which approach (or combination of approaches) makes sense for their situation."
+    ))
+
+    sections.append(_section("how-they-work", f"How Do They Work Differently?",
+        f"<strong>{p} mechanism:</strong> {d['mechanism']}",
+        f"<strong>{treatment} mechanism:</strong> {treatment_info['mechanism']}",
+        f"These are fundamentally different approaches. {treatment_info['approach_type']} while {p} {treatment_info['peptide_contrast']}."
+    ))
+
+    sections.append(_section("evidence", f"What Does the Evidence Look Like?",
+        f"<strong>{treatment} evidence:</strong> {treatment_info['evidence']}",
+        f"<strong>{p} evidence:</strong> {d['research_summary']}",
+        f"The evidence gap is significant. {treatment} has been used in clinical settings for {treatment_info['history']}, while {p}'s evidence is primarily preclinical. This doesn't mean {p} doesn't work — it means we have less human data to draw conclusions from."
+    ))
+
+    sections.append(_section("pros-cons", f"What Are the Pros and Cons of Each?",
+        f"<strong>{treatment} advantages:</strong> {treatment_info['pros']}",
+        f"<strong>{treatment} disadvantages:</strong> {treatment_info['cons']}",
+        f"<strong>{p} advantages:</strong> Non-invasive administration ({d['route']}), targets underlying repair mechanisms rather than just symptoms, can be self-administered, relatively low side effect profile based on available research.",
+        f"<strong>{p} disadvantages:</strong> Limited human clinical data, not FDA-approved, requires sourcing from research vendors, results can be variable, typical cycle duration of {d['cycle_length']} means effects aren't immediate."
+    ))
+
+    sections.append(_section("cost", f"How Do the Costs Compare?",
+        f"<strong>{treatment} cost:</strong> {treatment_info['cost']}",
+        f"<strong>{p} cost:</strong> Research-grade {p} typically runs $80-150 per vial (5mg) from reputable vendors. A full {d['cycle_length']} cycle requires multiple vials plus bacteriostatic water and supplies. Total cycle cost: roughly $200-600 depending on dosage and cycle length.",
+        f"Insurance typically covers {treatment_lower} but does not cover research peptides. This cost difference is significant for many people."
+    ))
+
+    sections.append(_section("combination", f"Can You Use Both Together?",
+        f"Some researchers use {p} alongside conventional treatments like {treatment_lower}, treating them as complementary rather than competing approaches.",
+        f"{treatment_info['combination_note']}",
+        f"The logic: {treatment_lower} addresses {treatment_info['addresses']} while {p} may support {treatment_info['peptide_supports']}. Different mechanisms targeting the same problem from different angles."
+    ))
+
+    sections.append(_calc_cta(p))
+
+    sections.append(_section("who-chooses-what", f"Who Might Choose Which Option?",
+        f"<strong>{treatment} may be preferable when:</strong> {treatment_info['when_preferred']}",
+        f"<strong>{p} may interest researchers who:</strong> Want to explore options beyond conventional treatment, are interested in supporting natural repair mechanisms, have tried {treatment_lower} without satisfactory results, or are looking for a lower-intervention approach.",
+        f"Many people don't treat this as an either-or decision. They use {treatment_lower} for immediate needs while exploring {p} research for longer-term support."
+    ))
+
+    sections.append(_section("side-effects", f"How Do the Side Effect Profiles Compare?",
+        f"<strong>{treatment} risks:</strong> {treatment_info['risks']}",
+        f"<strong>{p} side effects:</strong> {d['side_effects']}",
+        f"{p} is {d['legal_status'].lower()}"
+    ))
+
+    sections.append(_section("bottom-line", f"Bottom Line: {p} vs {treatment}",
+        f"{treatment} is the established, evidence-backed option with {treatment_info['history']} of clinical use. {p} is a research compound with promising preclinical data but limited human evidence.",
+        f"The best approach depends on your specific situation, risk tolerance, and access to medical supervision. Consult a qualified healthcare provider before making decisions about either option. This guide is for educational purposes only."
+    ))
+
+    sections.append(_related_reading(p, d, "vs-treatment"))
+    return "\n\n    ".join(sections)
+
+
+def _get_treatment_info(treatment):
+    """Get structured info about mainstream treatments for comparison articles."""
+    treatment_lower = treatment.lower().strip()
+
+    treatments = {
+        "cortisone injection": {
+            "status": "an FDA-approved medical treatment",
+            "mechanism": "Cortisone is a corticosteroid that powerfully suppresses inflammation at the injection site. It blocks the inflammatory cascade, reducing swelling, pain, and immune activity in the treated area.",
+            "approach_type": "Cortisone addresses symptoms (pain and inflammation) directly and rapidly",
+            "peptide_contrast": "aims to support underlying tissue repair processes",
+            "evidence": "Decades of clinical use with extensive human data. Cortisone injections are considered standard of care for various inflammatory conditions. Effectiveness is well-documented for short-term pain relief, though long-term effects on tissue health are debated.",
+            "history": "decades",
+            "pros": "Rapid pain relief (often within days), covered by insurance, administered by medical professionals, extensive safety data, proven short-term efficacy.",
+            "cons": "May weaken tendons and cartilage with repeated use, effects are temporary (weeks to months), doesn't address underlying tissue damage, limited to 3-4 injections per year per site, can mask injury leading to further damage.",
+            "cost": "$100-500 per injection (often covered by insurance with copay of $20-75). Typically 2-4 injections per year.",
+            "combination_note": "Using peptides alongside cortisone is a topic of discussion. Some researchers space them apart (cortisone first for acute relief, peptides for ongoing tissue support). The anti-inflammatory action of cortisone could theoretically interfere with healing peptides' mechanism in the short term.",
+            "addresses": "immediate pain and inflammation",
+            "peptide_supports": "underlying tissue repair and regeneration",
+            "when_preferred": "Acute flare-ups requiring immediate relief, when a medical professional recommends it, when insurance coverage matters, when short-term symptom management is the priority.",
+            "risks": "Tendon weakening with repeated injections, infection risk (rare), skin depigmentation at injection site, temporary blood sugar elevation, potential cartilage degradation with overuse."
+        },
+        "prp therapy": {
+            "status": "an FDA-recognized regenerative treatment",
+            "mechanism": "Platelet-Rich Plasma (PRP) concentrates the patient's own platelets (containing growth factors like PDGF, TGF-beta, VEGF) and injects them into the injured area to accelerate natural healing.",
+            "approach_type": "PRP works with the body's own growth factors to enhance natural repair",
+            "peptide_contrast": "provides exogenous signaling molecules to trigger similar pathways",
+            "evidence": "Growing clinical evidence with multiple randomized controlled trials. Results vary by condition — strong evidence for certain tendon injuries, mixed evidence for joint conditions. PRP has regulatory clearance but isn't always covered by insurance.",
+            "history": "15-20 years of clinical application",
+            "pros": "Uses the body's own biology, growing clinical evidence base, targets repair rather than just symptoms, medical professional oversight, single or few treatments may suffice.",
+            "cons": "Expensive ($500-2000 per treatment), inconsistent insurance coverage, results vary significantly, requires blood draw and processing, multiple treatments often needed, effectiveness depends on preparation technique.",
+            "cost": "$500-2000+ per treatment session (rarely covered by insurance). Most conditions require 1-3 treatments.",
+            "combination_note": "Some regenerative medicine practitioners combine PRP with peptide protocols, theorizing that the endogenous growth factors in PRP and the signaling effects of peptides may be complementary.",
+            "addresses": "tissue healing through concentrated autologous growth factors",
+            "peptide_supports": "similar healing pathways through exogenous signaling molecules",
+            "when_preferred": "When regenerative (not just symptomatic) treatment is desired, when working with a sports medicine or regenerative medicine specialist, when willing to invest in out-of-pocket treatment, for specific conditions with good PRP evidence.",
+            "risks": "Post-injection pain and swelling, infection risk (rare), no standardized preparation protocol (results vary between providers), limited efficacy for some conditions."
+        },
+        "stem cell therapy": {
+            "status": "an emerging regenerative treatment",
+            "mechanism": "Stem cell therapy introduces undifferentiated cells (typically mesenchymal stem cells from bone marrow or adipose tissue) to damaged areas. These cells can differentiate into needed tissue types and secrete regenerative growth factors.",
+            "approach_type": "Stem cell therapy attempts to rebuild tissue through cellular replacement and paracrine signaling",
+            "peptide_contrast": "aims to enhance existing repair mechanisms through molecular signaling",
+            "evidence": "Promising but still developing. Some conditions show strong results in clinical trials, while others remain experimental. The field is plagued by clinics offering unproven treatments at high cost.",
+            "history": "10-15 years of clinical application (research ongoing)",
+            "pros": "Potential for actual tissue regeneration, addresses root cause, growing evidence for specific conditions, can treat damage beyond the body's normal repair capacity.",
+            "cons": "Very expensive ($5,000-50,000+), limited availability, inconsistent quality between providers, many unproven claims, regulatory uncertainty, risk of immune rejection with allogeneic cells.",
+            "cost": "$5,000-50,000+ depending on source, processing, and provider. Not covered by insurance in most cases.",
+            "combination_note": "Some regenerative medicine protocols include peptides as adjunctive therapy alongside stem cell treatments, with the theory that peptides may support the survival and function of transplanted cells.",
+            "addresses": "tissue regeneration through cellular replacement",
+            "peptide_supports": "the molecular environment that may enhance natural or assisted healing",
+            "when_preferred": "Severe injuries beyond normal repair capacity, when other treatments have failed, when budget allows, when working with an experienced regenerative medicine specialist.",
+            "risks": "Infection, immune rejection, tumor risk (theoretical), unregulated providers may use unsafe practices, high cost with variable outcomes."
+        },
+        "physical therapy alone": {
+            "status": "a first-line medical treatment",
+            "mechanism": "Physical therapy uses targeted exercises, manual therapy, and progressive loading to strengthen tissues, improve range of motion, and promote natural healing through controlled mechanical stress.",
+            "approach_type": "Physical therapy works through mechanical stimulus to promote natural tissue adaptation",
+            "peptide_contrast": "may enhance the biological response to that mechanical stimulus at the molecular level",
+            "evidence": "Extensive evidence base across virtually all musculoskeletal conditions. Physical therapy is considered standard of care and is recommended as a first-line treatment for most injuries.",
+            "history": "many decades",
+            "pros": "Strong evidence base, covered by insurance, addresses functional deficits directly, builds long-term tissue resilience, low risk, addresses movement patterns that may have contributed to injury.",
+            "cons": "Results take time (weeks to months), requires consistent attendance and home exercise compliance, may not be sufficient for severe injuries, quality varies by provider.",
+            "cost": "$50-300 per session (usually covered by insurance with copay). Typical course: 8-16 sessions over 6-12 weeks.",
+            "combination_note": "Peptides and physical therapy may be highly complementary. PT provides the mechanical stimulus for tissue adaptation while peptides may enhance the biological repair response. Many researchers consider this one of the most logical combinations.",
+            "addresses": "functional deficits, movement quality, and mechanical tissue health",
+            "peptide_supports": "the molecular healing process that physical therapy's mechanical stimulus initiates",
+            "when_preferred": "For most injuries as a first-line approach, when a comprehensive functional recovery is the goal, when insurance coverage matters, when building long-term tissue resilience.",
+            "risks": "Minimal when properly supervised. Overaggressive progression can cause re-injury. Requires time commitment."
+        },
+        "surgery": {
+            "status": "a definitive medical intervention",
+            "mechanism": "Surgery directly repairs, removes, or reconstructs damaged tissue through operative intervention. For musculoskeletal conditions, this may include arthroscopic repair, tendon reattachment, joint replacement, or reconstructive procedures.",
+            "approach_type": "Surgery directly addresses structural damage through operative repair",
+            "peptide_contrast": "aims to support biological healing without surgical intervention",
+            "evidence": "Extensive evidence for specific indications. Surgery is often considered when conservative treatments fail, though indications and outcomes vary significantly by procedure and condition.",
+            "history": "many decades of refinement",
+            "pros": "Directly addresses structural damage, definitive treatment for many conditions, extensive outcome data, can address issues beyond biological repair capacity.",
+            "cons": "Invasive with inherent surgical risks (infection, anesthesia, complications), significant recovery time (weeks to months), expensive, may not guarantee better long-term outcomes than conservative treatment for some conditions.",
+            "cost": "$5,000-50,000+ depending on procedure (usually covered by insurance with deductible and copay). Plus post-operative rehabilitation costs.",
+            "combination_note": "Some orthopedic surgeons are interested in peptides as adjunctive therapy to enhance post-surgical healing. The theory is that peptides may accelerate the biological repair process after surgical intervention. This is an active area of interest but not standard practice.",
+            "addresses": "structural tissue damage directly",
+            "peptide_supports": "pre- and post-surgical healing and tissue repair",
+            "when_preferred": "When structural damage is severe, when conservative treatments have failed, when the condition is progressive and will worsen without intervention, when a medical team recommends it.",
+            "risks": "Surgical complications, infection, nerve damage, blood clots, prolonged recovery, potential need for revision surgery, general anesthesia risks."
+        },
+    }
+
+    # GLP-1 / weight loss treatments
+    for drug in ["ozempic", "wegovy", "mounjaro", "saxenda", "contrave", "phentermine", "metformin for weight loss"]:
+        if treatment_lower == drug or drug in treatment_lower:
+            return _get_weight_loss_treatment_info(treatment)
+
+    # Skin treatments
+    for skin in ["retinol", "vitamin c serum", "hyaluronic acid", "microneedling alone", "botox"]:
+        if treatment_lower == skin:
+            return _get_skin_treatment_info(treatment)
+
+    # ED treatments
+    for ed in ["viagra", "cialis", "levitra", "supplements for ed"]:
+        if treatment_lower == ed or ed in treatment_lower:
+            return _get_ed_treatment_info(treatment)
+
+    # Tanning treatments
+    for tan in ["spray tan", "tanning beds", "dha self tanner"]:
+        if treatment_lower == tan or tan in treatment_lower:
+            return _get_tanning_treatment_info(treatment)
+
+    # GH treatments
+    for gh in ["hgh injections", "sermorelin", "natural growth hormone boosters"]:
+        if treatment_lower == gh or gh in treatment_lower:
+            return _get_gh_treatment_info(treatment)
+
+    # Gastric procedures
+    for gastric in ["gastric sleeve", "lap band"]:
+        if treatment_lower == gastric:
+            return _get_bariatric_treatment_info(treatment)
+
+    if treatment_lower in treatments:
+        return treatments[treatment_lower]
+
+    # Intelligent default
+    return {
+        "status": "an established treatment option",
+        "mechanism": f"{treatment} works through its own established mechanism of action. Understanding this mechanism is key to comparing it with peptide-based approaches.",
+        "approach_type": f"{treatment} addresses the condition through conventional therapeutic mechanisms",
+        "peptide_contrast": "targets biological repair pathways at the molecular level",
+        "evidence": f"{treatment} has an established evidence base from clinical use. The depth and quality of evidence varies by specific application.",
+        "history": "years of clinical application",
+        "pros": f"Established treatment with clinical data, medical professional oversight, may be covered by insurance.",
+        "cons": f"Varies by specific treatment — may have side effects, limited duration of effect, or not address underlying causes.",
+        "cost": "Varies — consult with providers for current pricing. Insurance coverage varies.",
+        "combination_note": f"Some researchers explore combining peptides with {treatment_lower} as complementary approaches. The feasibility depends on the specific mechanisms involved.",
+        "addresses": "the condition through its specific therapeutic mechanism",
+        "peptide_supports": "biological repair and regeneration processes",
+        "when_preferred": f"When medical professional guidance recommends it, when evidence supports its use for the specific condition, when conventional approaches are appropriate.",
+        "risks": f"Varies by treatment — consult medical literature and healthcare providers for specific risk information."
+    }
+
+
+def _get_weight_loss_treatment_info(treatment):
+    """Info for GLP-1 and weight loss drug comparisons."""
+    t = treatment.title()
+    return {
+        "status": "an FDA-approved weight loss treatment",
+        "mechanism": f"{t} works through pharmacological pathways targeting appetite regulation, metabolism, or fat absorption. These medications have undergone rigorous clinical trials for weight management.",
+        "approach_type": f"{t} uses pharmaceutical intervention to regulate body weight",
+        "peptide_contrast": "may affect weight through different metabolic and hormonal pathways",
+        "evidence": f"{t} has been evaluated in large-scale clinical trials with published data on efficacy and safety for weight management.",
+        "history": "years of clinical use (varies by specific medication)",
+        "pros": f"FDA-approved with clinical data, prescribed and monitored by physicians, insurance may cover in some cases, predictable dose-response relationship.",
+        "cons": f"Prescription required, potential side effects, cost can be significant, may need ongoing use to maintain results, not suitable for all patients.",
+        "cost": "Varies significantly — $200-1500+/month depending on the specific medication and insurance coverage.",
+        "combination_note": f"Combining research peptides with prescription weight loss medications should only be considered under direct medical supervision, as both affect metabolic and hormonal pathways.",
+        "addresses": "weight management through regulated pharmaceutical pathways",
+        "peptide_supports": "metabolic function through research-stage biological mechanisms",
+        "when_preferred": f"When working with a physician, when FDA-approved treatment is desired, when insurance coverage is available, when clinical evidence for weight loss is the priority.",
+        "risks": f"GI side effects (nausea, diarrhea), potential pancreatitis risk, thyroid concerns (varies by medication), rebound weight gain after discontinuation."
+    }
+
+
+def _get_skin_treatment_info(treatment):
+    """Info for skin/anti-aging treatment comparisons."""
+    t = treatment.title()
+    return {
+        "status": "an established skincare treatment",
+        "mechanism": f"{t} works through dermatological pathways to improve skin health, appearance, and function. It has been studied and used in clinical and cosmetic settings.",
+        "approach_type": f"{t} addresses skin concerns through topical or procedural intervention",
+        "peptide_contrast": "targets skin biology at the cellular signaling level through peptide receptor activation",
+        "evidence": f"{t} has established dermatological evidence for its intended applications, with varying levels of clinical study support.",
+        "history": "years to decades of clinical/cosmetic use",
+        "pros": f"Established safety profile, widely available, regulated manufacturing standards, extensive user experience data.",
+        "cons": f"Results may be gradual, effectiveness varies by individual, may require ongoing use, potential for skin irritation or sensitivity.",
+        "cost": "Varies from $10-500+ depending on formulation and professional application.",
+        "combination_note": f"Some dermatology-focused researchers combine peptides with conventional skincare treatments like {treatment.lower()}, viewing them as complementary layers in a comprehensive skin protocol.",
+        "addresses": "skin concerns through established dermatological mechanisms",
+        "peptide_supports": "skin biology at the cellular and molecular level through growth factor signaling",
+        "when_preferred": f"When proven, accessible skincare is the priority, when working with a dermatologist, when a gradual, evidence-based approach is preferred.",
+        "risks": f"Generally low risk — potential for irritation, sensitivity, or allergic reaction depending on the specific product and individual skin type."
+    }
+
+
+def _get_ed_treatment_info(treatment):
+    """Info for ED treatment comparisons."""
+    t = treatment.title()
+    return {
+        "status": "an FDA-approved medication",
+        "mechanism": f"{t} addresses erectile function through pharmacological pathways (typically PDE5 inhibition) that increase blood flow to erectile tissue.",
+        "approach_type": f"{t} works through direct vasodilation and blood flow enhancement",
+        "peptide_contrast": "targets sexual function through central nervous system melanocortin receptor pathways rather than peripheral blood flow",
+        "evidence": f"{t} has extensive clinical trial data and real-world evidence from millions of prescriptions. It is one of the most studied medications in this category.",
+        "history": "decades of clinical use",
+        "pros": f"Well-studied mechanism, rapid onset (30-60 minutes), high success rate, available as generic in many cases, medical supervision.",
+        "cons": f"Only addresses symptoms (not underlying causes), requires planning around sexual activity, drug interactions (especially nitrates), may cause headache/flushing/visual changes, doesn't increase desire.",
+        "cost": "$2-70 per dose depending on brand vs generic and insurance coverage.",
+        "combination_note": f"Combining peptides with PDE5 inhibitors like {treatment.lower()} should be approached with caution due to potential synergistic effects on blood pressure. Medical supervision is essential.",
+        "addresses": "erectile function through peripheral vasodilation",
+        "peptide_supports": "sexual function through central nervous system pathways that may affect both desire and function",
+        "when_preferred": f"When rapid, proven results are needed, when a physician recommends it, when the issue is primarily blood flow related, when insurance coverage is available.",
+        "risks": f"Headache, facial flushing, nasal congestion, visual disturbances, dangerous interaction with nitrate medications, priapism (rare), hearing changes (rare)."
+    }
+
+
+def _get_tanning_treatment_info(treatment):
+    """Info for tanning method comparisons."""
+    t = treatment.title()
+    return {
+        "status": "a widely used cosmetic method",
+        "mechanism": f"{t} produces a tanned appearance through either UV exposure (stimulating melanin production) or topical color application (DHA reaction with skin proteins).",
+        "approach_type": f"{t} changes skin color through external application or UV exposure",
+        "peptide_contrast": "stimulates the body's own melanin production system through melanocortin receptor activation",
+        "evidence": f"{t} has well-understood mechanisms and decades of consumer use. The trade-offs between appearance and health risks are well-documented.",
+        "history": "decades of consumer use",
+        "pros": f"Widely available, immediate or rapid results, no injection required, predictable outcome, regulated products.",
+        "cons": f"UV methods increase skin cancer risk, results are temporary, spray tans can appear unnatural, ongoing maintenance required.",
+        "cost": "Varies from $10-50 per session for spray tans to minimal cost for self-tanners.",
+        "combination_note": f"Some users combine melanocyte-stimulating peptides with reduced UV exposure, theorizing that enhanced melanin production allows for tanning with less UV damage. This is a common but unproven approach.",
+        "addresses": "skin appearance through external color modification",
+        "peptide_supports": "the body's natural melanin production pathway from the inside",
+        "when_preferred": f"When a non-injectable approach is preferred, when immediate results are needed, when UV exposure is acceptable or when using UV-free methods.",
+        "risks": f"UV-based: skin cancer risk, premature aging, sunburn. Topical: potential allergic reactions, uneven application, temporary staining of clothes."
+    }
+
+
+def _get_gh_treatment_info(treatment):
+    """Info for growth hormone treatment comparisons."""
+    t = treatment.title()
+    return {
+        "status": "a growth hormone intervention",
+        "mechanism": f"{t} affects growth hormone levels either through direct GH replacement or by stimulating the body's own GH production through various mechanisms.",
+        "approach_type": f"{t} modifies GH levels through its specific intervention pathway",
+        "peptide_contrast": "may affect GH secretion through secretagogue pathways or GHRH stimulation",
+        "evidence": f"{t} has clinical data supporting its effects on GH levels, though the strength of evidence varies by specific product/approach.",
+        "history": "years to decades depending on the specific approach",
+        "pros": f"Established mechanism for affecting GH levels, medical supervision (for prescription options), measurable effects via blood testing.",
+        "cons": f"Cost can be significant, may require ongoing use, potential side effects, prescription options require medical evaluation.",
+        "cost": "Varies significantly — from $50/month for supplements to $500-2000+/month for prescription GH.",
+        "combination_note": f"GH secretagogue peptides are sometimes used alongside or as alternatives to {treatment.lower()}. Combining multiple GH-elevating compounds requires careful monitoring of IGF-1 levels.",
+        "addresses": "growth hormone levels through its specific mechanism",
+        "peptide_supports": "GH secretion and metabolic pathways through peptide receptor signaling",
+        "when_preferred": f"When medical supervision is available, when a proven approach to GH modulation is preferred, when the specific mechanism matches the research goal.",
+        "risks": f"GH-related: joint pain, water retention, insulin resistance, potential tumor growth stimulation (theoretical). Specific risks vary by intervention."
+    }
+
+
+def _get_bariatric_treatment_info(treatment):
+    """Info for bariatric surgery comparisons."""
+    t = treatment.title()
+    return {
+        "status": "an FDA-approved surgical weight loss procedure",
+        "mechanism": f"{t} surgically modifies the digestive system to restrict food intake and/or reduce nutrient absorption, leading to significant weight loss.",
+        "approach_type": f"{t} produces weight loss through surgical modification of the GI tract",
+        "peptide_contrast": "aims to affect weight through metabolic and hormonal signaling without surgical intervention",
+        "evidence": f"{t} has extensive long-term clinical data showing significant and sustained weight loss. It is considered the most effective intervention for severe obesity.",
+        "history": "decades of surgical refinement and long-term outcome data",
+        "pros": f"Most effective weight loss intervention available, sustained results in most patients, improvement in obesity-related comorbidities, extensive long-term data.",
+        "cons": f"Major surgery with inherent risks, irreversible (or difficult to reverse), nutritional deficiencies requiring lifelong supplementation, dietary restrictions, potential complications.",
+        "cost": "$15,000-35,000+ (often covered by insurance for qualifying patients with BMI >35-40).",
+        "combination_note": f"Peptides are not a substitute for bariatric surgery in patients who qualify. Some researchers explore peptides as complementary support for metabolic health post-surgery.",
+        "addresses": "severe obesity through direct surgical modification",
+        "peptide_supports": "metabolic and hormonal pathways that influence body composition",
+        "when_preferred": f"When BMI qualifies for surgical intervention (>35-40), when obesity-related health conditions are present, when conservative approaches have failed, when a medical team recommends it.",
+        "risks": f"Surgical complications, infection, nutritional deficiencies, dumping syndrome, gallstones, hernias, need for revision surgery, anesthesia risks."
+    }
+
+
 def build_guide_body(p, d):
     """Comprehensive guide — the default catch-all for generic or unlabeled articles."""
     sections = []
@@ -1061,8 +1671,16 @@ def build_roundup_body(peptide_str, title):
 # BODY CONTENT ROUTER
 # ============================================================
 
-def build_body(peptide, pdata, angle, article_type, title, keyword, vendors_str):
+def build_body(peptide, pdata, angle, article_type, title, keyword, vendors_str, filename=""):
     """Route to the correct angle-specific body builder."""
+    # Long-tail article types
+    if angle == "condition-specific" and pdata:
+        return build_condition_specific_body(peptide, pdata, title, filename)
+    if angle == "interaction" and pdata:
+        return build_interaction_body(peptide, pdata, title, filename)
+    if angle == "vs-treatment" and pdata:
+        return build_vs_treatment_body(peptide, pdata, title, filename)
+
     if article_type == "Comparison":
         return build_comparison_body(peptide, title)
     if article_type == "Roundup":
@@ -1107,6 +1725,9 @@ def build_body(peptide, pdata, angle, article_type, title, keyword, vendors_str)
         "storage": lambda: build_storage_body(peptide, pdata),
         "legal": lambda: build_legal_body(peptide, pdata),
         "condition": lambda: build_condition_body(peptide, pdata, title),
+        "condition-specific": lambda: build_condition_specific_body(peptide, pdata, title, filename),
+        "interaction": lambda: build_interaction_body(peptide, pdata, title, filename),
+        "vs-treatment": lambda: build_vs_treatment_body(peptide, pdata, title, filename),
         "guide": lambda: build_guide_body(peptide, pdata),
     }
 
@@ -1201,6 +1822,9 @@ def build_meta_desc(peptide, pdata, angle, title):
         "faq": f"{p} FAQ: answers to the most common questions about dosing, safety, and use.",
         "storage": f"How to store {p}: temperature, shelf life, and stability for powder and solution.",
         "legal": f"Is {p} legal? Current regulatory status, sports bans, and jurisdictional rules.",
+        "condition-specific": f"{title.split(':')[0]} — research evidence, protocol, and what to expect.",
+        "interaction": f"{title.split(':')[0]} — interaction safety, timing, and what researchers need to know.",
+        "vs-treatment": f"{title.split(':')[0]} — comparing mechanisms, evidence, costs, and pros vs cons.",
     }
     desc = descs.get(angle, f"{title} — Research-backed guide from WolveStack.")
     if len(desc) > 160:
@@ -1232,7 +1856,7 @@ def generate_article(article_data, template):
     vendors = article_data.get("vendors", "")
 
     # Detect angle and get peptide data
-    angle = detect_angle(filename, title)
+    angle = detect_angle(filename, title, article_type)
     pdata = get_peptide(peptide)
 
     # Build meta description
@@ -1287,7 +1911,7 @@ def generate_article(article_data, template):
         html = html.replace(key, val)
 
     # Build angle-specific body content
-    body_content = build_body(peptide, pdata, angle, article_type, title, keyword, vendors)
+    body_content = build_body(peptide, pdata, angle, article_type, title, keyword, vendors, filename)
 
     # Replace the body section
     body_marker_start = '<!-- GEO: Use question-format H2 headers that mirror how people ask AI -->'
@@ -1339,10 +1963,22 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--overwrite", action="store_true", default=True, help="Overwrite existing files (default: True)")
     parser.add_argument("--no-overwrite", action="store_true", help="Skip existing files")
+    parser.add_argument("--matrix", type=str, default="", help="Path to article matrix JSON (default: new-articles-todo.json)")
+    parser.add_argument("--longtail", action="store_true", help="Use longtail-articles-todo.json as the matrix")
     args = parser.parse_args()
 
     template = load_template()
-    articles = load_matrix()
+
+    # Determine which matrix file to use
+    if args.matrix:
+        matrix_path = args.matrix
+    elif args.longtail:
+        matrix_path = LONGTAIL_MATRIX_FILE
+    else:
+        matrix_path = MATRIX_FILE
+
+    with open(matrix_path) as f:
+        articles = json.load(f)
 
     # Filter
     if args.tier:
@@ -1362,7 +1998,7 @@ def main():
 
     if args.dry_run:
         for a in articles:
-            angle = detect_angle(a["filename"], a["title"])
+            angle = detect_angle(a["filename"], a["title"], a.get("type", ""))
             has_data = "✓" if get_peptide(a["peptide"]) else "○"
             print(f"  [{has_data}] [{angle:16s}] {a['filename']}")
         return
