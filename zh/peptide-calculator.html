@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peptide Dosing 计算器 — XTERMX000, TB-500 &amp; More QWolveStack</title>
+<meta content="免费的peptide做计算器. 输入你的瓶子大小和所需的剂量,以获得XTERMX000,TB-500和其他研究peptides的精确重组数学. 没有猜想" name="description"/>
+<meta content="peptide dosing calculator, BPC-157 calculator, TB-500 calculator, reconstitution calculator, bacteriostatic water, peptide math" name="keywords"/>
+<link href="https://wolvestack.com/zh/peptide-calculator.html" rel="canonical"/>
+<meta content="Peptide Dosing 计算器 — XTERMX000, TB-500 &amp; More QWolveStack" property="og:title">
+<meta content="免费的peptide做计算器. 获得精确的重组数学——没有猜测,没有错误." property="og:description">
+<meta content="https://wolvestack.com/zh/peptide-calculator.html" property="og:url">
+<meta content="website" property="og:type">
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Peptide 多辛计算器 XTERMX000" name="twitter:title"/>
+<meta content="用于XTERMX000,TB-500及以上的自由肽进行计算." name="twitter:description"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Peptide Dosing Calculator",
+  "url": "https://wolvestack.com/zh/peptide-calculator.html",
+  "description": "Free interactive calculator for peptide reconstitution and dosing. Supports BPC-157, TB-500, CJC-1295, Ipamorelin, and more.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WolveStack",
+    "url": "https://wolvestack.com/zh/"
+  }
+}</script>
+<style>
+    :root {
+      --navy: #0f1f3d;
+      --blue: #1e40af;
+      --accent: #3b82f6;
+      --accent-light: #eff6ff;
+      --green: #059669;
+      --green-light: #ecfdf5;
+      --amber: #d97706;
+      --amber-light: #fffbeb;
+      --red: #dc2626;
+      --red-light: #fef2f2;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --font-display: 'Georgia', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--gray-800); line-height: 1.6; }
+
+    /* NAV */
+    nav { background: var(--navy); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-family: var(--font-display); font-size: 20px; font-weight: 700; text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%); color: white; padding: 56px 24px 48px; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(59,130,246,0.2); border: 1px solid rgba(59,130,246,0.4); color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(28px, 5vw, 44px); font-weight: 700; margin-bottom: 12px; }
+    .hero p { font-size: 17px; color: rgba(255,255,255,0.75); max-width: 540px; margin: 0 auto; }
+
+    /* LAYOUT */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .main { padding: 40px 0 80px; }
+
+    /* CALC CARD */
+    .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; margin-bottom: 32px; }
+    .calc-header { background: var(--navy); padding: 20px 28px; }
+    .calc-header h2 { color: white; font-family: var(--font-display); font-size: 20px; }
+    .calc-header p { color: rgba(255,255,255,0.65); font-size: 14px; margin-top: 4px; }
+    .calc-body { padding: 28px; }
+
+    /* FORM GRID */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-600); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group select, .form-group input { width: 100%; padding: 10px 14px; border: 2px solid var(--gray-200); border-radius: 8px; font-size: 15px; color: var(--gray-800); background: white; transition: border-color 0.2s; outline: none; }
+    .form-group select:focus, .form-group input:focus { border-color: var(--accent); }
+    .form-group .unit { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+
+    /* PEPTIDE PRESETS */
+    .presets { margin-bottom: 24px; }
+    .presets-label { font-size: 13px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .preset-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .preset-btn { padding: 7px 14px; border: 2px solid var(--gray-200); background: white; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--gray-600); cursor: pointer; transition: all 0.15s; }
+    .preset-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+    .preset-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+
+    /* CALCULATE BUTTON */
+    .calc-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; letter-spacing: 0.02em; }
+    .calc-btn:hover { opacity: 0.9; }
+
+    /* RESULTS */
+    .results { margin-top: 28px; display: none; }
+    .results.show { display: block; }
+    .results-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-100); }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .result-box { background: var(--accent-light); border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px; text-align: center; }
+    .result-box.highlight { background: var(--green-light); border-color: #6ee7b7; }
+    .result-box .r-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-600); margin-bottom: 6px; }
+    .result-box .r-value { font-size: 26px; font-weight: 800; color: var(--navy); line-height: 1; }
+    .result-box .r-unit { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+
+    /* INSTRUCTION STEPS */
+    .instructions { background: var(--gray-50); border-radius: 10px; padding: 20px; margin-top: 16px; }
+    .instructions h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .steps { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .steps li { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--gray-800); line-height: 1.5; }
+    .step-num { flex-shrink: 0; width: 24px; height: 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+
+    /* WARNING / INFO BOXES */
+    .info-box { border-radius: 10px; padding: 16px 18px; margin-top: 16px; display: flex; gap: 12px; }
+    .info-box.amber { background: var(--amber-light); border: 1px solid #fcd34d; }
+    .info-box.blue { background: var(--accent-light); border: 1px solid #93c5fd; }
+    .info-icon { font-size: 18px; flex-shrink: 0; line-height: 1.4; }
+    .info-box p { font-size: 13px; color: var(--gray-800); line-height: 1.6; }
+    .info-box strong { color: var(--navy); }
+
+    /* REFERENCE TABLE */
+    .ref-section { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; margin-bottom: 32px; }
+    .ref-section h3 { font-family: var(--font-display); font-size: 20px; color: var(--navy); padding: 20px 28px 0; }
+    .ref-section p.sub { font-size: 14px; color: var(--gray-600); padding: 6px 28px 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: var(--navy); color: white; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 16px; text-align: left; }
+    tbody tr { border-bottom: 1px solid var(--gray-100); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--gray-50); }
+    tbody td { padding: 12px 16px; font-size: 14px; color: var(--gray-800); }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .tag.low { background: var(--green-light); color: var(--green); }
+    .tag.med { background: var(--amber-light); color: var(--amber); }
+    .tag.high { background: #fee2e2; color: var(--red); }
+
+    /* FAQ */
+    .faq-section { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 32px; }
+    .faq-section h3 { font-family: var(--font-display); font-size: 20px; color: var(--navy); margin-bottom: 20px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); padding: 18px 0; }
+    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+    .faq-q { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #374151; line-height: 1.7; margin: 0; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 13px; line-height: 1.8; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: white; }
+    footer .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    footer .disclaimer { max-width: 600px; margin: 12px auto 0; font-size: 12px; color: rgba(255,255,255,0.4); }
+  
+  .related-articles { background: #f8f9fa; padding: 56px 24px; border-top: 1px solid #e2e8f0; }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: #0a1628; margin-bottom: 28px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .related-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; display: block; transition: box-shadow .2s, transform .2s; }
+  .related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); transform: translateY(-2px); }
+  .related-card span { display: block; font-size: 13px; color: #0d9488; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .related-card strong { display: block; font-size: 15px; color: #0a1628; font-weight: 600; line-height: 1.4; }
+
+</style>
+</meta></meta></meta></meta><link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-calculator.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-calculator.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-calculator.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-calculator.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-calculator.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-calculator.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-calculator.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-calculator.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-calculator.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-calculator.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-calculator.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-calculator.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<nav>
+<a class="nav-logo" href="/zh/index.html">狼头<span>堆栈</span></a>
+<ul class="nav-links">
+<li><a href="/zh/peptide-beginners-guide.html">从这里开始</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-calculator.html" style="color:#fff;font-weight:700;">计算器</a></li>
+</ul>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-calculator.html">English</option><option value="/es/peptide-calculator.html">Español</option><option selected="" value="/zh/peptide-calculator.html">中文</option><option value="/ja/peptide-calculator.html">日本語</option><option value="/pt/peptide-calculator.html">Português</option><option value="/ru/peptide-calculator.html">Русский</option><option value="/it/peptide-calculator.html">Italiano</option><option value="/pl/peptide-calculator.html">Polski</option><option value="/fr/peptide-calculator.html">Français</option><option value="/id/peptide-calculator.html">Bahasa</option><option value="/de/peptide-calculator.html">Deutsch</option><option value="/nl/peptide-calculator.html">Nederlands</option><option value="/ar/peptide-calculator.html">العربية</option>
+</select>
+</div>
+</nav>
+<div class="hero">
+<div class="hero-badge">免费工具</div>
+<h1>Peptide 剂量计算器</h1>
+<p>输入你的瓶子规格和目标剂量。 获得精确的重组数学——没有猜测,没有注射器错误.</p>
+</div>
+<div class="container">
+<div class="main">
+<!-- MAIN CALCULATOR -->
+<div class="calc-card">
+<div class="calc-header">
+<h2>重构计算器</h2>
+<p>BPC-157号、TB-500号、CJC-1295号、Ipamorelin号以及任何聚硫磷的工程</p>
+</div>
+<div class="calc-body">
+<!-- PRESETS -->
+<div class="presets">
+<div class="presets-label">快速预设</div>
+<div class="preset-grid">
+<button class="preset-btn" onclick="loadPreset('bpc157_5mg')">XTERMX000 5毫克</button>
+<button class="preset-btn" onclick="loadPreset('bpc157_10mg')">0毫克</button>
+<button class="preset-btn" onclick="loadPreset('tb500_5mg')">XTERMX000 5毫克</button>
+<button class="preset-btn" onclick="loadPreset('tb500_10mg')">0毫克</button>
+<button class="preset-btn" onclick="loadPreset('cjc_2mg')">XTERMX000 2毫克</button>
+<button class="preset-btn" onclick="loadPreset('ipamorelin_2mg')">XTERMX000 2毫克</button>
+<button class="preset-btn" onclick="loadPreset('tb500_wolver')">XTERMX000 (英语).</button>
+</div>
+</div>
+<!-- INPUTS -->
+<div class="form-grid">
+<div class="form-group">
+<label>维尔大小( XTERMX000)</label>
+<input id="vialMg" min="0.1" placeholder="例如,5项" step="0.1" type="number" value=""/>
+<div class="unit">瓶内总毫克</div>
+</div>
+<div class="form-group">
+<label>添加的细菌水(XTERMX000)</label>
+<input id="bacWater" min="0.1" placeholder="例如,2项" step="0.1" type="number" value=""/>
+<div class="unit">你会加多少BAC水</div>
+</div>
+<div class="form-group">
+<label>目标剂量(XTERMX000)</label>
+<input id="doseMcg" min="1" placeholder="例如,250" step="1" type="number" value=""/>
+<div class="unit">以微克计的预定剂量</div>
+</div>
+<div class="form-group">
+<label>Syringe 类型</label>
+<select id="syringeType">
+<option value="100">胰岛素注射器-100个单位/XTERMX000</option>
+<option value="50">胰岛素注射器——50个单位/XTERMX000</option>
+</select>
+<div class="unit">多数便便器使用者使用U-100注射器</div>
+</div>
+</div>
+<button class="calc-btn" onclick="calculate()">计算我的剂量 ~</button>
+<!-- RESULTS -->
+<div class="results" id="results">
+<div class="results-title">您的剂量结果</div>
+<div class="result-grid">
+<div class="result-box">
+<div class="r-label">浓度</div>
+<div class="r-value" id="res-conc">. . . . . . .</div>
+<div class="r-unit">XTERMX000 每mL</div>
+</div>
+<div class="result-box highlight">
+<div class="r-label">绘制音量</div>
+<div class="r-value" id="res-ml">. . . . . . .</div>
+<div class="r-unit">XTERMX000 每剂</div>
+</div>
+<div class="result-box highlight">
+<div class="r-label">锡林单位</div>
+<div class="r-value" id="res-units">. . . . . . .</div>
+<div class="r-unit">注射器上的单位</div>
+</div>
+<div class="result-box">
+<div class="r-label">每个 Vial 剂量</div>
+<div class="r-value" id="res-doses">. . . . . . .</div>
+<div class="r-unit">总剂量</div>
+</div>
+</div>
+<div class="instructions">
+<h4>分步指示</h4>
+<ol class="steps" id="steps-list"></ol>
+</div>
+<div class="info-box amber">
+<div class="info-icon">⚠️</div>
+<p><strong>仅研究使用.</strong>这些计算用于教育参考. 苯丙胺是非计划的研究化学品,不是经批准的药物. 在使用前咨询合格的医疗专业人员。 XTERMX000不提供医疗建议。</p>
+</div>
+</div>
+</div>
+</div>
+<!-- REFERENCE TABLE -->
+<div class="ref-section">
+<h3>常见的 Peptide 参考剂量</h3>
+<p class="sub">根据研究论坛讨论的社区协议。 不是医疗建议</p>
+<table>
+<thead>
+<tr>
+<th>浸泡剂</th>
+<th>通用范围</th>
+<th>典型频率</th>
+<th>路线</th>
+<th>复杂性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>200 - 500 XTERMX000</td>
+<td>每天一两次</td>
+<td>子Q或 IM 数据</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>2 -5 mg0 (韩语).</td>
+<td>2×周(装载),周(维修)</td>
+<td>子Q或 IM 数据</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>250 XTERMX000BPC + 2.5 mg 结核病</td>
+<td>BPC 每日结核病2×/周</td>
+<td>次级问题</td>
+<td><span class="tag med">中型</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000(无发援会)</strong></td>
+<td>100 - 200 XTERMX000</td>
+<td>每日3x(脉冲)</td>
+<td>次级问题</td>
+<td><span class="tag med">中型</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>200-300 mcg0 (中文(简体) ).</td>
+<td>每日3x(脉冲)</td>
+<td>次级问题</td>
+<td><span class="tag med">中型</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>250 - 500 XTERMX000</td>
+<td>每天一两次</td>
+<td>内部或子Q</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>0.5 - 2 XTERMX000 (韩语).</td>
+<td>视需要(提前1至2小时)</td>
+<td>次级问题</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>300-500 mcg0 (韩语)</td>
+<td>每日一次(日报)</td>
+<td>次级问题</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>1 -3 XTERMX000 (韩语).</td>
+<td>每日一次( U)</td>
+<td>子Q或专题</td>
+<td><span class="tag low">低档</span></td>
+</tr>
+<tr>
+<td><strong>XTERMX000 (英语).</strong></td>
+<td>5 - 10 XTERMX000 (中文(简体) ).</td>
+<td>每日一次(周期)</td>
+<td>子Q或 IM 数据</td>
+<td><span class="tag med">中型</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- CONVERSION TABLE -->
+<div class="ref-section">
+<h3>快速单位转换参考</h3>
+<p class="sub">XTERMX000 ~ mL 初选的数学.</p>
+<table>
+<thead>
+<tr>
+<th>如果你的瓶子是...</th>
+<th>你加一个XTERMX000 BAC水</th>
+<th>你加两个XTERMX000 BAC水</th>
+<th>你加3个XTERMX000 BAC水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5 XTERMX000 瓶装</strong></td>
+<td>5 000 XTERMX000/mL → 250 mcg = 5个单位</td>
+<td>2 500 XTERMX000/mL → 250 mcg = 10个单位</td>
+<td>1 667 mcg/mL → 250 mcg = 15个单元</td>
+</tr>
+<tr>
+<td><strong>10 XTERMX000 瓶装</strong></td>
+<td>10 000 XTERMX000/mL → 250 mcg = 2.5单位</td>
+<td>5 000 XTERMX000/mL → 250 mcg = 5个单位</td>
+<td>3 333 mcg/mL → 250 mcg = 7.5单位</td>
+</tr>
+<tr>
+<td><strong>2 XTERMX000 瓶装</strong></td>
+<td>2 000 XTERMX000/mL → 200 mcg = 10个单位</td>
+<td>1 000 XTERMX000/mL → 200 mcg = 20个单位</td>
+<td>667 XTERMX000/mL → 200 mcg = 30个单位</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- FAQ -->
+<div class="faq-section">
+<h3>计算 FAQ</h3>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">为什么每个人都使用细菌水而不是无菌水?</div>
+<p class="faq-a">细菌性水含有0.9%的苯基醇,在刺穿止血剂后抑制了小瓶中的细菌生长. 重组的肽瓶在BAC水中储存在2-8°C时,可在4-6周内安全多次穿刺。 防腐水没有防腐剂,因此,最好在24至48小时内使用重组的瓶子,以尽量减少污染风险。 对于多用途的小瓶,BAC水是标准选择.</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">我加多少BAC水有关系吗?</div>
+<p class="faq-a">仅针对产生的浓度,影响你每剂抽取多少单位. 水量增加 = 浓度降低 = 每剂增加单位. 本质上也不更好——数学才是关键。 许多人更喜欢每5个个mg小瓶2个mg小瓶,因为它在U-100注射器上给出圆数. 用这个计算器来找出对注射器和剂量目标有效的方法.</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">U-50和U-100胰岛素注射器有什么区别?.</div>
+<p class="faq-a">两者均持有1XTERMX000液体,但毕业成绩不同. 一个U-100注射器上面有100个单位标记(每个单位=0.01 mL)。 U-50注射器有50个单位(每个单位=0.02 mL)。 U-100注射器是大多数peptide协议的标准,因为它们允许对小剂量进行更精确的测量. 计算器对两者都做了说明——只要在下降时选择你的.</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">我如何将微克(XTERMX000)转换成毫克(mg)?</div>
+<p class="faq-a">1 XTERMX000=1000 mcg (韩语). 所以一个5mg小瓶包含5000mcg总计. 当看到被列为"250 mcg"的肽类剂量,即0.25 mg——占总瓶子的一小部分. 这一点很重要,因为瓶子的大小通常在mg中标注(例如5 mg,10 mg),而单个剂量则在mcg中标注(例如250 mcg,500 mcg). 计算器自动处理此转换.</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">在皮下注射时注入气泡安全吗?</div>
+<p class="faq-a">皮下注射(SubQ)中的小气泡一般被认为是良性的——亚Q注射进入脂肪组织,而不是直接进入血管. 尽管如此,最佳做法是轻轻地抽打注射器,并轻轻地推动注射器,以在注射前释放可见的气泡。 静脉注射中的气泡是不同的物质,并构成真正的风险,但大多数的肽类协议使用SubQ注射到腹部或大腿.</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">重塑的肽瓶能持续多久?</div>
+<p class="faq-a">在细菌水中重新形成,储存冷藏在2-8°C(36-46°F),大多数肽在4-6周内保持稳定. 一些来源说,某些肽类可长达8周,但降解随着温度波动而加速。 永远不要冻结一个重组的瓶子。 在-20°C的冷藏器中储存的酸化(粉末)肽在重组前12-24个月可以保持稳定.</p>
+</div>
+</div>
+</div>
+<div class="info-box blue" style="border-radius:12px; margin-bottom: 32px;">
+<div class="info-icon">📚</div>
+<p><strong>想更深一点吗?</strong>读我们<a href="/zh/peptide-reconstitution-guide.html" style="color:var(--blue);text-decoration:underline;">完整的重组指南</a>用于逐步拍照、存储提示和注射技术。 新的药? 从我们开始<a href="/zh/peptide-beginners-guide.html" style="color:var(--blue);text-decoration:underline;">初学者指南</a>。 。 。</p>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer-links">
+<a href="/zh/index.html">页 次</a>
+<a href="/zh/peptide-beginners-guide.html">从这里开始</a>
+<a href="/zh/peptide-sourcing-guide.html">供应商</a>
+<a href="/zh/about.html">关于</a>
+<a href="/zh/privacy.html">隐私</a>
+<a href="/zh/affiliate-disclosure.html">披露</a>
+<a href="/zh/disclaimer.html">免责声明</a>
+<a href="/zh/terms.html">术语</a>
+</div>
+<p>2026 XTERMX000 (英语). 仅供研究和教育之用。</p>
+<p class="disclaimer">XTERMX000只为教育目的出版研究摘要。 这里没有什么是医疗建议。 所有peptides只用于研究.</p>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-calculator.html">English</option><option value="/es/peptide-calculator.html">Español</option><option selected="" value="/zh/peptide-calculator.html">中文</option><option value="/ja/peptide-calculator.html">日本語</option><option value="/pt/peptide-calculator.html">Português</option><option value="/ru/peptide-calculator.html">Русский</option><option value="/it/peptide-calculator.html">Italiano</option><option value="/pl/peptide-calculator.html">Polski</option><option value="/fr/peptide-calculator.html">Français</option><option value="/id/peptide-calculator.html">Bahasa</option><option value="/de/peptide-calculator.html">Deutsch</option><option value="/nl/peptide-calculator.html">Nederlands</option><option value="/ar/peptide-calculator.html">العربية</option>
+</select>
+</div>
+</footer>
+<script>
+  const presets = {
+    bpc157_5mg:   { vial: 5, water: 2, dose: 250, label: "BPC-157 5mg" },
+    bpc157_10mg:  { vial: 10, water: 2, dose: 250, label: "BPC-157 10mg" },
+    tb500_5mg:    { vial: 5, water: 1, dose: 2000, label: "TB-500 5mg" },
+    tb500_10mg:   { vial: 10, water: 2, dose: 2500, label: "TB-500 10mg" },
+    cjc_2mg:      { vial: 2, water: 1, dose: 100, label: "CJC-1295 2mg" },
+    ipamorelin_2mg: { vial: 2, water: 1, dose: 200, label: "Ipamorelin 2mg" },
+    tb500_wolver: { vial: 5, water: 1, dose: 2500, label: "Wolverine Stack (TB-500 portion)" }
+  };
+
+  function loadPreset(key) {
+    const p = presets[key];
+    document.getElementById('vialMg').value = p.vial;
+    document.getElementById('bacWater').value = p.water;
+    document.getElementById('doseMcg').value = p.dose;
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    calculate();
+  }
+
+  function round2(n) { return Math.round(n * 100) / 100; }
+  function round1(n) { return Math.round(n * 10) / 10; }
+
+  function calculate() {
+    const vialMg   = parseFloat(document.getElementById('vialMg').value);
+    const bacWater = parseFloat(document.getElementById('bacWater').value);
+    const doseMcg  = parseFloat(document.getElementById('doseMcg').value);
+    const syringeFactor = parseInt(document.getElementById('syringeType').value);
+
+    if (!vialMg || !bacWater || !doseMcg || isNaN(vialMg) || isNaN(bacWater) || isNaN(doseMcg)) {
+      alert('Please fill in all three fields (vial size, BAC water, and target dose) before calculating.');
+      return;
+    }
+
+    const vialMcg    = vialMg * 1000;
+    const concPerMl  = vialMcg / bacWater;          // mcg per mL
+    const mlPerDose  = doseMcg / concPerMl;         // mL to draw
+    const unitsPerDose = mlPerDose * syringeFactor; // units on syringe
+    const dosesPerVial = vialMcg / doseMcg;
+
+    document.getElementById('res-conc').textContent  = Math.round(concPerMl).toLocaleString();
+    document.getElementById('res-ml').textContent    = round2(mlPerDose);
+    document.getElementById('res-units').textContent = round1(unitsPerDose);
+    document.getElementById('res-doses').textContent = round1(dosesPerVial);
+
+    const syringeLabel = syringeFactor === 100 ? 'U-100' : 'U-50';
+    const stepsList = document.getElementById('steps-list');
+    stepsList.innerHTML = `
+      <li><span class="step-num">1</span><span>Wipe the vial stopper with an alcohol swab and let dry 30 seconds.</span></li>
+      <li><span class="step-num">2</span><span>Draw <strong>${round2(bacWater)} mL</strong> of bacteriostatic water into a fresh syringe.</span></li>
+      <li><span class="step-num">3</span><span>Inject the BAC water slowly down the <em>side</em> of the vial wall — do not aim directly at the peptide powder.</span></li>
+      <li><span class="step-num">4</span><span>Gently swirl (do not shake) until the powder is fully dissolved. The solution should be clear.</span></li>
+      <li><span class="step-num">5</span><span>Your concentration is now <strong>${Math.round(concPerMl).toLocaleString()} mcg/mL</strong>.</span></li>
+      <li><span class="step-num">6</span><span>For a <strong>${doseMcg} mcg</strong> dose: draw <strong>${round2(mlPerDose)} mL</strong> — that's <strong>${round1(unitsPerDose)} units</strong> on a ${syringeLabel} syringe.</span></li>
+      <li><span class="step-num">7</span><span>Store reconstituted vial in the fridge (2–8°C). Use within 4–6 weeks.</span></li>
+    `;
+
+    document.getElementById('results').classList.add('show');
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+<section class="related-articles">
+<div class="related-inner">
+<h3>相关指南</h3>
+<div class="related-grid">
+<a class="related-card" href="/zh/peptide-reconstitution-guide.html"><span>相关</span><strong>Peptide 重塑指南</strong></a>
+<a class="related-card" href="/zh/bacteriostatic-water-guide.html"><span>相关</span><strong>细菌水:完整的重组指南</strong></a>
+<a class="related-card" href="/zh/peptide-half-life-guide.html"><span>相关</span><strong>半条命指南</strong></a>
+<a class="related-card" href="/zh/peptide-beginners-guide.html"><span>相关</span><strong>初学者指南</strong></a>
+</div>
+</div>
+</section>
+<script src="/email-popup.js"></script>
+</body>
+</html>

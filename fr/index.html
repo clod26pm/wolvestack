@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WolveStack — Guides et protocoles de peptide à l'appui de la recherche</title>
+<meta content="Des guides impartiaux et soutenus par la recherche sur BPC-157, TB-500, Wolverine Stack, et d'autres peptides. Comparez les principaux fournisseurs. Usage éducatif seulement." name="description"/>
+<link href="https://wolvestack.com/fr/" rel="canonical"/>
+<meta content="WolveStack — Guides et protocoles de peptide à l'appui de la recherche" property="og:title"/>
+<meta content="Indépendant, les premiers guides scientifiques sur BPC-157, TB-500, le Wolverine Stack, et plus encore. Pas de hype. Pas de tactique de vente. Juste ce que la recherche dit en fait." property="og:description"/>
+<meta content="https://wolvestack.com/fr/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="WolveStack — Guides et protocoles de peptide à l'appui de la recherche" name="twitter:title"/>
+<meta content="Indépendant, les premiers guides scientifiques sur BPC-157, TB-500, le Wolverine Stack, et plus encore." name="twitter:description"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "WolveStack",
+      "url": "https://wolvestack.com/fr/",
+      "description": "Independent, research-backed peptide education covering BPC-157, TB-500, the Wolverine Stack, and more.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://wolvestack.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "WolveStack",
+      "url": "https://wolvestack.com/fr/",
+      "description": "Independent research peptide education resource"
+    }
+  ]
+}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0f2240;
+    --teal: #0d7377;
+    --teal-light: #14bdac;
+    --teal-pale: #e8f4f5;
+    --accent: #f0a500;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-600: #475569;
+    --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.6; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo {
+    font-family: var(--font-display); font-size: 22px; font-weight: 700;
+    color: var(--white); text-decoration: none; letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta {
+    background: var(--teal); color: var(--white);
+    padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--teal-light); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
+    padding: 100px 24px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 1;
+  }
+  .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4);
+    color: var(--teal-light); padding: 6px 16px; border-radius: 100px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 28px;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--teal-light); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+  .hero h1 {
+    font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700; color: var(--white); line-height: 1.15;
+    letter-spacing: -1.5px; margin-bottom: 20px;
+  }
+  .hero h1 em { color: var(--teal-light); font-style: normal; }
+  .hero p {
+    font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.72);
+    max-width: 640px; margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal-light); color: var(--navy);
+    padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 700;
+    text-decoration: none; transition: all .2s; display: inline-block;
+  }
+  .btn-primary:hover { background: #11d4c0; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(20,189,172,0.35); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600;
+    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.3); transition: all .2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+  .hero-stats {
+    display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+    margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--teal-light); }
+  .stat-label { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 4px; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 16px 24px; }
+  .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-600); font-weight: 500; }
+  .trust-icon { width: 18px; height: 18px; color: var(--teal); }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .section-sub { font-size: 17px; color: var(--gray-600); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+
+  /* FEATURED GUIDES */
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .guide-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 16px; padding: 28px; transition: all .25s;
+    text-decoration: none; color: inherit; display: block;
+    position: relative; overflow: hidden;
+  }
+  .guide-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+  .guide-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: var(--teal); }
+  .guide-tag {
+    display: inline-block; background: var(--teal-pale); color: var(--teal);
+    padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600;
+    margin-bottom: 16px; letter-spacing: 0.3px;
+  }
+  .guide-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+  .guide-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; }
+  .guide-meta { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--gray-400); }
+  .guide-meta span { display: flex; align-items: center; gap: 4px; }
+  .read-more { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--teal); margin-top: 20px; }
+  .read-more::after { content: '→'; transition: transform .2s; }
+  .guide-card:hover .read-more::after { transform: translateX(4px); }
+
+  /* FEATURED / HERO CARD */
+  .guide-card.featured {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 100%);
+    border-color: var(--teal);
+    grid-column: span 2;
+  }
+  @media (max-width: 768px) { .guide-card.featured { grid-column: span 1; } }
+  .guide-card.featured .guide-tag { background: rgba(13,115,119,0.4); color: var(--teal-light); }
+  .guide-card.featured h3 { color: var(--white); font-size: 26px; }
+  .guide-card.featured p { color: rgba(255,255,255,0.7); }
+  .guide-card.featured .guide-meta { color: rgba(255,255,255,0.4); }
+  .guide-card.featured .read-more { color: var(--teal-light); }
+
+  /* VENDOR TABLE */
+  .vendors { background: var(--gray-50); }
+  .vendor-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .vendor-table th { background: var(--navy); color: var(--white); padding: 16px 20px; text-align: left; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .vendor-table td { padding: 18px 20px; border-bottom: 1px solid var(--gray-100); font-size: 14px; color: var(--gray-600); vertical-align: middle; }
+  .vendor-table tr:last-child td { border-bottom: none; }
+  .vendor-table tr:hover td { background: var(--gray-50); }
+  .vendor-name { font-weight: 700; color: var(--navy); font-size: 15px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .badge-top { background: #d1fae5; color: #065f46; }
+  .badge-good { background: var(--teal-pale); color: var(--teal); }
+  .badge-ok { background: #fef3c7; color: #92400e; }
+  .stars { color: var(--accent); letter-spacing: 2px; }
+  .vendor-cta {
+    display: inline-block; background: var(--teal); color: var(--white);
+    padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: background .2s; white-space: nowrap;
+  }
+  .vendor-cta:hover { background: var(--teal-light); }
+  .table-disclaimer { font-size: 12px; color: var(--gray-400); margin-top: 16px; }
+
+  /* STACKS */
+  .stacks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .stack-card {
+    border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px;
+    background: var(--white);
+  }
+  .stack-icon { font-size: 36px; margin-bottom: 16px; }
+  .stack-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .stack-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; }
+  .stack-peptides { display: flex; flex-wrap: wrap; gap: 8px; }
+  .peptide-chip { background: var(--teal-pale); color: var(--teal); padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+
+  /* EMAIL CAPTURE */
+  .email-section {
+    background: linear-gradient(135deg, var(--navy) 0%, #083248 50%, #0a4a48 100%);
+    position: relative; overflow: hidden;
+  }
+  .email-section::before {
+    content: ''; position: absolute; right: -200px; top: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(13,115,119,0.2) 0%, transparent 70%);
+  }
+  .email-inner { max-width: 680px; margin: 0 auto; text-align: center; position: relative; }
+  .email-inner .section-tag { color: var(--teal-light); }
+  .email-inner .section-title { color: var(--white); }
+  .email-inner .section-sub { color: rgba(255,255,255,0.65); max-width: 100%; }
+  .email-form { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+  .email-form input {
+    flex: 1; min-width: 240px; padding: 14px 20px;
+    border: 1.5px solid rgba(255,255,255,0.2); border-radius: 8px;
+    background: rgba(255,255,255,0.08); color: var(--white);
+    font-size: 15px; font-family: var(--font-main); outline: none;
+    transition: border-color .2s;
+  }
+  .email-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .email-form input:focus { border-color: var(--teal-light); }
+  .email-form button {
+    background: var(--teal-light); color: var(--navy);
+    padding: 14px 28px; border-radius: 8px; border: none;
+    font-size: 15px; font-weight: 700; cursor: pointer; font-family: var(--font-main);
+    transition: all .2s; white-space: nowrap;
+  }
+  .email-form button:hover { background: #11d4c0; transform: translateY(-1px); }
+  .email-perks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .email-perk { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .email-perk::before { content: '✓'; color: var(--teal-light); font-weight: 700; }
+  .lead-magnet-box {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(20,189,172,0.3);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 32px;
+    display: flex; align-items: center; gap: 16px; text-align: left;
+  }
+  .lead-magnet-icon { font-size: 40px; flex-shrink: 0; }
+  .lead-magnet-text h4 { color: var(--white); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .lead-magnet-text p { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5; }
+
+  /* HOW IT WORKS */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 48px; }
+  .how-step { text-align: center; }
+  .step-num {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--white); font-family: var(--font-display); font-size: 20px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+  }
+  .how-step h4 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .how-step p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #fffbeb; border-top: 3px solid var(--accent);
+    padding: 24px;
+  }
+  .disclaimer-inner { max-width: 1200px; margin: 0 auto; }
+  .disclaimer p { font-size: 13px; color: #78350f; line-height: 1.6; }
+  .disclaimer strong { color: #92400e; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 48px 24px 32px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+  .footer-brand p { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7; margin-top: 12px; max-width: 280px; }
+  .footer-col h5 { color: var(--white); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color .2s; }
+  .footer-col ul a:hover { color: var(--teal-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 16px; }
+  .footer-copy { color: rgba(255,255,255,0.35); font-size: 13px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: rgba(255,255,255,0.35); font-size: 13px; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-light); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 70px 24px 56px; }
+    .hero-stats { gap: 24px; }
+    section { padding: 56px 24px; }
+    .vendor-table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://wolvestack.com/en/index.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/index.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/index.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/index.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/index.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/index.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/index.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/index.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/index.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/index.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/index.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/index.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/index.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/en/index.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+<a class="logo" href="/fr/index.html">Oiseaux<span>Stack</span></a>
+<ul class="nav-links">
+<li><a href="/fr/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/fr/tb-500-guide.html">TB-500</a></li>
+<li><a href="/fr/wolverine-stack.html">Piles</a></li>
+<li><a href="/fr/peptide-sourcing-guide.html">Fournisseurs</a></li>
+<li><a href="/fr/peptide-calculator.html">Calculatrice</a></li>
+</ul>
+<a class="nav-cta" href="/fr/peptide-beginners-guide.html">Commencez ici →</a>
+<div class="hamburger">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/index.html">English</option><option value="/es/index.html">Español</option><option value="/zh/index.html">中文</option><option value="/ja/index.html">日本語</option><option value="/pt/index.html">Português</option><option value="/ru/index.html">Русский</option><option value="/it/index.html">Italiano</option><option value="/pl/index.html">Polski</option><option selected="" value="/fr/index.html">Français</option><option value="/id/index.html">Bahasa</option><option value="/de/index.html">Deutsch</option><option value="/nl/index.html">Nederlands</option><option value="/ar/index.html">العربية</option>
+</select>
+</div>
+</nav>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-badge">Éducation au peptide soutenu par la recherche</div>
+<h1>La recherche derrière<br/><em>Protocoles sur le peptide</em></h1>
+<p>Indépendant, les premiers guides scientifiques sur BPC-157, TB-500, le Wolverine Stack, et plus encore. Pas de hype. Pas de tactique de vente. Juste ce que la recherche dit en fait.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#guides">Explorez les guides</a>
+<a class="btn-secondary" href="#signup">Obtenez le protocole gratuit PDF</a>
+</div>
+<div class="hero-stats">
+<div class="stat">
+<div class="stat-num">95</div>
+<div class="stat-label">Guides peptides</div>
+</div>
+<div class="stat">
+<div class="stat-num">200+</div>
+<div class="stat-label">Citations PubMed</div>
+</div>
+<div class="stat">
+<div class="stat-num">4</div>
+<div class="stat-label">Fournisseurs examinés</div>
+</div>
+<div class="stat">
+<div class="stat-num">Semaine</div>
+<div class="stat-label">Mises à jour de recherche</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+<div class="trust-inner">
+<div class="trust-item">
+<svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path></svg>PubRecherche médicale seulement
+</div>
+<div class="trust-item">
+<svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>Aucune allégation de santé directe
+</div>
+<div class="trust-item">
+<svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Objectif éducatif seulement
+</div>
+<div class="trust-item">
+<svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round"></path></svg>Mise à jour hebdomadaire
+</div>
+</div>
+</div>
+<!-- GUIDES -->
+<section id="guides">
+<div class="section-inner">
+<div class="section-tag">Guides en vedette</div>
+<h2 class="section-title">Commencez ici</h2>
+<p class="section-sub">Nos guides de peptides les plus complets, soutenus par la recherche. Chacun d'eux a été construit à partir de la littérature primaire et mis à jour régulièrement.</p>
+<div class="guides-grid">
+<!-- FEATURED CARD -->
+<a class="guide-card featured" href="/fr/wolverine-stack.html">
+<span class="guide-tag">Les plus populaires</span>
+<h3>Le Wolverine Stack: BPC-157 + TB-500 Guide complet du protocole</h3>
+<p>La combinaison de peptides la plus étudiée dans la communauté du biohacker. Nous décrivons ce que la science dit réellement sur BPC-157 et TB-500 utilisés en combinaison, les gammes de doses typiques étudiées dans la recherche, et ce qu'il faut chercher chez les fournisseurs de qualité.</p>
+<div class="guide-meta">
+<span>18 min lire</span>
+<span>24 citations PubMed</span>
+<span>Mise à jour février 2026</span>
+</div>
+<div class="read-more">Lire le guide complet</div>
+</a>
+<a class="guide-card" href="/fr/bpc-157-guide.html">
+<span class="guide-tag">Blessure et rétablissement</span>
+<h3>BPC-157: Ce que la recherche dit réellement</h3>
+<p>Le composé de protection du corps 157 est l'un des peptides synthétiques les plus étudiés. Nous couvrons le mécanisme d'action, les résultats des modèles de rongeurs, les gammes de doses utilisées dans les études et les critères de qualité des fournisseurs.</p>
+<div class="guide-meta">
+<span>14 min lire</span>
+<span>18 citations</span>
+</div>
+<div class="read-more">Lire le guide</div>
+</a>
+<a class="guide-card" href="/fr/tb-500-guide.html">
+<span class="guide-tag">Récupération et performance</span>
+<h3>TB-500 (Thymosin Beta-4): Aperçu de la recherche</h3>
+<p>TB-500 est une version synthétique de Thymosin Beta-4, un peptide naturellement présent dans presque toutes les cellules humaines et animales. Voici ce que les chercheurs ont trouvé dans les études précliniques.</p>
+<div class="guide-meta">
+<span>12 min lire</span>
+<span>15 citations</span>
+</div>
+<div class="read-more">Lire le guide</div>
+</a>
+<a class="guide-card" href="/fr/cjc-1295-vs-sermorelin.html">
+<span class="guide-tag">Hormone de croissance</span>
+<h3>CJC-1295 vs. Sermorelin : Comparaison de recherches</h3>
+<p>Les deux sont des peptides libérant de l'hormone de croissance avec des demi-vies distinctes et des profils de recherche. Nous comparons ce que la littérature montre sur chacun d'eux et comment les chercheurs ont approché le dosage.</p>
+<div class="guide-meta">
+<span>11 min lire</span>
+<span>12 citations</span>
+</div>
+<div class="read-more">Lire le guide</div>
+</a>
+<a class="guide-card" href="/fr/ghk-cu-guide.html">
+<span class="guide-tag">Peau et longévité</span>
+<h3>GHK-Cu: Le cycle de recherche sur le peptide de cuivre</h3>
+<p>GHK-Cu a été étudié pendant des décennies dans le contexte de la guérison des plaies et de la synthèse du collagène. Un des domaines de recherche sur les peptides les plus établis — voici ce que la science montre.</p>
+<div class="guide-meta">
+<span>10 min lire</span>
+<span>14 citations</span>
+</div>
+<div class="read-more">Lire le guide</div>
+</a>
+<a class="guide-card" href="/fr/glp1-peptides-guide.html">
+<span class="guide-tag">Poids et métabolisme</span>
+<h3>GLP-1 Peptides : la recherche derrière la tendance</h3>
+<p>Semaglutide, tirzepatide et les agonistes des récepteurs GLP-1 associés ont dominé les conversations de bien-être. Nous expliquons le mécanisme, les données cliniques et le paysage réglementaire.</p>
+<div class="guide-meta">
+<span>16 min lire</span>
+<span>22 citations</span>
+</div>
+<div class="read-more">Lire le guide</div>
+</a>
+</div>
+</div>
+</section>
+<!-- STACKS -->
+<section id="stacks" style="background: var(--gray-50);">
+<div class="section-inner">
+<div class="section-tag">Aperçus du Protocole</div>
+<h2 class="section-title">Stacks axés sur la recherche</h2>
+<p class="section-sub">Ce sont les combinaisons de peptides les plus fréquemment étudiées ensemble ou discutées dans la communauté de recherche.</p>
+<div class="stacks-grid">
+<a class="stack-card" href="/fr/wolverine-stack.html" style="text-decoration:none;color:inherit;display:block;">
+<div class="stack-icon">C'est-à-dire</div>
+<h3>Le Wolverine Stack</h3>
+<p>La combinaison la plus populaire dans l'espace de recherche sur la récupération des blessures. Etude des effets synergiques sur la réparation des tissus dans les modèles précliniques.</p>
+<div class="stack-peptides">
+<span class="peptide-chip">BPC-157</span>
+<span class="peptide-chip">TB-500</span>
+</div>
+<p style="margin-top:16px;font-size:13px;font-weight:600;color:var(--teal);">Lire le protocole complet →</p>
+</a>
+<div class="stack-card">
+<div class="stack-icon">*</div>
+<h3>Le protocole Glow</h3>
+<p>peptides centrés sur la peau avec le corps le plus fort du collagène et de la recherche de guérison des plaies. Populaire dans les milieux de recherche en médecine esthétique.</p>
+<div class="stack-peptides">
+<span class="peptide-chip">GHK-Cu</span>
+<span class="peptide-chip">BPC-157</span>
+<span class="peptide-chip">KPV</span>
+</div>
+</div>
+<div class="stack-card">
+<div class="stack-icon">*</div>
+<h3>La longévité</h3>
+<p>Combine les peptides avec la recherche sur la fonction mitochondriale, la modulation immunitaire et les voies de réparation cellulaire étudiées dans les modèles de vieillissement.</p>
+<div class="stack-peptides">
+<span class="peptide-chip">NAD+</span>
+<span class="peptide-chip">MOTS-C</span>
+<span class="peptide-chip">Thymosine Alpha-1</span>
+<span class="peptide-chip">Sermorelin</span>
+</div>
+</div>
+<div class="stack-card">
+<div class="stack-icon">*</div>
+<h3>Le sac de la GH</h3>
+<p>L'hormone de croissance libère des peptides étudiés pour leurs effets sur la pulsatilité naturelle du GH chez les sujets de recherche. Souvent combinés dans la recherche clinique.</p>
+<div class="stack-peptides">
+<span class="peptide-chip">CJC-1295</span>
+<span class="peptide-chip">Ipamorelin</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ALL GUIDES -->
+<section id="all-guides" style="background: var(--gray-50);">
+<div class="section-inner">
+<div class="section-tag">Bibliothèque complète</div>
+<h2 class="section-title">Parcourir les 95 guides</h2>
+<p class="section-sub">Chaque article sur WolveStack, organisé par sujet. Chaque guide cite des recherches primaires et suit notre politique éditoriale en langue de recherche.</p>
+<style>
+      .cluster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; }
+      .cluster-block { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; }
+      .cluster-block h4 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--teal-pale); display: flex; align-items: center; gap: 8px; }
+      .cluster-block ul { list-style: none; margin: 0; padding: 0; }
+      .cluster-block li { margin-bottom: 6px; }
+      .cluster-block a { color: var(--teal); text-decoration: none; font-size: 14px; line-height: 1.5; display: block; padding: 3px 0; transition: color .15s; }
+      .cluster-block a:hover { color: var(--navy); }
+      .new-badge { display: inline-block; background: var(--accent); color: white; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; letter-spacing: 0.3px; }
+    </style>
+<div class="cluster-grid">
+<!-- RECOVERY & HEALING -->
+<div class="cluster-block">
+<h4>Relèvement et guérison</h4>
+<ul>
+<li><a href="/fr/bpc-157-guide.html">Guide complet BPC-157</a></li>
+<li><a href="/fr/tb-500-guide.html">Guide complet TB-500</a></li>
+<li><a href="/fr/wolverine-stack.html">Le Wolverine Stack (BPC-157 + TB-500)</a></li>
+<li><a href="/fr/bpc-157-vs-tb-500.html">BPC-157 vs TB-500 — Lequel pour votre objectif?</a></li>
+<li><a href="/fr/bpc-157-gut-healing.html">BPC-157 pour Guet Healing &amp; Fuite Gut</a></li>
+<li><a href="/fr/bpc-157-nerve-damage.html">BPC-157 pour dommages aux nerfs</a></li>
+<li><a href="/fr/bpc-157-oral-vs-injectable.html">BPC-157: Voie orale ou injectable</a></li>
+<li><a href="/fr/bpc-157-bone-healing.html">BPC-157 pour la guérison des os<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/bpc-157-vs-nsaids.html">BPC-157 vs AINS<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/bpc-157-cancer-concern.html">BPC-157 et risque de cancer : analyse complète<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/tb-500-for-chronic-injury.html">TB-500 pour les lésions chroniques<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/tb-500-bpc-157-stack.html">Protocole TB-500 + BPC-157<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/best-peptides-injury-recovery.html">Meilleurs peptides pour la récupération des blessures</a></li>
+<li><a href="/fr/peptides-for-tendon-repair.html">Peptides pour la réparation de Tendon</a></li>
+<li><a href="/fr/peptides-for-tendinitis.html">Peptides pour Tendinite</a></li>
+<li><a href="/fr/peptides-for-acl.html">Peptides pour la récupération ACL</a></li>
+<li><a href="/fr/peptides-for-rotator-cuff.html">Peptides pour rotateur</a></li>
+<li><a href="/fr/peptides-for-knee-pain.html">Peptides pour la douleur au genou</a></li>
+<li><a href="/fr/peptides-for-plantar-fasciitis.html">Peptides pour la fasciite plantaire</a></li>
+<li><a href="/fr/peptides-for-back-pain.html">Peptides pour douleurs au dos</a></li>
+<li><a href="/fr/peptides-for-runners.html">Peptides pour coureurs</a></li>
+<li><a href="/fr/peptides-for-muscle-recovery.html">Peptides pour la récupération musculaire</a></li>
+<li><a href="/fr/peptides-for-crossfit.html">Peptides pour athlètes CrossFit<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/peptides-post-surgery.html">Peptides pour la récupération après chirurgie<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/peptides-for-inflammation.html">Peptides pour l'inflammation</a></li>
+<li><a href="/fr/peptides-for-leaky-gut.html">Peptides pour Gut Leaky</a></li>
+<li><a href="/fr/peptides-for-ibs.html">Peptides pour IBS</a></li>
+</ul>
+</div>
+<!-- GROWTH HORMONE -->
+<div class="cluster-block">
+<h4>Peptides d'hormone de croissance</h4>
+<ul>
+<li><a href="/fr/cjc-1295-ipamorelin-stack.html">CJC-1295 + Ipamorelin Guide de la pile</a></li>
+<li><a href="/fr/cjc-1295-vs-sermorelin.html">CJC-1295 vs Sermorelin</a></li>
+<li><a href="/fr/cjc-vs-mk677.html">CJC-1295 vs MK-677</a></li>
+<li><a href="/fr/cjc-dac-vs-no-dac.html">CJC-1295 avec DAC vs sans DAC<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/sermorelin-guide.html">Guide complet Sermorelin</a></li>
+<li><a href="/fr/ipamorelin-guide.html">Guide complet Ipamorelin</a></li>
+<li><a href="/fr/mk-677-guide.html">Guide MK-677 (Ibutamoren)</a></li>
+<li><a href="/fr/tesamorelin-guide.html">Guide Tesamorelin</a></li>
+<li><a href="/fr/ghrp-2-guide.html">Guide complet GHRP-2</a></li>
+<li><a href="/fr/ghrp-6-guide.html">Guide complet GHRP-6</a></li>
+<li><a href="/fr/ghrp-2-vs-ghrp-6.html">GHRP-2 vs GHRP-6</a></li>
+<li><a href="/fr/gh-peptide-timing.html">GH Peptide Guide de calendrier<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/igf-1-lr3-guide.html">Guide complet IGF-1 LR3<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/fragment-176-191-guide.html">Fragment 176-191 Guide</a></li>
+<li><a href="/fr/best-peptides-muscle-growth.html">Meilleurs peptides pour la croissance musculaire</a></li>
+<li><a href="/fr/best-peptides-fat-loss.html">Meilleurs peptides pour la perte de graisse</a></li>
+</ul>
+</div>
+<!-- COGNITIVE & NOOTROPIC -->
+<div class="cluster-block">
+<h4>Cognition et nootrope</h4>
+<ul>
+<li><a href="/fr/semax-guide.html">Guide complet Semax</a></li>
+<li><a href="/fr/selank-guide.html">Guide complet Selank</a></li>
+<li><a href="/fr/semax-vs-selank.html">Comparaison entre Semax et Selank</a></li>
+<li><a href="/fr/na-semax-guide.html">Guide NA-Semax</a></li>
+<li><a href="/fr/na-selank-guide.html">Guide NA-Selank<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/dihexa-guide.html">Guide Dihexa</a></li>
+<li><a href="/fr/cerebrolysin-guide.html">Guide Cerebrolysin<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/best-peptides-cognitive.html">Meilleurs peptides pour la cognition</a></li>
+<li><a href="/fr/peptides-for-adhd.html">Peptides pour TDAH<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/peptides-for-brain-fog.html">Peptides pour le brouillard cérébral<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/peptides-for-anxiety-stress.html">Peptides pour l'anxiété et le stress</a></li>
+<li><a href="/fr/peptides-for-depression.html">Peptides pour la dépression</a></li>
+<li><a href="/fr/peptides-for-ptsd.html">Peptides pour PTSD</a></li>
+<li><a href="/fr/peptides-for-sleep.html">Peptides pour le sommeil</a></li>
+</ul>
+</div>
+<!-- LONGEVITY & ANTI-AGING -->
+<div class="cluster-block">
+<h4>Longévité et anti-âge</h4>
+<ul>
+<li><a href="/fr/epithalon-guide.html">Guide complet Epithalon</a></li>
+<li><a href="/fr/humanin-guide.html">Guide Humanin</a></li>
+<li><a href="/fr/mots-c-guide.html">Guide MOTS-c</a></li>
+<li><a href="/fr/ss-31-guide.html">SS-31 (Elamipretide) Guide</a></li>
+<li><a href="/fr/ghk-cu-guide.html">Guide du peptide de cuivre GHK-Cu</a></li>
+<li><a href="/fr/ghk-cu-vs-retinol.html">GHK-Cu vs Retinol</a></li>
+<li><a href="/fr/best-peptides-anti-aging.html">Meilleurs Peptides pour Anti-Aging</a></li>
+<li><a href="/fr/peptides-for-longevity.html">Peptides pour la longévité</a></li>
+</ul>
+</div>
+<!-- WEIGHT & METABOLISM -->
+<div class="cluster-block">
+<h4>Poids et métabolisme</h4>
+<ul>
+<li><a href="/fr/glp1-peptides-guide.html">GLP-1 Peptides: Guide complet</a></li>
+<li><a href="/fr/semaglutide-vs-tirzepatide.html">Semaglutide vs Tirzepatide</a></li>
+<li><a href="/fr/aod-9604-guide.html">Guide AOD-9604</a></li>
+<li><a href="/fr/peptides-for-insulin-sensitivity.html">Peptides pour la sensibilité à l'insuline</a></li>
+</ul>
+</div>
+<!-- SEXUAL HEALTH -->
+<div class="cluster-block">
+<h4>Santé sexuelle</h4>
+<ul>
+<li><a href="/fr/pt-141-guide.html">Guide PT-141 (Bremélanotide)</a></li>
+<li><a href="/fr/pt-141-for-women.html">PT-141 pour les femmes</a></li>
+<li><a href="/fr/pt-141-vs-viagra.html">PT-141 vs Viagra</a></li>
+<li><a href="/fr/peptides-for-ed.html">Peptides pour la dysfonction érectile</a></li>
+</ul>
+</div>
+<!-- COMPARISONS -->
+<div class="cluster-block">
+<h4>Comparaisons</h4>
+<ul>
+<li><a href="/fr/peptides-vs-steroids.html">Peptides vs stéroïdes</a></li>
+<li><a href="/fr/peptides-vs-hgh.html">Peptides vs HGH</a></li>
+<li><a href="/fr/peptides-vs-sarms.html">Peptides vs SARMs</a></li>
+<li><a href="/fr/peptides-vs-prp.html">Peptides vs PRP Thérapie</a></li>
+<li><a href="/fr/bpc-157-vs-tb-500.html">BPC-157 vs TB-500</a></li>
+<li><a href="/fr/bpc-157-vs-nsaids.html">BPC-157 vs AINS<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/cjc-1295-vs-sermorelin.html">CJC-1295 vs Sermorelin</a></li>
+<li><a href="/fr/cjc-vs-mk677.html">CJC-1295 vs MK-677</a></li>
+<li><a href="/fr/ghrp-2-vs-ghrp-6.html">GHRP-2 vs GHRP-6</a></li>
+<li><a href="/fr/semax-vs-selank.html">Semax vs Selank</a></li>
+<li><a href="/fr/ghk-cu-vs-retinol.html">GHK-Cu vs Retinol</a></li>
+<li><a href="/fr/semaglutide-vs-tirzepatide.html">Semaglutide vs Tirzepatide</a></li>
+<li><a href="/fr/pt-141-vs-viagra.html">PT-141 vs Viagra</a></li>
+</ul>
+</div>
+<!-- ATHLETES & GOALS -->
+<div class="cluster-block">
+<h4>Par objectif et type d'athlète</h4>
+<ul>
+<li><a href="/fr/best-peptides-for-athletes.html">Meilleurs peptides pour les athlètes</a></li>
+<li><a href="/fr/best-peptides-for-beginners.html">Meilleurs peptides pour les débutants</a></li>
+<li><a href="/fr/peptides-for-women.html">Meilleurs peptides pour les femmes</a></li>
+<li><a href="/fr/best-peptides-muscle-growth.html">Meilleur pour la croissance musculaire</a></li>
+<li><a href="/fr/best-peptides-fat-loss.html">Meilleur pour la perte de graisse</a></li>
+<li><a href="/fr/best-peptides-anti-aging.html">Le meilleur pour l'anti-âge</a></li>
+<li><a href="/fr/best-peptides-cognitive.html">Meilleure connaissance</a></li>
+<li><a href="/fr/peptides-for-crossfit.html">Meilleur pour CrossFit<span class="new-badge">NOUVEAU</span></a></li>
+<li><a href="/fr/peptides-for-runners.html">Meilleur pour les coureurs</a></li>
+<li><a href="/fr/peptides-wada-drug-testing.html">Peptides et tests de médicaments de l'AMA</a></li>
+</ul>
+</div>
+<!-- PRACTICAL HOW-TO -->
+<div class="cluster-block">
+<h4>Guides pratiques</h4>
+<ul>
+<li><a href="/fr/peptide-beginners-guide.html">Guide complet du débutant</a></li>
+<li><a href="/fr/peptide-reconstitution-guide.html">Guide de reconstitution</a></li>
+<li><a href="/fr/subq-injection-guide.html">Guide d'injection de sous-Q</a></li>
+<li><a href="/fr/im-injection-guide.html">Guide d'injection de GI</a></li>
+<li><a href="/fr/how-to-store-peptides.html">Comment conserver les peptides</a></li>
+<li><a href="/fr/how-to-read-peptide-coa.html">Comment lire un ACO</a></li>
+<li><a href="/fr/peptide-sourcing-guide.html">Guide des fournisseurs et approvisionnement</a></li>
+<li><a href="/fr/peptide-cycling-guide.html">Guide des protocoles cyclistes</a></li>
+<li><a href="/fr/peptide-half-life-guide.html">Référence de demi-vie du peptide</a></li>
+<li><a href="/fr/peptide-side-effects.html">Guide principal des effets secondaires</a></li>
+<li><a href="/fr/bacteriostatic-water-guide.html">Guide de l'eau bactériostatique</a></li>
+<li><a href="/fr/peptide-calculator.html">Calculatrice de dosage du peptide</a></li>
+</ul>
+</div>
+<!-- REGULATORY & LEGAL -->
+<div class="cluster-block">
+<h4>Règlementaire et juridique</h4>
+<ul>
+<li><a href="/fr/peptide-legality-guide.html">Peptides sont-ils légaux ? (par pays)</a></li>
+<li><a href="/fr/peptide-fda-status.html">FDA État de la recherche Peptides</a></li>
+<li><a href="/fr/peptides-wada-drug-testing.html">Peptides et tests de médicaments de l'AMA</a></li>
+<li><a href="/fr/bpc-157-cancer-concern.html">BPC-157 et analyse des risques de cancer<span class="new-badge">NOUVEAU</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- VENDORS -->
+<section id="vendors">
+<div class="section-inner">
+<div class="section-tag">Comparaison des fournisseurs</div>
+<h2 class="section-title">Fournisseurs de Peptide de haut niveau examinés</h2>
+<p class="section-sub">Nous évaluons indépendamment les fournisseurs sur les tests de pureté, la conformité aux BPF, les prix et l'expédition. Mise à jour trimestrielle. Nous pouvons gagner une commission si vous achetez via nos liens.</p>
+<div style="overflow-x:auto;">
+<table class="vendor-table">
+<thead>
+<tr>
+<th>Fournisseur</th>
+<th>Essai de pureté</th>
+<th>État des BPF</th>
+<th>Livraison</th>
+<th>Notre évaluation</th>
+<th>Visite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="vendor-name">Peptides d'ascension</div>
+<span class="badge badge-top">Choisir en haut</span>
+</td>
+<td>CLHP + spécification de masse COA</td>
+<td><span class="badge badge-top">Certifié GMP</span></td>
+<td>2-4 jours US</td>
+<td><span class="stars">★★★★★★</span></td>
+<td><a class="vendor-cta" href="https://ascensionpeptides.com/ref/wolvestack/">Visiter →</a></td>
+</tr>
+<tr>
+<td>
+<div class="vendor-name">Apollo Sciences du peptide</div>
+<span class="badge badge-good">Hautement</span>
+</td>
+<td>CLHP COA inclus</td>
+<td><span class="badge badge-good">Conformité aux BPF</span></td>
+<td>3-5 jours US</td>
+<td><span class="stars">★★★★★★</span></td>
+<td><a class="vendor-cta" href="https://apollopeptidesciences.com/?rfsn=9022946">Visiter →</a></td>
+</tr>
+<tr>
+<td>
+<div class="vendor-name">Limitless Life Nootropics</div>
+<span class="badge badge-good">Choix de l'éditeur</span>
+</td>
+<td>ACO de tiers</td>
+<td><span class="badge badge-good">Conformité aux BPF</span></td>
+<td>3-5 jours US</td>
+<td><span class="stars">★★★★★</span></td>
+<td><a class="vendor-cta" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704" rel="noopener" target="_blank">Visiter →</a></td>
+</tr>
+<tr>
+<td>
+<div class="vendor-name">Particle Peptides</div>
+<span class="badge badge-good">Choix du meilleur choix de l'UE</span>
+</td>
+<td>CLHP + essais analytiques approfondis effectués par des tiers</td>
+<td><span class="badge badge-good">Ligne de production des BPF</span></td>
+<td>UE / International</td>
+<td><span class="stars">★★★★★★</span></td>
+<td><a class="vendor-cta" href="https://particlepeptides.com/en/?refs=25135" rel="noopener" target="_blank">Visiter →</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="table-disclaimer">Informations sur l'affiliation: Nous pouvons recevoir une commission sur les achats effectués via nos liens, sans frais supplémentaires pour vous. Cela n'influence pas nos notes. Tous les produits énumérés sont destinés à la recherche seulement et ne sont pas destinés à la consommation humaine.</p>
+</div>
+</section>
+<!-- EMAIL CAPTURE -->
+<section class="email-section" id="signup">
+<div class="section-inner">
+<div class="email-inner">
+<div class="section-tag">Téléchargement gratuit</div>
+<h2 class="section-title">Obtenez le guide du protocole Wolverine Stack</h2>
+<p class="section-sub" style="margin: 0 auto 32px;">Notre ressource la plus téléchargée. Une description en anglais simple de la façon dont les chercheurs ont approché BPC-157 + TB-500 en combinaison, y compris les plages posologiques, le calendrier et les critères d'approvisionnement.</p>
+<div class="lead-magnet-box">
+<div class="lead-magnet-icon">C'est-à-dire</div>
+<div class="lead-magnet-text">
+<h4>Le Wolverine Stack: Guide de recherche complet (PDF)</h4>
+<p>8 pages · Couvre le mécanisme, les résultats de recherche, les gammes de doses étudiées, les critères du fournisseur et la FAQ. Livré immédiatement à votre boîte de réception.</p>
+</div>
+</div>
+<form class="email-form" onsubmit="handleSubmit(event)">
+<input id="email-input" placeholder="Votre@email.com" required="" type="email"/>
+<button type="submit">Envoyer Me le guide →</button>
+</form>
+<div class="email-perks">
+<span class="email-perk">Gratuit, pas de carte de crédit</span>
+<span class="email-perk">Digest hebdomadaire de recherche</span>
+<span class="email-perk">Désabonnement à tout moment</span>
+<span class="email-perk">Pas de spam, jamais</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section id="about">
+<div class="section-inner">
+<div style="text-align:center;">
+<div class="section-tag">Notre méthodologie</div>
+<h2 class="section-title">Notre revue et notre recherche</h2>
+<p class="section-sub" style="margin: 0 auto 0;">Nous n'avons pas de produit pour vous vendre. Chaque guide et chaque examen des fournisseurs suivent le même processus.</p>
+</div>
+<div class="how-grid">
+<div class="how-step">
+<div class="step-num">1</div>
+<h4>PubMed Première</h4>
+<p>Chaque guide commence par une recherche systématique de PubMed pour des recherches évaluées par des pairs. Nous citons chaque revendication à une source primaire.</p>
+</div>
+<div class="how-step">
+<div class="step-num">2</div>
+<h4>Essai des fournisseurs</h4>
+<p>Nous examinons les ACO (certificats d'analyse), les certifications BPF et les résultats de tests de tiers pour chaque fournisseur que nous recommandons.</p>
+</div>
+<div class="how-step">
+<div class="step-num">3</div>
+<h4>Contribution communautaire</h4>
+<p>Nous surveillons les r/peptides et les forums de biohacker pour intégrer les observations du monde réel à la littérature de recherche formelle.</p>
+</div>
+<div class="how-step">
+<div class="step-num">4</div>
+<h4>Mise à jour trimestrielle</h4>
+<p>Les guides et les tableaux des fournisseurs sont examinés et mis à jour tous les trimestres, ou immédiatement en cas de pauses importantes dans le domaine de la réglementation ou de la recherche.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+<div class="disclaimer-inner">
+<p><strong>Recherche Utilisation seulement Avertissement :</strong>Tous les contenus sur WolveStack sont à des fins éducatives et informatives seulement. Rien sur ce site ne constitue un avis médical, un diagnostic ou des recommandations de traitement. Les peptides référencés dans tout ce site sont vendus à des fins de recherche seulement et ne sont pas destinés à la consommation humaine. Consultez toujours un fournisseur de soins de santé qualifié avant de prendre des décisions en matière de santé. WolveStack peut gagner des commissions d'affiliation à partir de liens fournisseurs, ce qui n'influence pas notre contenu éditorial. Les résultats de recherche discutés proviennent principalement d'études précliniques (animaux) et peuvent ne pas se traduire par des résultats humains.</p>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<a class="logo" href="/fr/index.html">Oiseaux<span>Stack</span></a>
+<p>L'éducation aux peptides est indépendante et soutenue par la recherche. Pas de produits, pas d'agenda, juste la science.</p>
+</div>
+<div class="footer-col">
+<h5>Guides</h5>
+<ul>
+<li><a href="/fr/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/fr/tb-500-guide.html">TB-500</a></li>
+<li><a href="/fr/wolverine-stack.html">Wolverine Stack</a></li>
+<li><a href="/fr/peptide-beginners-guide.html">Guide du débutant</a></li>
+<li><a href="/fr/peptide-reconstitution-guide.html">Guide de reconstitution</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Ressources</h5>
+<ul>
+<li><a href="/fr/peptide-sourcing-guide.html">Comparaison des fournisseurs</a></li>
+<li><a href="/fr/wolverine-stack.html">Protocoles relatifs aux piles</a></li>
+<li><a href="/fr/peptide-reconstitution-guide.html">Guide de dosage</a></li>
+<li><a href="/fr/peptide-beginners-guide.html">Commencez ici</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Droit</h5>
+<ul>
+<li><a href="/fr/disclaimer.html">Avertissement</a></li>
+<li><a href="/fr/privacy.html">Politique de confidentialité</a></li>
+<li><a href="/fr/affiliate-disclosure.html">Divulgation de l'affiliation</a></li>
+<li><a href="/fr/terms.html">Conditions d'utilisation</a></li>
+<li><a href="/fr/about.html">À propos de nous</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span class="footer-copy">© 2026 WolveStack. Tous droits réservés. À des fins éducatives seulement.</span>
+<div class="footer-links">
+<a href="/fr/privacy.html">Confidentialité</a>
+<a href="/fr/terms.html">Termes</a>
+<a href="/fr/affiliate-disclosure.html">Divulgation</a>
+</div>
+</div>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/index.html">English</option><option value="/es/index.html">Español</option><option value="/zh/index.html">中文</option><option value="/ja/index.html">日本語</option><option value="/pt/index.html">Português</option><option value="/ru/index.html">Русский</option><option value="/it/index.html">Italiano</option><option value="/pl/index.html">Polski</option><option selected="" value="/fr/index.html">Français</option><option value="/id/index.html">Bahasa</option><option value="/de/index.html">Deutsch</option><option value="/nl/index.html">Nederlands</option><option value="/ar/index.html">العربية</option>
+</select>
+</div>
+</footer>
+<script>
+  // REPLACE YOUR_SUBDOMAIN with your actual Cloudflare Workers subdomain
+  const WORKER_URL = 'https://wolvestack-email.clod26.workers.dev';
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    const input = document.getElementById('email-input');
+    const email = input.value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'homepage-cta', page: location.pathname }),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        btn.textContent = '✓ Check your inbox!';
+        btn.style.background = '#065f46';
+        btn.style.color = '#fff';
+        input.value = '';
+        input.placeholder = 'Guide sent! Check your email.';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.style.background = '#b91c1c';
+        console.error('Worker error:', data);
+      }
+    } catch (err) {
+      btn.textContent = 'Network error — try again';
+      btn.style.background = '#b91c1c';
+      console.error('Fetch error:', err);
+    }
+
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.textContent = 'Send Me the Guide →';
+      btn.style.background = '';
+      btn.style.color = '';
+      input.placeholder = 'your@email.com';
+    }, 5000);
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+<script src="/email-popup.js"></script>
+</body>
+</html>

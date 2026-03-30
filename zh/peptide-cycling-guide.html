@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peptide Cycling 协议: 何时循环、巡航和休整XTERMX000</title>
+<meta content="肽类循环协议的完整指南:哪些肽类需要循环,推荐上/下比,受体灵敏度会发生什么,以及如何构建长期研究." name="description"/>
+<link href="https://wolvestack.com/zh/peptide-cycling-guide.html" rel="canonical"/>
+<meta content="Peptide 循环指南——如何构建你的研究协议" property="og:title">
+<meta content="肽类循环协议的完整指南:哪些肽类需要循环,推荐上/下比,受体灵敏度会发生什么,以及如何构建长期研究." property="og:description">
+<meta content="https://wolvestack.com/zh/peptide-cycling-guide.html" property="og:url">
+<meta content="article" property="og:type"/>
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Peptide Cycling Guide — How to Structure Your Research Protocol",
+        "url": "https://wolvestack.com/peptide-cycling-guide.html",
+        "publisher": { "@type": "Organization", "name": "WolveStack", "url": "https://wolvestack.com/" },
+        "datePublished": "2026-03-11",
+        "dateModified": "2026-03-11"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wolvestack.com/" },
+          { "@type": "ListItem", "position": 2, "name": "How-To Guide", "item": "https://wolvestack.com/" },
+          { "@type": "ListItem", "position": 3, "name": "Peptide Cycling Guide — How to Structure Your Research Protocol", "item": "https://wolvestack.com/peptide-cycling-guide.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+    { "@type": "Question", "name": 'Do peptides lose effectiveness over time?', "acceptedAnswer": { "@type": "Answer", "text": 'It depends on the peptide. GHRPs (GHRP-2, GHRP-6) show measurable desensitisation with continuous high-frequency dosing. CJC-1295/Ipamorelin shows less. Selank and Semax community experience reports stable effects with regular use. BPC-157 for tissue repair may show diminishing returns once healing plateaus, which is goal-completion rather than tolerance. The answer varies by mechanism.' } },
+    { "@type": "Question", "name": "What happens if I don't cycle peptides?", "acceptedAnswer": { "@type": "Answer", "text": 'For most research peptides, the risks of continuous use are not well-characterised — primarily because human long-term studies are limited. The primary mechanistic concern is receptor desensitisation for GHRPs and GH secretagogues. For repair peptides and nootropics, continuous use is not documented to cause harm but off-periods are prudent as a risk management approach given limited long-term data.' } },
+    { "@type": "Question", "name": 'Should I take breaks from BPC-157?', "acceptedAnswer": { "@type": "Answer", "text": 'Breaks from BPC-157 are most appropriate when the intended therapeutic goal has been achieved — healing of an injury, resolution of gut symptoms. For maintenance use without a specific acute indication, weekly 2-day breaks and quarterly longer breaks are reasonable approaches that most researchers incorporate without a strong biological requirement.' } },
+    { "@type": "Question", "name": 'How long should the off period be relative to the on period?', "acceptedAnswer": { "@type": "Answer", "text": 'A commonly applied rule is off period = approximately 1/3 of the on period (e.g., 12 weeks on, 4 weeks off). For CJC-1295 with DAC specifically, longer off-periods are appropriate given persistent albumin-bound drug. For Epithalon, the research protocol of 10–20 days course with ~6 months until the next course is empirically derived from the original clinical study designs.' } }
+        ]
+      }
+    ]
+  }
+  </script>
+<style>
+    :root {
+      --navy: #0f1f3d; --blue: #1e40af; --accent: #8b5cf6; --accent-light: #eff6ff;
+      --green: #059669; --green-light: #ecfdf5;
+      --amber: #d97706; --amber-light: #fffbeb;
+      --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb;
+      --gray-400: #9ca3af; --gray-600: #4b5563; --gray-800: #1f2937;
+      --font-display: 'Georgia', serif; --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--gray-800); line-height: 1.7; }
+    nav { background: var(--navy); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-family: var(--font-display); font-size: 20px; font-weight: 700; text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: #fff; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .hero { background: linear-gradient(135deg, #0f1f3d 0%, #1e1b4b 100%); color: white; padding: 56px 24px 48px; }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .hero-tag { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(26px, 5vw, 42px); font-weight: 700; margin-bottom: 14px; line-height: 1.2; }
+    .hero-meta { font-size: 14px; color: rgba(255,255,255,0.55); display: flex; gap: 20px; flex-wrap: wrap; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .content { padding: 48px 0 80px; }
+    .content h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin: 40px 0 16px; padding-top: 8px; border-top: 3px solid var(--accent); display: inline-block; }
+    .content h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 28px 0 10px; }
+    .content p { font-size: 16px; color: #374151; line-height: 1.8; margin-bottom: 18px; }
+    .content strong { color: var(--navy); }
+    .content a { color: var(--blue); }
+    .intro-p { font-size: 17px; color: #374151; line-height: 1.85; margin-bottom: 24px; padding: 24px; background: white; border-radius: 12px; border-left: 4px solid var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .callout { border-radius: 10px; padding: 18px 20px; margin: 24px 0; display: flex; gap: 14px; }
+    .callout.amber { background: var(--amber-light); border-left: 4px solid var(--amber); }
+    .callout.blue { background: var(--accent-light); border-left: 4px solid var(--blue); }
+    .callout.green { background: var(--green-light); border-left: 4px solid var(--green); }
+    .callout-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+    .callout p { margin: 0; font-size: 15px; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    thead th { background: var(--navy); color: white; padding: 12px 14px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--gray-200); background: white; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--gray-50); }
+    .section-card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 28px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .faq-a { font-size: 15px; color: #374151; line-height: 1.75; margin: 0; }
+    .related-links { background: var(--accent-light); border: 1px solid rgba(139,92,246,0.3); border-radius: 10px; padding: 16px 20px; margin: 32px 0; font-size: 14px; }
+    .related-links strong { color: var(--navy); display: block; margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-links a { color: var(--blue); display: inline-block; margin-right: 16px; margin-bottom: 6px; }
+
+    .apollo-card { border-top: 3px solid #7c3aed !important; background: #f8f7ff !important; }
+    .apollo-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .apollo-btn { display: inline-block; background: #1e3a5f; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .apollo-btn:hover { background: #7c3aed !important; }
+    .apollo-btn.apollo-primary { background: #7c3aed; }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: white; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+    .disclaimer { max-width: 600px; margin: 10px auto 0; font-size: 12px; color: rgba(255,255,255,0.4); }
+
+  .related-articles { background: #f8f9fa; padding: 56px 24px; border-top: 1px solid #e2e8f0; }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: #0a1628; margin-bottom: 28px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .related-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; display: block; transition: box-shadow .2s, transform .2s; }
+  .related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); transform: translateY(-2px); }
+  .related-card span { display: block; font-size: 13px; color: #0d9488; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .related-card strong { display: block; font-size: 15px; color: #0a1628; font-weight: 600; line-height: 1.4; }
+
+    .particle-card { border-top: 3px solid #8b2fc9 !important; }
+    .particle-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .particle-btn { display: inline-block; background: #6b21a8; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .particle-btn:hover { background: #8b2fc9 !important; }
+    .particle-btn.particle-primary { background: #8b2fc9; }
+      .limitless-card { border-top: 3px solid #0891b2 !important; }
+    .limitless-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .limitless-btn:hover { background: #0891b2 !important; }
+    .limitless-btn.limitless-primary { background: #0891b2; }
+  
+  .quick-answer {
+    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+    border: 2px solid var(--teal, #0d7377);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 32px 0;
+    position: relative;
+  }
+  .quick-answer::before {
+    content: '⚡ Quick Answer';
+    display: block;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #0d7377);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .quick-answer p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #1e293b !important;
+    margin-bottom: 0 !important;
+  }
+
+</style>
+</meta></meta></meta><link href="https://wolvestack.com/en/peptide-cycling-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-cycling-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-cycling-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-cycling-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-cycling-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-cycling-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-cycling-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-cycling-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-cycling-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-cycling-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-cycling-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-cycling-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-cycling-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/en/peptide-cycling-guide.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<nav>
+<a class="nav-logo" href="/zh/index.html">狼头<span>堆栈</span></a>
+<ul class="nav-links">
+<li><a href="/zh/peptide-beginners-guide.html">从这里开始</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-calculator.html">计算器</a></li>
+</ul>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-cycling-guide.html">English</option><option value="/es/peptide-cycling-guide.html">Español</option><option selected="" value="/zh/peptide-cycling-guide.html">中文</option><option value="/ja/peptide-cycling-guide.html">日本語</option><option value="/pt/peptide-cycling-guide.html">Português</option><option value="/ru/peptide-cycling-guide.html">Русский</option><option value="/it/peptide-cycling-guide.html">Italiano</option><option value="/pl/peptide-cycling-guide.html">Polski</option><option value="/fr/peptide-cycling-guide.html">Français</option><option value="/id/peptide-cycling-guide.html">Bahasa</option><option value="/de/peptide-cycling-guide.html">Deutsch</option><option value="/nl/peptide-cycling-guide.html">Nederlands</option><option value="/ar/peptide-cycling-guide.html">العربية</option>
+</select>
+</div>
+</nav>
+<div class="hero">
+<div class="hero-inner">
+<div class="breadcrumb"><a href="/zh/index.html">页 次</a>/ 如何向导</div>
+<div class="hero-tag">如何向导</div>
+<h1>活体循环议定书:实用指南</h1>
+<div class="hero-meta">
+<span>8分钟读取</span>
+<span>* 5次参考</span>
+<span>最后更新的2026年3月</span>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="content">
+<p class="intro-p">并非所有的peptides都需要循环,"循环"对于不同的化合物来说意味着不同的事物. GH分泌物的循环原理(受体脱敏关切)不同于XTERMX000(目标依赖使用)、Selank(容忍问题)和Epithalon(基于课程的协议设计)的循环原理。 本指南解释了循环每个主要肽类的生物原理,并提供了实用的结构建议。</p>
+<div class="callout amber">
+<div class="callout-icon">⚠️</div>
+<p><strong>仅研究背景。</strong>关于XTERMX000的Peptides是未经FDA批准供人类使用的研究化学品。 本页面中没有任何内容构成医疗建议。 在使用前咨询合格的保健专业人员。</p>
+</div>
+<div class="quick-answer">
+<p>肽类循环协议的完整指南:哪些肽类需要循环,推荐上/下比,受体灵敏度会发生什么,以及如何构建长期研究.</p>
+</div>
+<div class="section-card">
+<h2>GH 秘方:受体减敏问题</h2>
+<p>GH分泌管(XTERMX000,Ipamorelin,GHRP-2,GHRP-6,Sermorelin)在垂体素上通过刺激GHRH受体或Ghrelin受体来工作. 慢性的,持续的刺激这些受体引起对脱敏的担忧——受体降温调控随着时间的推移降低反应. 这在GHRPs(GHRP-2,GHRP-6)中特别有文献记载,显示受体有高频剂量的脱敏.</p><p>GH分泌者常见的循环方法:5天,休息2天("5/2"协议)——保留周末敏感度重置,同时保持周日刺激;或12周,休息4周. XTERMX000没有DAC的半衰期足够短,其作用在日剂量和受体恢复之间解脱得更快. 与发援会的CJC-1295(为期一周的半衰期)由于持续受体占用,需要较长的休息期(12周周期后2-4周)。 Ipamorelin的脱敏性比GHRP更不明显,并容忍5天/2天或6天/1天的做法.</p>
+</div>
+<div class="section-card">
+<h2>XTERMX000和TB-500:基于目标的自行车</h2>
+<p>XTERMX000和TB-500没有详细记载的受体脱敏问题——它们的机理(生长因子调制,VEGFR2信号,细胞骨骼效应)并不以同样的方式涉及简单的受体激动. 这些化合物的循环通常以目标为基础:在急性伤害或密集训练期间使用,然后在治疗目标实现或维持高原达到时减少或停止使用。</p><p>常用方法:8至12周的主动伤害愈合周期,休息4至6周;在无主动伤害期间的维持剂量(2至3x/周而不是每日);或慢性病持续低剂量使用(250 XTERMX000 3x/周)。 没有有力的证据表明持续使用BPC-157会造成伤害,但一旦治愈完毕,组织修复的成本和降低回报的可能性是完全治愈过程后循环关闭的实际原因.</p>
+</div>
+<div class="section-card">
+<h2>诺特罗皮克:容忍的考虑</h2>
+<p>XTERMX000和Semax没有文献记载的药物耐受性(不同于苯并二氮杂卓,它使GABA-A受体具有慢性用途). 社区在这两种方面的经验基本一致:随着经常使用而不是逐渐消失,效果仍然相当稳定。 然而,许多用户在周期性断裂后向认知增强报告主观的"新鲜度"——这是否反映了真实的药理耐受性,心理异构适应,或者只是基线认知状态的变异,尚不清楚.</p><p>节点学的实用循环方法:休息5天/2天(最常见的,与工作周匹配);或持续使用,每月休息1周。 XTERMX000, 由于其结构机制, 经常用于定义更明确的4-8周课程, 课间休息时间更长( 4-8周) , 以便在另一个周期之前巩固任何结构变化。</p>
+</div>
+<div class="section-card">
+<h2>XTERMX000和长寿药:课程协议</h2>
+<p>XTERMX000(和哈文森作品中更广泛的生物调节器肽类)是针对定义的课程设计的,而不是持续使用——与临床研究设计相仿,在临床研究设计中展示了效益. 标准协议:每日5–10 mg,连续10–20天,每年运行一次或两次. 这反映了研究设计和假设,即调聚物酶活化在课程之间产生持久影响,而不是需要持续接触。</p><p>寿命的XTERMX000可以进行更连续的运行(每日或5x/周),无需有文件证明的耐受性. SS-31和Humanin通常在8-12周的区块内循环,休息4周,这还是基于实际协议管理和成本,而不是既定的生物要求。</p>
+</div>
+<div class="section-card">
+<h2>重量损失佩普提斯:基于标注的自行车</h2>
+<p>XTERMX000 激动剂(Semaglutide,Tirzepatide,Retatrutide)需要一种根本不同的循环方法:剂量乳化而不是开/关循环. 这些化合物在几周内向上配位,以尽量减少GI的副作用(恶心,食欲下降). 随着GLP-1受体失去外来刺激,Brupt中止会导致反弹性饥饿和体重的恢复.</p>
+<p>标准XTERMX000奶:从0.25 mg/周开始4周,然后从0.5 mg开始4周,然后从1.0 mg开始,最多到2.4 mg/周. Tirzepatide沿着从2.5 mg到15 mg周的类似坡道. 如果中断的话,会减少 超过4-6周而不是突然停止。 一些研究者用较低的剂量进行无限期的维护,而不是完全循环。</p>
+<p>XTERMX000(脂肪损失的GH片段)不需要同样的配位方法——它可以在标准的8-12周周期中运行,有4周的休息期,类似于GH分泌物,但是没有受体脱敏的担忧,因为它不会刺激GH的释放.</p>
+<p>XTERMX000(一种以NNMT酶为目标的脂肪损失肽)一般在4-8周周期内运行,断裂长度相等. 作为酶抑制剂,它不会引起受体脱敏,但循环可以使NNMT活动在课程之间正常化.</p>
+</div>
+<div class="section-card">
+<h2>免疫和抗微生物药:课程使用</h2>
+<p>Thymosin Alpha-1、Thymalin和XTERMX000通常用于定义的课程,而不是连续管理。 Thymosin Alpha-1遵循的临床规程为1.6 mg,在确定的治疗期间(往往是4-12周)每周两次,在课程之间重新评估。</p>
+<p>XTERMX000,人类抗微生物肽,一般用于急性情况——主动感染,伤口愈合支持,或生物膜干扰. 典型的课程为2-4周。 持续的长期使用没有得到很好的研究,而且鉴于肽具有强大的免疫活性,因此不建议使用。</p>
+<p>XTERMX000(抗炎三肽)可以更连续地用于慢性炎症,但大多数协议使用4-8周周期,休息2-4周. 它的机理(α-MSH碎片活动)没有表现出有记载的耐受性.</p>
+</div>
+<div class="section-card">
+<h2>性健康和Tanning Peptides:急性剂量</h2>
+<p>XTERMX000(Bremelanotide)在肽类药物中是独一无二的,因为它通常按需使用而不是连续循环. 标准协议是1-2 mg在预期效果前2-4小时执行. 使用PT-141每天迅速引起Tachyphylaxis(急性耐受性),因此大多数协议将使用限制在每周2-3次,剂量之间至少48小时.</p>
+<p>XTERMX000在装载和维护阶段运行:0.25-0.5 mg每天运行2-3周(装载),然后每周运行0.5 mg次(维修). 一些研究人员在冬季完全循环,并在太阳照射季节前重新装药。 Kisspeptin协议因应用而异——用于激素支持的脉冲剂量反射其天然脉冲分泌.</p>
+</div>
+<div class="section-card">
+<h2>如何设计自己的自行车协议</h2>
+<p>当不存在特定肽的既定协议时,利用这些原则设计合理的循环方法:</p>
+<p><strong>步骤1——确定机制:</strong>是受体激动剂吗? 酶修饰剂? 信号分子? 受体激动剂一般需要循环;酶靶和结构肽通常不需要.</p>
+<p><strong>步骤2——考虑半衰期:</strong>半衰期较长的浸泡剂需要更长的洗涤期. 短半衰期化合物快速清晰,可以使用较短的期外化合物. 通常:期外应至少有5个半衰期,以确保接近完成清除。</p>
+<p><strong>步骤3——确定目标:</strong>急性目标(创伤愈合、感染治疗)决定了使用至解决的协议。 慢性目标(身体组成,认知增强,长寿)需要可持续的循环计划,你可以长期保持.</p>
+<p><strong>步骤4——开始保守:</strong>当出现疑问时,使用3:1的比例(如12周后,4周后),并监测影响是否在整个周期内减弱。 如果在整个周期内效果仍然强劲,周期长度是适当的。</p>
+<p>用我们的<a href="/zh/peptide-calculator.html">偶联计算器</a>在你周期内精确的用量数学 以及我们个人的peptide指南 对于化合物特定协议的细节。</p>
+</div>
+<div class="section-card">
+<h2>常见的循环错误</h2>
+<p><strong>错误1——把一切按同样的方式循环.</strong>12/on/4-off时刻表为GH分泌者工作,但对XTERMX000(课程),PT-141(按需)和Semaglutide(图)都是错误的. 将循环方式与机制相匹配.</p>
+<p><strong>错误2——缩短周期.</strong>许多肽效应是累积的,需要4-8周才能充分显现出来. 第3周停止XTERMX000治疗周期 因为"什么都没有发生"错过了大多数研究人员报告重大变化的窗口.</p>
+<p><strong>错误3——化合物之间不得冲洗.</strong>当从一个肽转化为另一个针对同一受体时,允许在开始新化合物之前有一个完全的洗涤期(至少5个半衰期). 重叠的类似机制可造成更复杂的脱敏。</p>
+<p><strong>错误 4 — 忽略存储退化.</strong>重新组装的 p随着时间推移而退化. 如果你的12周周期使用1日重整的瓶子,到8日,化合物可能会显著退化. 4 -6周后才恢复使用 看我们的<a href="/zh/bpc-157-storage.html">peptide 存储指南</a>详细情况。</p>
+<p><strong>错误 5 —— 堆放而不惊人.</strong>同时开始3个新的peptides使得无法识别哪个负责效应(或副效应). 堆叠时每个循环引入一个化合物.</p>
+</div>
+<div class="section-card">
+<h2>建议</h2>
+<table>
+<thead><tr><th>浸泡剂</th><th>剂量</th><th>路线</th><th>频率</th><th>页:1</th></tr></thead>
+<tbody><tr><td>XTERMX000(无发援会)</td><td>12个星期后</td><td>4周假(或5/2)</td><td>预防受体失敏</td><td>最常见的研究方法</td></tr>
+<tr><td>XTERMX000(与发援会)</td><td>8至10个星期</td><td>4至6个星期的假</td><td>长半衰期需要更长的重置时间</td><td>长于无发援会</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>12个星期后</td><td>4周假(或5/2)</td><td>降低敏感性</td><td>最能原谅GH Peptides的</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>基于伤害的周期(6至12周)</td><td>4-6周(或PRN)</td><td>基于目标而非容忍</td><td>慢性病继续</td></tr>
+<tr><td>XTERMX000 / Semax (韩语).</td><td>5天/2天休(正在进行)</td><td>每月1周休息时间</td><td>主观新鲜;无硬容忍</td><td>非常灵活;生活方式常见</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>10-20天课程</td><td>~6个月后下课</td><td>协议匹配的临床研究</td><td>课程之间的持久影响</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>4-6周装载,然后维修</td><td>在装载周期之间休息4周</td><td>基于目标的循环</td><td>2XTERMX000/周持续运行</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>连续(4至12周)</td><td>休息4个星期</td><td>没有有记录的容忍度</td><td>专题可持续使用</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>16至20周的提法</td><td>4至6个星期</td><td>剂量升级,不进行/关闭循环</td><td>经常无限期的维持剂量</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>8至12个星期</td><td>休息4个星期</td><td>无GH受体脱敏</td><td>标准周期办法</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>点播(最多2-3x/周)</td><td>剂量之间48小时以上</td><td>每日使用急性胸腺炎</td><td>永远不要每天使用</td></tr>
+<tr><td>Thyα-1</td><td>4至12个星期</td><td>课程之间的重新评估</td><td>基于临床课程的剂量</td><td>1.6 XTERMX000 2x/周标准</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>4-8个星期</td><td>4-8个星期的假</td><td>结构巩固期</td><td>允许神经变化稳定</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>8至12个星期</td><td>休息4个星期</td><td>适应性适应</td><td>周期外影响可能持续存在</td></tr>
+<tr><td>XTERMX000 (英语).</td><td>4-8个星期</td><td>4-8个星期的假</td><td>NNMT 正常化</td><td>酶抑制剂;无受体关切</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-card apollo-card">
+<h2>也可在XTERMX000 Peptide Sciences查阅</h2>
+<p><strong>XTERMX000 Peptide 科学</strong>携带独立测试的研究级化合物。 来自美国的产品船 已公布纯度证书。</p>
+<div class="cta-buttons">
+<a class="apollo-btn apollo-primary" href="https://apollopeptidesciences.com/product/cjc1295-ipamorelin/?rfsn=9022946">XTERMX000 / Ipamorelin (韩语). 堆叠 +</a>
+<a class="apollo-btn" href="https://apollopeptidesciences.com/product/bpc157-10mg/?rfsn=9022946">(单位:千美元)</a>
+</div>
+<p class="cta-disclaimer">仅供研究之用. 关联披露:XTERMX000在不增加费用的情况下获得合格购买的佣金。</p>
+</div>
+<div class="section-card">
+<h2>经常问的问题</h2>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">Peptides是否随着时间的推移而失去效力?</div>
+<p class="faq-a">取决于脓血. GHRPs(XTERMX000,GHRP-6)显示具有连续高频剂量的可测量脱敏. CJC-1295/Ipamorelin显示较少. Selank和Semax社区经验报告有稳定效果并定期使用. 用于组织修复的BPC-157,一旦愈合高原,即是目标完成而不是耐受性,可能显示回报下降。 答案因机制而异。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">如果我不循环 peptides 会发生什么?</div>
+<p class="faq-a">对于大多数研究peptides来说,持续使用的风险没有很好的特征描述——这主要是因为人类的长期研究是有限的. 主要的机械问题是GHRPs和GH分泌物的受体脱敏. 对于修复peptides和Nootrophic,由于长期数据有限,连续使用不会造成伤害,但作为风险管理方法,期外使用是审慎的。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">我应该休息 从XTERMX000?</div>
+<p class="faq-a">突破XTERMX000最适宜于实现预定的治疗目标——治愈损伤,解决肠道症状. 对于没有具体急性指示的维修用途,每周2天休息和每季度更长休息是大多数研究人员采用的合理方法,没有强烈的生物要求。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">休业期应比休业期长多久?</div>
+<p class="faq-a">一项通常适用的规则是停工时间=该时间的三分之一左右(例如,12周内,4周外)。 具体针对发援会的XTERMX000,较长的期外时间是合适的,因为有持久性的杂交药物。 对于Epithalon,10~20天课程的研究协议,到下一个课程还有~6个月的时间,从经验上从最初的临床研究设计中推导出来.</p>
+</div>
+</div>
+</div>
+<div class="related-links"><strong>相关指南</strong><a href="/zh/cjc-1295-ipamorelin-stack.html">XTERMX000+ Ipamorelin 堆栈</a> <a href="/zh/peptide-beginners-guide.html">初学者指南</a> <a href="/zh/sermorelin-guide.html">XTERMX000 指南</a> <a href="/zh/peptide-half-life-guide.html">半衰期参考文献</a></div>
+</div>
+</div>
+<footer>
+<div class="footer-links">
+<a href="/zh/index.html">页 次</a>
+<a href="/zh/peptide-beginners-guide.html">从这里开始</a>
+<a href="/zh/peptide-sourcing-guide.html">供应商</a>
+<a href="/zh/about.html">关于</a>
+<a href="/zh/privacy.html">隐私</a>
+<a href="/zh/affiliate-disclosure.html">披露</a>
+<a href="/zh/disclaimer.html">免责声明</a>
+<a href="/zh/terms.html">术语</a>
+</div>
+<p>2026 XTERMX000 (英语). 仅供研究和教育之用。</p>
+<p class="disclaimer">XTERMX000只为教育目的出版研究摘要。 这里没有什么是医疗建议。 所有peptides只用于研究.</p>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-cycling-guide.html">English</option><option value="/es/peptide-cycling-guide.html">Español</option><option selected="" value="/zh/peptide-cycling-guide.html">中文</option><option value="/ja/peptide-cycling-guide.html">日本語</option><option value="/pt/peptide-cycling-guide.html">Português</option><option value="/ru/peptide-cycling-guide.html">Русский</option><option value="/it/peptide-cycling-guide.html">Italiano</option><option value="/pl/peptide-cycling-guide.html">Polski</option><option value="/fr/peptide-cycling-guide.html">Français</option><option value="/id/peptide-cycling-guide.html">Bahasa</option><option value="/de/peptide-cycling-guide.html">Deutsch</option><option value="/nl/peptide-cycling-guide.html">Nederlands</option><option value="/ar/peptide-cycling-guide.html">العربية</option>
+</select>
+</div>
+</footer>
+<section class="related-articles">
+<div class="related-inner">
+<h3>相关指南</h3>
+<div class="related-grid">
+<a class="related-card" href="/zh/peptide-half-life-guide.html"><span>相关</span><strong>半条命指南</strong></a>
+<a class="related-card" href="/zh/wolverine-stack.html"><span>相关</span><strong>XTERMX000 号</strong></a>
+<a class="related-card" href="/zh/cjc-1295-ipamorelin-stack.html"><span>相关</span><strong>XTERMX000+ Ipamorelin 堆栈指南</strong></a>
+<a class="related-card" href="/zh/peptide-beginners-guide.html"><span>相关</span><strong>初学者指南</strong></a>
+<a class="related-card" href="/zh/gh-secretagogue-cycling.html"><span>相关</span><strong>GH 密室自行车协议</strong></a>
+</div>
+</div>
+</section>
+<script src="/email-popup.js"></script>
+</body>
+</html>
