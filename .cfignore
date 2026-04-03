@@ -1,0 +1,30 @@
+# Cloudflare Pages ignore file
+# Exclude non-deployable files to stay under 20K file limit
+
+# English mirror (served from root)
+en/
+
+# Python artifacts
+__pycache__/
+*.py
+*.pyc
+
+# Content batch logs
+*.md
+*.json
+*.txt
+*.sh
+*.yml
+
+# Git
+.git/
+.github/
+.gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backups
+*.bak
+*.backup
