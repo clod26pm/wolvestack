@@ -305,11 +305,11 @@ def _inject_hreflang(soup, filename):
             link['href'] = f"{DOMAIN}/{lang_code}/{filename}"
         head.append(link)
 
-    # x-default points to English
+    # x-default points to root (which IS the English version)
     link = soup.new_tag('link')
     link['rel'] = 'alternate'
     link['hreflang'] = 'x-default'
-    link['href'] = f"{DOMAIN}/en/{filename}"
+    link['href'] = f"{DOMAIN}/{filename}"
     head.append(link)
 
 

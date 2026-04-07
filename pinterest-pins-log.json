@@ -239,6 +239,72 @@
       "image": "pinterest-pins/pin-9-me-bc-guide.png",
       "description": "Complete 9-Me-BC research guide covering dosage, benefits, side effects, and cycling protocols. A powerful nootropic compound for cognitive enhancement. #peptides #research #biohacking #nootropics #9MeBC #brainhealth #cognitive #focus",
       "link": "https://wolvestack.com/9-me-bc-guide"
+    },
+    {
+      "filename": "bpc-157-oral-vs-injectable.html",
+      "title": "BPC-157 Oral vs Injectable | Which Route Works Better? 2026",
+      "color": "#1a5276",
+      "date": "2026-04-05",
+      "status": "image_ready_not_published",
+      "image": "pinterest-pins/pin-bpc-157-oral-vs-injectable.png",
+      "description": "Should you take BPC-157 orally or by injection? Compare absorption, efficacy, dosing, and practical considerations for each route. #peptides #research #biohacking #health #BPC157 #oralvsinject #healing #gutHealth",
+      "link": "https://wolvestack.com/bpc-157-oral-vs-injectable",
+      "pin_image_params": {
+        "color": "#1a5276",
+        "heading": "BPC-157\nOral vs Injectable",
+        "subtitle": "Which Route Works Better?",
+        "bullets": [
+          "Oral route best for GI-specific issues",
+          "Injectable for systemic & localized healing",
+          "Absorption & bioavailability compared",
+          "Practical decision guide included"
+        ],
+        "urlSlug": "bpc-157-oral-vs-injectable"
+      }
+    },
+    {
+      "filename": "best-peptides-for-brain.html",
+      "title": "Best Peptides for Brain & Cognitive Enhancement | Guide 2026",
+      "color": "#7d3c98",
+      "date": "2026-04-05",
+      "status": "image_ready_not_published",
+      "image": "pinterest-pins/pin-best-peptides-for-brain.png",
+      "description": "Discover the top 7 research peptides for brain function and cognitive enhancement, including Cerebrolysin, Pinealon, and BPC-157. #peptides #research #biohacking #nootropics #brainhealth #cognitive #focus #memory",
+      "link": "https://wolvestack.com/best-peptides-for-brain",
+      "pin_image_params": {
+        "color": "#7d3c98",
+        "heading": "Best Peptides\nfor Brain Health",
+        "subtitle": "Top 7 Cognitive Enhancers",
+        "bullets": [
+          "Cerebrolysin \u2014 neuroprotective peptide extract",
+          "Pinealon \u2014 EDR tripeptide for focus",
+          "BPC-157 \u2014 brain-gut axis benefits",
+          "GHK-Cu \u2014 neuroprotective copper peptide"
+        ],
+        "urlSlug": "best-peptides-for-brain"
+      }
+    },
+    {
+      "filename": "bpc-157-vs-stem-cell-therapy.html",
+      "title": "BPC-157 vs Stem Cell Therapy | Comparison Guide 2026",
+      "color": "#1e8449",
+      "date": "2026-04-05",
+      "status": "image_ready_not_published",
+      "image": "pinterest-pins/pin-bpc-157-vs-stem-cell-therapy.png",
+      "description": "BPC-157 vs stem cell therapy \u2014 comparing mechanisms, evidence, costs, side effects, and when to use each. Can you combine both? #peptides #research #biohacking #health #BPC157 #stemcells #regenerative #healing",
+      "link": "https://wolvestack.com/bpc-157-vs-stem-cell-therapy",
+      "pin_image_params": {
+        "color": "#1e8449",
+        "heading": "BPC-157 vs\nStem Cell Therapy",
+        "subtitle": "Which Regenerative Option?",
+        "bullets": [
+          "Mechanisms & evidence compared",
+          "Cost analysis: peptide vs clinic",
+          "Side effect profiles reviewed",
+          "Can you use both together?"
+        ],
+        "urlSlug": "bpc-157-vs-stem-cell-therapy"
+      }
     }
   ]
 }
