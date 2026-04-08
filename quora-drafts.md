@@ -358,3 +358,86 @@ We put together a comprehensive breakdown covering the different GLP-1 compounds
 ---
 
 *Generated 2026-04-07. Chrome extension not connected — could not access Quora for posting. Post these manually via the URLs above.*
+# Quora Draft Answers — April 8, 2026
+
+> **Status:** DRAFTS — Chrome extension not connected; posting requires explicit user action.
+> **Account:** WolveStack (wolvestack.com)
+> **Note:** These drafts need to be posted manually. Navigate to each URL and paste the answer.
+
+---
+
+## Draft 1
+
+**Question:** "Can peptide therapy improve muscle growth and recovery?"
+**URL:** https://www.quora.com/unanswered/Can-peptide-therapy-improve-muscle-growth-and-recovery
+**Status:** Unanswered — 1 person wants an answer
+
+**Answer:**
+
+Short answer: yes, but the results depend heavily on which peptides you're using and what you mean by "improve."
+
+If you're expecting steroid-level gains, recalibrate. Peptides work through different mechanisms — mostly by optimizing your body's own hormonal signaling rather than flooding it with exogenous hormones. The upside is a much cleaner side-effect profile. The trade-off is more gradual results.
+
+For muscle growth specifically, the GH secretagogue stack is the workhorse. CJC-1295 paired with Ipamorelin stimulates your pituitary to release more growth hormone in a pattern that mimics natural pulsatile secretion. Over 8-12 weeks, most people see meaningful improvements in body composition — not dramatic scale changes, but visible recomposition. Fuller muscles, less midsection softness, better recovery between sessions. Studies on GH-releasing peptides show increases in IGF-1 levels of 50-150% depending on dosing, and IGF-1 is the downstream driver of protein synthesis and satellite cell activation.
+
+For recovery, BPC-157 is probably the most talked-about peptide right now. It accelerates tendon and ligament repair by promoting angiogenesis — new blood vessel formation at the injury site. If you're training hard enough to grow, you're also creating micro-damage that needs to heal. BPC-157 at 250-500 mcg daily can noticeably compress recovery timelines. People dealing with chronic tendinopathy or nagging joint issues often report resolution within 2-4 weeks that wasn't happening with PT alone.
+
+TB-500 is the other recovery compound worth knowing about. It works systemically rather than locally — improving your body's ability to mobilize repair cells to wherever they're needed. The BPC-157 + TB-500 stack covers both localized repair and system-wide recovery enhancement.
+
+One thing that gets overlooked: sleep quality matters as much as the peptides. GH release happens primarily during deep sleep stages. If you're chronically under-sleeping, even the best secretagogue protocol is fighting a losing battle.
+
+We put together detailed protocol guides for both the muscle growth side (wolvestack.com/best-peptides-muscle-growth.html) and recovery applications (wolvestack.com/best-peptides-injury-recovery.html). Worth reading before committing to anything — the dosing and cycling details matter more than people think.
+
+---
+
+## Draft 2
+
+**Question:** "Where can I find reliable suppliers of peptides?"
+**URL:** https://www.quora.com/unanswered/Where-can-I-find-reliable-suppliers-of-peptides
+**Status:** Unanswered
+
+**Answer:**
+
+I'm going to skip naming specific vendors because this market changes fast — a company that's great this quarter might cut corners next quarter when demand outpaces their production capacity. What I will give you is the framework we use at WolveStack when we evaluate any peptide source. This is more useful long-term than any vendor name.
+
+First priority: third-party testing. You want a Certificate of Analysis (COA) with HPLC purity data and mass spectrometry. HPLC tells you purity percentage — look for 98%+ minimum. Mass spec confirms molecular identity, meaning the vial actually contains the peptide you ordered. The COA should be batch-matched to the specific lot number on your product. If a vendor can't produce this within 24 hours of you asking, walk away.
+
+Who did the testing matters. In-house testing from the vendor is essentially worthless — it's grading their own homework. Janoshik Analytical is the gold standard independent lab in this space. Some vendors also use Colmaric Analyticals or other ISO-accredited labs.
+
+Pricing is a useful bullshit detector. Peptide synthesis has real costs. If someone is selling BPC-157 at half the market rate, ask yourself how. Usually it means underdosed product, lower purity, or degraded peptides that weren't stored properly. The difference between a high-purity peptide and sketchy powder might be $20-30 per vial. Not the place to bargain-hunt.
+
+Check shipping practices. Lyophilized peptides should arrive as a dry powder or cake in sealed vials with cold packs during warm months. If it arrives as a liquid or the crimp seal looks off, return it.
+
+Community feedback is valuable but verify independently. Reddit communities like r/Peptides have vendor review threads, but these can be manipulated. Cross-reference multiple sources before trusting any single recommendation.
+
+We built an entire vendor evaluation guide with specific red flags, COA interpretation walkthroughs, and pricing benchmarks at wolvestack.com/peptide-sourcing-guide.html. It's the resource I wish existed when I first started navigating this market.
+
+---
+
+## Draft 3
+
+**Question:** "What kind of doctor will prescribe BPC-157?"
+**URL:** https://www.quora.com/What-kind-of-doctor-will-prescribe-BPC-157-I-ve-had-golfers-elbow-inside-of-elbow-for-three-years-and-now-I-ve-developed-tennis-elbow-outside-of-elbow-so-I-have-both-now-I-can-t-even-do-curls-it-hurts-so-bad-Already
+**Status:** Has answers but room for a more current, practical response given the 2024 FDA changes
+
+**Answer:**
+
+This is a question where the answer changed significantly in 2024. Before the FDA crackdown, functional medicine doctors, sports medicine physicians, and anti-aging/longevity clinics were the main prescribers. They'd write a script, a compounding pharmacy would produce the BPC-157, and you'd get pharmaceutical-grade product with medical oversight.
+
+That pathway is largely closed now. The FDA added BPC-157 to the list of substances that compounding pharmacies cannot use. So even doctors who want to prescribe it have lost their supply chain for the compounded version.
+
+Some clinics still work with it through research protocols or by sourcing from overseas pharmacies, but this is a gray area legally and the options have narrowed considerably.
+
+For your specific situation — bilateral epicondylitis that hasn't responded to conventional treatment over three years — here's what I'd actually do:
+
+Find a sports medicine physician or orthopedist who's open-minded about regenerative therapies. Even if they can't prescribe BPC-157 specifically, they can offer PRP (platelet-rich plasma) injections, which have decent evidence for tendinopathy. Some of these same physicians are knowledgeable about peptides and can at least discuss them with you informally.
+
+Functional medicine and longevity clinics are still the most peptide-friendly. Look for providers who are members of organizations like A4M (American Academy of Anti-Aging Medicine) or IFM (Institute for Functional Medicine). Many of them will discuss BPC-157 even if the prescribing pathway has changed.
+
+The research peptide route is how most people currently access BPC-157. It's legal to purchase for research purposes — it's not a controlled substance. The key is sourcing from a vendor with verified third-party testing (HPLC purity + mass spec). For elbow tendinopathy specifically, subcutaneous injection near the affected area at 250-500 mcg daily for 4-6 weeks is the protocol you'll see referenced most in the literature and biohacking communities.
+
+We have a full guide on BPC-157 covering the mechanisms, protocols, and current access landscape at wolvestack.com/bpc-157-guide.html. For your elbow situation specifically, the injury recovery comparison page (wolvestack.com/best-peptides-injury-recovery.html) compares BPC-157 against other options like TB-500 and might help you decide on an approach.
+
+---
+
+*Generated 2026-04-08. Chrome extension not connected — could not access Quora for posting. Post these manually via the URLs above.*
