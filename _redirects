@@ -1,2 +1,29 @@
 # Redirect old /peptide-daily-content/ paths to root
 /peptide-daily-content/*  /:splat  301
+
+# Fix 404s reported by GSC (phantom URLs from bad links)
+# /ar/guides → ar index (no guides page exists)
+/ar/guides          /ar/peptide-beginners-guide.html  301
+/it/guides.html     /it/peptide-beginners-guide.html  301
+
+# /ja/ short URLs → correct -guide.html versions
+/ja/tb-500.html     /ja/tb-500-guide.html   301
+/ja/bpc-157.html    /ja/bpc-157-guide.html  301
+/ja/start-here.html /ja/peptide-beginners-guide.html 301
+/ja/contact.html    /ja/about.html          301
+
+# /ja/peptides and /id/peptides → beginners guide
+/ja/peptides.html   /ja/peptide-beginners-guide.html  301
+/ja/peptides        /ja/peptide-beginners-guide.html  301
+/id/peptides        /id/peptide-beginners-guide.html  301
+
+# /zh/ filename mismatch (nad-plus vs nadplus)
+/zh/nad-plus-guide.html  /zh/nadplus-guide.html  301
+
+# Catch common short-URL patterns across all languages
+/:lang/guides       /:lang/peptide-beginners-guide.html      301
+/:lang/guides.html  /:lang/peptide-beginners-guide.html      301
+/:lang/peptides     /:lang/peptide-beginners-guide.html      301
+/:lang/peptides.html /:lang/peptide-beginners-guide.html     301
+/:lang/contact.html /:lang/about.html              301
+/:lang/start-here.html /:lang/peptide-beginners-guide.html 301
