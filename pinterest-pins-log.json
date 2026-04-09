@@ -329,6 +329,69 @@
       "date": "2026-04-08",
       "description": "Tirzepatide vs semaglutide comparison: dual GIP/GLP-1 vs single GLP-1, weight loss results, side effects, dosing, and cost. #peptides #research #biohacking #health #tirzepatide #semaglutide #GLP1 #weightloss",
       "link": "https://wolvestack.com/tirzepatide-vs-semaglutide"
+    },
+    {
+      "filename": "best-peptides-for-fat-loss.html",
+      "title": "Best Peptides for Fat Loss | Research & Protocols 2026",
+      "color": "#1a5276",
+      "date": "2026-04-09",
+      "status": "image_ready_not_published",
+      "description": "Top research peptides for fat loss ranked and reviewed. Covers AOD-9604, 5-Amino-1MQ, semaglutide, and more with dosing protocols. #peptides #research #biohacking #health #fatloss #weightloss #AOD9604 #semaglutide #metabolic",
+      "link": "https://wolvestack.com/best-peptides-for-fat-loss",
+      "pin_image_params": {
+        "color": "#1a5276",
+        "heading": "Best Peptides\nfor Fat Loss",
+        "subtitle": "Research & Protocols Ranked",
+        "bullets": [
+          "AOD-9604 \u2014 GH fragment for fat metabolism",
+          "5-Amino-1MQ \u2014 NNMT inhibitor for stubborn fat",
+          "Semaglutide \u2014 GLP-1 appetite & metabolic control",
+          "Dosing protocols & stacking strategies"
+        ],
+        "urlSlug": "best-peptides-for-fat-loss"
+      }
+    },
+    {
+      "filename": "sermorelin-guide.html",
+      "title": "Sermorelin Guide | GH Therapy Dosing & Effects 2026",
+      "color": "#7d3c98",
+      "date": "2026-04-09",
+      "status": "image_ready_not_published",
+      "description": "Complete sermorelin research guide: dosing, effects, and how it compares to CJC-1295 and MK-677. The original FDA-approved GHRH analogue. #peptides #research #biohacking #health #sermorelin #growthhormone #GH #antiaging #GHRH",
+      "link": "https://wolvestack.com/sermorelin-guide",
+      "pin_image_params": {
+        "color": "#7d3c98",
+        "heading": "Sermorelin\nComplete Guide",
+        "subtitle": "The Original GH Therapy Peptide",
+        "bullets": [
+          "FDA-approved GHRH analogue dosing",
+          "Sermorelin vs CJC-1295 comparison",
+          "Sermorelin vs MK-677 trade-offs",
+          "Best stacking partner: Ipamorelin"
+        ],
+        "urlSlug": "sermorelin-guide"
+      }
+    },
+    {
+      "filename": "bpc-157-injection-guide.html",
+      "title": "How to Inject BPC-157 | SubQ Technique Guide 2026",
+      "color": "#1e8449",
+      "date": "2026-04-09",
+      "status": "image_ready_not_published",
+      "description": "Step-by-step BPC-157 injection guide covering subcutaneous technique, needle selection, site rotation, and preparation. #peptides #research #biohacking #health #BPC157 #injection #subQ #healing #reconstitution",
+      "link": "https://wolvestack.com/bpc-157-injection-guide",
+      "pin_image_params": {
+        "color": "#1e8449",
+        "heading": "How to Inject\nBPC-157",
+        "subtitle": "SubQ Technique & Syringe Guide",
+        "bullets": [
+          "200-500 mcg subcutaneous protocol",
+          "Needle size & syringe selection",
+          "Injection site rotation explained",
+          "Reconstitution & preparation steps"
+        ],
+        "urlSlug": "bpc-157-injection-guide"
+      }
     }
   ]
 }
