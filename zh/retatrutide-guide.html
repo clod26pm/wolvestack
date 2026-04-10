@@ -1,42 +1,27 @@
-<!--
-  WOLVESTACK ARTICLE TEMPLATE (GEO-Optimized)
-
-  Instructions for creating new articles:
-  1. Replace all {{PLACEHOLDERS}} with actual content
-  2. Use question-format H2 headers (e.g. "What Is X?" not "Overview")
-  3. Quick Answer box should contain 2-3 sentences directly answering the main query
-  4. FAQPage schema should have 4-6 Q&A pairs covering the most common questions
-  5. Keep meta description under 160 characters
-  6. Update sitemap.xml when adding new pages
--->
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MLF04PQ0JV');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Retatrutide0 指南:效益、剂量、副作用和研究</title>
-<meta content="XTERMX000剂量:每星期4-12次mg(乳头后维持)一次. 周期长度,时间,重组指南." name="description"/>
+<meta content="" name="description"/>
 <!-- Open Graph Meta Tags -->
-<meta content="Retatrutide0 指南:效益、剂量、副作用和研究" property="og:title"/>
-<meta content="XTERMX000剂量:每星期4-12次mg(乳头后维持)一次. 周期长度,时间,重组指南." property="og:description"/>
-<meta content="https://wolvestack.com/zh/retatrutide-guide.html" property="og:url"/>
+<meta content="" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="" property="og:url"/>
 <meta content="article" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
+<meta content="" property="og:image"/>
 <!-- Twitter Card Meta Tags -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Retatrutide0 指南:效益、剂量、副作用和研究" name="twitter:title"/>
-<meta content="XTERMX000剂量:每星期4-12次mg(乳头后维持)一次. 周期长度、时间、重组指南" name="twitter:description"/>
+<meta content="" name="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
 <!-- Canonical Link -->
-<link href="https://wolvestack.com/zh/retatrutide-guide.html" rel="canonical"/>
+<link href="" rel="canonical"/>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">[
   {
@@ -132,9 +117,9 @@
     ]
   }
 ]</script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
+
   :root {
     --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
     --teal-pale: #e8f4f5; --accent: #f0a500;
@@ -162,14 +147,21 @@
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
 
   .article-hero {
     background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
     padding: 64px 24px 56px; position: relative; overflow: hidden;
   }
+  .article-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
   .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
   .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
   .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
   .breadcrumb span { color: rgba(255,255,255,0.3); }
   .breadcrumb .current { color: rgba(255,255,255,0.75); }
   .article-tag {
@@ -197,12 +189,88 @@
   .article-body h2 {
     font-family: var(--font-display); font-size: 26px; font-weight: 700;
     color: var(--navy); margin: 48px 0 16px; line-height: 1.3;
+    padding-top: 8px; border-top: 2px solid var(--teal-pale);
   }
   .article-body h2:first-child { margin-top: 0; border-top: none; }
   .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
   .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+  .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+  .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
+  .article-body strong { color: var(--navy); font-weight: 600; }
+  .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 
-  /* GEO: Quick Answer Box */
+  .callout {
+    background: var(--teal-pale); border-left: 4px solid var(--teal);
+    padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0;
+  }
+  .callout.warning { background: #fef3c7; border-color: #f59e0b; }
+  .callout.research { background: #eff6ff; border-color: #3b82f6; }
+  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout.warning .callout-label { color: #92400e; }
+  .callout.research .callout-label { color: #1d4ed8; }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .sidebar { position: sticky; top: 84px; }
+  .toc {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 24px;
+  }
+  .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 10px; }
+  .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
+  .toc a:hover { color: var(--teal); }
+  .sidebar-card {
+    background: linear-gradient(135deg, var(--navy), #0a3d5c);
+    border-radius: 12px; padding: 24px; margin-top: 24px; color: white;
+  }
+  .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
+  .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
+  .sidebar-card a:hover { background: var(--teal-light); }
+
+  .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
+  .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13px; color: var(--gray-600); }
+
+
+    .apollo-card { border-top: 3px solid #7c3aed !important; background: #f8f7ff !important; }
+    .apollo-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .apollo-btn { display: inline-block; background: #1e3a5f; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .apollo-btn:hover { background: #7c3aed !important; }
+    .apollo-btn.apollo-primary { background: #7c3aed; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+  .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+  .faq-q { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .faq-a { font-size: 16px; color: #374151; line-height: 1.7; margin: 0; }
+    .particle-card { border-top: 3px solid #8b2fc9 !important; }
+    .particle-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .particle-btn { display: inline-block; background: #6b21a8; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .particle-btn:hover { background: #8b2fc9 !important; }
+    .particle-btn.particle-primary { background: #8b2fc9; }
+      .limitless-card { border-top: 3px solid #0891b2 !important; }
+    .limitless-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .limitless-btn:hover { background: #0891b2 !important; }
+    .limitless-btn.limitless-primary { background: #0891b2; }
+  
   .quick-answer {
     background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
     border: 2px solid var(--teal, #0d7377);
@@ -229,53 +297,42 @@
     margin-bottom: 0 !important;
   }
 
-  .callout {
-    border-radius: 10px; padding: 20px 24px; margin: 24px 0;
-    display: flex; gap: 16px; align-items: flex-start;
-  }
-  .callout.warning {
-    background: #fef3c7; border-left: 4px solid #f59e0b;
-  }
-  .callout-label { font-weight: 700; font-size: 14px; white-space: nowrap; }
+
 </style>
-<link href="https://wolvestack.com/en/retatrutide-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/retatrutide-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/retatrutide-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/retatrutide-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/retatrutide-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/retatrutide-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/retatrutide-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/retatrutide-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/retatrutide-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/retatrutide-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/retatrutide-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/retatrutide-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/retatrutide-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/retatrutide-guide.html" hreflang="x-default" rel="alternate"/></head>
+
+</head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/zh/index.html">狼头<span>堆栈</span></a>
+<a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/zh/peptide-beginners-guide.html">从这里开始</a></li>
-<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
-<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
-<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
-<li><a href="/zh/peptide-calculator.html">计算器</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
-</div>
-
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/retatrutide-guide.html">English</option><option value="/es/retatrutide-guide.html">Español</option><option selected="" value="/zh/retatrutide-guide.html">中文</option><option value="/ja/retatrutide-guide.html">日本語</option><option value="/pt/retatrutide-guide.html">Português</option><option value="/ru/retatrutide-guide.html">Русский</option><option value="/it/retatrutide-guide.html">Italiano</option><option value="/pl/retatrutide-guide.html">Polski</option><option value="/fr/retatrutide-guide.html">Français</option><option value="/id/retatrutide-guide.html">Bahasa</option><option value="/de/retatrutide-guide.html">Deutsch</option><option value="/nl/retatrutide-guide.html">Nederlands</option><option value="/ar/retatrutide-guide.html">العربية</option>
-</select>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 <div class="article-hero">
 <div class="article-hero-inner">
 <div class="breadcrumb">
-<a href="/zh/index.html">页 次</a> <span>›</span>
-<a href="/zh/index.html">重量损失</a> <span>›</span>
-<span class="current">XTERMX000 (英语).</span>
+<a href="/">Home</a>
+<span>/</span>
+<a href="/">Guides</a>
+<span>/</span>
+<span class="current">Retatrutide Guide</span>
 </div>
-<div class="article-tag">重击失败</div>
-<h1>XTERMX000 指南</h1>
-<p style="color: rgba(255,255,255,0.7); font-size: 18px; line-height: 1.6; max-width: 640px;">惠益、剂量、副作用和研究
+<div class="article-tag">Deep Dive · Research Peptide</div>
+<h1>Retatrutide0 指南:效益、剂量、副作用和研究</h1>
+<p style="color:rgba(255,255,255,0.72); font-size:18px; margin-top:16px; line-height:1.7;">
+
 </p>
 <div class="article-meta">
-<span>8分钟读取</span>
-<span>研究与教育</span>
-<span>没有医疗建议</span>
-<span>最后一次审查:2026年4月</span>
+<span>📖 15 min read</span>
+<span>🔬 Research & Education</span>
+<span>⚠️ Not medical advice</span>
+<span>✅ Last reviewed: April 2026</span>
 </div>
 </div>
 </div>
@@ -285,13 +342,13 @@
 <div class="quick-answer">
 <p>XTERMX000(LY3437943)是Eli Lilly针对GLP-1,GIP和葡萄糖受体同时的三激动剂肽. 第二阶段试验的体重下降率高达24.2%,是迄今为止任何肥胖药物中最高的。 每周下皮注射,用乳头注射1~12 mg. 林业发展局尚未核准(预计2026-2027年)。 副作用主要是胃肠道作用,与其他GLP-1类似,但由于三重作用而可能更为明显.</p>
 </div>
-<h2>什么是Retatrutide吗?</h2>
+<h2 id="什么是retatrutide吗">什么是Retatrutide吗?</h2>
 <p>XTERMX000是基于肽的减重疗法的一个突破. 由Eli Lilly开发并被指定为LY3437943,它是一级三重受体激动剂——一种同时激活GLP-1,GIP(葡萄糖依赖性胰氨酸多肽),以及葡萄糖受体的化合物. 这种三重机制从根本上区分了retatrutide与前几代减重偶联剂,如semaglutide(单一GLP-1激动剂)和tirzepatide(双重GLP-1/GIP激动剂).</p>
 <p>该化合物从Eli Lilly的强力肥胖药理学管道中出现,自临床前的研究表明有显著的代谢效果后,该化合物就一直受到强烈的研究关注. 截至2026年4月,XTERMX000处于TRIUMPH方案下的第三阶段临床试验,试验NCT04881706的第二阶段数据显示出前所未有的减重效果. 制药界和新陈代谢健康研究人员密切跟踪retatrutide,因为其疗效特征——在48周时其影响的平均体重损失为基准体重的24.2%——超过了以前批准或研究过的所有肥胖药物。</p>
 <h3>发展历史和临床时间表</h3>
 <p>XTERMX000在充满希望的临床前和第一阶段安全数据后,于2021年进入人体试验. 第二阶段试验(NCT04881706)录取了患有肥胖症或2型糖尿病的参与者,并评估了retatrutide与安慰剂的升降剂量. 这次试验的结果在同行评审的期刊上发表,并在主要的内分泌学会议上发表,结果确定retatrutide是迄今为止研究得最有效的抗肥沃剂.</p>
 <p>转向第三阶段测试(TRIUPH Program)代表了目前的开发阶段. 这些大型随机控制试验旨在确认第二阶段在更广泛的人群中的功效结果,详细描述安全情况,并生成提交管制文件所需的数据。 Eli Lilly公开表示,打算在2026年中晚期向FDA提交新药申请(NDA),并可能在2026年末或2027年初获得批准,假定审判结果为正面.</p>
-<h2>XTERMX000 工作怎么样?</h2>
+<h2 id="xtermx000-工作怎么样">XTERMX000 工作怎么样?</h2>
 <p>了解XTERMX000的动作机制需要检查其三个受体目标中的每一个如何促进减重和代谢改善. 这些途径之间的协同作用解释了其优于早先的单一和双重目标方法。</p>
 <h3>GLP-10 受体激活:吞噬抑制</h3>
 <p>retatrutide的XTERMX000(glucagon-like peptide-1)组件通过多种途径工作. 当retatrutide与脑下丘脑中的GLP-1受体结合时,它抑制了促进饮食的信号。 这导致食欲下降,食物渴望减少,即使在消耗了较少数量的食品之后,人们也更加感到饱满。</p>
@@ -303,7 +360,7 @@
 <p>XTERMX000小说中添加的葡萄糖受体活化法代表了与以前所有可用的抗肥胖药物的关键区别. Glucagon通过促进储存脂肪(脂解)和葡萄糖(葡萄糖)的分解,自然提高代谢率和能量消耗. retatrutide激活葡萄糖受体时,可以增强机体为能量调动和氧化脂肪的能力,进一步增加热量消耗.</p>
 <p>葡萄糖成分还可能有助于在减重时保持瘦肌肉质量——这是一个重要的优势,因为肌肉组织具有代谢活性,其丧失可减缓长期代谢。 动物研究和早期人类数据表明,与其它GLP-1激动剂相比,XTERMX000引起的体重损失具有更有利的肌肉对脂肪损失比率,这意味着失重的较高比例来自脂肪组织而不是肌肉.</p>
 <p>然而,葡萄糖活化也会给胃肠功能和葡萄糖代谢带来影响,值得仔细监测. 三极激动机制的确在管理副作用方面引入了额外的复杂性,副作用部分对此进行了详细讨论.</p>
-<h2>XTERMX000的临床效果是什么?</h2>
+<h2 id="xtermx000的临床效果是什么">XTERMX000的临床效果是什么?</h2>
 <p>对XTERMX000的强烈兴趣最有说服力的原因是它在临床试验中达到了前所未有的效果. 第2阶段的数据表明,体重损失的结果超过了以前研究过的所有肥胖药物。</p>
 <h3>第二阶段 审判结果(NCT04881706)</h3>
 <p>第二阶段试验吸引了约338名肥胖症(BMI=30千克/平方米)或2型糖尿病超重症(BMI=27千克/平方米)的参与者。 在48周的治疗中,随机抽取了8剂XTERMX000(0.5、1.0、1.5、2.0、4.0、6.0、8.0或10.0 mg)或安慰剂。</p>
@@ -328,7 +385,7 @@
 <p>虽然按百分比计算,这似乎不大,但对许多个人来说,这是有意义的临床差异。 对于重150公斤的人来说,22.5%和24.2%的体重损失的差别是33.75公斤和36.3公斤——相差2.55公斤。 对于试图用其他药物在临床上实现有意义的体重损失的个人来说,这种额外的疗效可能是部分成功和转型结果的区别.</p>
 <h3>搜索需求和临床利益</h3>
 <p>XTERMX000在12个月的时间里引起了显著的搜索激增,大约增加了512%,这表明公众和专业的兴趣非常浓厚。 这种激增反映了试验数据所显示的希望以及媒体对一流创新的关注。 保健提供者和对肥胖症管理感兴趣的个人正在积极寻找关于retatrutide的可用性、功效和适合潜在使用的信息。</p>
-<h2>Retatrutide的《剂量议定书》是什么?</h2>
+<h2 id="retatrutide的《剂量议定书》是什么">Retatrutide的《剂量议定书》是什么?</h2>
 <p>虽然林业发展局核准的最后剂量时间表尚未确定,但第二阶段试验数据和临床讨论明确了预期的剂量方法。 目前临床实践和试验规程使用如下框架:</p>
 <h3>路线和频率</h3>
 <p>XTERMX000通过皮下(皮肤以下)注射方式每周注射一次。 和semaglutide和tirzepatide一样,可以注射到腹部,大腿,或上臂. 药品是作为预装笔或注射器提供的,在保健提供者接受初步培训后,自我管理便捷。</p>
@@ -346,7 +403,7 @@
 <p>XTERMX000的半衰期约为4~5天,这意味着在血液中达到稳定状态需要大约2~3周的正常每周剂量. 这种相对较长的半衰期可以方便地进行一周一次的剂量,如果错过一次剂量,则可以提供缓冲。 长半衰期还有助于在开始或停止治疗时逐步开始行动并逐渐解决副作用。</p>
 <h3>保养期和自行车</h3>
 <p>在第二阶段试验中,参与者持续保持目标维持剂量40周以上。 迄今为止,还没有证据表明XTERMX000应该循环运行和关闭;相反,它似乎是一种类似于semaglutide和tirzepatide的连续疗法。 在停止治疗时,体重可能会恢复,尽管恢复的程度和时间取决于治疗期间对生活方式的改变。</p>
-<h2>XTERMX000与Semaglutide相比如何?.</h2>
+<h2 id="xtermx000与semaglutide相比如何.">XTERMX000与Semaglutide相比如何?.</h2>
 <p>XTERMX000(Wegovy/Ozempic)仍然是市场领先的GLP-1激动剂,也是减重时最广泛使用的肽. 了解retatrutide的不同对于评估治疗方案的个人至关重要。</p>
 <h3>机制差异</h3>
 <p>XTERMX000是纯GLP-1受体激动剂. 它只激活一个激素途径。 Retatrutide激活了三个路径:GLP-1,GIP和glucagon. 这意味着retatrutide提供了semaglutide(通过GLP-1)的所有抑制食欲的好处,加上额外的热能效应(通过GIP)加上额外的代谢速率增强(通过glucagon). 三重机制在理论上是优越的,这得到了临床数据的支持.</p>
@@ -358,7 +415,7 @@
 <p>XTERMX000自2021年6月起被FDA批准,并拥有来自数百万患者的广泛市场后安全数据库. Retatrutide尚未获得林业发展局批准,仍在第三阶段试验中。 这种批准状况差异影响到保险的覆盖面、可获取性和对安全数据的信心。 Semaglutide今天可以开具处方;retatrutide需要临床试验注册或等待批准(预计2026-2027年).</p>
 <h3>成本考虑因素</h3>
 <p>XTERMX000 通常每月花费200-600美元,没有保险,保险范围可按计划变. Retatrutide的最终定价结构尚未建立,但由于其效能和复杂性的提高,它可能与semaglutide相当或可能高于.</p>
-<h2>XTERMX000与Tirzepatide相比如何?.</h2>
+<h2 id="xtermx000与tirzepatide相比如何.">XTERMX000与Tirzepatide相比如何?.</h2>
 <p>XTERMX000(Zepbound/Mounjaro)是林业发展局最近批准的竞争对手,代表了双重激动主义的护理标准. 与retatrutide的直接比较特别有价值,因为这两种药物代表了肥胖药理治疗的连续创新步骤.</p>
 <h3>机制差异</h3>
 <p>XTERMX000是一种GLP-1/GIP双受体激动剂,激活两个激素途径. Retatrutide是一种GLP-1/GIP/glucagon三重受体激动剂,激活三个途径. retatrutide中的额外葡萄糖成分为增加代谢率和能量消耗提供了一种额外的机制. 从理论上讲,这应该转化为优效,第二阶段的数据证实了这一预测.</p>
@@ -371,7 +428,7 @@
 <p>XTERMX000自2023年11月起由林业发展局核准,可通过开具方和保险计划随时提供。 Retatrutide尚未获得批准。 这种监管优势目前有利于tirzepatide. 然而,一旦retatrutide获得FDA批准(预计2026年末至2027年初),两者都将是可供选择的,临床医生可以在现实世界实践中进行头对头比较.</p>
 <h3>多兴方便</h3>
 <p>XTERMX000的剂量范围是每周2.5-15 mg. Retatrutide的预期剂量范围为每周0.5-10 mg. 有趣的是,retatrutide在较低绝对剂量下达到优效,表明每毫克的疗效可能更高。 这可以转化为较小的注射量或更方便的剂量,尽管这仍有待确定。</p>
-<h2>XTERMX000的副作用是什么?</h2>
+<h2 id="xtermx000的副作用是什么">XTERMX000的副作用是什么?</h2>
 <p>所有基于XTERMX000的药物都产生以胃肠效应为中心的特征副作用剖面. Retatrutide的三重机制意味着副作用剖面包括所有三种受体激活的贡献,这些受体一般与单倍激动剂和双倍激动剂的剖面一致但超过了这种特征.</p>
 <h3>胃肠侧效应</h3>
 <p><strong>恶心</strong>是最常见的副作用,在第二阶段试验中,大约42-48%的参与者报告了最高剂量的副作用。 在剂量乳化阶段,尤其是从一个剂量级升至另一个剂量级时,一般会出现恶心峰值。 大多数患者报告说,恶心在身体适应时达到稳定剂量后4-8周内减少或解决. 恶心症一般轻度至中度,很少导致停止治疗,尽管有些人认为它很烦恼,只能维持较低的剂量。</p>
@@ -396,7 +453,7 @@
 <li style="margin-bottom: 10px;"><strong>抗药</strong>:处方药或场外抗恶心药物可能在乳头时提供暂时的缓解,尽管它们有时可以钝化食欲抑制作用.</li>
 <li style="margin-bottom: 10px;"><strong>仍在低效剂量下</strong>:并非所有患者都需要最大剂量来实现有意义的体重损失. 有些人发现每周6.0 XTERMX000提供优异的功效,比10.0 mg更能耐.</li>
 </ul>
-<h2>你知道XTERMX000的监管状况吗?</h2>
+<h2 id="你知道xtermx000的监管状况吗">你知道XTERMX000的监管状况吗?</h2>
 <p>XTERMX000的监管行程将决定何时以及如何获得. 了解现状和预期时间表对于确定期望十分重要。</p>
 <h3>现阶段3 发展</h3>
 <p>截至2026年4月,XTERMX000正在TRIUMPH计划下的第三阶段临床试验中. 这些大规模随机的控制试验旨在确认第二阶段的效力,描述不同人群的安全情况,并生成林业发展局提交文件所需的全面数据。 典型的第三阶段肥胖药物方案有4 000至5 000人参加,为期12至24个月。</p>
@@ -406,7 +463,7 @@
 <p>Eli Lilly公开指出,预计在2026年中晚期将提交NDA。 假设第3阶段的结果是积极的,林业发展局的审查是成功的,则批准工作可能在2026年末或2027年初进行。 然而,这一时限会根据试验结果和监管反馈而改变。</p>
 <h3>核准后景观</h3>
 <p>一旦FDA批准,XTERMX000将通过在美国获得许可的处方提供。 保险覆盖面将随时间而变化;最初,许多计划可能需要事先批准或限制偿还,但随着药物经验的积累和竞争的药物建立市场,保险模式通常会扩大。 预计自付费用与tirzepatide和semaglutide相当,可能为每月200-600美元,没有保险。</p>
-<h2>您目前如何访问 XTERMX000?</h2>
+<h2 id="您目前如何访问-xtermx000">您目前如何访问 XTERMX000?</h2>
 <p>在FDA批准之前,XTERMX000的访问是有限的,但并非不可能. 目前的途径包括:</p>
 <h3>临床审判参与</h3>
 <p>有兴趣接受XTERMX000的个人可以参加正在进行的第三阶段TRIUMPH试验。 临床试验场位于美国全国和国际. 参加审判通常包括定期探访、验血和监测,但免费提供治疗,参与者甚至可以得到时间和旅行补偿。</p>
@@ -415,7 +472,7 @@
 <p>FDA的扩大获取(同情使用)方案允许有严重或立即危及生命条件的个人在临床试验之外获得调查药物. 然而,鉴于已核准的替代品(semaglutide,tirzepatide)的存在,tirzepatide治疗肥胖症的同情用途不太可能。 仁慈的使用通常只用于没有经批准治疗的条件。</p>
 <h3>国际可得性</h3>
 <p>XTERMX000可能在美国FDA批准前在一些国家提供. 然而,截至2026年4月,它尚未获得主要国际监管管辖区的批准. 一旦获得批准,供应情况将取决于每个国家的监管程序和药品定价框架。</p>
-<h2>关于XTERMX000经常问什么问题?</h2>
+<h2 id="关于xtermx000经常问什么问题">关于XTERMX000经常问什么问题?</h2>
 <h3>XTERMX000是"最佳"减重药吗?</h3>
 <p>XTERMX000显示迄今所研究的任何药物的平均减重疗效最高(最高剂量为24.2%)。 然而,"最佳"是主观的,取决于个人因素:副作用耐受,成本,获取,医疗共性,以及个人偏好. 对于一些个人来说,semaglutide经过验证的音轨记录和更大的可访问性可能是可取的. 对其他人来说,tirzepatide的高效平衡和FDA的批准可能是理想的. Retatrutide在其他这些选项已经尝试并证明不足时成为了上级选择.</p>
 <h3>XTERMX000什么时候得到林业发展局的批准?</h3>
@@ -428,7 +485,7 @@
 <p>第二阶段的数据,最多48周的处理表明安全,但长期的安全数据(6个月以上)将来自第三阶段的试验。 一旦得到数百万患者的核准和使用,市场后期监测将进一步说明长期安全情况。 根据长期使用的XTERMX000和tirzepatide的安全简介,没有理由期待retatrutide出现出乎意料的重大安全问题,尽管需要不断进行监测。</p>
 <h3>我能从XTERMX000或Tirzepatide切换到Retatrutide吗?</h3>
 <p>一旦XTERMX000获得批准,就应当能够从其他GLP-1激动剂中切换,尽管过渡的具体协议仍有待建立. 某些个人如果在其他药物上取得了低于最佳的减重,就可能从转换中受益。 另一些人可能发现,胃肠道副作用与retatrutide的发生率略高,使其更不可取. 任何药品开关都应在医疗监督下进行,并有明确的监测和跟踪。</p>
-<h2>你在哪里能找到关于XTERMX000研究的信息?</h2>
+<h2 id="你在哪里能找到关于xtermx000研究的信息">你在哪里能找到关于XTERMX000研究的信息?</h2>
 <p>要了解目前的研究情况,并为研究目的获取肽化合物,就需要知道在哪里寻找可靠的信息和合格来源。 若干平台提供关于XTERMX000和相关化合物的循证数据。</p>
 <h3>临床试验信息</h3>
 <p>临床试验信息的官方存放处是:<strong>临床研究.gov</strong>,国家医学图书馆维护的数据库. 搜索"XTERMX000"以找到所有注册的试验,包括第三阶段TRIUMPH程序,入学标准,地点,以及主要调查人员. 这一资源对于了解积极的研究和评价潜在的参与是十分宝贵的。</p>
@@ -439,7 +496,7 @@
 <p>美国糖尿病协会(diabetes.org)和肥胖协会(obesity.org)提供有关XTERMX000激动剂和新兴疗法的教育资源. 这些组织发布立场声明和临床指南,其中包括retatrutide等小药剂在通过开发与审批过程中的信息.</p>
 <h3>制造商信息</h3>
 <p>Eli Lilly维持着一个官方网站,其中包含投资者关系和临床管道信息. 新闻稿和投资者电话经常提供XTERMX000的发展状况、审判进展和预期时间表的最新情况。 这一信息是公开的,并代表了该公司对药物发展的官方立场.</p>
-<h2>有哪些研究复合物和相关产品可供使用?</h2>
+<h2 id="有哪些研究复合物和相关产品可供使用">有哪些研究复合物和相关产品可供使用?</h2>
 <p>在等待FDA批准XTERMX000时,对肽类科学感兴趣的研究人员和个人可能寻求有关化合物和研究工具的信息. 一些供应商提供了经核实的真实性和纯度的高质量研究peptides。</p>
 <h3>研究Peptide供应商</h3>
 <p>优质研究丙胺供应商通常提供:</p>
@@ -459,62 +516,67 @@
 <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">医疗免责声明</p>
 <p style="margin: 0;">这篇文章是为了<strong>仅供参考和教育目的</strong>并且不构成医疗建议。 讨论的化合物是研究化学物质<strong>未经林业发展局核准</strong>截止2026年4月为人类使用. 在考虑任何恋童癖协议之前,请咨询有执照的保健专业人员。 XTERMX000没有医务人员,也没有诊断、治疗或开处方。 看我们的满<a href="/zh/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免责声明</a>。 。 。</p>
 </div>
-</article></div>
-<!-- Internal Links: You Might Also Like -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px 28px; margin: 32px 0;">
-<p style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #0f2240; margin: 0 0 12px;">你也一样</p>
-<div style="margin-bottom: 16px;">
-<p style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 4px;">更多关于XTERMX000</p>
-<a href="/zh/retatrutide-before-and-after.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 前后</a>
-<a href="/zh/retatrutide-benefits.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 福利</a>
-<a href="/zh/retatrutide-cycle.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 循环</a>
-<a href="/zh/retatrutide-dosage.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 剂量</a>
+</article>
+<aside class="sidebar">
+<nav class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#什么是retatrutide吗">什么是Retatrutide吗?</a></li>
+<li><a href="#xtermx000-工作怎么样">XTERMX000 工作怎么样?</a></li>
+<li><a href="#xtermx000的临床效果是什么">XTERMX000的临床效果是什么?</a></li>
+<li><a href="#retatrutide的《剂量议定书》是什么">Retatrutide的《剂量议定书》是什么?</a></li>
+<li><a href="#xtermx000与semaglutide相比如何.">XTERMX000与Semaglutide相比如何?.</a></li>
+<li><a href="#xtermx000与tirzepatide相比如何.">XTERMX000与Tirzepatide相比如何?.</a></li>
+<li><a href="#xtermx000的副作用是什么">XTERMX000的副作用是什么?</a></li>
+<li><a href="#你知道xtermx000的监管状况吗">你知道XTERMX000的监管状况吗?</a></li>
+<li><a href="#您目前如何访问-xtermx000">您目前如何访问 XTERMX000?</a></li>
+<li><a href="#关于xtermx000经常问什么问题">关于XTERMX000经常问什么问题?</a></li>
+<li><a href="#你在哪里能找到关于xtermx000研究的信息">你在哪里能找到关于XTERMX000研究的信息?</a></li>
+<li><a href="#有哪些研究复合物和相关产品可供使用">有哪些研究复合物和相关产品可供使用?</a></li>
+</ol>
+</nav>
+
+<div class="sidebar-card">
+<h4>Wolverine Stack Protocol</h4>
+<p>BPC-157 + TB-500 combined is considered the gold standard for injury recovery in the peptide community.</p>
+<a href="/wolverine-stack.html">View Full Protocol →</a>
 </div>
-<div style="margin-bottom: 16px;">
-<p style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 4px;">相关贝普提斯</p>
-<a href="/zh/semaglutide-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 指南</a>
-<a href="/zh/tirzepatide-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000 指南</a>
-<a href="/zh/aod-9604-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">AOD 9604 指南</a>
-<a href="/zh/glp1-comparison-2026.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">XTERMX000对Tirzepatide对Retatrutide:2026比较</a>
-</div>
-<a href="/zh/best-peptides-fat-loss.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; font-weight: 600;">最佳食虫动物脂肪损失</a>
-<div style="margin-top: 12px; padding-top: 12px; border-top: 2px solid #e2e8f0;">
-<a href="/zh/peptide-beginners-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">初学者指南</a>
-<a href="/zh/best-peptide-stacks.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">最佳堆栈</a>
-</div>
-</div>
-<!-- E-E-A-T: Author Bio -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px 28px; margin: 40px 0 24px; display: flex; gap: 20px; align-items: flex-start;">
-<div style="min-width: 56px; width: 56px; height: 56px; background: linear-gradient(135deg, #0d7377, #14bdac); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px;">WS 系统</div>
-<div>
-<p style="font-weight: 700; font-size: 15px; margin: 0 0 4px; color: #0f2240;">WolveStack0 研究小组</p>
-<p style="font-size: 13px; color: #64748b; margin: 0 0 8px;">Peptide 研究和教育</p>
-<p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">我们的团队评论发表了关于肽化合物的临床和临床文献. 每篇文章都与PubMed指数化的研究,制造商COA,以及同行评审的期刊相互参照. 内容随着新研究的出现而更新.<a href="/zh/about.html" style="color: #0d7377; text-decoration: underline;">多了解我们的过程</a>。 。 。</p>
-</div>
-</div>
-<footer style="background: #0f2240; color: rgba(255,255,255,0.6); padding: 48px 24px 32px; margin-top: 64px;">
-<div style="max-width: 800px; margin: 0 auto; text-align: center;">
-<div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; font-size: 14px;">
-<a href="/zh/index.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">页 次</a>
-<a href="/zh/peptide-beginners-guide.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">从这里开始</a>
-<a href="/zh/peptide-calculator.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">计算器</a>
-<a href="/zh/peptide-sourcing-guide.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">供应商</a>
-<a href="/zh/about.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">关于</a>
-<a href="/zh/affiliate-disclosure.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">披露</a>
-<a href="/zh/privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">隐私</a>
-<a href="/zh/terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">术语</a>
-</div>
-<p style="font-size: 13px; margin-bottom: 8px;">2026 XTERMX000 (英语). 仅供研究和教育之用。</p>
-<p style="font-size: 12px; color: rgba(255,255,255,0.35); max-width: 600px; margin: 0 auto;">XTERMX000只为教育目的出版研究摘要。 这里没有什么是医疗建议。 讨论过的所有peptides只供研究使用. 在使用前咨询合格的保健专业人员。</p>
+<div class="sidebar-card" style="margin-top:16px;">
+<h4>New to Peptides?</h4>
+<p>Start with our beginner's guide before diving into specific compounds.</p>
+<a href="/peptide-beginners-guide.html">Beginner's Guide →</a>
 </div>
 
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/retatrutide-guide.html">English</option><option value="/es/retatrutide-guide.html">Español</option><option selected="" value="/zh/retatrutide-guide.html">中文</option><option value="/ja/retatrutide-guide.html">日本語</option><option value="/pt/retatrutide-guide.html">Português</option><option value="/ru/retatrutide-guide.html">Русский</option><option value="/it/retatrutide-guide.html">Italiano</option><option value="/pl/retatrutide-guide.html">Polski</option><option value="/fr/retatrutide-guide.html">Français</option><option value="/id/retatrutide-guide.html">Bahasa</option><option value="/de/retatrutide-guide.html">Deutsch</option><option value="/nl/retatrutide-guide.html">Nederlands</option><option value="/ar/retatrutide-guide.html">العربية</option>
-</select>
+</aside>
 </div>
+<section class="related-articles">
+<div class="related-inner">
+<h3>Related Guides</h3>
+<div class="related-grid">
+<a class="related-card" href="/tb-500-guide.html">
+<div class="tag">Research Peptide</div>
+<h4>TB-500: Complete Guide to Thymosin Beta-4</h4>
+<p>How TB-500 works, what makes it different from BPC-157, and the evidence behind it.</p>
+</a>
+<a class="related-card" href="/wolverine-stack.html">
+<div class="tag">Protocol</div>
+<h4>The Wolverine Stack: BPC-157 + TB-500 Protocol</h4>
+<p>The complete combined protocol used for serious injury recovery and healing optimization.</p>
+</a>
+<a class="related-card" href="/peptide-sourcing-guide.html">
+<div class="tag">Sourcing</div>
+<h4>Where to Buy Research Peptides</h4>
+<p>Vendor comparison, quality testing, red flags to avoid, and how to verify purity.</p>
+</a>
+</div>
+</div>
+</section>
+<footer>
+<p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+  BPC-157 and other peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+<a href="/index.html">Home</a> · <a href="/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/peptide-sourcing-guide.html">Vendors</a><br/>
+<a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/affiliate-disclosure.html">Affiliate Disclosure</a> · <a href="/disclaimer.html">Disclaimer</a> · <a href="/terms.html">Terms</a><br/><br/>
+  © 2026 WolveStack. For research and educational purposes only.</p>
 </footer>
 <script src="/email-popup.js"></script>
 </body>

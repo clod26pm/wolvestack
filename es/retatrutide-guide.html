@@ -1,42 +1,27 @@
-<!--
-  WOLVESTACK ARTICLE TEMPLATE (GEO-Optimized)
-
-  Instructions for creating new articles:
-  1. Replace all {{PLACEHOLDERS}} with actual content
-  2. Use question-format H2 headers (e.g. "What Is X?" not "Overview")
-  3. Quick Answer box should contain 2-3 sentences directly answering the main query
-  4. FAQPage schema should have 4-6 Q&A pairs covering the most common questions
-  5. Keep meta description under 160 characters
-  6. Update sitemap.xml when adding new pages
--->
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MLF04PQ0JV');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Retatrutide Guía: Beneficios, Dosis, Efectos secundarios " Investigación TENIDO WolveStack</title>
-<meta content="Dosis Retatrutide: 4-12 mg semanal (mantenimiento después de la titulación) una vez semanal. Longitud del ciclo, tiempo, guía de reconstitución." name="description"/>
+<meta content="" name="description"/>
 <!-- Open Graph Meta Tags -->
-<meta content="Retatrutide Guía: Beneficios, Dosificación, Efectos secundarios &amp; Investigación" property="og:title"/>
-<meta content="Dosis Retatrutide: 4-12 mg semanal (mantenimiento después de la titulación) una vez semanal. Longitud del ciclo, tiempo, guía de reconstitución." property="og:description"/>
-<meta content="https://wolvestack.com/es/retatrutide-guide.html" property="og:url"/>
+<meta content="" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="" property="og:url"/>
 <meta content="article" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
+<meta content="" property="og:image"/>
 <!-- Twitter Card Meta Tags -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Retatrutide Guía: Beneficios, Dosificación, Efectos secundarios &amp; Investigación" name="twitter:title"/>
-<meta content="Dosis Retatrutide: 4-12 mg semanal (mantenimiento después de la titulación) una vez semanal. Longitud del ciclo, tiempo, guía de reconstrucción" name="twitter:description"/>
+<meta content="" name="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
 <!-- Canonical Link -->
-<link href="https://wolvestack.com/es/retatrutide-guide.html" rel="canonical"/>
+<link href="" rel="canonical"/>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">[
   {
@@ -132,9 +117,9 @@
     ]
   }
 ]</script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
+
   :root {
     --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
     --teal-pale: #e8f4f5; --accent: #f0a500;
@@ -162,14 +147,21 @@
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
 
   .article-hero {
     background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
     padding: 64px 24px 56px; position: relative; overflow: hidden;
   }
+  .article-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
   .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
   .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
   .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
   .breadcrumb span { color: rgba(255,255,255,0.3); }
   .breadcrumb .current { color: rgba(255,255,255,0.75); }
   .article-tag {
@@ -197,12 +189,88 @@
   .article-body h2 {
     font-family: var(--font-display); font-size: 26px; font-weight: 700;
     color: var(--navy); margin: 48px 0 16px; line-height: 1.3;
+    padding-top: 8px; border-top: 2px solid var(--teal-pale);
   }
   .article-body h2:first-child { margin-top: 0; border-top: none; }
   .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
   .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+  .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+  .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
+  .article-body strong { color: var(--navy); font-weight: 600; }
+  .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 
-  /* GEO: Quick Answer Box */
+  .callout {
+    background: var(--teal-pale); border-left: 4px solid var(--teal);
+    padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0;
+  }
+  .callout.warning { background: #fef3c7; border-color: #f59e0b; }
+  .callout.research { background: #eff6ff; border-color: #3b82f6; }
+  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout.warning .callout-label { color: #92400e; }
+  .callout.research .callout-label { color: #1d4ed8; }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .sidebar { position: sticky; top: 84px; }
+  .toc {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 24px;
+  }
+  .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 10px; }
+  .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
+  .toc a:hover { color: var(--teal); }
+  .sidebar-card {
+    background: linear-gradient(135deg, var(--navy), #0a3d5c);
+    border-radius: 12px; padding: 24px; margin-top: 24px; color: white;
+  }
+  .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
+  .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
+  .sidebar-card a:hover { background: var(--teal-light); }
+
+  .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+  .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
+  .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13px; color: var(--gray-600); }
+
+
+    .apollo-card { border-top: 3px solid #7c3aed !important; background: #f8f7ff !important; }
+    .apollo-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .apollo-btn { display: inline-block; background: #1e3a5f; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .apollo-btn:hover { background: #7c3aed !important; }
+    .apollo-btn.apollo-primary { background: #7c3aed; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+  .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+  .faq-q { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .faq-a { font-size: 16px; color: #374151; line-height: 1.7; margin: 0; }
+    .particle-card { border-top: 3px solid #8b2fc9 !important; }
+    .particle-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .particle-btn { display: inline-block; background: #6b21a8; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .particle-btn:hover { background: #8b2fc9 !important; }
+    .particle-btn.particle-primary { background: #8b2fc9; }
+      .limitless-card { border-top: 3px solid #0891b2 !important; }
+    .limitless-card h2 { border-top: none !important; margin-top: 0 !important; }
+    .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+    .limitless-btn:hover { background: #0891b2 !important; }
+    .limitless-btn.limitless-primary { background: #0891b2; }
+  
   .quick-answer {
     background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
     border: 2px solid var(--teal, #0d7377);
@@ -229,53 +297,42 @@
     margin-bottom: 0 !important;
   }
 
-  .callout {
-    border-radius: 10px; padding: 20px 24px; margin: 24px 0;
-    display: flex; gap: 16px; align-items: flex-start;
-  }
-  .callout.warning {
-    background: #fef3c7; border-left: 4px solid #f59e0b;
-  }
-  .callout-label { font-weight: 700; font-size: 14px; white-space: nowrap; }
+
 </style>
-<link href="https://wolvestack.com/en/retatrutide-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/retatrutide-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/retatrutide-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/retatrutide-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/retatrutide-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/retatrutide-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/retatrutide-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/retatrutide-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/retatrutide-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/retatrutide-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/retatrutide-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/retatrutide-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/retatrutide-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/retatrutide-guide.html" hreflang="x-default" rel="alternate"/></head>
+
+</head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/es/index.html">Wolve<span>Stack</span></a>
+<a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/es/peptide-beginners-guide.html">Empieza aquí</a></li>
-<li><a href="/es/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/es/tb-500-guide.html">TB-500</a></li>
-<li><a href="/es/wolverine-stack.html">The Stack</a></li>
-<li><a href="/es/peptide-calculator.html">Calculadora</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
-</div>
-
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/retatrutide-guide.html">English</option><option selected="" value="/es/retatrutide-guide.html">Español</option><option value="/zh/retatrutide-guide.html">中文</option><option value="/ja/retatrutide-guide.html">日本語</option><option value="/pt/retatrutide-guide.html">Português</option><option value="/ru/retatrutide-guide.html">Русский</option><option value="/it/retatrutide-guide.html">Italiano</option><option value="/pl/retatrutide-guide.html">Polski</option><option value="/fr/retatrutide-guide.html">Français</option><option value="/id/retatrutide-guide.html">Bahasa</option><option value="/de/retatrutide-guide.html">Deutsch</option><option value="/nl/retatrutide-guide.html">Nederlands</option><option value="/ar/retatrutide-guide.html">العربية</option>
-</select>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 <div class="article-hero">
 <div class="article-hero-inner">
 <div class="breadcrumb">
-<a href="/es/index.html">Inicio</a> <span>›</span>
-<a href="/es/index.html">Pérdida de peso</a> <span>›</span>
-<span class="current">Retatrutide</span>
+<a href="/">Home</a>
+<span>/</span>
+<a href="/">Guides</a>
+<span>/</span>
+<span class="current">Retatrutide Guide</span>
 </div>
-<div class="article-tag">Pérdida</div>
-<h1>Guía Retatrutide</h1>
-<p style="color: rgba(255,255,255,0.7); font-size: 18px; line-height: 1.6; max-width: 640px;">Beneficios, Dosificación, Efectos secundarios " Investigación
+<div class="article-tag">Deep Dive · Research Peptide</div>
+<h1>Retatrutide Guía: Beneficios, Dosis, Efectos secundarios " Investigación TENIDO WolveStack</h1>
+<p style="color:rgba(255,255,255,0.72); font-size:18px; margin-top:16px; line-height:1.7;">
+
 </p>
 <div class="article-meta">
-<span>8 min read</span>
-<span>🔬 Investigación " Educación</span>
-<span>Acaso no hay consejos médicos</span>
-<span>↑ Última revisión: abril 2026</span>
+<span>📖 15 min read</span>
+<span>🔬 Research & Education</span>
+<span>⚠️ Not medical advice</span>
+<span>✅ Last reviewed: April 2026</span>
 </div>
 </div>
 </div>
@@ -285,13 +342,13 @@
 <div class="quick-answer">
 <p>Retatrutide (LY3437943) es el péptido triple-agonista de Eli Lilly que apunta a GLP-1, GIP, y los receptores de glucagon simultáneamente. Los ensayos de fase 2 mostraron hasta un 24,2% de pérdida de peso, el más alto de cualquier medicamento de obesidad hasta la fecha. Inyección subcutánea semanal, dosificada 1-12 mg con titración. Aún no aprobado por la FDA (esperado 2026-2027). Los efectos secundarios son principalmente gastrointestinales, similares a otros GLP-1, pero potencialmente más pronunciados debido a la acción triple.</p>
 </div>
-<h2>¿Qué es Retatrutide?</h2>
+<h2 id="¿qué-es-retatrutide">¿Qué es Retatrutide?</h2>
 <p>Retatrutide representa un avance en la terapia de pérdida de peso basada en péptidos. Desarrollado por Eli Lilly y designado LY3437943, es el agonista de triple receptor de primera clase, un compuesto que activa simultáneamente GLP-1, GIP (polipéptido insulinotrópico dependiente de glucosa), y receptores de glucago. Este triple mecanismo diferencia fundamentalmente retatrutide de las generaciones anteriores de péptidos de pérdida de peso como semaglutide (single GLP-1 agonist) y tirzepatide (dual GLP-1/GIP agonista).</p>
 <p>El compuesto surgió del sólido oleoducto de obesidad de Eli Lilly y ha sido objeto de intensos intereses de investigación ya que el trabajo preclínico demostró notables efectos metabólicos. A partir de abril de 2026, retatrutide está en ensayos clínicos de fase 3 bajo el programa TRIUMPH, con datos de fase 2 del ensayo NCT04881706 mostrando una eficacia sin precedentes de la pérdida de peso. La comunidad farmacéutica y los investigadores de salud metabólicos han rastreado retatrutide de cerca debido a que su perfil de eficacia —que reduce las pérdidas de peso promedio del 24,2% del peso corporal básico a 48 semanas— supera todos los medicamentos de obesidad previamente aprobados o estudiados.</p>
 <h3>Historia del desarrollo y cronograma clínico</h3>
 <p>Retatrutide entró en ensayos humanos en 2021 tras prometedores datos de seguridad preclínicos y de Fase 1. El ensayo Fase 2 (NCT04881706) inscribió a los participantes con obesidad o diabetes tipo 2 y evaluó dosis escaladas de retatrutide en comparación con placebo. Los resultados de este ensayo, publicados en revistas revisadas por pares y presentados en las principales conferencias endocrinología, establecieron retatrutide como el agente antiobesidad más eficaz estudiado hasta la fecha.</p>
 <p>El paso a las pruebas de Fase 3 (programa de TRUMPH) representa la etapa de desarrollo actual. Estos grandes ensayos controlados aleatorizados están diseñados para confirmar los hallazgos de eficacia Fase 2 en poblaciones más amplias, caracterizar el perfil de seguridad en detalle, y generar los datos necesarios para la presentación regulatoria. Eli Lilly ha declarado públicamente su intención de presentar una nueva solicitud de drogas (NDA) a la FDA a mediados de 2026, con posible aprobación a finales de 2026 o principios de 2027, asumiendo resultados positivos en el juicio.</p>
-<h2>¿Cómo funciona Retatrutide?</h2>
+<h2 id="¿cómo-funciona-retatrutide">¿Cómo funciona Retatrutide?</h2>
 <p>Comprender el mecanismo de acción de retatrutide requiere examinar cómo cada uno de sus tres objetivos de receptores contribuye a la pérdida de peso y la mejora metabólica. La sinergia entre estas vías explica su eficacia superior en comparación con los enfoques mono-agonistas anteriores.</p>
 <h3>GLP-1 Activación del receptor: Supresión competitiva</h3>
 <p>El componente GLP-1 (peptide-1 similar aglucagon) de retatrutide funciona a través de múltiples vías. Cuando retatrutide se une a los receptores GLP-1 en el hipotálamo, una región del cerebro que regula el hambre y la saciedad, humecta las señales que promueven el comer. Esto resulta en una disminución del apetito, reducción de los antojos de alimentos y aumento de los sentimientos de plenitud incluso después de consumir cantidades más pequeñas de alimentos.</p>
@@ -303,7 +360,7 @@
 <p>La nueva adición de Retatrutide de la activación del receptor de glucagon representa el diferenciador clave de todos los medicamentos antiobesidad previamente disponibles. Glucagon aumenta naturalmente la tasa metabólica y el gasto energético promoviendo el desglose de grasa almacenada (lipolisis) y glucosa (gluconeogenesis). Cuando retatrutide activa los receptores de glucagón, aumenta la capacidad del cuerpo para movilizar y oxidar la grasa para la energía, aumentando aún más el gasto calórico.</p>
 <p>El componente del glucago también puede ayudar a preservar la masa muscular magra durante la pérdida de peso, una ventaja significativa porque el tejido muscular es metabólicamente activo y su pérdida puede frenar el metabolismo a largo plazo. Estudios de animales y datos humanos tempranos sugieren que la pérdida de peso inducida por retatrutide tiene una relación de pérdida muscular-grasa más favorable en comparación con otros agonistas GLP-1, lo que significa que una proporción mayor del peso perdido viene de tejido de grasa en lugar de músculo.</p>
 <p>Sin embargo, la activación del glucagon también conlleva implicaciones para la función gastrointestinal y el metabolismo de la glucosa que garantizan un control cuidadoso. El mecanismo agonista triple introduce complejidad adicional en la gestión de los efectos secundarios, que se examina detalladamente en la sección de efectos secundarios.</p>
-<h2>¿Cuál es la eficacia clínica de Retatrutide?</h2>
+<h2 id="¿cuál-es-la-eficacia-clínica-de-retatrutide">¿Cuál es la eficacia clínica de Retatrutide?</h2>
 <p>La razón más convincente para el interés intenso en retatrutide es su eficacia sin precedentes en ensayos clínicos. Los datos de fase 2 demostraron resultados de pérdida de peso que exceden todos los medicamentos de obesidad previamente estudiados.</p>
 <h3>Resultados de la fase 2 (NCT04881706)</h3>
 <p>El ensayo Fase 2 inscribió a aproximadamente 338 participantes con obesidad (BMI ≥ 30 kg/m2) o sobrepeso con diabetes tipo 2 (BMI ≥ 27 kg/m2). Los participantes fueron aleatorizados para recibir una de las ocho dosis de retatrutide (0.5, 1.0, 1.5, 2.0, 4.0, 6.0, 8.0, o 10.0 mg semanal) o placebo durante 48 semanas de tratamiento.</p>
@@ -328,7 +385,7 @@
 <p>Si bien esto podría parecer modesto sobre una base porcentual, representa una diferencia clínica significativa para muchos individuos. Para alguien que pesa 150 kg, la diferencia entre 22,5% y 24,2% de pérdida de peso significa 33,75 kg frente a 36,3 kg, una diferencia de 2,55 kg. Para los individuos que han luchado por lograr una pérdida de peso clínicamente significativa con otros medicamentos, esta eficacia adicional podría ser la diferencia entre el éxito parcial y los resultados transformadores.</p>
 <h3>Demanda de búsqueda e interés clínico</h3>
 <p>Retatrutide ha generado un aumento notable de búsqueda de aproximadamente 512% en búsquedas durante un período de 12 meses, lo que indica un interés público y profesional intenso. Este aumento refleja tanto la promesa demostrada en los datos de prueba como la atención mediática que rodea las innovaciones de primera clase. Los proveedores de atención de salud y las personas interesadas en la gestión de la obesidad están buscando activamente información sobre la disponibilidad, eficacia y idoneidad de retatrutide.</p>
-<h2>¿Cuál es el protocolo de dosificación para Retatrutide?</h2>
+<h2 id="¿cuál-es-el-protocolo-de-dosificación-para-retatrutide">¿Cuál es el protocolo de dosificación para Retatrutide?</h2>
 <p>Aunque todavía no se ha establecido el calendario final de dosificación aprobado por la FDA, los datos de ensayo de fase 2 y los debates clínicos proporcionan claridad sobre los enfoques de dosificación previstos. La práctica clínica actual y los protocolos de ensayo utilizan el siguiente marco:</p>
 <h3>Ruta y Frecuencia</h3>
 <p>Retatrutide se administra mediante inyección subcutánea (bajo el piel) una vez semanal. Como semaglutide y tirzepatide, se puede inyectar en el abdomen, el muslo o el brazo superior. El medicamento se suministra como un bolígrafo o jeringa prellenado, haciendo autoadministración directa después de la formación inicial de un proveedor de atención médica.</p>
@@ -346,7 +403,7 @@
 <p>Retatrutide tiene una vida media de aproximadamente 4-5 días, lo que significa que toma aproximadamente 2-3 semanas de dosis semanales regulares para alcanzar niveles de estado estable en el torrente sanguíneo. Esta vida media relativamente larga permite una dosis conveniente una vez por semana y proporciona un cojín si se olvida una sola dosis. La larga vida media también contribuye al inicio gradual de la acción y la resolución gradual de los efectos secundarios cuando se inicia o se suspende la terapia.</p>
 <h3>Duración del mantenimiento y Ciclismo</h3>
 <p>En los juicios de la segunda fase, los participantes permanecieron en la dosis de mantenimiento prevista para 40 semanas y más. No hay evidencia hasta la fecha que sugiera que retatrutide debe ser ciclizado en y fuera; más bien, parece funcionar como una terapia continua similar a semaglutide y tirzepatide. La recuperación de peso puede ocurrir cuando se interrumpe la terapia, aunque el alcance de la recuperación y su cronología dependen de las modificaciones de estilo de vida implementadas durante el tratamiento.</p>
-<h2>¿Cómo se compara Retatrutide con Semaglutide?</h2>
+<h2 id="¿cómo-se-compara-retatrutide-con-semaglutide">¿Cómo se compara Retatrutide con Semaglutide?</h2>
 <p>Semaglutide (Wegovy/Ozempic) sigue siendo el agonista GLP-1 líder en el mercado y el péptido más utilizado para la pérdida de peso. Comprender cómo difiere retatrutide es esencial para las personas que evalúan las opciones de tratamiento.</p>
 <h3>Diferencias del mecanismo</h3>
 <p>Semaglutide es un agonista receptor GLP-1 puro. Sólo activa una vía hormonal. Retatrutide activa tres caminos: GLP-1, GIP, y glucagon. Esto significa que retatrutide proporciona todos los beneficios que aumentan el apetito de semaglutide (a través de GLP-1) más efectos termogénicos adicionales (a través de GIP) más aumento de la tasa metabólica adicional (a través del glucago). El triple mecanismo es teóricamente superior y esto es apoyado por datos clínicos.</p>
@@ -358,7 +415,7 @@
 <p>Semaglutide ha sido aprobado por la FDA desde junio de 2021 y tiene una extensa base de datos de seguridad post-mercado de millones de pacientes. Retatrutide aún no está aprobado por la FDA y todavía está en ensayos de fase 3. Esta diferencia de estado de aprobación afecta la cobertura de seguros, accesibilidad y confianza en los datos de seguridad. Semaglutide se puede prescribir hoy; retatrutide requiere la inscripción en el ensayo clínico o la espera hasta la aprobación (esperada 2026-2027).</p>
 <h3>Consideraciones de gastos</h3>
 <p>Semaglutide normalmente cuesta $200-600 por mes sin seguro, con la cobertura de seguro variable por plan. La estructura final de precios de Retatrutide no se ha establecido, pero es probable que sea comparable o potencialmente superior a semaglutide dada su mayor eficacia y complejidad.</p>
-<h2>¿Cómo se compara Retatrutide con Tirzepatide?</h2>
+<h2 id="¿cómo-se-compara-retatrutide-con-tirzepatide">¿Cómo se compara Retatrutide con Tirzepatide?</h2>
 <p>Tirzepatide (Zepbound/Mounjaro) es el competidor más reciente aprobado por la FDA y representa el estándar de atención dual-agonista. La comparación directa con retatrutide es particularmente valiosa porque los dos medicamentos representan pasos de innovación consecutivos en la farmacoterapia de obesidad.</p>
 <h3>Diferencias del mecanismo</h3>
 <p>Tirzepatide es un agonista dual receptor GLP-1/GIP activando dos vías hormonales. Retatrutide es un agonista de triple receptor GLP-1/GIP/glucagon, activando tres vías. El componente de glucago adicional en retatrutide proporciona un mecanismo adicional para aumentar la tasa metabólica y el gasto energético. En teoría, esto debe traducir a una eficacia superior, y los datos de la Fase 2 confirman esta predicción.</p>
@@ -371,7 +428,7 @@
 <p>Tirzepatide ha sido aprobado por la FDA desde noviembre de 2023 y está fácilmente disponible a través de prescriptores y planes de seguro. Retatrutide aún no está aprobado. Esta ventaja regulatoria favorece tirzepatide actualmente. Sin embargo, una vez que retatrutide reciba la aprobación de la FDA (anticipada a finales de 2026-cerca de 2027), ambos estarán disponibles opciones y los médicos pueden hacer comparaciones de cabeza a cabeza en la práctica del mundo real.</p>
 <h3>Conveniencia de dosificación</h3>
 <p>El rango de dosis de Tirzepatide es de 2,5-15 mg semanal. El rango de dosis anticipada de Retatrutide es de 0,5-10 mg semanal. Curiosamente, retatrutide logra una eficacia superior en dosis absolutas inferiores, sugiriendo que puede ser más potente sobre una base por miligrama. Esto podría traducir a volúmenes de inyección más pequeños o dosis más conveniente, aunque esto queda por determinar.</p>
-<h2>¿Cuáles son los efectos secundarios de Retatrutide?</h2>
+<h2 id="¿cuáles-son-los-efectos-secundarios-de-retatrutide">¿Cuáles son los efectos secundarios de Retatrutide?</h2>
 <p>Todos los medicamentos basados en GLP-1 producen un perfil de efecto secundario característico centrado en los efectos gastrointestinales. El triple mecanismo de Retatrutide significa que el perfil de efecto secundario incluye contribuciones de las tres activaciones de receptores, que generalmente se alinean con pero exceden los perfiles de agonistas individuales y duales.</p>
 <h3>Efectos secundarios gastrointestinales</h3>
 <p><strong>Nausea</strong>es el efecto secundario más común, reportado en aproximadamente 42-48% de los participantes en las dosis más altas en los ensayos de Fase 2. La náusea suele alcanzar los picos durante la fase de titración de dosis, especialmente cuando avanza de un nivel de dosis a otro. La mayoría de los pacientes informan que la náusea disminuye o resuelve dentro de 4-8 semanas de alcanzar una dosis estable a medida que el cuerpo se adapta. La náusea es típicamente leve a moderada en gravedad y rara vez causa la interrupción de la terapia, aunque algunos individuos encuentran que es lo suficientemente molesto como para permanecer en dosis inferiores.</p>
@@ -396,7 +453,7 @@
 <li style="margin-bottom: 10px;"><strong>Medicamentos antieméticos</strong>: Los medicamentos antinauseas de prescripción o venta libre pueden proporcionar alivio temporal durante la titulación, aunque a veces pueden provocar efectos de supresión del apetito.</li>
 <li style="margin-bottom: 10px;"><strong>Permanecer en dosis más bajas efectivas</strong>: No todos los pacientes requieren la dosis máxima para lograr una pérdida significativa de peso. Algunos encuentran 6.0 mg semanal proporciona una excelente eficacia con mejor tolerancia que 10.0 mg.</li>
 </ul>
-<h2>¿Qué debe saber sobre el estado regulatorio de Retatrutide?</h2>
+<h2 id="¿qué-debe-saber-sobre-el-estado-regulatorio-de-retatrutide">¿Qué debe saber sobre el estado regulatorio de Retatrutide?</h2>
 <p>El viaje regulatorio de Retatrutide determinará cuándo y cómo estará disponible. Comprender el estado actual y el plazo previsto es importante para establecer expectativas.</p>
 <h3>Desarrollo de la fase 3</h3>
 <p>A partir de abril de 2026, retatrutide está en ensayos clínicos de fase 3 bajo el programa TRIUMPH. Estos grandes ensayos controlados aleatorizados están diseñados para confirmar la eficacia de la Fase 2, caracterizar el perfil de seguridad en diversas poblaciones, y generar los datos completos necesarios para la presentación de la FDA. Programas típicos de Fase 3 para medicamentos de obesidad implican a 4.000-5.000 participantes y se ejecutan durante 12-24 meses.</p>
@@ -406,7 +463,7 @@
 <p>Eli Lilly ha guiado públicamente que se espera una presentación de la NDA a mediados de 2026. Asumiendo resultados positivos de la fase 3 y una revisión exitosa de la FDA, la aprobación podría ocurrir a finales de 2026 o principios de 2027. Sin embargo, este plazo está sujeto a cambios en función de los resultados de los juicios y los comentarios reglamentarios.</p>
 <h3>Paisaje posterior a la aprobación</h3>
 <p>Una vez aprobado por la FDA, retatrutide estará disponible a través de prescriptores autorizados en los Estados Unidos. La cobertura del seguro evolucionará con el tiempo; inicialmente, muchos planes pueden requerir autorización previa o restringir el reembolso, pero como la experiencia con el medicamento se acumula y los medicamentos competidores establecen el mercado, las pautas de cobertura generalmente se expanden. Se prevé que los gastos fuera de la caja serán comparables a tirzepatide y semaglutide, probablemente en el rango de 200 a 600 dólares por mes sin seguro.</p>
-<h2>¿Cómo puedes acceder a Retatrutide actualmente?</h2>
+<h2 id="¿cómo-puedes-acceder-a-retatrutide-actualmente">¿Cómo puedes acceder a Retatrutide actualmente?</h2>
 <p>Hasta la aprobación de la FDA, el acceso a retatrutide es limitado pero no imposible. Las vías actuales incluyen:</p>
 <h3>Participación en los ensayos clínicos</h3>
 <p>Los individuos interesados en recibir potencialmente retatrutide pueden participar en ensayos en fase 3 TRIUMPH en curso. Los sitios de ensayo clínicos se encuentran en todo Estados Unidos e internacionalmente. La participación en el juicio suele incluir visitas regulares, análisis de sangre y vigilancia, pero el tratamiento no se proporciona a ningún costo y los participantes pueden incluso recibir compensación por el tiempo y los viajes.</p>
@@ -415,7 +472,7 @@
 <p>El programa de Acceso Ampliado (Uso Compassionado) de la FDA permite a las personas con condiciones graves o inmediatas de amenaza para la vida para acceder a medicamentos investigativos fuera de los ensayos clínicos. Sin embargo, el uso compasivo para el tratamiento de obesidad retatrutide es improbable dado que existen alternativas aprobadas (semaglutide, tirzepatide). El uso compasivo se reserva normalmente para las condiciones donde no hay tratamientos aprobados.</p>
 <h3>International Availability</h3>
 <p>Retatrutide puede estar disponible en algunos países antes de la aprobación de la FDA en los Estados Unidos. Sin embargo, a partir de abril de 2026, no se ha aprobado en las principales jurisdicciones reglamentarias internacionales. Una vez aprobado, la disponibilidad dependerá de los procesos regulatorios de cada país y de los marcos de precios farmacéuticos.</p>
-<h2>¿Qué son las preguntas frecuentes sobre Retatrutide?</h2>
+<h2 id="¿qué-son-las-preguntas-frecuentes-sobre-retatrutide">¿Qué son las preguntas frecuentes sobre Retatrutide?</h2>
 <h3>¿Es Retatrutide el medicamento "mejor" de pérdida de peso?</h3>
 <p>Retatrutide demuestra la mayor eficacia promedio de pérdida de peso de cualquier medicamento estudiado hasta la fecha (24,2% a la dosis más alta). Sin embargo, "mejor" es subjetivo y depende de factores individuales: tolerancia de efecto secundario, coste, acceso, comorbilidades médicas y preferencias personales. Para algunos individuos, el historial probado de semaglutide y mayor accesibilidad puede ser preferible. Para otros, el balance de alta eficacia de tirzepatide y la aprobación de la FDA pueden ser ideales. Retatrutide se convierte en una elección superior cuando estas otras opciones se han probado y han demostrado insuficiente.</p>
 <h3>¿Cuándo Retatrutide será aprobado por la FDA?</h3>
@@ -428,7 +485,7 @@
 <p>Los datos de fase 2 con hasta 48 semanas de tratamiento demostraron seguridad, pero los datos de seguridad a largo plazo (6+ meses) vendrán de los ensayos de fase 3. Una vez aprobado y utilizado por millones de pacientes, la vigilancia posterior al mercado caracterizará aún más el perfil de seguridad a largo plazo. Basado en el perfil de seguridad de semaglutide y tirzepatide, que han sido utilizados a largo plazo por millones, no hay razón para esperar importantes problemas de seguridad inesperados con retatrutide, aunque el monitoreo continuo está justificado.</p>
 <h3>¿Puedo cambiar de Semaglutide o Tirzepatide a Retatrutide?</h3>
 <p>Una vez que se apruebe retatrutide, cambiar de otros agonistas GLP-1 debe ser posible, aunque los protocolos específicos para la transición permanecen por establecerse. Algunas personas pueden beneficiarse de cambiar si han logrado pérdida de peso suboptimal en otros medicamentos. Otros pueden encontrar que la incidencia ligeramente mayor de los efectos secundarios gastrointestinales con retatrutide lo hace menos preferible. Cualquier cambio de medicación debe hacerse bajo supervisión médica con monitoreo y seguimiento claros.</p>
-<h2>¿Dónde puedes encontrar información sobre Retatrutide Investigación?</h2>
+<h2 id="¿dónde-puedes-encontrar-información-sobre-retatrutide-investigación">¿Dónde puedes encontrar información sobre Retatrutide Investigación?</h2>
 <p>Comprender el paisaje de investigación actual y acceder a compuestos de péptidos para fines de investigación requiere saber dónde buscar información fiable y fuentes calificadas. Varias plataformas proporcionan datos basados en pruebas en retatrutide y compuestos conexos.</p>
 <h3>Información sobre ensayos clínicos</h3>
 <p>El repositorio oficial para la información del ensayo clínico es<strong>ClinicalTrials.gov</strong>, una base de datos que mantiene la Biblioteca Nacional de Medicina. Busque "retatrutide" para encontrar todos los ensayos registrados, incluyendo el programa de la Fase 3 TRIUMPH, criterios de inscripción, ubicaciones y principales investigadores. Este recurso es inestimable para comprender la investigación activa y evaluar la posible participación.</p>
@@ -439,7 +496,7 @@
 <p>La Asociación Americana de Diabetes (diabetes.org) y la Sociedad de Obesidad (obesity.org) proporcionan recursos educativos sobre los agonistas GLP-1 y terapias emergentes. Estas organizaciones publican declaraciones de posición y directrices clínicas que incluyen información sobre agentes novedosos como retatrutide a medida que avanzan a través del desarrollo y la aprobación.</p>
 <h3>Información del fabricante</h3>
 <p>Eli Lilly mantiene un sitio web oficial con relaciones de inversores e información clínica de gasoductos. Los comunicados de prensa y las llamadas de inversores a menudo proporcionan actualizaciones sobre el estado de desarrollo de retatrutide, el progreso de prueba y los plazos previstos. Esta información está disponible públicamente y representa la posición oficial de la empresa sobre el desarrollo de la droga.</p>
-<h2>¿Qué compuestos de investigación y productos relacionados están disponibles?</h2>
+<h2 id="¿qué-compuestos-de-investigación-y-productos-relacionados-están-disponibles">¿Qué compuestos de investigación y productos relacionados están disponibles?</h2>
 <p>Mientras espera la aprobación de la FDA de retatrutide, investigadores e individuos interesados en la ciencia del péptido pueden buscar información sobre compuestos relacionados y herramientas de investigación. Varios proveedores proporcionan péptidos de investigación de alta calidad con autenticidad y pureza verificadas.</p>
 <h3>Proveedores de Peptide de investigación</h3>
 <p>Los proveedores de investigación de calidad ofrecen típicamente:</p>
@@ -459,62 +516,67 @@
 <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Reclamación médica</p>
 <p style="margin: 0;">Este artículo es para<strong>con fines informativos y educativos únicamente</strong>y no constituye asesoramiento médico. Los compuestos discutidos son químicos de investigación que son<strong>no aprobado por la FDA</strong>para uso humano a partir de abril de 2026. Consulte siempre a un profesional de la salud con licencia antes de considerar cualquier protocolo de péptidos. WolveStack no tiene personal médico y no diagnostica, trata o prescribe. Ver todo<a href="/es/disclaimer.html" style="color: #991b1b; text-decoration: underline;">descargo</a>.</p>
 </div>
-</article></div>
-<!-- Internal Links: You Might Also Like -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px 28px; margin: 32px 0;">
-<p style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #0f2240; margin: 0 0 12px;">También podría gustarte</p>
-<div style="margin-bottom: 16px;">
-<p style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 4px;">Más sobre Retatrutide</p>
-<a href="/es/retatrutide-before-and-after.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Antes y después</a>
-<a href="/es/retatrutide-benefits.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Beneficios Retatrutide</a>
-<a href="/es/retatrutide-cycle.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Ciclo Retatrutide</a>
-<a href="/es/retatrutide-dosage.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Dosificación Retatrutide</a>
+</article>
+<aside class="sidebar">
+<nav class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#¿qué-es-retatrutide">¿Qué es Retatrutide?</a></li>
+<li><a href="#¿cómo-funciona-retatrutide">¿Cómo funciona Retatrutide?</a></li>
+<li><a href="#¿cuál-es-la-eficacia-clínica-de-retatrutide">¿Cuál es la eficacia clínica de Retatrutide?</a></li>
+<li><a href="#¿cuál-es-el-protocolo-de-dosificación-para-retatrutide">¿Cuál es el protocolo de dosificación para Retatrutide?</a></li>
+<li><a href="#¿cómo-se-compara-retatrutide-con-semaglutide">¿Cómo se compara Retatrutide con Semaglutide?</a></li>
+<li><a href="#¿cómo-se-compara-retatrutide-con-tirzepatide">¿Cómo se compara Retatrutide con Tirzepatide?</a></li>
+<li><a href="#¿cuáles-son-los-efectos-secundarios-de-retatrutide">¿Cuáles son los efectos secundarios de Retatrutide?</a></li>
+<li><a href="#¿qué-debe-saber-sobre-el-estado-regulatorio-de-retatrutide">¿Qué debe saber sobre el estado regulatorio de Retatrutide?</a></li>
+<li><a href="#¿cómo-puedes-acceder-a-retatrutide-actualmente">¿Cómo puedes acceder a Retatrutide actualmente?</a></li>
+<li><a href="#¿qué-son-las-preguntas-frecuentes-sobre-retatrutide">¿Qué son las preguntas frecuentes sobre Retatrutide?</a></li>
+<li><a href="#¿dónde-puedes-encontrar-información-sobre-retatrutide-investigación">¿Dónde puedes encontrar información sobre Retatrutide Investigación?</a></li>
+<li><a href="#¿qué-compuestos-de-investigación-y-productos-relacionados-están-disponibles">¿Qué compuestos de investigación y productos relacionados están disponibles?</a></li>
+</ol>
+</nav>
+
+<div class="sidebar-card">
+<h4>Wolverine Stack Protocol</h4>
+<p>BPC-157 + TB-500 combined is considered the gold standard for injury recovery in the peptide community.</p>
+<a href="/wolverine-stack.html">View Full Protocol →</a>
 </div>
-<div style="margin-bottom: 16px;">
-<p style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 4px;">Peptides relacionados</p>
-<a href="/es/semaglutide-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Guía Semaglutide</a>
-<a href="/es/tirzepatide-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Guía Tirzepatide</a>
-<a href="/es/aod-9604-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Guía AOD 9604</a>
-<a href="/es/glp1-comparison-2026.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Semaglutide vs Tirzepatide vs Retatrutide: 2026 Comparación</a>
-</div>
-<a href="/es/best-peptides-fat-loss.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; font-weight: 600;">Mejor Péptidos Pérdida de grasa</a>
-<div style="margin-top: 12px; padding-top: 12px; border-top: 2px solid #e2e8f0;">
-<a href="/es/peptide-beginners-guide.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Peptide Beginner's Guide</a>
-<a href="/es/best-peptide-stacks.html" style="color: #0d7377; text-decoration: none; font-size: 14px; padding: 8px 0; display: block; border-bottom: 1px solid #f1f5f9;">Mejores patos de péptidos</a>
-</div>
-</div>
-<!-- E-E-A-T: Author Bio -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px 28px; margin: 40px 0 24px; display: flex; gap: 20px; align-items: flex-start;">
-<div style="min-width: 56px; width: 56px; height: 56px; background: linear-gradient(135deg, #0d7377, #14bdac); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px;">WS</div>
-<div>
-<p style="font-weight: 700; font-size: 15px; margin: 0 0 4px; color: #0f2240;">WolveStack Equipo de Investigación</p>
-<p style="font-size: 13px; color: #64748b; margin: 0 0 8px;">Peptide Research " Education</p>
-<p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">Nuestro equipo revisa la literatura preclínica y clínica sobre compuestos de péptidos. Cada artículo se hace referencia cruzada con estudios PubMed-indexed, fabricante de COAs y revistas revisadas por pares. El contenido se actualiza a medida que surgen nuevas investigaciones.<a href="/es/about.html" style="color: #0d7377; text-decoration: underline;">Más información sobre nuestro proceso</a>.</p>
-</div>
-</div>
-<footer style="background: #0f2240; color: rgba(255,255,255,0.6); padding: 48px 24px 32px; margin-top: 64px;">
-<div style="max-width: 800px; margin: 0 auto; text-align: center;">
-<div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; font-size: 14px;">
-<a href="/es/index.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Inicio</a>
-<a href="/es/peptide-beginners-guide.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Empieza aquí</a>
-<a href="/es/peptide-calculator.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Calculadora</a>
-<a href="/es/peptide-sourcing-guide.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Vendedores</a>
-<a href="/es/about.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Acerca de</a>
-<a href="/es/affiliate-disclosure.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Difusión</a>
-<a href="/es/privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacidad</a>
-<a href="/es/terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Términos</a>
-</div>
-<p style="font-size: 13px; margin-bottom: 8px;">© 2026 WolveStack. Sólo para fines educativos y de investigación.</p>
-<p style="font-size: 12px; color: rgba(255,255,255,0.35); max-width: 600px; margin: 0 auto;">WolveStack publica resúmenes de investigación para fines educativos solamente. Nada aquí constituye un consejo médico. Todos los péptidos discutidos son sólo para el uso de la investigación. Consulte a un profesional sanitario cualificado antes de usar.</p>
+<div class="sidebar-card" style="margin-top:16px;">
+<h4>New to Peptides?</h4>
+<p>Start with our beginner's guide before diving into specific compounds.</p>
+<a href="/peptide-beginners-guide.html">Beginner's Guide →</a>
 </div>
 
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/retatrutide-guide.html">English</option><option selected="" value="/es/retatrutide-guide.html">Español</option><option value="/zh/retatrutide-guide.html">中文</option><option value="/ja/retatrutide-guide.html">日本語</option><option value="/pt/retatrutide-guide.html">Português</option><option value="/ru/retatrutide-guide.html">Русский</option><option value="/it/retatrutide-guide.html">Italiano</option><option value="/pl/retatrutide-guide.html">Polski</option><option value="/fr/retatrutide-guide.html">Français</option><option value="/id/retatrutide-guide.html">Bahasa</option><option value="/de/retatrutide-guide.html">Deutsch</option><option value="/nl/retatrutide-guide.html">Nederlands</option><option value="/ar/retatrutide-guide.html">العربية</option>
-</select>
+</aside>
 </div>
+<section class="related-articles">
+<div class="related-inner">
+<h3>Related Guides</h3>
+<div class="related-grid">
+<a class="related-card" href="/tb-500-guide.html">
+<div class="tag">Research Peptide</div>
+<h4>TB-500: Complete Guide to Thymosin Beta-4</h4>
+<p>How TB-500 works, what makes it different from BPC-157, and the evidence behind it.</p>
+</a>
+<a class="related-card" href="/wolverine-stack.html">
+<div class="tag">Protocol</div>
+<h4>The Wolverine Stack: BPC-157 + TB-500 Protocol</h4>
+<p>The complete combined protocol used for serious injury recovery and healing optimization.</p>
+</a>
+<a class="related-card" href="/peptide-sourcing-guide.html">
+<div class="tag">Sourcing</div>
+<h4>Where to Buy Research Peptides</h4>
+<p>Vendor comparison, quality testing, red flags to avoid, and how to verify purity.</p>
+</a>
+</div>
+</div>
+</section>
+<footer>
+<p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+  BPC-157 and other peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+<a href="/index.html">Home</a> · <a href="/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/peptide-sourcing-guide.html">Vendors</a><br/>
+<a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/affiliate-disclosure.html">Affiliate Disclosure</a> · <a href="/disclaimer.html">Disclaimer</a> · <a href="/terms.html">Terms</a><br/><br/>
+  © 2026 WolveStack. For research and educational purposes only.</p>
 </footer>
 <script src="/email-popup.js"></script>
 </body>
