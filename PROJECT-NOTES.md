@@ -4,7 +4,7 @@
 - Site: https://wolvestack.com
 - Repo: https://github.com/clod26pm/wolvestack
 - Content directory: peptide-daily-content/
-- GitHub PAT: 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
+- GitHub PAT: stored in ../.github-pat (not committed — check this file at session start)
 - 13 languages: en, es, zh, ja, pt, ru, it, pl, fr, id, de, nl, ar
 - Hosting: Netlify (auto-deploys from main branch via GitHub)
 - IMPORTANT: English content uses /en/ directory, NOT the root directory, for GSC indexing
