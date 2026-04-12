@@ -221,28 +221,191 @@
             .vendor-grid { grid-template-columns: 1fr; }
             .article-meta { flex-direction: column; gap: 1rem; }
         }
-    </style>
+    
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .search-input {
+      width: 100px;
+    }
+    .search-input:focus {
+      width: 130px;
+    }
+    .nav-lang-toggle {
+      padding: 4px 6px;
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-search form {
+      padding: 2px 6px;
+    }
+    .search-input {
+      width: 80px;
+      font-size: 13px;
+    }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
+  }
+
+  </style>
 <link href="https://wolvestack.com/en/peptide-dosing-mistakes.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-dosing-mistakes.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-dosing-mistakes.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-dosing-mistakes.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-dosing-mistakes.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-dosing-mistakes.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-dosing-mistakes.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-dosing-mistakes.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-dosing-mistakes.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-dosing-mistakes.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-dosing-mistakes.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-dosing-mistakes.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-dosing-mistakes.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-dosing-mistakes.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
-<nav-container>
-<a class="nav-logo" href="/en/index.html">WolveStack</a>
+<div class="nav-inner">
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
+<li><a href="/en/peptide-beginners-guide.html">Start Here</a></li>
 <li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
 <li><a href="/en/tb-500-guide.html">TB-500</a></li>
-<li><a href="/en/peptide-stacks.html">Stacks</a></li>
-<li><a href="/en/vendors.html">Vendors</a></li>
-<li><a class="nav-cta" href="/en/start-here.html">Start Here</a></li>
+<li><a href="/en/wolverine-stack.html">The Stack</a></li>
+<li><a href="/en/peptide-calculator.html">Calculator</a></li>
 </ul>
-</nav-container>
-
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option selected="" value="/en/peptide-dosing-mistakes.html">English</option><option value="/es/peptide-dosing-mistakes.html">Español</option><option value="/zh/peptide-dosing-mistakes.html">中文</option><option value="/ja/peptide-dosing-mistakes.html">日本語</option><option value="/pt/peptide-dosing-mistakes.html">Português</option><option value="/ru/peptide-dosing-mistakes.html">Русский</option><option value="/it/peptide-dosing-mistakes.html">Italiano</option><option value="/pl/peptide-dosing-mistakes.html">Polski</option><option value="/fr/peptide-dosing-mistakes.html">Français</option><option value="/id/peptide-dosing-mistakes.html">Bahasa</option><option value="/de/peptide-dosing-mistakes.html">Deutsch</option><option value="/nl/peptide-dosing-mistakes.html">Nederlands</option><option value="/ar/peptide-dosing-mistakes.html">العربية</option>
-</select>
+<div class="nav-search">
+<form>
+<input type="text" placeholder="Search..." class="search-input">
+<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+</form>
+</div>
+<div class="nav-lang">
+<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<div class="nav-lang-menu">
+<a href="/en/bpc-157-guide.html" class="active">English</a>
+<a href="/es/bpc-157-guide.html">Español</a>
+<a href="/zh/bpc-157-guide.html">中文</a>
+<a href="/ja/bpc-157-guide.html">日本語</a>
+<a href="/pt/bpc-157-guide.html">Português</a>
+<a href="/ru/bpc-157-guide.html">Русский</a>
+<a href="/it/bpc-157-guide.html">Italiano</a>
+<a href="/pl/bpc-157-guide.html">Polski</a>
+<a href="/fr/bpc-157-guide.html">Français</a>
+<a href="/id/bpc-157-guide.html">Bahasa</a>
+<a href="/de/bpc-157-guide.html">Deutsch</a>
+<a href="/nl/bpc-157-guide.html">Nederlands</a>
+<a href="/ar/bpc-157-guide.html">العربية</a>
+</div>
+</div>
 </div>
 </nav>
 <!-- Main Content -->
@@ -504,13 +667,7 @@
 <p>© 2026 WolveStack. All rights reserved. Peptides discussed are research compounds and are not approved by the FDA for human use.</p>
 </div>
 
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option selected="" value="/en/peptide-dosing-mistakes.html">English</option><option value="/es/peptide-dosing-mistakes.html">Español</option><option value="/zh/peptide-dosing-mistakes.html">中文</option><option value="/ja/peptide-dosing-mistakes.html">日本語</option><option value="/pt/peptide-dosing-mistakes.html">Português</option><option value="/ru/peptide-dosing-mistakes.html">Русский</option><option value="/it/peptide-dosing-mistakes.html">Italiano</option><option value="/pl/peptide-dosing-mistakes.html">Polski</option><option value="/fr/peptide-dosing-mistakes.html">Français</option><option value="/id/peptide-dosing-mistakes.html">Bahasa</option><option value="/de/peptide-dosing-mistakes.html">Deutsch</option><option value="/nl/peptide-dosing-mistakes.html">Nederlands</option><option value="/ar/peptide-dosing-mistakes.html">العربية</option>
-</select>
-</div>
+
 </footer>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -634,5 +791,38 @@
     </script>
 <!-- Email Popup Script -->
 <script src="/assets/js/email-popup.js"></script>
+<script>
+// Language dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navLangToggle = document.querySelector('.nav-lang-toggle');
+  const navLang = document.querySelector('.nav-lang');
+
+  if (navLangToggle) {
+    navLangToggle.addEventListener('click', function() {
+      navLang.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLang.contains(event.target)) {
+        navLang.classList.remove('open');
+      }
+    });
+  }
+
+  // Search form - redirect to search.html with query parameter
+  const searchForm = document.querySelector('.nav-search form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.querySelector('.search-input').value.trim();
+      if (query) {
+        window.location.href = '/search.html?q=' + encodeURIComponent(query);
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>

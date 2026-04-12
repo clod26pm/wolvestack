@@ -166,7 +166,42 @@ footer{background:var(--navy);padding:48px 24px;margin-top:80px}.footer-inner{ma
   </script>
 <link href="https://wolvestack.com/en/cerebrolysin-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/cerebrolysin-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/cerebrolysin-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/cerebrolysin-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/cerebrolysin-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/cerebrolysin-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/cerebrolysin-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/cerebrolysin-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/cerebrolysin-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/cerebrolysin-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/cerebrolysin-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/cerebrolysin-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/cerebrolysin-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/cerebrolysin-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><a class="logo" href="/">Wolve<span>Stack</span></a><ul class="nav-links"><li><a href="/peptide-beginners-guide.html">Start Here</a></li><li><a href="/semax-guide.html">Semax</a></li><li><a href="/selank-guide.html">Selank</a></li><li><a href="/best-peptides-cognitive.html">Cognitive</a></li></ul><a class="nav-cta" href="https://www.ascensionpeptides.com/?ref=wolvestack" rel="noopener" target="_blank">Research Peptides →</a></div></nav>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
+<ul class="nav-links">
+<li><a href="/en/peptide-beginners-guide.html">Start Here</a></li>
+<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/en/tb-500-guide.html">TB-500</a></li>
+<li><a href="/en/wolverine-stack.html">The Stack</a></li>
+<li><a href="/en/peptide-calculator.html">Calculator</a></li>
+</ul>
+<div class="nav-search">
+<form>
+<input type="text" placeholder="Search..." class="search-input">
+<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+</form>
+</div>
+<div class="nav-lang">
+<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<div class="nav-lang-menu">
+<a href="/en/bpc-157-guide.html" class="active">English</a>
+<a href="/es/bpc-157-guide.html">Español</a>
+<a href="/zh/bpc-157-guide.html">中文</a>
+<a href="/ja/bpc-157-guide.html">日本語</a>
+<a href="/pt/bpc-157-guide.html">Português</a>
+<a href="/ru/bpc-157-guide.html">Русский</a>
+<a href="/it/bpc-157-guide.html">Italiano</a>
+<a href="/pl/bpc-157-guide.html">Polski</a>
+<a href="/fr/bpc-157-guide.html">Français</a>
+<a href="/id/bpc-157-guide.html">Bahasa</a>
+<a href="/de/bpc-157-guide.html">Deutsch</a>
+<a href="/nl/bpc-157-guide.html">Nederlands</a>
+<a href="/ar/bpc-157-guide.html">العربية</a>
+</div>
+</div>
+</div>
+</nav>
 <div class="article-hero"><div class="article-hero-inner"><div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/peptides/">Peptides</a><span>/</span><span class="current">Cerebrolysin</span></div><span class="article-tag">RESEARCH GUIDE</span><h1><em>Cerebrolysin:</em> What the Research Actually Shows</h1><div class="article-meta"><span>Updated March 14, 2026</span><span>~2,050 words</span><span>Evidence-Based</span>
       <span>✅ Last reviewed: April 2026</span>
     </div></div></div>
@@ -354,5 +389,38 @@ footer{background:var(--navy);padding:48px 24px;margin-top:80px}.footer-inner{ma
 </div>
 </section>
 <script src="/email-popup.js"></script>
+<script>
+// Language dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navLangToggle = document.querySelector('.nav-lang-toggle');
+  const navLang = document.querySelector('.nav-lang');
+
+  if (navLangToggle) {
+    navLangToggle.addEventListener('click', function() {
+      navLang.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLang.contains(event.target)) {
+        navLang.classList.remove('open');
+      }
+    });
+  }
+
+  // Search form - redirect to search.html with query parameter
+  const searchForm = document.querySelector('.nav-search form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.querySelector('.search-input').value.trim();
+      if (query) {
+        window.location.href = '/search.html?q=' + encodeURIComponent(query);
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>

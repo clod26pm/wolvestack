@@ -726,7 +726,154 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .search-input {
+      width: 100px;
+    }
+    .search-input:focus {
+      width: 130px;
+    }
+    .nav-lang-toggle {
+      padding: 4px 6px;
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-search form {
+      padding: 2px 6px;
+    }
+    .search-input {
+      width: 80px;
+      font-size: 13px;
+    }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
+  }
+
+  </style>
 <link href="https://wolvestack.com/en/peptides-vs-collagen.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptides-vs-collagen.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptides-vs-collagen.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptides-vs-collagen.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptides-vs-collagen.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptides-vs-collagen.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptides-vs-collagen.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptides-vs-collagen.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptides-vs-collagen.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptides-vs-collagen.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptides-vs-collagen.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptides-vs-collagen.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptides-vs-collagen.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptides-vs-collagen.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Sticky Navigation -->
@@ -742,13 +889,7 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
 </ul>
 </div>
 
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option selected="" value="/en/peptides-vs-collagen.html">English</option><option value="/es/peptides-vs-collagen.html">Español</option><option value="/zh/peptides-vs-collagen.html">中文</option><option value="/ja/peptides-vs-collagen.html">日本語</option><option value="/pt/peptides-vs-collagen.html">Português</option><option value="/ru/peptides-vs-collagen.html">Русский</option><option value="/it/peptides-vs-collagen.html">Italiano</option><option value="/pl/peptides-vs-collagen.html">Polski</option><option value="/fr/peptides-vs-collagen.html">Français</option><option value="/id/peptides-vs-collagen.html">Bahasa</option><option value="/de/peptides-vs-collagen.html">Deutsch</option><option value="/nl/peptides-vs-collagen.html">Nederlands</option><option value="/ar/peptides-vs-collagen.html">العربية</option>
-</select>
-</div>
+
 </nav>
 <!-- Article Hero -->
 <section class="article-hero">
@@ -1017,13 +1158,7 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
 <p>© 2026 WolveStack. Educational content for research purposes only. Not medical advice. Always consult healthcare providers before using any peptides.</p>
 </div>
 
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option selected="" value="/en/peptides-vs-collagen.html">English</option><option value="/es/peptides-vs-collagen.html">Español</option><option value="/zh/peptides-vs-collagen.html">中文</option><option value="/ja/peptides-vs-collagen.html">日本語</option><option value="/pt/peptides-vs-collagen.html">Português</option><option value="/ru/peptides-vs-collagen.html">Русский</option><option value="/it/peptides-vs-collagen.html">Italiano</option><option value="/pl/peptides-vs-collagen.html">Polski</option><option value="/fr/peptides-vs-collagen.html">Français</option><option value="/id/peptides-vs-collagen.html">Bahasa</option><option value="/de/peptides-vs-collagen.html">Deutsch</option><option value="/nl/peptides-vs-collagen.html">Nederlands</option><option value="/ar/peptides-vs-collagen.html">العربية</option>
-</select>
-</div>
+
 </footer>
 <!-- Email Popup Script -->
 <script src="/email-popup.js"></script>
@@ -1046,5 +1181,38 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
             question.classList.toggle('active');
         }
     </script>
+<script>
+// Language dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navLangToggle = document.querySelector('.nav-lang-toggle');
+  const navLang = document.querySelector('.nav-lang');
+
+  if (navLangToggle) {
+    navLangToggle.addEventListener('click', function() {
+      navLang.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLang.contains(event.target)) {
+        navLang.classList.remove('open');
+      }
+    });
+  }
+
+  // Search form - redirect to search.html with query parameter
+  const searchForm = document.querySelector('.nav-search form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.querySelector('.search-input').value.trim();
+      if (query) {
+        window.location.href = '/search.html?q=' + encodeURIComponent(query);
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>

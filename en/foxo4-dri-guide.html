@@ -243,15 +243,38 @@ rel="canonical"/>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/peptide-beginners-guide.html">Start Here</a></li>
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">The Stack</a></li>
-<li><a href="/peptide-calculator.html">Calculator</a></li>
-<li><a href="/search.html">🔍 Search</a></li>
+<li><a href="/en/peptide-beginners-guide.html">Start Here</a></li>
+<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/en/tb-500-guide.html">TB-500</a></li>
+<li><a href="/en/wolverine-stack.html">The Stack</a></li>
+<li><a href="/en/peptide-calculator.html">Calculator</a></li>
 </ul>
+<div class="nav-search">
+<form>
+<input type="text" placeholder="Search..." class="search-input">
+<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+</form>
+</div>
+<div class="nav-lang">
+<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<div class="nav-lang-menu">
+<a href="/en/bpc-157-guide.html" class="active">English</a>
+<a href="/es/bpc-157-guide.html">Español</a>
+<a href="/zh/bpc-157-guide.html">中文</a>
+<a href="/ja/bpc-157-guide.html">日本語</a>
+<a href="/pt/bpc-157-guide.html">Português</a>
+<a href="/ru/bpc-157-guide.html">Русский</a>
+<a href="/it/bpc-157-guide.html">Italiano</a>
+<a href="/pl/bpc-157-guide.html">Polski</a>
+<a href="/fr/bpc-157-guide.html">Français</a>
+<a href="/id/bpc-157-guide.html">Bahasa</a>
+<a href="/de/bpc-157-guide.html">Deutsch</a>
+<a href="/nl/bpc-157-guide.html">Nederlands</a>
+<a href="/ar/bpc-157-guide.html">العربية</a>
+</div>
+</div>
 </div>
 </nav>
 <div class="article-hero">
@@ -503,5 +526,38 @@ rel="canonical"/>
 </div>
 </footer>
 <script src="/email-popup.js"></script>
+<script>
+// Language dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navLangToggle = document.querySelector('.nav-lang-toggle');
+  const navLang = document.querySelector('.nav-lang');
+
+  if (navLangToggle) {
+    navLangToggle.addEventListener('click', function() {
+      navLang.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLang.contains(event.target)) {
+        navLang.classList.remove('open');
+      }
+    });
+  }
+
+  // Search form - redirect to search.html with query parameter
+  const searchForm = document.querySelector('.nav-search form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.querySelector('.search-input').value.trim();
+      if (query) {
+        window.location.href = '/search.html?q=' + encodeURIComponent(query);
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
