@@ -28,6 +28,23 @@
 /:lang/contact.html /:lang/about.html              301
 /:lang/start-here.html /:lang/peptide-beginners-guide.html 301
 
+# ===== Broken /en/ internal links → correct versions =====
+/en/contact.html    /en/about.html    301
+/en/vendors.html    /en/peptide-sourcing-guide.html    301
+/en/start-here.html    /en/peptide-beginners-guide.html    301
+/en/research.html    /en/peptide-beginners-guide.html    301
+/en/peptide-stacks.html    /en/best-peptide-stacks.html    301
+/en/faq.html    /en/peptide-beginners-guide.html    301
+/en/bpc-157.html    /en/bpc-157-guide.html    301
+/en/collagen-peptides-guide.html    /en/peptide-beginners-guide.html    301
+/en/peptides.html    /en/peptide-beginners-guide.html    301
+/en/guides.html    /en/peptide-beginners-guide.html    301
+/en/peptide-guides.html    /en/peptide-beginners-guide.html    301
+/en/peptide-mental-health.html    /en/best-peptides-for-anxiety.html    301
+/en/peptide-anxiety.html    /en/best-peptides-for-anxiety.html    301
+/en/peptide-stacking-safety.html    /en/best-peptide-stacks.html    301
+/en/tb-500.html    /en/tb-500-guide.html    301
+
 # ===== Root English pages → /en/ equivalents (SEO consolidation) =====
 # Keep these pages at root (passthrough) — they must NOT redirect
 /index.html         /index.html                            200
