@@ -175,25 +175,191 @@
     margin-bottom: 0 !important;
   }
 
-</style>
+
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .search-input {
+      width: 100px;
+    }
+    .search-input:focus {
+      width: 130px;
+    }
+    .nav-lang-toggle {
+      padding: 4px 6px;
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-search form {
+      padding: 2px 6px;
+    }
+    .search-input {
+      width: 80px;
+      font-size: 13px;
+    }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
+  }
+
+  </style>
 </meta></meta></meta><link href="https://wolvestack.com/en/fragment-176-191-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/fragment-176-191-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/fragment-176-191-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/fragment-176-191-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/fragment-176-191-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/fragment-176-191-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/fragment-176-191-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/fragment-176-191-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/fragment-176-191-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/fragment-176-191-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/fragment-176-191-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/fragment-176-191-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/fragment-176-191-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/fragment-176-191-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
-<a class="nav-logo" href="/es/index.html">Wolve<span>Stack</span></a>
+<div class="nav-inner">
+<a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/es/peptide-beginners-guide.html">Empieza aquí</a></li>
-<li><a href="/es/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/es/tb-500-guide.html">TB-500</a></li>
-<li><a href="/es/wolverine-stack.html">The Stack</a></li>
-<li><a href="/es/peptide-calculator.html">Calculadora</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
-
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/fragment-176-191-guide.html">English</option><option selected="" value="/es/fragment-176-191-guide.html">Español</option><option value="/zh/fragment-176-191-guide.html">中文</option><option value="/ja/fragment-176-191-guide.html">日本語</option><option value="/pt/fragment-176-191-guide.html">Português</option><option value="/ru/fragment-176-191-guide.html">Русский</option><option value="/it/fragment-176-191-guide.html">Italiano</option><option value="/pl/fragment-176-191-guide.html">Polski</option><option value="/fr/fragment-176-191-guide.html">Français</option><option value="/id/fragment-176-191-guide.html">Bahasa</option><option value="/de/fragment-176-191-guide.html">Deutsch</option><option value="/nl/fragment-176-191-guide.html">Nederlands</option><option value="/ar/fragment-176-191-guide.html">العربية</option>
-</select>
+<div class="nav-search">
+<form>
+<input type="text" placeholder="Search..." class="search-input">
+<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+</form>
+</div>
+<div class="nav-lang">
+<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<div class="nav-lang-menu">
+<a href="/fragment-176-191-guide.html">English</a>
+<a href="/es/fragment-176-191-guide.html" class="active">Español</a>
+<a href="/zh/fragment-176-191-guide.html">中文</a>
+<a href="/ja/fragment-176-191-guide.html">日本語</a>
+<a href="/pt/fragment-176-191-guide.html">Português</a>
+<a href="/ru/fragment-176-191-guide.html">Русский</a>
+<a href="/it/fragment-176-191-guide.html">Italiano</a>
+<a href="/pl/fragment-176-191-guide.html">Polski</a>
+<a href="/fr/fragment-176-191-guide.html">Français</a>
+<a href="/id/fragment-176-191-guide.html">Bahasa</a>
+<a href="/de/fragment-176-191-guide.html">Deutsch</a>
+<a href="/nl/fragment-176-191-guide.html">Nederlands</a>
+<a href="/ar/fragment-176-191-guide.html">العربية</a>
+</div>
+</div>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 <div class="hero">
@@ -319,5 +485,50 @@
 </div>
 </section>
 <script src="/email-popup.js"></script>
+<script>
+
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
+    });
+  })();
+
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
+</script>
 </body>
 </html>

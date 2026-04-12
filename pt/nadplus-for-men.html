@@ -233,27 +233,191 @@
     background: #fef3c7; border-left: 4px solid #f59e0b;
   }
   .callout-label { font-weight: 700; font-size: 14px; white-space: nowrap; }
-</style>
+
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .search-input {
+      width: 100px;
+    }
+    .search-input:focus {
+      width: 130px;
+    }
+    .nav-lang-toggle {
+      padding: 4px 6px;
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-search form {
+      padding: 2px 6px;
+    }
+    .search-input {
+      width: 80px;
+      font-size: 13px;
+    }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
+  }
+
+  </style>
 <link href="https://wolvestack.com/en/nadplus-for-men.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/nadplus-for-men.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/nadplus-for-men.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/nadplus-for-men.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/nadplus-for-men.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/nadplus-for-men.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/nadplus-for-men.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/nadplus-for-men.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/nadplus-for-men.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/nadplus-for-men.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/nadplus-for-men.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/nadplus-for-men.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/nadplus-for-men.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/nadplus-for-men.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/pt/index.html">Lobo<span>Pilha</span></a>
+<a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/pt/peptide-beginners-guide.html">Iniciar Aqui</a></li>
-<li><a href="/pt/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/pt/tb-500-guide.html">TB-500</a></li>
-<li><a href="/pt/wolverine-stack.html">A Pilha</a></li>
-<li><a href="/pt/peptide-calculator.html">Calculadora</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
+<div class="nav-search">
+<form>
+<input type="text" placeholder="Search..." class="search-input">
+<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+</form>
 </div>
-
-<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
-<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
-<option value="/en/nadplus-for-men.html">English</option><option value="/es/nadplus-for-men.html">Español</option><option value="/zh/nadplus-for-men.html">中文</option><option value="/ja/nadplus-for-men.html">日本語</option><option selected="" value="/pt/nadplus-for-men.html">Português</option><option value="/ru/nadplus-for-men.html">Русский</option><option value="/it/nadplus-for-men.html">Italiano</option><option value="/pl/nadplus-for-men.html">Polski</option><option value="/fr/nadplus-for-men.html">Français</option><option value="/id/nadplus-for-men.html">Bahasa</option><option value="/de/nadplus-for-men.html">Deutsch</option><option value="/nl/nadplus-for-men.html">Nederlands</option><option value="/ar/nadplus-for-men.html">العربية</option>
-</select>
+<div class="nav-lang">
+<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<div class="nav-lang-menu">
+<a href="/nadplus-for-men.html">English</a>
+<a href="/es/nadplus-for-men.html">Español</a>
+<a href="/zh/nadplus-for-men.html">中文</a>
+<a href="/ja/nadplus-for-men.html">日本語</a>
+<a href="/pt/nadplus-for-men.html" class="active">Português</a>
+<a href="/ru/nadplus-for-men.html">Русский</a>
+<a href="/it/nadplus-for-men.html">Italiano</a>
+<a href="/pl/nadplus-for-men.html">Polski</a>
+<a href="/fr/nadplus-for-men.html">Français</a>
+<a href="/id/nadplus-for-men.html">Bahasa</a>
+<a href="/de/nadplus-for-men.html">Deutsch</a>
+<a href="/nl/nadplus-for-men.html">Nederlands</a>
+<a href="/ar/nadplus-for-men.html">العربية</a>
+</div>
+</div>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 <div class="article-hero">
@@ -311,5 +475,50 @@
 </div>
 </footer>
 <script src="/email-popup.js"></script>
+<script>
+
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
+    });
+  })();
+
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
+</script>
 </body>
 </html>
