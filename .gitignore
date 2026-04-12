@@ -1,1 +1,42 @@
+# GitHub directory
 .github/
+
+# Secrets and credentials
+*.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+.github-pat
+secrets.*
+credentials.*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Backups
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+npm-debug.log
+
+# Build artifacts
+*.log

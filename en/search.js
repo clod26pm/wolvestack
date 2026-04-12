@@ -221,7 +221,12 @@ function searchForTerm(term) {
 function highlightMatch(text, query) {
   if (!query) return escapeHtml(text);
 
-  const regex = new RegExp(`(${query.split(/\s+/).join('|')})`, 'gi');
+  // Escape regex special characters to prevent ReDoS attacks
+  const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const terms = query.split(/\s+/).map(escapeRegex).filter(Boolean);
+  if (terms.length === 0) return escapeHtml(text);
+
+  const regex = new RegExp(`(${terms.join('|')})`, 'gi');
   return escapeHtml(text).replace(
     regex,
     '<mark style="background: rgba(20, 189, 172, 0.2); color: inherit; font-weight: 600;">$1</mark>'
