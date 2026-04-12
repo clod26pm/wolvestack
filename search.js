@@ -110,7 +110,7 @@ function performSearch(query) {
     })
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 30); // Limit to 30 results
+    .slice(0, 50); // Limit to 50 results
 }
 
 /**
