@@ -40,8 +40,17 @@ async function initializeSearch() {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
       searchInput.addEventListener('input', handleSearchInput);
-      // Show popular searches on page load
-      showPopularSearches();
+
+      // Check for ?q= URL parameter (from nav search bar)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlQuery = urlParams.get('q');
+      if (urlQuery && urlQuery.trim()) {
+        searchInput.value = urlQuery.trim();
+        const results = performSearch(urlQuery.trim());
+        displayResults(results, urlQuery.trim());
+      } else {
+        showPopularSearches();
+      }
     }
   } catch (error) {
     console.error('Error loading search index:', error);
@@ -135,9 +144,9 @@ function displayResults(results, query) {
     .join('');
 
   resultsContainer.innerHTML = `
-    <div style="margin-bottom: 20px; padding: 0 24px; max-width: 1200px; margin-left: auto; margin-right: auto;">
-      <p style="color: #475569; font-size: 15px; font-weight: 500;">
-        Found <strong>${results.length}</strong> result${results.length !== 1 ? 's' : ''}
+    <div style="margin-bottom: 8px; padding: 0 20px; max-width: 780px; margin-left: auto; margin-right: auto;">
+      <p style="color: #94a3b8; font-size: 13px; font-weight: 500;">
+        ${results.length} result${results.length !== 1 ? 's' : ''}
       </p>
     </div>
     <div class="search-grid">

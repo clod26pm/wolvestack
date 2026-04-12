@@ -154,7 +154,7 @@
       gap: 0;
       padding: 0 24px;
       margin-bottom: 40px;
-      max-width: 800px;
+      max-width: 780px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -162,13 +162,14 @@
     /* Search Result Row */
     .search-result-card {
       display: block;
-      padding: 20px 0;
+      padding: 22px 20px;
       text-decoration: none;
       color: inherit;
-      border-bottom: 1px solid var(--gray-200);
+      border-radius: 10px;
+      transition: background 0.15s ease;
     }
-    .search-result-card:first-child {
-      border-top: 1px solid var(--gray-200);
+    .search-result-card:hover {
+      background: var(--gray-50);
     }
     .search-result-card:hover .search-result-title {
       color: var(--teal);
@@ -180,12 +181,12 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: var(--teal);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .search-result-title {
       font-family: var(--font-display);
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--navy);
       margin-bottom: 6px;
@@ -194,7 +195,7 @@
     }
 
     .search-result-description {
-      font-size: 15px;
+      font-size: 14px;
       color: var(--gray-600);
       line-height: 1.5;
       margin-bottom: 0;
