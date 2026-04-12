@@ -24,9 +24,16 @@
       '<p>Join 2,000+ researchers and biohackers getting our free weekly breakdown of new peptide studies, protocol updates, and sourcing alerts.</p>' +
       '<form id="ws-email-form">' +
         '<input type="email" id="ws-email-input" placeholder="Your email address" required />' +
-        '<button type="submit" id="ws-email-submit">Subscribe Free</button>' +
+        '<button type="submit" id="ws-email-submit" disabled>Subscribe Free</button>' +
       '</form>' +
-      '<p id="ws-email-note">No spam. Unsubscribe anytime. We respect your privacy.</p>' +
+      '<div id="ws-consent-wrapper">' +
+        '<label id="ws-consent-label">' +
+          '<input type="checkbox" id="ws-consent-checkbox" />' +
+          '<span>I agree to receive emails from WolveStack. No spam, unsubscribe anytime.</span>' +
+        '</label>' +
+        '<p id="ws-privacy-link"><a href="/en/privacy.html" target="_blank">View our Privacy Policy</a></p>' +
+      '</div>' +
+      '<p id="ws-email-note">We respect your privacy.</p>' +
       '<div id="ws-popup-success" style="display:none;">' +
         '<div style="font-size:2rem;margin-bottom:12px;">✅</div>' +
         '<h3>You\'re in!</h3>' +
@@ -57,7 +64,14 @@
     '#ws-email-submit{background:#c0392b;color:#fff;border:none;padding:14px 24px;' +
     'border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;white-space:nowrap;' +
     'transition:background 0.2s}' +
-    '#ws-email-submit:hover{background:#a93226}' +
+    '#ws-email-submit:hover:not(:disabled){background:#a93226}' +
+    '#ws-email-submit:disabled{background:#ccc;cursor:not-allowed;opacity:0.6}' +
+    '#ws-consent-wrapper{margin:16px 0;text-align:left;padding:12px;background:#f9f9f9;border-radius:8px}' +
+    '#ws-consent-label{display:flex;align-items:flex-start;gap:8px;font-size:0.9rem;color:#555;cursor:pointer;margin:0}' +
+    '#ws-consent-label input[type=checkbox]{margin-top:2px;cursor:pointer;flex-shrink:0}' +
+    '#ws-privacy-link{font-size:0.8rem;color:#999;margin:8px 0 0;text-align:center}' +
+    '#ws-privacy-link a{color:#c0392b;text-decoration:none}' +
+    '#ws-privacy-link a:hover{text-decoration:underline}' +
     '#ws-email-note{font-size:0.8rem;color:#999;margin:0}' +
     '#ws-popup-success h3{color:#1a1a2e;margin:0 0 8px}' +
     '@media(max-width:500px){#ws-email-form{flex-direction:column}' +
@@ -80,9 +94,21 @@
     }
   };
 
+  // Checkbox validation — enable/disable submit button
+  document.getElementById('ws-consent-checkbox').onchange = function() {
+    document.getElementById('ws-email-submit').disabled = !this.checked;
+  };
+
   // Form submission — stores email in localStorage and sends to endpoint if configured
   document.getElementById('ws-email-form').onsubmit = function(e) {
     e.preventDefault();
+
+    // Verify consent checkbox is checked
+    if (!document.getElementById('ws-consent-checkbox').checked) {
+      alert('Please agree to receive emails before subscribing.');
+      return;
+    }
+
     var email = document.getElementById('ws-email-input').value;
     
     // Store locally
