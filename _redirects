@@ -27,3 +27,13 @@
 /:lang/peptides.html /:lang/peptide-beginners-guide.html     301
 /:lang/contact.html /:lang/about.html              301
 /:lang/start-here.html /:lang/peptide-beginners-guide.html 301
+
+# ===== Root English pages → /en/ equivalents (SEO consolidation) =====
+# Keep these pages at root (passthrough) — they must NOT redirect
+/index.html         /index.html                            200
+/search.html        /search.html                           200
+/app/*              /app/:splat                            200
+/category/*         /category/:splat                       200
+
+# Catch-all: redirect ALL other root .html pages to /en/ versions
+/*.html             /en/:splat.html                        301

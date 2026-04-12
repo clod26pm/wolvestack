@@ -10,7 +10,10 @@
 - IMPORTANT: English content uses /en/ directory, NOT the root directory, for GSC indexing
   - Root files exist but /en/ is the canonical English version for Google
   - All language versions: /en/, /es/, /zh/, /ja/, /pt/, /ru/, /it/, /pl/, /fr/, /id/, /de/, /nl/, /ar/
-  - Root files have self-referencing canonicals; /en/ files canonical to /en/
+  - Root file canonicals point to /en/ equivalents (updated 2026-04-12)
+  - /en/ files have full hreflang tags for all 13 languages + x-default
+  - Netlify _redirects: root /*.html → /en/*.html via 301 (except index.html, search.html, /app/*, /category/*)
+  - When creating NEW content: create in /en/ first, then copy to root + other languages
   - When updating English content, ALWAYS propagate changes to /en/ directory too
 
 ## Templates
@@ -49,9 +52,18 @@
 - 51 articles as of 2026-04-10
 - New articles added daily by scheduled task
 
+## SEO / Google Search Console
+- /en/ is canonical for English — root files 301 redirect to /en/ via Netlify _redirects
+- Root files also have canonical tags pointing to /en/ (belt + suspenders)
+- All /en/ files have hreflang tags for all 13 languages + x-default
+- Netlify pretty URLs strip .html — Google may index both /slug and /slug.html
+- New content workflow: write in /en/ → copy to root (for redirect) → translate to other langs
+- GSC verified: ~1,000 pages indexed as of 2026-04-12 (999 from CSV export)
+
 ## Key Gotchas
 - Pinterest description field loses content when focus changes — always fill it last
 - Pinterest "Enter website" input sometimes needs a click at ~(735, 229) before find tool locates it
 - Pin builder page takes 10-20s to fully render
 - Always use form_input (not type) for URL fields in Pinterest's React inputs
 - Destination link auto-fills with the image URL — must be changed to the article URL
+- GitHub PAT may need refreshing — check if push fails with auth error
