@@ -135,8 +135,8 @@ function displayResults(results, query) {
     .join('');
 
   resultsContainer.innerHTML = `
-    <div style="margin-bottom: 16px; padding: 0 24px;">
-      <p style="color: #94a3b8; font-size: 13px;">
+    <div style="margin-bottom: 20px; padding: 0 24px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+      <p style="color: #475569; font-size: 15px; font-weight: 500;">
         Found <strong>${results.length}</strong> result${results.length !== 1 ? 's' : ''}
       </p>
     </div>
