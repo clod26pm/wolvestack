@@ -33,6 +33,34 @@
 /:lang/contact.html /:lang/about.html              301
 /:lang/start-here.html /:lang/peptide-beginners-guide.html 301
 
+# ===== Cross-language short URL → correct versions =====
+# These cover all 13 languages using :lang placeholder
+/:lang/vendors.html       /:lang/peptide-sourcing-guide.html   301
+/:lang/vendors            /:lang/peptide-sourcing-guide.html   301
+/:lang/bpc-157.html       /:lang/bpc-157-guide.html            301
+/:lang/bpc-157            /:lang/bpc-157-guide.html            301
+/:lang/tb-500.html        /:lang/tb-500-guide.html             301
+/:lang/tb-500             /:lang/tb-500-guide.html             301
+/:lang/stacks.html        /:lang/best-peptide-stacks.html      301
+/:lang/stacks             /:lang/best-peptide-stacks.html      301
+/:lang/peptide-stacks.html /:lang/best-peptide-stacks.html     301
+/:lang/peptide-stacks     /:lang/best-peptide-stacks.html      301
+
+# nad-plus vs nadplus filename mismatch (all languages)
+# Most files use "nadplus-" but Google crawls "nad-plus-" from internal links
+/:lang/nad-plus-guide.html      /:lang/nadplus-guide.html           301
+/:lang/nad-plus-guide           /:lang/nadplus-guide.html           301
+/:lang/nad-plus-stacking.html   /:lang/nadplus-stacking.html        301
+/:lang/nad-plus-stacking        /:lang/nadplus-stacking.html        301
+/:lang/nad-plus-benefits.html   /:lang/nadplus-benefits.html        301
+/:lang/nad-plus-dosage.html     /:lang/nadplus-dosage.html          301
+/:lang/nad-plus-faq.html        /:lang/nadplus-faq.html             301
+/:lang/nad-plus-cycle.html      /:lang/nadplus-cycle.html           301
+/:lang/nad-plus-results-timeline.html /:lang/nadplus-results-timeline.html 301
+/:lang/nad-plus-reconstitution.html   /:lang/nadplus-reconstitution.html   301
+/:lang/nad-plus-side-effects.html     /:lang/nadplus-side-effects.html     301
+/:lang/nad-plus-reviews.html          /:lang/nadplus-reviews.html          301
+
 # ===== Broken /en/ internal links → correct versions =====
 /en/contact.html    /en/about.html    301
 /en/vendors.html    /en/peptide-sourcing-guide.html    301
