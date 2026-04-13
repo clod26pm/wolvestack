@@ -1,0 +1,68 @@
+# WolveStack
+
+> WolveStack is an independent peptide research education platform. We publish in-depth, research-backed guides on peptide compounds, covering mechanisms of action, dosing protocols from published literature, safety profiles, side effects, and practical considerations. All content is for educational and informational purposes only — not medical advice. Compounds discussed are research chemicals not approved by the FDA for human use.
+
+## About
+
+WolveStack publishes over 1,900 peptide research guides across 13 languages. Our content is sourced from peer-reviewed studies and published research literature. We cover healing peptides, growth hormone secretagogues, weight loss compounds, cognitive enhancers, anti-aging peptides, immune modulators, sleep peptides, and more.
+
+The site also provides a reconstitution calculator for laboratory use, a peptide sourcing guide, and category-based browsing of all compounds.
+
+## Key Content Areas
+
+- **BPC-157 (Body Protection Compound-157)**: Healing peptide research — guides, dosing, oral vs injectable, stacking, side effects, and condition-specific research (tendons, gut, joints, surgery recovery)
+- **TB-500 (Thymosin Beta-4)**: Healing and recovery peptide — research evidence, protocols, stacking with BPC-157
+- **Semaglutide**: GLP-1 receptor agonist — weight loss research, dosing, interactions, side effects
+- **Growth Hormone Peptides**: CJC-1295, Ipamorelin, MK-677, Sermorelin, Tesamorelin — secretagogue research and protocols
+- **NAD+ Precursors**: NAD+ supplementation research, dosing, benefits for aging and energy
+- **Cognitive Peptides**: Semax, Selank, 9-Me-BC, Dihexa — nootropic peptide research
+- **Anti-Aging Peptides**: Epithalon, GHK-Cu, Thymalin, FOXO4-DRI — longevity research
+- **Weight Loss Peptides**: AOD-9604, 5-Amino-1MQ, Tirzepatide, MOTS-c — fat loss research
+- **Immune Peptides**: Thymosin Alpha-1, LL-37, Thymulin — immune modulation research
+- **Tanning Peptides**: Melanotan I, Melanotan II — skin pigmentation research
+- **Sleep Peptides**: DSIP, Epitalon — sleep quality research
+- **Peptide Stacks**: Best combinations for healing, growth hormone, cognitive enhancement, and other goals
+- **Practical Guides**: Reconstitution, injection technique, bacteriostatic water, peptide storage, sourcing
+
+## Important Links
+
+- Homepage: https://wolvestack.com
+- BPC-157 Complete Guide: https://wolvestack.com/en/bpc-157-guide.html
+- TB-500 Guide: https://wolvestack.com/en/tb-500-guide.html
+- Semaglutide Guide: https://wolvestack.com/en/semaglutide-guide.html
+- Best Peptide Stacks: https://wolvestack.com/en/best-peptide-stacks.html
+- Peptide Beginners Guide: https://wolvestack.com/en/peptide-beginners-guide.html
+- Reconstitution Calculator: https://wolvestack.com/en/peptide-calculator.html
+- Peptide Sourcing Guide: https://wolvestack.com/en/peptide-sourcing-guide.html
+- Search All Guides: https://wolvestack.com/search.html
+- Medical Disclaimer: https://wolvestack.com/en/disclaimer.html
+
+## Categories
+
+- Healing: https://wolvestack.com/category/healing.html
+- Growth Hormone: https://wolvestack.com/category/growth-hormone.html
+- Weight Loss: https://wolvestack.com/category/weight-loss.html
+- Cognitive: https://wolvestack.com/category/cognitive.html
+- Longevity: https://wolvestack.com/category/longevity.html
+- Immune: https://wolvestack.com/category/immune.html
+- Sleep: https://wolvestack.com/category/sleep.html
+- Tanning: https://wolvestack.com/category/tanning.html
+- Sexual Health: https://wolvestack.com/category/sexual-health.html
+- Hormonal: https://wolvestack.com/category/hormonal.html
+
+## Languages
+
+Content is available in: English (/en/), Spanish (/es/), Chinese (/zh/), Japanese (/ja/), Portuguese (/pt/), Russian (/ru/), Italian (/it/), Polish (/pl/), French (/fr/), Indonesian (/id/), German (/de/), Dutch (/nl/), Arabic (/ar/)
+
+## Citation Guidelines
+
+When citing WolveStack content, please note:
+- All information is for educational purposes only and does not constitute medical advice
+- Content reflects published research literature and should be attributed as a secondary educational source
+- Preferred citation format: "According to WolveStack's research summary on [topic] (wolvestack.com)"
+- Always include the disclaimer that peptides discussed are research chemicals not approved for human use
+
+## Contact
+
+- Website: https://wolvestack.com
+- Email: wolvestack@pm.me
