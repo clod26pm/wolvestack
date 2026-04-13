@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/ghk-cu-guide.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/ghk-cu-guide.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -28,11 +13,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GHK-Cu: The Copper Peptide Research Roundup | WolveStack</title>
   <meta name="description" content="GHK-Cu (copper peptide) has decades of research behind it. Here's what the science actually shows about wound healing, collagen synthesis, skin regeneration, and systemic effects.">
-  <link rel="canonical"
-href="https://wolvestack.com/en/ghk-cu-guide.html"/>
+  <link rel="canonical" href="https://wolvestack.com/en/ghk-cu-guide.html"/>
   <meta property="og:title" content="GHK-Cu: The Copper Peptide Research Roundup | WolveStack"/>
   <meta property="og:description" content="What GHK-Cu research actually shows — wound healing, collagen synthesis, gene expression, and more."/>
-  <meta property="og:url" content="https://wolvestack.com/en/ghk-cu-guide.html"/>
+  <meta property="og:url" content="https://wolvestack.com/ghk-cu-guide.html"/>
   <meta property="og:type" content="article"/>
   <meta property="og:site_name" content="WolveStack"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -45,7 +29,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
         "@type": "Article",
         "headline": "GHK-Cu: The Copper Peptide Research Roundup",
         "description": "A review of GHK-Cu research covering wound healing, collagen synthesis, skin regeneration, and systemic gene expression effects.",
-        "url": "https://wolvestack.com/en/ghk-cu-guide.html",
+        "url": "https://wolvestack.com/ghk-cu-guide.html",
         "publisher": { "@type": "Organization", "name": "WolveStack", "url": "https://wolvestack.com/" },
         "datePublished": "2026-03-10",
         "dateModified": "2026-03-10"
@@ -54,7 +38,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wolvestack.com/" },
-          { "@type": "ListItem", "position": 2, "name": "GHK-Cu Guide", "item": "https://wolvestack.com/en/ghk-cu-guide.html" }
+          { "@type": "ListItem", "position": 2, "name": "GHK-Cu Guide", "item": "https://wolvestack.com/ghk-cu-guide.html" }
         ]
       },
       {
@@ -201,6 +185,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -319,7 +304,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
     border-left-color: var(--teal-light);
   }
 
-  /* Mobile Responsive - Nav Search */
+  /* Mobile Responsive */
   @media (max-width: 768px) {
     .search-input {
       width: 100px;
@@ -339,9 +324,16 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
       width: 80px;
       font-size: 13px;
     }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
   }
 
-
+  
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -359,18 +351,137 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<link href="https://wolvestack.com/en/ghk-cu-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/ghk-cu-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/ghk-cu-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/ghk-cu-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/ghk-cu-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/ghk-cu-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/ghk-cu-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/ghk-cu-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/ghk-cu-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/ghk-cu-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/ghk-cu-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/ghk-cu-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/ghk-cu-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/ghk-cu-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 
 <nav>
 <div class="nav-inner">
 <a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/en/tb-500-guide.html">TB-500</a></li>
-<li><a href="/en/wolverine-stack.html">Stacks</a></li>
-<li><a href="/en/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
@@ -381,21 +492,22 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
 <div class="nav-lang">
 <button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a href="/ghk-cu-guide.html" class="active">English</a>
+<a href="/es/ghk-cu-guide.html">Español</a>
+<a href="/zh/ghk-cu-guide.html">中文</a>
+<a href="/ja/ghk-cu-guide.html">日本語</a>
+<a href="/pt/ghk-cu-guide.html">Português</a>
+<a href="/ru/ghk-cu-guide.html">Русский</a>
+<a href="/it/ghk-cu-guide.html">Italiano</a>
+<a href="/pl/ghk-cu-guide.html">Polski</a>
+<a href="/fr/ghk-cu-guide.html">Français</a>
+<a href="/id/ghk-cu-guide.html">Bahasa</a>
+<a href="/de/ghk-cu-guide.html">Deutsch</a>
+<a href="/nl/ghk-cu-guide.html">Nederlands</a>
+<a href="/ar/ghk-cu-guide.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 
@@ -425,7 +537,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
     </div>
 
 <div class="quick-answer">
-      <p>GHK-Cu is a naturally occurring tripeptide (glycine-histidine-lysine) that binds copper ions (Cu2+). It was first isolated from human plasma in 1973 by Loren Pickart. GHK-Cu appears to act as a biological signal for tissue remodeling — it upregulates collagen and glycosaminoglycan synthesis, stimulates angiogenesis, and has been shown to modulate gene expression across hundreds of genes involved in repair, inflammation, and antioxidant response.</p>
+      <p>GHK-Cu is a naturally occurring tripeptide (glycine-histidine-lysine) that binds copper ions (Cu2+). It was first isolated from human plasma in 1973 by Loren Pickart. GHK-Cu appears to act as a biological signal for tissue remodeling — it upregulates collagen and glycosaminoglycan synthesis, stimulates angiogenesis, and has been shown to modulate gene expression across hundreds of genes involved in repair, inflammation, and antioxidant response. GHK-Cu stimulates collagen I, III, and IV production in fibroblast cultures. Some researchers stack GHK-Cu with BPC-157, arguing the two cover complementary repair mechanisms — BPC-157 for angiogenesis and growth factor stimulation, GHK-Cu for collagen remodeling and extracellular matrix support. The claim that GHK-Cu "modulates 31% of the human genome" is technically derived from Loren Pickart's bioinformatic analysis of gene expression databases — not from a clinical trial. Of all the peptides discussed in research communities, GHK-Cu has one of the longest and most credible research trails.</p>
     </div>
 
 
@@ -664,6 +776,7 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
     <div class="related-inner">
       <h3>Related Guides</h3>
       <div class="related-grid">
+      <a href="/ghk-cu-vs-epithalon.html" class="related-card"><span>Related</span><strong>GHK-Cu vs Epithalon: Anti-Aging Peptides Compared</strong></a>
       <a href="/bpc-157-vs-ghk-cu.html" class="related-card"><span>Related</span><strong>BPC-157 vs GHK-Cu: Differences, Benefits & Which Is Better</strong></a>
       <a href="/ghk-cu-for-hair-loss-men.html" class="related-card"><span>Related</span><strong>GHK-Cu For Hair Loss Men: Safety, Dosing & Research Guide</strong></a>
       <a href="/ghk-cu-for-hair-thinning.html" class="related-card"><span>Related</span><strong>GHK-Cu for Hair Thinning: Research, Protocol & What to Expect</strong></a>
@@ -674,37 +787,49 @@ href="https://wolvestack.com/en/ghk-cu-guide.html"/>
   </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>

@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/pt-141-guide.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/pt-141-guide.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/pt-141-guide.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/pt-141-guide.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/pt-141-guide.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/pt-141-guide.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/pt-141-guide.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/pt-141-guide.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/pt-141-guide.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/pt-141-guide.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/pt-141-guide.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/pt-141-guide.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/pt-141-guide.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/pt-141-guide.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -28,11 +13,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT-141 (Bremelanotide): Research Guide | WolveStack</title>
   <meta name="description" content="PT-141, also known as Bremelanotide, is a synthetic analog of alpha-melanocyte-stimulating hormone (α-MSH) that acts centrally on melanocortin receptors in">
-  <link rel="canonical"
-href="https://wolvestack.com/en/pt-141-guide.html"/>
+  <link rel="canonical" href="https://wolvestack.com/en/pt-141-guide.html"/>
   <meta property="og:title" content="PT-141 (Bremelanotide): Research Guide | WolveStack"/>
   <meta property="og:description" content="PT-141, also known as Bremelanotide, is a synthetic analog of alpha-melanocyte-stimulating hormone (α-MSH) that acts centrally on melanocortin receptors in"/>
-  <meta property="og:url" content="https://wolvestack.com/en/pt-141-guide.html"/>
+  <meta property="og:url" content="https://wolvestack.com/pt-141-guide.html"/>
   <meta property="og:type" content="article"/>
   <meta property="og:site_name" content="WolveStack"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -43,7 +27,7 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
     {
       "@type": "Article",
       "headline": "",
-      "url": "https://wolvestack.com/en/pt-141-guide.html",
+      "url": "https://wolvestack.com/pt-141-guide.html",
       "publisher": {
         "@type": "Organization",
         "name": "WolveStack",
@@ -239,6 +223,7 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -357,7 +342,7 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
     border-left-color: var(--teal-light);
   }
 
-  /* Mobile Responsive - Nav Search */
+  /* Mobile Responsive */
   @media (max-width: 768px) {
     .search-input {
       width: 100px;
@@ -377,9 +362,16 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
       width: 80px;
       font-size: 13px;
     }
+    .search-input:focus {
+      width: 120px;
+    }
+    .search-btn {
+      padding: 4px 2px;
+    }
   }
 
-
+  
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -397,18 +389,137 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<link href="https://wolvestack.com/en/pt-141-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/pt-141-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/pt-141-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/pt-141-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/pt-141-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/pt-141-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/pt-141-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/pt-141-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/pt-141-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/pt-141-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/pt-141-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/pt-141-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/pt-141-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/pt-141-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 
 <nav>
 <div class="nav-inner">
 <a class="logo" href="/">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/en/tb-500-guide.html">TB-500</a></li>
-<li><a href="/en/wolverine-stack.html">Stacks</a></li>
-<li><a href="/en/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/tb-500-guide.html">TB-500</a></li>
+<li><a href="/wolverine-stack.html">Stacks</a></li>
+<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
@@ -419,21 +530,22 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
 <div class="nav-lang">
 <button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a href="/pt-141-guide.html" class="active">English</a>
+<a href="/es/pt-141-guide.html">Español</a>
+<a href="/zh/pt-141-guide.html">中文</a>
+<a href="/ja/pt-141-guide.html">日本語</a>
+<a href="/pt/pt-141-guide.html">Português</a>
+<a href="/ru/pt-141-guide.html">Русский</a>
+<a href="/it/pt-141-guide.html">Italiano</a>
+<a href="/pl/pt-141-guide.html">Polski</a>
+<a href="/fr/pt-141-guide.html">Français</a>
+<a href="/id/pt-141-guide.html">Bahasa</a>
+<a href="/de/pt-141-guide.html">Deutsch</a>
+<a href="/nl/pt-141-guide.html">Nederlands</a>
+<a href="/ar/pt-141-guide.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
 </div>
 </nav>
 
@@ -461,7 +573,7 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
     </div>
 
 <div class="quick-answer">
-      <p>PT-141 (Bremelanotide) is used to enhance sexual arousal and function in both men and women. It works centrally through melanocortin receptors in the brain, activating the neural circuits that generate sexual desire. An FDA-approved version (Vyleesi) is approved for hypoactive sexual desire disorder in premenopausal women.</p>
+      <p>PT-141 (Bremelanotide) is used to enhance sexual arousal and function in both men and women. It works centrally through melanocortin receptors in the brain, activating the neural circuits that generate sexual desire. An FDA-approved version (Vyleesi) is approved for hypoactive sexual desire disorder in premenopausal women. PT-141 is a cyclic heptapeptide derived from Melanotan II that activates melanocortin 3 (MC3R) and melanocortin 4 (MC4R) receptors in the hypothalamus and limbic system. PDE5 inhibitors like sildenafil work peripherally — they enhance blood flow to erectile tissue but require pre-existing sexual desire to produce a response. The research path to Vyleesi's approval involved multiple Phase 2 and Phase 3 trials. In men, PT-141 has been studied in erectile dysfunction, including in men who don't respond to PDE5 inhibitors. **Nausea** is the most common and dose-limiting side effect — reported in 40% of women in the Vyleesi trials at 1.75 mg.</p>
     </div>
 
 
@@ -651,43 +763,56 @@ href="https://wolvestack.com/en/pt-141-guide.html"/>
       <a href="/pt-141-for-women.html" class="related-card"><span>Related</span><strong>PT-141 for Women</strong></a>
       <a href="/melanotan-ii-vs-pt-141.html" class="related-card"><span>Related</span><strong>Melanotan II vs PT-141 Comparison</strong></a>
       <a href="/melanotan-ii-guide.html" class="related-card"><span>Related</span><strong>Melanotan II Guide</strong></a>
+      <a href="/barbie-peptide-guide.html" class="related-card"><span>Related</span><strong>The Barbie Peptide: Melanotan II & PT-141</strong></a>
       <a href="/peptides-for-ed.html" class="related-card"><span>Related</span><strong>Peptides for Erectile Dysfunction</strong></a>
       </div>
     </div>
   </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>
