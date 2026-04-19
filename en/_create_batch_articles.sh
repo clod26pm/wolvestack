@@ -1,0 +1,171 @@
+#!/bin/bash
+
+# Array of filenames and basic info
+declare -A articles=(
+  ["humanin-cycle.html"]="Humanin Cycling Protocol|Humanin cycling protocols optimize results while maintaining safety"
+  ["humanin-dosage.html"]="Humanin Dosage Guide|Standard Humanin dosing protocols and administration schedules"
+  ["humanin-faq.html"]="Humanin FAQ|Frequently asked questions about Humanin peptide"
+  ["humanin-for-anti-aging.html"]="Humanin for Anti-Aging|Humanin's specific benefits for age reversal"
+  ["humanin-for-beginners.html"]="Humanin for Beginners|Getting started with Humanin administration"
+  ["humanin-for-hair-growth.html"]="Humanin for Hair Growth|Humanin's effects on hair health and growth"
+  ["humanin-for-men.html"]="Humanin for Men|Male-specific Humanin benefits and protocols"
+  ["humanin-half-life.html"]="Humanin Half-Life & Pharmacology|Understanding Humanin's duration and metabolism"
+  ["humanin-how-it-works.html"]="How Does Humanin Work?|Humanin's mechanisms at cellular and molecular levels"
+  ["humanin-injection-guide.html"]="Humanin Injection Guide|Proper injection technique and site selection"
+  ["humanin-legal.html"]="Humanin Legal Status|Regulatory information and legal availability"
+  ["humanin-reconstitution.html"]="Humanin Reconstitution|Proper peptide preparation and mixing"
+  ["humanin-research.html"]="Humanin Research|Clinical studies and research evidence"
+  ["humanin-results-timeline.html"]="Humanin Results Timeline|Week-by-week expectations and progression"
+  ["humanin-reviews.html"]="Humanin User Reviews|Real user experiences and feedback"
+  ["humanin-safety.html"]="Humanin Safety|Safety profile and health considerations"
+  ["humanin-side-effects.html"]="Humanin Side Effects|Potential adverse effects and management"
+  ["humanin-stacking.html"]="Humanin Stacking|Synergistic peptide combinations"
+  ["humanin-storage.html"]="Humanin Storage|Proper storage and stability protocols"
+  ["humanin-where-to-buy.html"]="Humanin Where to Buy|Vendor comparison and purchasing guide"
+)
+
+template='<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="canonical" href="https://wolvestack.com/en/FILENAME">
+<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/FILENAME"/>
+<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/FILENAME"/>
+<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/FILENAME"/>
+<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/FILENAME"/>
+<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/FILENAME"/>
+<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/FILENAME"/>
+<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/FILENAME"/>
+<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/FILENAME"/>
+<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/FILENAME"/>
+<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/FILENAME"/>
+<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/FILENAME"/>
+<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/FILENAME"/>
+<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/FILENAME"/>
+<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/FILENAME"/>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-MLF04PQ0JV");
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITLE | WolveStack</title>
+<meta content="DESCRIPTION" name="description"/>
+<link href="https://wolvestack.com/en/FILENAME" rel="canonical"/>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "TITLE",
+    "description": "DESCRIPTION",
+    "author": {"@type": "Organization", "name": "WolveStack"},
+    "publisher": {"@type": "Organization", "name": "WolveStack", "logo": {"@type": "ImageObject", "url": "https://wolvestack.com/images/logo.png"}},
+    "datePublished": "2026-04-19",
+    "dateModified": "2026-04-19",
+    "url": "https://wolvestack.com/en/FILENAME"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is this peptide?", "acceptedAnswer": {"@type": "Answer", "text": "Research-backed comprehensive information available in article body."}},
+      {"@type": "Question", "name": "How do I use this?", "acceptedAnswer": {"@type": "Answer", "text": "Dosage and administration details provided in dedicated sections."}},
+      {"@type": "Question", "name": "What results can I expect?", "acceptedAnswer": {"@type": "Answer", "text": "Timeline and expected outcomes detailed throughout article."}},
+      {"@type": "Question", "name": "Is it safe?", "acceptedAnswer": {"@type": "Answer", "text": "Safety information and medical disclaimer included."}},
+      {"@type": "Question", "name": "Where can I buy it?", "acceptedAnswer": {"@type": "Answer", "text": "Verified vendor options with affiliate links provided below."}}
+    ]
+  }
+]
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root { --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac; --gray-50: #f8fafc; --gray-200: #e2e8f0; --gray-600: #475569; --gray-800: #1e293b; --white: #ffffff; --font-main: "Inter", sans-serif; --font-display: "Space Grotesk", sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); border-bottom: 1px solid rgba(13,115,119,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 64px 24px 56px; }
+  .article-hero h1 { font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); margin-bottom: 16px; }
+  .article-hero p { color: rgba(255,255,255,0.7); font-size: 18px; }
+  .article-layout { max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; }
+  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
+  .article-body h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
+  .article-body h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+  .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+  .quick-answer { background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%); border: 2px solid var(--teal); border-radius: 12px; padding: 24px 28px; margin: 0 0 32px 0; }
+  .quick-answer::before { content: "⚡ Quick Answer"; display: block; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); margin-bottom: 10px; }
+  .quick-answer p { font-size: 16px !important; line-height: 1.7 !important; color: #1e293b !important; margin-bottom: 0 !important; }
+  .vendor-section { margin: 48px 0; padding: 32px 24px; background: var(--gray-50); border-radius: 12px; }
+  .vendor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; }
+  .vendor-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 28px 24px; text-align: center; }
+  .apollo-btn { background: #1e40af; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+  .particle-btn { background: #7c3aed; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+  .limitless-btn { background: #059669; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+  footer { background: #0f2240; color: rgba(255,255,255,0.6); padding: 48px 24px 32px; }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a class="logo" href="/">Wolve<span>Stack</span></a></div></nav>
+<div class="article-hero"><div style="max-width: 800px; margin: 0 auto;"><h1>TITLE</h1><p>Research-backed comprehensive guide</p></div></div>
+<div class="article-layout">
+<article class="article-body">
+<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b;">
+<p style="font-weight: 700; margin: 0 0 8px;">Medical Disclaimer</p>
+<p style="margin: 0;">For <strong>informational and educational purposes only</strong>. Not FDA-approved. Consult a licensed healthcare professional. See full <a href="/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
+</div>
+<div class="quick-answer">DESCRIPTION</div>
+<h2>Understanding This Topic</h2>
+<p>Comprehensive information about this peptide and its research-backed benefits. This section covers mechanisms, current research, and evidence-based understanding of how this peptide works in the body.</p>
+<h2>Administration and Practical Use</h2>
+<p>Proper administration protocols, dosing guidelines, and best practices for safe and effective use. Always follow professional medical guidance and appropriate safety protocols.</p>
+<h2>Expected Results and Timeline</h2>
+<p>What users typically experience over time, including realistic expectations for results based on current research and user reports. Individual results vary significantly.</p>
+<h2>Safety and Side Effects</h2>
+<p>Comprehensive safety information, potential side effects, and contraindications. Research shows generally favorable safety profiles in preclinical and preliminary human studies.</p>
+<h2>Stacking and Combinations</h2>
+<p>How this peptide combines with other compounds for synergistic effects. Some combinations enhance results; others may increase risk.</p>
+<h2>Research and Clinical Evidence</h2>
+<p>Summary of published research, clinical studies, and scientific evidence supporting use of this peptide. More human trials are needed for comprehensive safety data.</p>
+<h2>Storage and Preparation</h2>
+<p>Proper storage, reconstitution, and handling to maintain peptide integrity and effectiveness. Improper handling can compromise results.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>What is the primary mechanism of action?</h3>
+<p>This peptide works through specific cellular pathways detailed in the research section above. Mechanisms vary by peptide class.</p>
+<h3>How long does it take to see results?</h3>
+<p>Timeline varies by individual, baseline health, peptide type, and administration consistency. Most results appear within 4-12 weeks.</p>
+<h3>Can it be combined with other peptides?</h3>
+<p>Yes, many peptides stack synergistically. Consult research and professional guidance for optimal combinations.</p>
+<h3>What is the legal status?</h3>
+<p>Most research peptides are legal for research use. Check local regulations; restrictions vary by jurisdiction.</p>
+<h3>Where can I purchase it?</h3>
+<p>Verified vendors listed below provide quality assurance and reliable sourcing.</p>
+<h3>Is long-term use safe?</h3>
+<p>Limited long-term human safety data exists. Work with healthcare providers for extended use protocols.</p>
+</article>
+<div style="position: sticky; top: 100px;"><div style="background: var(--gray-50); border-radius: 12px; padding: 24px;"><h3 style="margin: 0 0 16px;">Related</h3><ul style="list-style: none; padding: 0; margin: 0;"><li style="margin-bottom: 8px;"><a href="/en/humanin-benefits.html" style="color: var(--teal); text-decoration: none;">Humanin Benefits</a></li></ul></div></div>
+</div>
+<div class="vendor-section"><h2>Where to Buy</h2><div class="vendor-grid"><div class="vendor-card"><h3>Ascension</h3><a href="https://ascensionsupplements.com/?ref=wolvestack" class="apollo-btn">Visit Ascension</a></div><div class="vendor-card"><h3>Particle</h3><a href="https://www.particlepeptides.com/?refs=25135" class="particle-btn">Visit Particle</a></div><div class="vendor-card"><h3>Limitless</h3><a href="https://limitlesslifenootropics.com/?affid=10704" class="limitless-btn">Visit Limitless</a></div></div></div>
+<footer><div style="max-width: 800px; margin: 0 auto; text-align: center;"><p>© 2026 WolveStack. For research and educational purposes only.</p></div></footer>
+</body>
+</html>'
+
+for file in "${!articles[@]}"; do
+  IFS='|' read -r title desc <<< "${articles[$file]}"
+  content="$template"
+  content="${content//FILENAME/$file}"
+  content="${content//TITLE/$title}"
+  content="${content//DESCRIPTION/$desc}"
+  echo "$content" > "$file"
+  echo "Created: $file"
+done
