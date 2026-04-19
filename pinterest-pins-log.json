@@ -524,22 +524,22 @@
       "title": "Epithalon (Epitalon): Longevity Peptide Research Guide",
       "color": "#7B1FA2",
       "date": "2026-04-11",
-      "status": "manual_publish_pending",
+      "status": "published_v2",
       "image": "pinterest-pins-v2/pin-epithalon-guide.png",
       "description": "Complete Epithalon research guide covering telomerase activation, pineal gland regulation, 10-day cycle protocols, and anti-aging evidence. #peptides #research #biohacking #health #epithalon #longevity #antiaging #telomeres #pineal #epitalon",
       "link": "https://wolvestack.com/epithalon-guide",
-      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-12.md"
+      "pin_v2_date": "2026-04-14"
     },
     {
       "filename": "mk-677-guide.html",
       "title": "MK-677 (Ibutamoren): The Oral GH Secretagogue Guide",
       "color": "#3949AB",
       "date": "2026-04-11",
-      "status": "manual_publish_pending",
+      "status": "published_v2",
       "image": "pinterest-pins-v2/pin-mk-677-guide.png",
-      "description": "Everything you need to know about MK-677 — the oral growth hormone secretagogue. Covers dosing, IGF-1 benefits, sleep improvement, and side effects. #peptides #research #biohacking #health #MK677 #ibutamoren #growthhormone #GH #bodybuilding #recovery",
+      "description": "Everything you need to know about MK-677 \u2014 the oral growth hormone secretagogue. Covers dosing, IGF-1 benefits, sleep improvement, and side effects. #peptides #research #biohacking #health #MK677 #ibutamoren #growthhormone #GH #bodybuilding #recovery",
       "link": "https://wolvestack.com/mk-677-guide",
-      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-12.md"
+      "pin_v2_date": "2026-04-14"
     },
     {
       "filename": "selank-guide.html",
@@ -548,9 +548,59 @@
       "date": "2026-04-11",
       "status": "manual_publish_pending",
       "image": "pinterest-pins-v2/pin-selank-guide.png",
-      "description": "Research guide to Selank — the Russian-developed anxiolytic peptide. Covers GABA modulation, nasal spray vs injection, cognitive enhancement, and clinical data. #peptides #research #biohacking #health #selank #anxiety #nootropics #GABA #focus #mentalhealth",
+      "description": "Research guide to Selank \u2014 the Russian-developed anxiolytic peptide. Covers GABA modulation, nasal spray vs injection, cognitive enhancement, and clinical data. #peptides #research #biohacking #health #selank #anxiety #nootropics #GABA #focus #mentalhealth",
       "link": "https://wolvestack.com/selank-guide",
-      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-12.md"
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-14.md"
+    },
+    {
+      "filename": "oral-semaglutide-guide.html",
+      "title": "Oral Semaglutide Guide: Rybelsus, Dosage & Research",
+      "color": "#D84315",
+      "date": "2026-04-14",
+      "status": "image_ready_not_published",
+      "description": "Complete guide to oral semaglutide (Rybelsus) covering dosing protocols, bioavailability, GLP-1 mechanism, weight loss results, and comparison to injectable forms. #peptides #research #biohacking #health #semaglutide #Rybelsus #GLP1 #weightloss #oral #metabolic",
+      "link": "https://wolvestack.com/oral-semaglutide-guide",
+      "image": "pinterest-pins-v2/pin-oral-semaglutide-guide.png",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-14.md"
+    },
+    {
+      "filename": "melanotan-ii-guide.html",
+      "title": "Melanotan II: Tanning Peptide Research Guide",
+      "color": "#7B1FA2",
+      "date": "2026-04-14",
+      "status": "image_ready_not_published",
+      "description": "Research guide to Melanotan II covering tanning effects, dosing protocols, side effects, sexual function benefits, and safety concerns. #peptides #research #biohacking #health #melanotan #tanning #skincare #MT2 #melanocortin",
+      "link": "https://wolvestack.com/melanotan-ii-guide",
+      "image": "pinterest-pins-v2/pin-melanotan-ii-guide.png",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-14.md"
+    },
+    {
+      "filename": "dihexa-guide.html",
+      "title": "Dihexa Guide: The Potent Nootropic Peptide",
+      "color": "#0097A7",
+      "date": "2026-04-14",
+      "status": "image_ready_not_published",
+      "description": "Complete Dihexa research guide \u2014 one of the most potent nootropic peptides discovered. Covers HGF mechanism, cognitive enhancement data, dosing, and safety profile. #peptides #research #biohacking #nootropics #dihexa #cognitive #brainhealth #memory #focus",
+      "link": "https://wolvestack.com/dihexa-guide",
+      "image": "pinterest-pins-v2/pin-dihexa-guide.png",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-14.md"
+    },
+    {
+      "filename": "maritide-guide.html",
+      "title": "MariTide Guide | First Antibody-Peptide Conjugate for Weight Loss",
+      "color": "#0d7377",
+      "date": "2026-04-19",
+      "status": "pending_v2_pin",
+      "pin_v2_date": null
+    },
+    {
+      "filename": "orforglipron-guide.html",
+      "title": "Orforglipron Guide | First Oral Small-Molecule GLP-1 Agonist",
+      "color": "#0d7377",
+      "date": "2026-04-19",
+      "status": "pending_v2_pin",
+      "pin_v2_date": null
     }
-  ]
+  ],
+  "last_updated": "2026-04-19"
 }
