@@ -45,7 +45,7 @@ from html.parser import HTMLParser
 from bs4 import BeautifulSoup, NavigableString, Comment, Doctype
 
 # ─── Config ────────────────────────────────────────────────────────────────────
-SITE_DIR = Path(__file__).resolve().parent / "peptide-daily-content"
+SITE_DIR = Path(__file__).resolve().parent
 DOMAIN = "https://wolvestack.com"
 
 LANGUAGES = {
@@ -212,7 +212,12 @@ def translate_html(html_content: str, to_lang: str, filename: str) -> str:
     # 4. Add hreflang tags
     _inject_hreflang(soup, filename)
 
-    # 5. Update JSON-LD URLs
+    # 5. Remove noindex (replacing fake translations with real ones)
+    for meta in soup.find_all('meta', attrs={'name': 'robots'}):
+        if 'noindex' in meta.get('content', ''):
+            meta.decompose()
+
+    # 6. Update JSON-LD URLs
     for script_tag in soup.find_all('script', type='application/ld+json'):
         try:
             data = json.loads(script_tag.string)
@@ -223,7 +228,7 @@ def translate_html(html_content: str, to_lang: str, filename: str) -> str:
         except (json.JSONDecodeError, TypeError):
             pass
 
-    # 6. Translate text nodes in <head> meta tags
+    # 7. Translate text nodes in <head> meta tags
     for meta in soup.find_all('meta'):
         for attr in ['content']:
             val = meta.get(attr, '')
@@ -236,20 +241,20 @@ def translate_html(html_content: str, to_lang: str, filename: str) -> str:
             if val:
                 meta['content'] = translate_text(val, to_lang)
 
-    # 7. Translate <title>
+    # 8. Translate <title>
     title_tag = soup.find('title')
     if title_tag and title_tag.string:
         title_tag.string = translate_text(title_tag.string, to_lang)
 
-    # 8. Translate body text nodes
+    # 9. Translate body text nodes
     body = soup.find('body')
     if body:
         _translate_tree(body, to_lang)
 
-    # 9. Inject language switcher
+    # 10. Inject language switcher
     _inject_language_switcher(soup, to_lang, filename)
 
-    # 10. Update internal links to include language prefix
+    # 11. Update internal links to include language prefix
     _update_internal_links(soup, to_lang)
 
     # Use formatter="minimal" to avoid double-encoding &amp; → &amp;amp;

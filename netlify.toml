@@ -1,0 +1,4 @@
+# Disable Pretty URLs — prevents Netlify from serving foo.html at /foo
+# This eliminates 3k+ "Alternative page with proper canonical" GSC warnings
+[build.processing.html]
+  pretty_urls = false
