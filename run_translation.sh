@@ -87,9 +87,9 @@ echo "  To monitor: tail -f $LOG"
 echo "  To stop:    kill \$(cat $PID_FILE)"
 echo ""
 
-# Run with --force to overwrite fake translations
-# caffeinate -i keeps Mac awake (prevents idle sleep)
-caffeinate -i python3 translate_site.py --all --force > "$LOG" 2>&1 &
+# No --force needed: script auto-detects fakes (noindex tag) and overwrites them,
+# but skips real translations. Safe to pause/resume anytime.
+caffeinate -i python3 translate_site.py --all >> "$LOG" 2>&1 &
 BGPID=$!
 echo $BGPID > "$PID_FILE"
 

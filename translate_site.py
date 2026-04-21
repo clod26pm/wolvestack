@@ -644,8 +644,17 @@ def translate_all(target_langs=None, force=False, specific_file=None):
         for file_idx, filename in enumerate(files):
             dest_path = lang_dir / filename
             if dest_path.exists() and not force:
-                skipped += 1
-                continue
+                # Check if it's a fake translation (still has noindex = not yet real)
+                try:
+                    existing = dest_path.read_text(encoding='utf-8', errors='replace')
+                    if 'noindex' in existing:
+                        pass  # Fake — translate it
+                    else:
+                        skipped += 1
+                        continue  # Real translation — skip
+                except:
+                    skipped += 1
+                    continue
 
             try:
                 src_path = SITE_DIR / filename
