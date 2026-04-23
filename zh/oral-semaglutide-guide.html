@@ -3,8 +3,6 @@
 <html lang="zh">
 <head>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="口服XTERMX000(Rybelsus):生物利用率,SNAC技术,25mg配方,剂量,以及它如何与可注射GLP-1相比." name="description"/>
 <meta content="index, follow" name="robots"/>
@@ -635,44 +633,190 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/oral-semaglutide-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/oral-semaglutide-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/oral-semaglutide-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/oral-semaglutide-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/oral-semaglutide-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/oral-semaglutide-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/oral-semaglutide-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/oral-semaglutide-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/oral-semaglutide-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/oral-semaglutide-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/oral-semaglutide-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/oral-semaglutide-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/oral-semaglutide-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/oral-semaglutide-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/zh/index.html">狼头<span>堆栈</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-sourcing-guide.html">供应商</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="搜索..." type="text"/>
+<button aria-label="搜索" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="选择语言" class="nav-lang-toggle">🌐<span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/oral-semaglutide-guide.html">English</a>
-<a href="/es/oral-semaglutide-guide.html">Español</a>
-<a href="/zh/oral-semaglutide-guide.html" class="active">中文</a>
-<a href="/ja/oral-semaglutide-guide.html">日本語</a>
-<a href="/pt/oral-semaglutide-guide.html">Português</a>
-<a href="/ru/oral-semaglutide-guide.html">Русский</a>
-<a href="/it/oral-semaglutide-guide.html">Italiano</a>
-<a href="/pl/oral-semaglutide-guide.html">Polski</a>
-<a href="/fr/oral-semaglutide-guide.html">Français</a>
-<a href="/id/oral-semaglutide-guide.html">Bahasa</a>
-<a href="/de/oral-semaglutide-guide.html">Deutsch</a>
-<a href="/nl/oral-semaglutide-guide.html">Nederlands</a>
-<a href="/ar/oral-semaglutide-guide.html">العربية</a>
+<a class="active" href="/zh/oral-semaglutide-guide.html">联合国</a>
+<a href="/zh/oral-semaglutide-guide.html">西班牙语Name</a>
+<a href="/zh/oral-semaglutide-guide.html">联合国</a>
+<a href="/zh/oral-semaglutide-guide.html">日本語</a>
+<a href="/zh/oral-semaglutide-guide.html">葡萄牙</a>
+<a href="/zh/oral-semaglutide-guide.html">Русский</a>
+<a href="/zh/oral-semaglutide-guide.html">意大利语Name</a>
+<a href="/zh/oral-semaglutide-guide.html">波尔斯基</a>
+<a href="/zh/oral-semaglutide-guide.html">法国语Name</a>
+<a href="/zh/oral-semaglutide-guide.html">巴哈萨</a>
+<a href="/zh/oral-semaglutide-guide.html">德国</a>
+<a href="/zh/oral-semaglutide-guide.html">荷兰</a>
+<a href="/zh/oral-semaglutide-guide.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/zh/peptide-beginners-guide.html">从这里开始</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/oral-semaglutide-guide.html">English</option><option value="/es/oral-semaglutide-guide.html">Español</option><option selected="" value="/zh/oral-semaglutide-guide.html">中文</option><option value="/ja/oral-semaglutide-guide.html">日本語</option><option value="/pt/oral-semaglutide-guide.html">Português</option><option value="/ru/oral-semaglutide-guide.html">Русский</option><option value="/it/oral-semaglutide-guide.html">Italiano</option><option value="/pl/oral-semaglutide-guide.html">Polski</option><option value="/fr/oral-semaglutide-guide.html">Français</option><option value="/id/oral-semaglutide-guide.html">Bahasa</option><option value="/de/oral-semaglutide-guide.html">Deutsch</option><option value="/nl/oral-semaglutide-guide.html">Nederlands</option><option value="/ar/oral-semaglutide-guide.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -710,6 +854,9 @@
 <p>根据遗传学、生活方式、剂量、管理技术和总体健康状况,个人结果差异很大。 本指南不保障具体成果或认可任何特定产品或供应商。</p>
 </section>
 <!-- Section 1: What is Oral Semaglutide -->
+<div class="quick-answer">
+<p>完整分析口服XTERMX000配方,SNAC技术,剂量协议,以及口服GLP-1激动剂与注射替代品的对比. 口服semaglutide(Rybelsus)是一种口服GLP-1激动剂,使用专利的SNAC技术进行吸收增强. 虽然生物利用率大大低于可注射配方(约1%对89%),但口服semaglutide提供了方便,并解决了对针头恐惧症的关切。 2025-2026年引入25mg和50mg配方提高了疗效,使口服semaglutide与传统注射式GLP-1,如semaglutide和tirzepatide,成为减重管理的可行选择. 根据遗传学、生活方式、剂量、管理技术和总体健康状况,个人结果差异很大。 本指南不保障具体成果或认可任何特定产品或供应商。 口服semaglutide,以品牌Rybelsus销售,通过为每周注射semaglutide(Ozempic, Wegovy)提供方便的基于药片的替代品,是GLP-1受体激动疗法的一大进步.</p>
+</div>
 <h2>什么是口服XTERMX000(Rybelsus),它如何区别于可注射制剂?</h2>
 <p>口服XTERMX000,以品牌Rybelsus销售,通过为每周注射semaglutide(Ozempic, Wegovy)提供方便的基于药片的替代品,代表了GLP-1受体激动疗法的重大进步. 这两种制剂都含有同样的活性药物成分-TERMX0003-但在运载工具、生物利用率、剂量表和病人经验方面差别很大。</p>
 <p>XTERMX000是一种类似葡萄糖的肽-1(GLP-1)受体激动剂,可以模仿天然激素GLP-1,调节血糖水平和食欲. GLP-1受体分布于整个大脑,胰腺,胃肠道,使其在2型糖尿病和减重管理中既能高效地进行甘油控制. 可注射semaglutide于2017年首次获得FDA批准(Ozempic for Demotia),随后于2021年被批准用于慢性体重管理(Wegovy).</p>

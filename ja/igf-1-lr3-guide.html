@@ -2,6 +2,7 @@
 
 <html lang="ja">
 <head>
+<link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" rel="canonical"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -11,12 +12,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IGF-1 LR3 完全なガイド: 投薬、メカニズム及び研究  WolveStack</title>
 <meta content="IGF-1 LR3の研究ガイドは、通常のIGF-1、プロトコル、がんリスク、およびペプチドスタックにどのように適合するかを覆います。" name="description"/>
-<link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" rel="canonical"/>
+<link href="https://wolvestack.com/en/igf-1-lr3-guide.html" rel="canonical"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -31,7 +30,12 @@
     "url": "https://wolvestack.com"
   },
   "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15"
+  "dateModified": "2026-04-08",
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "WolveStack Research Team",
+    "url": "https://wolvestack.com/ja/about.html"
+  }
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -355,53 +359,199 @@
     }
   }
 
-  </style>
-<meta content="IGF-1 LR3:メカニズム、半減期及びプロトコル ガイド" property="og:title">
-<meta content="IGF-1 LR3の研究ガイドは、通常のIGF-1、プロトコル、がんリスク、およびペプチドスタックにどのように適合するかを覆います。" property="og:description">
-<meta content="https://wolvestack.com/ja/igf-1-lr3-guide.html" property="og:url">
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<meta content="IGF-1 LR3:メカニズム、半減期及びプロトコル ガイド" property="og:title"/>
+<meta content="IGF-1 LR3の研究ガイドは、通常のIGF-1、プロトコル、がんリスク、およびペプチドスタックにどのように適合するかを覆います。" property="og:description"/>
+<meta content="https://wolvestack.com/ja/igf-1-lr3-guide.html" property="og:url"/>
 <meta content="article" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="IGF-1 LR3:メカニズム、半減期及びプロトコル ガイド" name="twitter:title"/>
 <meta content="IGF-1 LR3の研究ガイドは、通常のIGF-1、プロトコル、がんリスク、およびペプチドスタックにどのように適合するかを覆います。" name="twitter:description"/>
-</meta></meta></meta><link href="https://wolvestack.com/en/igf-1-lr3-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/igf-1-lr3-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/igf-1-lr3-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/igf-1-lr3-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/igf-1-lr3-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/igf-1-lr3-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/igf-1-lr3-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/igf-1-lr3-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/igf-1-lr3-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/igf-1-lr3-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/igf-1-lr3-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/igf-1-lr3-guide.html" hreflang="x-default" rel="alternate"/></head>
+<link href="https://wolvestack.com/en/igf-1-lr3-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/igf-1-lr3-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/igf-1-lr3-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/igf-1-lr3-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/igf-1-lr3-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/igf-1-lr3-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/igf-1-lr3-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/igf-1-lr3-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/igf-1-lr3-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/igf-1-lr3-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/igf-1-lr3-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/igf-1-lr3-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
 <div class="logo">ウルブ<span>スタック</span></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/ja/index.html">ウルブ<span>スタック</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/ja/bpc-157-guide.html">BPC-157の特長</a></li>
+<li><a href="/ja/tb-500-guide.html">TB-500の特長</a></li>
+<li><a href="/ja/wolverine-stack.html">スタック</a></li>
+<li><a href="/ja/peptide-sourcing-guide.html">ベンダー</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="お問い合わせ" type="text"/>
+<button aria-label="インフォメーション" class="search-btn" type="submit">ログイン</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="言語を選択" class="nav-lang-toggle">ブーツ<span class="arrow"></span></button>
 <div class="nav-lang-menu">
-<a href="/igf-1-lr3-guide.html">English</a>
-<a href="/es/igf-1-lr3-guide.html">Español</a>
-<a href="/zh/igf-1-lr3-guide.html">中文</a>
-<a href="/ja/igf-1-lr3-guide.html" class="active">日本語</a>
-<a href="/pt/igf-1-lr3-guide.html">Português</a>
-<a href="/ru/igf-1-lr3-guide.html">Русский</a>
-<a href="/it/igf-1-lr3-guide.html">Italiano</a>
-<a href="/pl/igf-1-lr3-guide.html">Polski</a>
-<a href="/fr/igf-1-lr3-guide.html">Français</a>
-<a href="/id/igf-1-lr3-guide.html">Bahasa</a>
-<a href="/de/igf-1-lr3-guide.html">Deutsch</a>
-<a href="/nl/igf-1-lr3-guide.html">Nederlands</a>
-<a href="/ar/igf-1-lr3-guide.html">العربية</a>
+<a class="active" href="/ja/igf-1-lr3-guide.html">日本語 English</a>
+<a href="/ja/igf-1-lr3-guide.html">スペイン語</a>
+<a href="/ja/igf-1-lr3-guide.html">ニュース</a>
+<a href="/ja/igf-1-lr3-guide.html">日本語 English</a>
+<a href="/ja/igf-1-lr3-guide.html">お問い合わせ</a>
+<a href="/ja/igf-1-lr3-guide.html">ありがたい</a>
+<a href="/ja/igf-1-lr3-guide.html">所在地:東京都</a>
+<a href="/ja/igf-1-lr3-guide.html">ポーランド</a>
+<a href="/ja/igf-1-lr3-guide.html">フランチェスコ</a>
+<a href="/ja/igf-1-lr3-guide.html">バハサ</a>
+<a href="/ja/igf-1-lr3-guide.html">ドイツ</a>
+<a href="/ja/igf-1-lr3-guide.html">日本語   English</a>
+<a href="/ja/igf-1-lr3-guide.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/ja/peptide-beginners-guide.html">詳細はこちら →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/igf-1-lr3-guide.html">English</option><option value="/es/igf-1-lr3-guide.html">Español</option><option value="/zh/igf-1-lr3-guide.html">中文</option><option selected="" value="/ja/igf-1-lr3-guide.html">日本語</option><option value="/pt/igf-1-lr3-guide.html">Português</option><option value="/ru/igf-1-lr3-guide.html">Русский</option><option value="/it/igf-1-lr3-guide.html">Italiano</option><option value="/pl/igf-1-lr3-guide.html">Polski</option><option value="/fr/igf-1-lr3-guide.html">Français</option><option value="/id/igf-1-lr3-guide.html">Bahasa</option><option value="/de/igf-1-lr3-guide.html">Deutsch</option><option value="/nl/igf-1-lr3-guide.html">Nederlands</option><option value="/ar/igf-1-lr3-guide.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
@@ -418,8 +568,8 @@
 <div class="layout">
 <div class="content">
 <div class="quick-answer">
-      <p>キーの相違は位置3の単一のアミノ酸の置換です —アルギニンは内因性のIGF-1で見つけられたグルタミン酸を取り替えます。 この一見小さな修正は、ペプチドの薬理学と組織活動のための深い含意を持っています。 Arg3 置換は、IGF-1 LR3 を IGF 結合タンパク質 (IGFBPs) に結合しないようにします。 これは、通常、ネイティブ IGF-1 の半減期および生理能力を調節します。 組織では、違いはさらに劇的です。 IGF-1 LR3が他のホルモンとどのように異なるかを理解することは重要です。 これは第一次同化カスケードです。</p>
-    </div>
+<p>IGF-1 LR3 は IGF 結合蛋白質への結合を防ぐ Arg3 の置換を、~12 時間からおよそ 120 時間まで拡張し、それにネイティブ IGF-1 よりティッシュでおよそ 3x の強力なしますあります。 IGF-1 LR3は、インシュリン様成長因子1受容体(IGF1R)、筋肉細胞、線維芽細胞および他の組織で見つかったチロシンキナーゼ受容体に結合することにより、その効果を発揮します。 PI3Kの活性化は、タンパク質合成のマスターレギュレータであるmTORを活性化するAktリン酸化につながります。 蛋白同化ステロイドとは異なり、 (主に高血圧を介して繊維サイズを増加), IGF-1 LR3 独自に衛星細胞増殖を刺激します。, 筋肉繊維の数の実際の増加につながる. IGF-1 LR3(インシュリン様成長因子1ロングアーグ3)は、研究目的で開発されたネイティブIGF-1の修正アナログです。 この延長持続期間と IGFBP 抵抗は、IGF-1 LR3 をほぼ 3x ティッシュよりも強力にします。 ネイティブ IGF-1, 均等なモラー用量で.</p>
+</div>
 <h2>IGF-1 LR3とは何ですか?</h2>
 <p>IGF-1 LR3(インシュリン様成長因子1ロングアーグ3)は、研究目的のために開発されたネイティブIGF-1の修正アナログです。 キーの相違は位置3の単一のアミノ酸の置換です —アルギニンは内因性のIGF-1で見つけられたグルタミン酸を取り替えます。 この一見小さな修正は、ペプチドの薬理学と組織活動のための深い含意を持っています。</p>
 <p>Arg3 置換は、IGF-1 LR3 を IGF 結合タンパク質 (IGFBPs) に結合しないようにします。これは、通常、ネイティブ IGF-1 の半減期および生理能力を調節します。 このため、IGF-1 LR3は、ネイティブIGF-1を循環させるためにわずか12〜15分と比較して約120時間(約5日)の半減期を満喫しています。 組織では、違いはさらに劇的です。地元のIGF-1は、クリアされる前に12〜15時間しか活動していませんが、IGF-1 LR3は日々活動を続けることができます。</p>
@@ -587,13 +737,11 @@
 <p>高慢性用量では、IGF-1 LR3は、臓器肥大につながる、視覚器官(肝臓、腎臓、心臓)の成長を刺激することができます。 骨格の変化も可能な - 顎の拡大、手厚く、足の成長 - acromegaly に似ています。 これらの変更は、毎日50 mcgを超える用量または8〜10週間以上サイクルで可能性があります。 効果は、中止時に部分的にリバーシブルである可能性がありますが、臓器の成長は関係しています。</p>
 <h3>局部化 Lipohypertrophy (注射部位)</h3>
 <p>同じ筋肉に繰り返しIMの注入は局所化された脂肪蓄積および審美的な変形を引き起こすことができます。 これは実際にいくつかの(筋肉の完全性を増加させる)によって求められているが、それは他の人による副作用と見なされます。 回転注射部位は、これを緩和するのに役立ちます。</p>
-
-    <!-- E-E-A-T: Enhanced Medical Disclaimer -->
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
-      <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Medical Disclaimer</p>
-      <p style="margin: 0;">For <strong>informational and educational purposes only</strong>. Not FDA-approved for human use. Consult a licensed healthcare professional. See full <a href="/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
-    </div>
-
+<!-- E-E-A-T: Enhanced Medical Disclaimer -->
+<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
+<p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">医療免責事項</p>
+<p style="margin: 0;">この記事は<strong>情報提供・教育目的のみ</strong>医療アドバイスを構成しない 議論された化合物は、研究化学物質である<strong>FDA 承認されていない</strong>人間の使用のため。 ペプチドプロトコルを検討する前に、必ず認定医療専門家に相談してください。 WolveStackに医学のスタッフがなく、診断、治療、または処方されていません。 お問い合わせ<a href="/ja/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免責事項</a>お問い合わせ</p>
+</div>
 <div class="faq-item">
 <div class="faq-q">IGF-1 LR3は低血糖を引き起こしますか?</div>
 <div class="faq-a">それはインスリン自体よりも弱いインスリン受容体活性を持っていますが、それはまだ筋肉組織にグルコースを駆動し、特に30〜40 mcg以上の用量で、または炭水化物制限状態を引き起こす可能性があります。 常に十分な炭水化物の摂取量を維持し、研究期間中に迅速に作用する炭水化物を持っています。</div>
@@ -729,6 +877,7 @@
 <a class="related-card" href="/ja/wolverine-stack.html"><span>関連記事</span><strong>Wolverine Stackの特長</strong></a>
 <a class="related-card" href="/ja/gh-peptide-timing.html"><span>関連記事</span><strong>GHのペプチッド タイミング ガイド</strong></a>
 <a class="related-card" href="/ja/gh-peptides-igf1-monitoring.html"><span>関連記事</span><strong>GHのペプチッドおよびIGF-1:モニターへの何か</strong></a>
+<a class="related-card" href="/ja/igf1-lr3-vs-cjc1295.html"><span>関連記事</span><strong>IGF-1 LR3 対 CJC-1295: どのビルドより多くの筋肉?</strong></a>
 </div>
 </div>
 </section>

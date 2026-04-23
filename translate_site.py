@@ -39,8 +39,22 @@ import re
 import sys
 import time
 from copy import copy
+from datetime import datetime, timedelta
 from pathlib import Path
 from html.parser import HTMLParser
+
+# ─── Disable Stanza in argostranslate ────────────────────────────────────────
+# Stanza is installed (argostranslate requires it to import) but sbd.py is
+# patched to set stanza_available = False, so it uses regex sentence splitting
+# instead. No import hooks needed — just let it import harmlessly.
+#
+# If sbd.py isn't patched yet, force it here:
+try:
+    import argostranslate.sbd
+    argostranslate.sbd.stanza_available = False
+except Exception:
+    pass
+# ─────────────────────────────────────────────────────────────────────────────
 
 from bs4 import BeautifulSoup, NavigableString, Comment, Doctype
 
@@ -106,9 +120,23 @@ _protected_pattern = re.compile(
 # Placeholder format for protecting terms during translation
 _PLACEHOLDER_PREFIX = "XTERMX"
 
+# ─── Translation Verification ────────────────────────────────────────────────
+
+def _extract_text_sample(html_content: str) -> str:
+    """Extract the first substantial paragraph text from HTML for comparison.
+    Used to detect fake translations (English copies masquerading as translated)."""
+    # Find first <p> tag with at least 50 chars of content
+    matches = re.findall(r'<p[^>]*>([^<]{50,})', html_content)
+    if matches:
+        # Normalize whitespace for comparison
+        return ' '.join(matches[0].split())[:200]
+    return ''
+
+
 # ─── Translation Engine ───────────────────────────────────────────────────────
 
 _translators = {}  # Cache: (from_lang, to_lang) -> translator
+_translation_errors = 0  # Track errors within a single file's translation
 
 
 def _get_translator(from_lang: str, to_lang: str):
@@ -116,9 +144,24 @@ def _get_translator(from_lang: str, to_lang: str):
     key = (from_lang, to_lang)
     if key not in _translators:
         import argostranslate.translate
-        _translators[key] = argostranslate.translate.get_translation_from_codes(
+        # Belt + suspenders: also disable stanza at the argos sbd level
+        try:
+            import argostranslate.sbd
+            argostranslate.sbd.stanza_available = False
+        except Exception:
+            pass
+        translator = argostranslate.translate.get_translation_from_codes(
             ARGOS_LANG_MAP[from_lang], ARGOS_LANG_MAP[to_lang]
         )
+        if translator is None:
+            raise RuntimeError(f"No Argos translator installed for {from_lang}→{to_lang}. "
+                             f"Run: python3 translate_site.py --install-languages")
+        # Smoke test: verify it actually translates (not just returning input)
+        test_result = translator.translate("Hello, how are you?")
+        if test_result == "Hello, how are you?":
+            print(f"    ⚠ WARNING: {from_lang}→{to_lang} translator returned English unchanged. "
+                  f"Model may not be working.", flush=True)
+        _translators[key] = translator
     return _translators[key]
 
 
@@ -154,7 +197,10 @@ def translate_text(text: str, to_lang: str, from_lang: str = "en") -> str:
     try:
         translated = translator.translate(protected_text)
     except Exception as e:
-        print(f"    ⚠ Translation error: {e}")
+        global _translation_errors
+        _translation_errors += 1
+        if _translation_errors <= 3:  # Don't spam logs
+            print(f"    ⚠ Translation error: {e}", flush=True)
         return text
 
     # Step 3: Restore protected terms
@@ -184,6 +230,10 @@ def translate_html(html_content: str, to_lang: str, filename: str) -> str:
     """
     Translate an entire HTML page while preserving structure.
     """
+    # Pre-process: ensure all <link> and <meta> tags are self-closed so
+    # html.parser doesn't treat them as parent elements and eat the <head>.
+    html_content = re.sub(r'<(link|meta)\s+([^>]*?)(?<!/)\s*>', r'<\1 \2/>', html_content)
+
     soup = BeautifulSoup(html_content, 'html.parser')
 
     # 1. Update <html lang="">
@@ -193,19 +243,22 @@ def translate_html(html_content: str, to_lang: str, filename: str) -> str:
         if LANGUAGES[to_lang]["dir"] == "rtl":
             html_tag['dir'] = 'rtl'
 
-    # 2. Update canonical URL
+    # 2. Update canonical URL — strip any existing language prefix first
     canonical = soup.find('link', rel='canonical')
     if canonical and canonical.get('href'):
         old_href = canonical['href']
-        # /bpc-157-guide.html → /es/bpc-157-guide.html
-        canonical['href'] = old_href.replace(
+        # Strip existing lang prefix: /en/file.html or /es/file.html → /file.html
+        clean_href = re.sub(rf'{re.escape(DOMAIN)}/[a-z]{{2}}/', f'{DOMAIN}/', old_href)
+        # Now add the target language prefix
+        canonical['href'] = clean_href.replace(
             f"{DOMAIN}/", f"{DOMAIN}/{to_lang}/"
         )
 
-    # 3. Update og:url
+    # 3. Update og:url — same fix for language prefix
     og_url = soup.find('meta', property='og:url')
     if og_url and og_url.get('content'):
-        og_url['content'] = og_url['content'].replace(
+        clean_og = re.sub(rf'{re.escape(DOMAIN)}/[a-z]{{2}}/', f'{DOMAIN}/', og_url['content'])
+        og_url['content'] = clean_og.replace(
             f"{DOMAIN}/", f"{DOMAIN}/{to_lang}/"
         )
 
@@ -430,11 +483,25 @@ def generate_sitemaps():
 
     today = time.strftime("%Y-%m-%d")
 
-    # Generate per-language sitemaps
+    # Only include languages where most files are actually translated (not English copies)
+    translated_langs = []
     for lang_code in LANGUAGES:
         lang_dir = SITE_DIR / lang_code
         if not lang_dir.exists():
             continue
+        # Check if files have noindex (= untranslated)
+        sample_files = list(lang_dir.glob('*.html'))[:10]
+        noindex_count = sum(1 for f in sample_files if 'noindex' in f.read_text(encoding='utf-8', errors='replace'))
+        if noindex_count < len(sample_files) / 2:
+            translated_langs.append(lang_code)
+        else:
+            # Write empty sitemap for untranslated language
+            empty = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<!-- Translation in progress -->\n</urlset>\n'
+            (lang_dir / "sitemap.xml").write_text(empty, encoding='utf-8')
+
+    # Generate per-language sitemaps (only for translated languages)
+    for lang_code in translated_langs:
+        lang_dir = SITE_DIR / lang_code
 
         sitemap_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
         sitemap_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
@@ -463,10 +530,10 @@ def generate_sitemaps():
         out_path = lang_dir / "sitemap.xml"
         out_path.write_text(sitemap_content, encoding='utf-8')
 
-    # Master sitemap index
+    # Master sitemap index (only translated languages)
     index_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
     index_content += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    for lang_code in LANGUAGES:
+    for lang_code in translated_langs:
         index_content += f'  <sitemap>\n'
         index_content += f'    <loc>{DOMAIN}/{lang_code}/sitemap.xml</loc>\n'
         index_content += f'    <lastmod>{today}</lastmod>\n'
@@ -604,12 +671,12 @@ def translate_all(target_langs=None, force=False, specific_file=None):
     total_langs = len(target_langs)
     total_work = total_files * total_langs
 
-    print(f"\n  Translation Pipeline")
-    print(f"  {'═' * 50}")
-    print(f"  Files: {total_files}")
-    print(f"  Languages: {total_langs} ({', '.join(target_langs)})")
-    print(f"  Total pages to generate: {total_work:,}")
-    print(f"  {'═' * 50}\n")
+    print(f"\n  Translation Pipeline", flush=True)
+    print(f"  {'═' * 50}", flush=True)
+    print(f"  Files: {total_files}", flush=True)
+    print(f"  Languages: {total_langs} ({', '.join(target_langs)})", flush=True)
+    print(f"  Total pages to generate: {total_work:,}", flush=True)
+    print(f"  {'═' * 50}\n", flush=True)
 
     # First, copy English files to /en/ directory
     print(f"  Setting up /en/ directory...")
@@ -630,9 +697,35 @@ def translate_all(target_langs=None, force=False, specific_file=None):
 
     # Translate each language
     completed = 0
+    global_errors = 0
+    global_translated = 0
+    global_skipped = 0
+    start_time = time.time()
+
+    def _log(msg):
+        ts = datetime.now().strftime('%H:%M:%S')
+        line = f"[{ts}] {msg}"
+        print(line, flush=True)
+
+    def _eta():
+        elapsed = time.time() - start_time
+        done = global_translated + global_skipped + global_errors
+        if done == 0:
+            return "calculating..."
+        rate = done / elapsed  # pages per second
+        remaining = total_work - done
+        secs = remaining / rate
+        eta = datetime.now() + timedelta(seconds=secs)
+        if secs > 3600:
+            return f"{secs/3600:.1f}h remaining (ETA {eta.strftime('%b %d %H:%M')})"
+        elif secs > 60:
+            return f"{secs/60:.0f}m remaining (ETA {eta.strftime('%H:%M')})"
+        else:
+            return f"{secs:.0f}s remaining"
+
     for lang_idx, lang in enumerate(target_langs):
         lang_info = LANGUAGES[lang]
-        print(f"  [{lang_idx+1}/{total_langs}] {lang_info['name']} ({lang_info['native']}) → /{lang}/")
+        _log(f"━━━ [{lang_idx+1}/{total_langs}] {lang_info['name']} ({lang_info['native']}) → /{lang}/ ━━━")
 
         lang_dir = SITE_DIR / lang
         lang_dir.mkdir(exist_ok=True)
@@ -640,50 +733,98 @@ def translate_all(target_langs=None, force=False, specific_file=None):
         skipped = 0
         translated = 0
         errors = 0
+        lang_start = time.time()
 
         for file_idx, filename in enumerate(files):
             dest_path = lang_dir / filename
             if dest_path.exists() and not force:
-                # Check if it's a fake translation (still has noindex = not yet real)
+                # Check if it's a REAL translation or a fake (English copy)
                 try:
                     existing = dest_path.read_text(encoding='utf-8', errors='replace')
+                    # Fake if: has noindex tag, OR body content is identical to English
                     if 'noindex' in existing:
-                        pass  # Fake — translate it
+                        pass  # Fake (noindex marker) — translate it
                     else:
-                        skipped += 1
-                        continue  # Real translation — skip
-                except:
+                        # Compare first substantial <p> tag against English source
+                        src_content = (SITE_DIR / filename).read_text(encoding='utf-8', errors='replace')
+                        src_sample = _extract_text_sample(src_content)
+                        dest_sample = _extract_text_sample(existing)
+                        if src_sample and dest_sample and src_sample == dest_sample:
+                            pass  # Fake (English copy) — translate it
+                        else:
+                            skipped += 1
+                            global_skipped += 1
+                            continue  # Real translation — skip
+                except Exception:
                     skipped += 1
+                    global_skipped += 1
                     continue
 
             try:
                 src_path = SITE_DIR / filename
                 html_content = src_path.read_text(encoding='utf-8')
+
+                # Reset per-file error counter
+                global _translation_errors
+                _translation_errors = 0
+
                 result = translate_html(html_content, lang, filename)
+
+                # Quality check: if too many translation errors happened,
+                # don't save this file — it's mostly untranslated English
+                if _translation_errors > 10:
+                    _log(f"  ✗ SKIP {lang}/{filename}: {_translation_errors} translation errors — would be mostly English")
+                    errors += 1
+                    global_errors += 1
+                    continue
+
                 dest_path.write_text(result, encoding='utf-8')
                 translated += 1
+                global_translated += 1
             except Exception as e:
-                print(f"    ✗ {filename}: {str(e)[:80]}")
+                err_msg = str(e)[:120]
+                _log(f"  ✗ ERROR {lang}/{filename}: {err_msg}")
                 errors += 1
+                global_errors += 1
+
+                # If we get 5+ consecutive errors on same type, stop and report
+                if errors >= 5 and translated == 0:
+                    _log(f"  ⛔ FATAL: {errors} consecutive errors for {lang}. Likely a systemic issue.")
+                    _log(f"  ⛔ Last error: {err_msg}")
+                    _log(f"  ⛔ Skipping {lang} — fix the error and re-run.")
+                    break
 
             completed += 1
-            if (translated + skipped + errors) % 100 == 0:
-                pct = ((lang_idx * total_files) + file_idx + 1) / total_work * 100
-                print(f"    ...{translated} translated, {skipped} skipped ({pct:.0f}% overall)")
 
-        print(f"    ✓ {translated} translated, {skipped} skipped, {errors} errors")
+            # Progress every 10 files
+            if (file_idx + 1) % 10 == 0:
+                pct = (global_translated + global_skipped + global_errors) / total_work * 100
+                rate = translated / (time.time() - lang_start) if translated > 0 and time.time() > lang_start else 0
+                _log(f"  {lang}: {file_idx+1}/{total_files} files | {translated} done, {skipped} skipped | {pct:.1f}% overall | {rate:.1f} files/sec | {_eta()}")
+
+        # Language summary
+        lang_elapsed = time.time() - lang_start
+        _log(f"  ✓ {lang} DONE: {translated} translated, {skipped} skipped, {errors} errors ({lang_elapsed:.0f}s)")
+
+        # Overall summary after each language
+        overall_pct = (global_translated + global_skipped + global_errors) / total_work * 100
+        _log(f"  📊 Overall: {overall_pct:.1f}% | {global_translated} translated, {global_skipped} skipped, {global_errors} errors | {_eta()}")
+        _log("")
 
     # Generate sitemaps
-    print(f"\n  Generating sitemaps...")
+    _log("Generating sitemaps...")
     generate_sitemaps()
 
     # Generate Cloudflare Worker
-    print(f"  Generating Cloudflare Worker...")
+    _log("Generating Cloudflare Worker...")
     generate_worker()
 
-    print(f"\n  {'═' * 50}")
-    print(f"  COMPLETE: {completed:,} pages translated")
-    print(f"  {'═' * 50}")
+    total_elapsed = time.time() - start_time
+    hours = total_elapsed / 3600
+    _log(f"{'═' * 60}")
+    _log(f"  COMPLETE in {hours:.1f} hours")
+    _log(f"  {global_translated:,} translated | {global_skipped:,} skipped | {global_errors:,} errors")
+    _log(f"{'═' * 60}")
 
 
 def install_languages():

@@ -609,7 +609,43 @@
       "description": "Research guide to orforglipron — the first oral small-molecule GLP-1 receptor agonist. Covers once-daily pill dosing, Phase 3 weight-loss data, comparison to semaglutide, and metabolic effects. #peptides #research #biohacking #health #orforglipron #GLP1 #weightloss #oral #diabetes #LillyRxBio",
       "link": "https://wolvestack.com/orforglipron-guide",
       "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-19.md"
+    },
+    {
+      "filename": "cagrisema-guide.html",
+      "title": "Cagrisema Guide: GLP-1/Amylin Combination for Weight Loss",
+      "color": "#0d7377",
+      "date": "2026-04-23",
+      "status": "image_ready_not_published",
+      "pin_v2_date": null,
+      "image": "pinterest-pins-v2/pin-cagrisema-guide.png",
+      "description": "Research guide to cagrisema — the investigational GLP-1/amylin receptor co-agonist from Novo Nordisk. Covers Phase 3 weight-loss data, dosing protocol, and comparison to semaglutide and tirzepatide. #peptides #research #biohacking #health #cagrisema #GLP1 #amylin #weightloss #NovoNordisk #obesity",
+      "link": "https://wolvestack.com/cagrisema-guide",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-23.md"
+    },
+    {
+      "filename": "cerebrolysin-guide.html",
+      "title": "Cerebrolysin: What the Research Actually Shows",
+      "color": "#7B1FA2",
+      "date": "2026-04-23",
+      "status": "image_ready_not_published",
+      "pin_v2_date": null,
+      "image": "pinterest-pins-v2/pin-cerebrolysin-guide.png",
+      "description": "Evidence-based guide to cerebrolysin — the porcine-derived neurotrophic peptide mixture. Covers stroke and Alzheimer's clinical data, dosing protocols, cognitive enhancement mechanisms, and safety profile. #peptides #research #biohacking #nootropics #cerebrolysin #cognitive #brainhealth #neuroprotection #alzheimers #stroke",
+      "link": "https://wolvestack.com/cerebrolysin-guide",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-23.md"
+    },
+    {
+      "filename": "fragment-176-191-guide.html",
+      "title": "HGH Fragment 176-191 Guide: The Fat Loss Peptide Explained",
+      "color": "#D84315",
+      "date": "2026-04-23",
+      "status": "image_ready_not_published",
+      "pin_v2_date": null,
+      "image": "pinterest-pins-v2/pin-fragment-176-191-guide.png",
+      "description": "Complete guide to HGH Fragment 176-191 — the modified GH peptide that targets lipolysis without the systemic growth hormone side effects. Covers mechanism, clinical evidence, dosing, and stacking protocols. #peptides #research #biohacking #health #HGHfragment #fatloss #lipolysis #weightloss #GH #bodycomposition",
+      "link": "https://wolvestack.com/fragment-176-191-guide",
+      "publish_instructions": "pinterest-pins-v2/PUBLISH-INSTRUCTIONS-2026-04-23.md"
     }
   ],
-  "last_updated": "2026-04-19"
+  "last_updated": "2026-04-23"
 }

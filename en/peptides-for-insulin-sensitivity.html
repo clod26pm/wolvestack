@@ -2,22 +2,6 @@
 
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://wolvestack.com/en/peptides-for-insulin-sensitivity.html">
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/peptides-for-insulin-sensitivity.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/peptides-for-insulin-sensitivity.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -182,6 +166,7 @@
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -329,6 +314,7 @@
   }
 
   
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -346,12 +332,131 @@
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</meta></meta></meta></head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+</meta></meta></meta><link href="https://wolvestack.com/en/peptides-for-insulin-sensitivity.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptides-for-insulin-sensitivity.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptides-for-insulin-sensitivity.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptides-for-insulin-sensitivity.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptides-for-insulin-sensitivity.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptides-for-insulin-sensitivity.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptides-for-insulin-sensitivity.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptides-for-insulin-sensitivity.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptides-for-insulin-sensitivity.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptides-for-insulin-sensitivity.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptides-for-insulin-sensitivity.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptides-for-insulin-sensitivity.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptides-for-insulin-sensitivity.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptides-for-insulin-sensitivity.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
 <li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
 <li><a href="/en/tb-500-guide.html">TB-500</a></li>
@@ -360,28 +465,37 @@
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a class="active" href="/en/peptides-for-insulin-sensitivity.html">English</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Español</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">中文</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">日本語</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Português</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Русский</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Italiano</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Polski</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Français</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Bahasa</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Deutsch</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">Nederlands</a>
+<a href="/en/peptides-for-insulin-sensitivity.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/peptides-for-insulin-sensitivity.html">English</option><option value="/es/peptides-for-insulin-sensitivity.html">Español</option><option value="/zh/peptides-for-insulin-sensitivity.html">中文</option><option value="/ja/peptides-for-insulin-sensitivity.html">日本語</option><option value="/pt/peptides-for-insulin-sensitivity.html">Português</option><option value="/ru/peptides-for-insulin-sensitivity.html">Русский</option><option value="/it/peptides-for-insulin-sensitivity.html">Italiano</option><option value="/pl/peptides-for-insulin-sensitivity.html">Polski</option><option value="/fr/peptides-for-insulin-sensitivity.html">Français</option><option value="/id/peptides-for-insulin-sensitivity.html">Bahasa</option><option value="/de/peptides-for-insulin-sensitivity.html">Deutsch</option><option value="/nl/peptides-for-insulin-sensitivity.html">Nederlands</option><option value="/ar/peptides-for-insulin-sensitivity.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
@@ -404,8 +518,8 @@
 <p><strong>Research context only.</strong> The peptides discussed on WolveStack are research chemicals not approved for human use by the FDA. Nothing on this page constitutes medical advice. Consult a qualified healthcare professional before use.</p>
 </div>
 <div class="quick-answer">
-      <p>Research peptides targeting insulin sensitivity: GLP-1 agonists, MOTS-c, humanin, BPC-157, and others. Evidence review for metabolic syndrome and pre-diabetes. GLP-1 (glucagon-like peptide-1) agonists represent the most clinically validated peptide approach to insulin sensitivity. MOTS-c (mitochondrial open reading frame of the 12S rRNA-c) is a mitochondria-derived peptide that declines with age and adiposity. Humanin (a mitochondria-derived peptide) has shown direct pancreatic beta cell protective effects in multiple animal studies — reducing beta cell apoptosis, improving insulin secretion capacity, and attenuating diet-induced diabetes progression. For individuals with pre-diabetes or early metabolic syndrome, GLP-1 agonists produce profound improvements in insulin sensitivity and beta cell function. Human studies are limited but show MOTS-c levels are inversely correlated with insulin resistance, type 2 diabetes prevalence, and metabolic syndrome markers. Human serum Humanin levels are inversely correlated with insulin resistance and type 2 diabetes — lower Humanin is associated with worse metabolic status.</p>
-    </div>
+<p>Research peptides targeting insulin sensitivity: GLP-1 agonists, MOTS-c, humanin, BPC-157, and others. Evidence review for metabolic syndrome and pre-diabetes. GLP-1 (glucagon-like peptide-1) agonists represent the most clinically validated peptide approach to insulin sensitivity. MOTS-c (mitochondrial open reading frame of the 12S rRNA-c) is a mitochondria-derived peptide that declines with age and adiposity. Humanin (a mitochondria-derived peptide) has shown direct pancreatic beta cell protective effects in multiple animal studies — reducing beta cell apoptosis, improving insulin secretion capacity, and attenuating diet-induced diabetes progression. For individuals with pre-diabetes or early metabolic syndrome, GLP-1 agonists produce profound improvements in insulin sensitivity and beta cell function. Human studies are limited but show MOTS-c levels are inversely correlated with insulin resistance, type 2 diabetes prevalence, and metabolic syndrome markers. Human serum Humanin levels are inversely correlated with insulin resistance and type 2 diabetes — lower Humanin is associated with worse metabolic status.</p>
+</div>
 <div class="section-card">
 <h2>GLP-1 Agonists: The Established Standard</h2>
 <p>GLP-1 (glucagon-like peptide-1) agonists represent the most clinically validated peptide approach to insulin sensitivity. Semaglutide and tirzepatide work by stimulating insulin secretion in a glucose-dependent manner (avoiding hypoglycemia), suppressing glucagon, slowing gastric emptying, and — through central mechanisms — significantly reducing caloric intake. The resulting weight loss independently improves insulin sensitivity through reduced adipose tissue-driven inflammation and lipotoxicity.</p><p>For individuals with pre-diabetes or early metabolic syndrome, GLP-1 agonists produce profound improvements in insulin sensitivity and beta cell function. The SUSTAIN and STEP trial series demonstrate meaningful HbA1c reductions and, critically, long-term cardiovascular outcome improvements — effects beyond simple glucose lowering. As research peptides, semaglutide and tirzepatide are available without prescription but are also FDA-approved drugs for which medical supervision is appropriate.</p>
@@ -481,7 +595,13 @@
 <p>© 2026 WolveStack. For research and educational purposes only.</p>
 <p class="disclaimer">WolveStack publishes research summaries for educational purposes only. Nothing here constitutes medical advice. All peptides are for research use only.</p>
 
-
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/peptides-for-insulin-sensitivity.html">English</option><option value="/es/peptides-for-insulin-sensitivity.html">Español</option><option value="/zh/peptides-for-insulin-sensitivity.html">中文</option><option value="/ja/peptides-for-insulin-sensitivity.html">日本語</option><option value="/pt/peptides-for-insulin-sensitivity.html">Português</option><option value="/ru/peptides-for-insulin-sensitivity.html">Русский</option><option value="/it/peptides-for-insulin-sensitivity.html">Italiano</option><option value="/pl/peptides-for-insulin-sensitivity.html">Polski</option><option value="/fr/peptides-for-insulin-sensitivity.html">Français</option><option value="/id/peptides-for-insulin-sensitivity.html">Bahasa</option><option value="/de/peptides-for-insulin-sensitivity.html">Deutsch</option><option value="/nl/peptides-for-insulin-sensitivity.html">Nederlands</option><option value="/ar/peptides-for-insulin-sensitivity.html">العربية</option>
+</select>
+</div>
 </footer>
 <section class="related-articles">
 <div class="related-inner">
@@ -496,37 +616,49 @@
 </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>

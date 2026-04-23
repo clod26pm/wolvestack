@@ -2,22 +2,6 @@
 
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://wolvestack.com/en/cjc-1295-vs-sermorelin.html">
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/cjc-1295-vs-sermorelin.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/cjc-1295-vs-sermorelin.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -194,6 +178,7 @@
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -341,6 +326,7 @@
   }
 
   
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -358,12 +344,131 @@
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</meta></meta></meta></head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+</meta></meta></meta><link href="https://wolvestack.com/en/cjc-1295-vs-sermorelin.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/cjc-1295-vs-sermorelin.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/cjc-1295-vs-sermorelin.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/cjc-1295-vs-sermorelin.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/cjc-1295-vs-sermorelin.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/cjc-1295-vs-sermorelin.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/cjc-1295-vs-sermorelin.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/cjc-1295-vs-sermorelin.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/cjc-1295-vs-sermorelin.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/cjc-1295-vs-sermorelin.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/cjc-1295-vs-sermorelin.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/cjc-1295-vs-sermorelin.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/cjc-1295-vs-sermorelin.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/cjc-1295-vs-sermorelin.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
 <li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
 <li><a href="/en/tb-500-guide.html">TB-500</a></li>
@@ -372,28 +477,37 @@
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a class="active" href="/en/cjc-1295-vs-sermorelin.html">English</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Español</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">中文</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">日本語</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Português</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Русский</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Italiano</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Polski</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Français</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Bahasa</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Deutsch</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">Nederlands</a>
+<a href="/en/cjc-1295-vs-sermorelin.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/cjc-1295-vs-sermorelin.html">English</option><option value="/es/cjc-1295-vs-sermorelin.html">Español</option><option value="/zh/cjc-1295-vs-sermorelin.html">中文</option><option value="/ja/cjc-1295-vs-sermorelin.html">日本語</option><option value="/pt/cjc-1295-vs-sermorelin.html">Português</option><option value="/ru/cjc-1295-vs-sermorelin.html">Русский</option><option value="/it/cjc-1295-vs-sermorelin.html">Italiano</option><option value="/pl/cjc-1295-vs-sermorelin.html">Polski</option><option value="/fr/cjc-1295-vs-sermorelin.html">Français</option><option value="/id/cjc-1295-vs-sermorelin.html">Bahasa</option><option value="/de/cjc-1295-vs-sermorelin.html">Deutsch</option><option value="/nl/cjc-1295-vs-sermorelin.html">Nederlands</option><option value="/ar/cjc-1295-vs-sermorelin.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
@@ -417,8 +531,8 @@
 <p><strong>Research context only.</strong> CJC-1295 is an unscheduled research chemical. Sermorelin has a historic FDA approval history (see below) but is no longer commercially available. Neither is approved for self-administration. This article discusses research literature only.</p>
 </div>
 <div class="quick-answer">
-      <p>Sermorelin is a 29-amino acid fragment of GHRH with a short half-life of 10–20 minutes. CJC-1295 without DAC (also called Mod GRF 1-29) is a modified form with substitutions at positions 2, 8, 15, and 27 that extend its half-life to 30 minutes. CJC-1295 with DAC adds a Drug Affinity Complex that extends half-life to 8+ days via albumin binding. Both CJC-1295 and Sermorelin belong to the same family: growth hormone releasing hormone (GHRH) analogs. Growth hormone releasing hormone (GHRH) is secreted by the hypothalamus and travels to the anterior pituitary, where it binds to GHRH receptors and triggers GH secretion. The key insight here is that GHRH secretagogues don't bypass your GH axis — they amplify the existing signal. CJC-1295 (no DAC) is rarely used alone in research protocols. Ipamorelin is notably selective — it stimulates GH secretion without the cortisol, prolactin, or ACTH increases seen with older GHRPs like GHRP-6.</p>
-    </div>
+<p>Sermorelin is a 29-amino acid fragment of GHRH with a short half-life of 10–20 minutes. CJC-1295 without DAC (also called Mod GRF 1-29) is a modified form with substitutions at positions 2, 8, 15, and 27 that extend its half-life to 30 minutes. CJC-1295 with DAC adds a Drug Affinity Complex that extends half-life to 8+ days via albumin binding. Both CJC-1295 and Sermorelin belong to the same family: growth hormone releasing hormone (GHRH) analogs. Growth hormone releasing hormone (GHRH) is secreted by the hypothalamus and travels to the anterior pituitary, where it binds to GHRH receptors and triggers GH secretion. The key insight here is that GHRH secretagogues don't bypass your GH axis — they amplify the existing signal. CJC-1295 (no DAC) is rarely used alone in research protocols. Ipamorelin is notably selective — it stimulates GH secretion without the cortisol, prolactin, or ACTH increases seen with older GHRPs like GHRP-6.</p>
+</div>
 <h2>The Biology: What GHRH Actually Does</h2>
 <p>Growth hormone releasing hormone (GHRH) is secreted by the hypothalamus and travels to the anterior pituitary, where it binds to GHRH receptors and triggers GH secretion. This is the natural, pulsatile system your body uses throughout the day — with the largest GH pulse typically occurring about 90 minutes after sleep onset.</p>
 <p>The key insight here is that GHRH secretagogues don't bypass your GH axis — they amplify the existing signal. Somatostatin, the natural GH "off switch," still operates. Your body's own feedback mechanisms remain functional. This physiological preservation is what distinguishes GHRH analogs from direct exogenous HGH administration.</p>
@@ -543,52 +657,70 @@
 <p>© 2026 WolveStack. For research and educational purposes only.</p>
 <p class="disclaimer">WolveStack publishes research summaries for educational purposes only. Nothing here constitutes medical advice. All peptides are for research use only.</p>
 
-
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/cjc-1295-vs-sermorelin.html">English</option><option value="/es/cjc-1295-vs-sermorelin.html">Español</option><option value="/zh/cjc-1295-vs-sermorelin.html">中文</option><option value="/ja/cjc-1295-vs-sermorelin.html">日本語</option><option value="/pt/cjc-1295-vs-sermorelin.html">Português</option><option value="/ru/cjc-1295-vs-sermorelin.html">Русский</option><option value="/it/cjc-1295-vs-sermorelin.html">Italiano</option><option value="/pl/cjc-1295-vs-sermorelin.html">Polski</option><option value="/fr/cjc-1295-vs-sermorelin.html">Français</option><option value="/id/cjc-1295-vs-sermorelin.html">Bahasa</option><option value="/de/cjc-1295-vs-sermorelin.html">Deutsch</option><option value="/nl/cjc-1295-vs-sermorelin.html">Nederlands</option><option value="/ar/cjc-1295-vs-sermorelin.html">العربية</option>
+</select>
+</div>
 </footer>
 <section class="related-articles">
 <div class="related-inner">
 <h3>Related Guides</h3>
 <div class="related-grid">
 <a class="related-card" href="/en/sermorelin-guide.html"><span>Related</span><strong>Sermorelin Guide</strong></a>
+<a class="related-card" href="/en/sermorelin-guide.html"><span>Related</span><strong>Sermorelin: Dosing, Effects</strong></a>
 <a class="related-card" href="/en/cjc-dac-vs-no-dac.html"><span>Related</span><strong>CJC-DAC vs CJC No-DAC</strong></a>
 <a class="related-card" href="/en/cjc-vs-mk677.html"><span>Related</span><strong>CJC-1295 vs MK-677</strong></a>
-<a class="related-card" href="/en/gh-peptide-timing.html"><span>Related</span><strong>GH Peptide Timing Guide</strong></a>
 </div>
 </div>
 </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>

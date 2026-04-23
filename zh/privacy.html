@@ -11,8 +11,6 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://wolvestack.com/zh/privacy.html" rel="canonical"/>
 <title>隐私政策</title>
@@ -275,45 +273,191 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/privacy.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/privacy.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/privacy.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/privacy.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/privacy.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/privacy.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/privacy.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/privacy.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/privacy.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/privacy.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/privacy.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/privacy.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/privacy.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/privacy.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
 <div class="logo"><a href="/zh/index.html" style="text-decoration:none;color:inherit">狼头<span>堆栈</span></a></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/zh/index.html">狼头<span>堆栈</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-sourcing-guide.html">供应商</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="搜索..." type="text"/>
+<button aria-label="搜索" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="选择语言" class="nav-lang-toggle">🌐<span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/privacy.html">English</a>
-<a href="/es/privacy.html">Español</a>
-<a href="/zh/privacy.html" class="active">中文</a>
-<a href="/ja/privacy.html">日本語</a>
-<a href="/pt/privacy.html">Português</a>
-<a href="/ru/privacy.html">Русский</a>
-<a href="/it/privacy.html">Italiano</a>
-<a href="/pl/privacy.html">Polski</a>
-<a href="/fr/privacy.html">Français</a>
-<a href="/id/privacy.html">Bahasa</a>
-<a href="/de/privacy.html">Deutsch</a>
-<a href="/nl/privacy.html">Nederlands</a>
-<a href="/ar/privacy.html">العربية</a>
+<a class="active" href="/zh/privacy.html">联合国</a>
+<a href="/zh/privacy.html">西班牙语Name</a>
+<a href="/zh/privacy.html">联合国</a>
+<a href="/zh/privacy.html">日本語</a>
+<a href="/zh/privacy.html">葡萄牙</a>
+<a href="/zh/privacy.html">Русский</a>
+<a href="/zh/privacy.html">意大利语Name</a>
+<a href="/zh/privacy.html">波尔斯基</a>
+<a href="/zh/privacy.html">法国语Name</a>
+<a href="/zh/privacy.html">巴哈萨</a>
+<a href="/zh/privacy.html">德国</a>
+<a href="/zh/privacy.html">荷兰</a>
+<a href="/zh/privacy.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/zh/peptide-beginners-guide.html">从这里开始</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/privacy.html">English</option><option value="/es/privacy.html">Español</option><option selected="" value="/zh/privacy.html">中文</option><option value="/ja/privacy.html">日本語</option><option value="/pt/privacy.html">Português</option><option value="/ru/privacy.html">Русский</option><option value="/it/privacy.html">Italiano</option><option value="/pl/privacy.html">Polski</option><option value="/fr/privacy.html">Français</option><option value="/id/privacy.html">Bahasa</option><option value="/de/privacy.html">Deutsch</option><option value="/nl/privacy.html">Nederlands</option><option value="/ar/privacy.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
@@ -323,9 +467,9 @@
 </div>
 <div class="content-wrap">
 <h2>我们收集的信息</h2>
-<p>我们通过尊重隐私的分析收集匿名分析数据(页面视图、交通来源)。 如果你通过我们的通讯表提交你的电子邮件, 我们储存它发送教育指南。 我们不卖你的数据。</p>
+<p>我们用Google分析(GA4)来了解访客如何使用我们的网站. 这一服务收集匿名数据,包括访问的网页、现场时间和一般地理区域。 Google Analytics使用cookie——您可以通过安装Google Analytics Opt-out浏览器Add-on来选择退出. 详情见Google的隐私政策https://politics.google.com/privacy. 如果你通过我们的通讯表提交你的电子邮件, 我们储存它发送教育指南。 我们不卖你的数据。</p>
 <h2>饼干</h2>
-<p>我们用最小的饼干做分析 关联链接点击可能会从供应商站点设置第三方饼干——这些饼干受这些供应商的隐私政策制约.</p>
+<p>我们用谷歌分析饼干 追踪匿名交通数据。 关联链接点击可能会从供应商站点设置第三方饼干——这些饼干受这些供应商的隐私政策制约.</p>
 <h2>附属链接</h2>
 <p>该网站的一些链接是附属链接。 点击它们可能会在供应商的网站上设置一个跟踪饼干. 除了佣金汇总数据之外,我们从这些点击处没有收到任何个人信息。</p>
 <h2>第三方服务</h2>

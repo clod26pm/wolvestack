@@ -21,8 +21,6 @@ SAFE TO UPDATE: article body content, vendor links, related articles, FAQ questi
     </script>
 <!-- Meta Tags -->
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>XTERMX000对HGH注射:成本,效果,以及选择的WolveStack</title>
 <meta content="比较XTERMX000(口服GH secretagogue)与外来HGH注射. 学习成本,效果,副作用,对于肌肉生长和抗衰老效果较好." name="description"/>
@@ -863,7 +861,145 @@ SAFE TO UPDATE: article body content, vendor links, related articles, FAQ questi
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <!-- hreflang Tags -->
 
 
@@ -884,38 +1020,46 @@ SAFE TO UPDATE: article body content, vendor links, related articles, FAQ questi
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/zh/index.html">狼头<span>堆栈</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-sourcing-guide.html">供应商</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="搜索..." type="text"/>
+<button aria-label="搜索" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="选择语言" class="nav-lang-toggle">🌐<span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/mk677-vs-hgh.html">English</a>
-<a href="/es/mk677-vs-hgh.html">Español</a>
-<a href="/zh/mk677-vs-hgh.html" class="active">中文</a>
-<a href="/ja/mk677-vs-hgh.html">日本語</a>
-<a href="/pt/mk677-vs-hgh.html">Português</a>
-<a href="/ru/mk677-vs-hgh.html">Русский</a>
-<a href="/it/mk677-vs-hgh.html">Italiano</a>
-<a href="/pl/mk677-vs-hgh.html">Polski</a>
-<a href="/fr/mk677-vs-hgh.html">Français</a>
-<a href="/id/mk677-vs-hgh.html">Bahasa</a>
-<a href="/de/mk677-vs-hgh.html">Deutsch</a>
-<a href="/nl/mk677-vs-hgh.html">Nederlands</a>
-<a href="/ar/mk677-vs-hgh.html">العربية</a>
+<a class="active" href="/zh/mk677-vs-hgh.html">联合国</a>
+<a href="/zh/mk677-vs-hgh.html">西班牙语Name</a>
+<a href="/zh/mk677-vs-hgh.html">联合国</a>
+<a href="/zh/mk677-vs-hgh.html">日本語</a>
+<a href="/zh/mk677-vs-hgh.html">葡萄牙</a>
+<a href="/zh/mk677-vs-hgh.html">Русский</a>
+<a href="/zh/mk677-vs-hgh.html">意大利语Name</a>
+<a href="/zh/mk677-vs-hgh.html">波尔斯基</a>
+<a href="/zh/mk677-vs-hgh.html">法国语Name</a>
+<a href="/zh/mk677-vs-hgh.html">巴哈萨</a>
+<a href="/zh/mk677-vs-hgh.html">德国</a>
+<a href="/zh/mk677-vs-hgh.html">荷兰</a>
+<a href="/zh/mk677-vs-hgh.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/zh/peptide-beginners-guide.html">从这里开始</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/mk677-vs-hgh.html">English</option><option value="/es/mk677-vs-hgh.html">Español</option><option selected="" value="/zh/mk677-vs-hgh.html">中文</option><option value="/ja/mk677-vs-hgh.html">日本語</option><option value="/pt/mk677-vs-hgh.html">Português</option><option value="/ru/mk677-vs-hgh.html">Русский</option><option value="/it/mk677-vs-hgh.html">Italiano</option><option value="/pl/mk677-vs-hgh.html">Polski</option><option value="/fr/mk677-vs-hgh.html">Français</option><option value="/id/mk677-vs-hgh.html">Bahasa</option><option value="/de/mk677-vs-hgh.html">Deutsch</option><option value="/nl/mk677-vs-hgh.html">Nederlands</option><option value="/ar/mk677-vs-hgh.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Article Hero -->
@@ -953,6 +1097,9 @@ SAFE TO UPDATE: article body content, vendor links, related articles, FAQ questi
 </div>
 <!-- Article Body -->
 <article class="article-body">
+<div class="quick-answer">
+<p>对ibutamoren(XTERMX000)和外部人类生长激素的详细比较,用于肌肉生长,抗衰老,以及整体性能. MK-677(ibutamoren)是一种口服Ghrelin类复方激素,它刺激了身体的自然生长激素生产,而外源HGH则是直接注入重组的人类生长激素. MK-677,又称ibutamoren或ibutamoren mesylate,是一种口服革林受体激动剂和生长激素分泌物. 如下: MK-677在你的下丘脑和垂垂体腺中与革林受体结合. MK-677的一个关键优势在于它能刺激你的自然GH脉冲,与直接激素取代相比维持更多的生理激素模式. 外源性人类生长激素(HGH)是指注入重组的人类生长激素——191-氨基酸蛋白的合成版本,你的垂体自然生成. MK-677是一种间接途径:它刺激了ghrelin受体,它信号你的垂体产生和释放更多的GH.</p>
+</div>
 <h2>什么是XTERMX000(伊布塔莫伦)?</h2>
 <p>XTERMX000,又称ibutamoren或ibutamoren mesylate,是一种口服革林受体激动剂和生长激素分泌物. 与外来生长激素注射不同,MK-677并不直接提供GH——相反,它使你的身体在自然地产生更多的自身生长激素.</p>
 <p>如下操作: XTERMX000在你的下丘脑和垂体腺中与革林受体结合. Ghrelin常被称作"饥饿激素",当MK-677激活这些受体时,你的垂体通过在脉冲模式下释放更多生长激素来反应——类似于你的身体在睡眠和禁食期间如何自然产生GH.</p>

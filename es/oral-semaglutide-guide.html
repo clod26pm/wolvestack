@@ -3,8 +3,6 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Guía completa de semaglutide oral (Rybelsus): biodisponibilidad, tecnología SNAC, formulaciones de 25 mg, dosificación y cómo se compara con GLP-1s inyectables." name="description"/>
 <meta content="index, follow" name="robots"/>
@@ -635,44 +633,190 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/oral-semaglutide-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/oral-semaglutide-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/oral-semaglutide-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/oral-semaglutide-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/oral-semaglutide-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/oral-semaglutide-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/oral-semaglutide-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/oral-semaglutide-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/oral-semaglutide-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/oral-semaglutide-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/oral-semaglutide-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/oral-semaglutide-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/oral-semaglutide-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/oral-semaglutide-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/es/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/es/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/es/tb-500-guide.html">TB-500</a></li>
+<li><a href="/es/wolverine-stack.html">Stacks</a></li>
+<li><a href="/es/peptide-sourcing-guide.html">Vendedores</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Buscar..." type="text"/>
+<button aria-label="Búsqueda" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Seleccionar idioma" class="nav-lang-toggle">🌐<span class="arrow">.</span></button>
 <div class="nav-lang-menu">
-<a href="/oral-semaglutide-guide.html">English</a>
-<a href="/es/oral-semaglutide-guide.html" class="active">Español</a>
-<a href="/zh/oral-semaglutide-guide.html">中文</a>
-<a href="/ja/oral-semaglutide-guide.html">日本語</a>
-<a href="/pt/oral-semaglutide-guide.html">Português</a>
-<a href="/ru/oral-semaglutide-guide.html">Русский</a>
-<a href="/it/oral-semaglutide-guide.html">Italiano</a>
-<a href="/pl/oral-semaglutide-guide.html">Polski</a>
-<a href="/fr/oral-semaglutide-guide.html">Français</a>
-<a href="/id/oral-semaglutide-guide.html">Bahasa</a>
-<a href="/de/oral-semaglutide-guide.html">Deutsch</a>
-<a href="/nl/oral-semaglutide-guide.html">Nederlands</a>
-<a href="/ar/oral-semaglutide-guide.html">العربية</a>
+<a class="active" href="/es/oral-semaglutide-guide.html">Inglés</a>
+<a href="/es/oral-semaglutide-guide.html">Español</a>
+<a href="/es/oral-semaglutide-guide.html">中文</a>
+<a href="/es/oral-semaglutide-guide.html">日本語</a>
+<a href="/es/oral-semaglutide-guide.html">Português</a>
+<a href="/es/oral-semaglutide-guide.html">Русский</a>
+<a href="/es/oral-semaglutide-guide.html">Italiano</a>
+<a href="/es/oral-semaglutide-guide.html">Polski</a>
+<a href="/es/oral-semaglutide-guide.html">Français</a>
+<a href="/es/oral-semaglutide-guide.html">Bahasa</a>
+<a href="/es/oral-semaglutide-guide.html">Deutsch</a>
+<a href="/es/oral-semaglutide-guide.html">Nederlands</a>
+<a href="/es/oral-semaglutide-guide.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/es/peptide-beginners-guide.html">Inicio Aquí →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/oral-semaglutide-guide.html">English</option><option selected="" value="/es/oral-semaglutide-guide.html">Español</option><option value="/zh/oral-semaglutide-guide.html">中文</option><option value="/ja/oral-semaglutide-guide.html">日本語</option><option value="/pt/oral-semaglutide-guide.html">Português</option><option value="/ru/oral-semaglutide-guide.html">Русский</option><option value="/it/oral-semaglutide-guide.html">Italiano</option><option value="/pl/oral-semaglutide-guide.html">Polski</option><option value="/fr/oral-semaglutide-guide.html">Français</option><option value="/id/oral-semaglutide-guide.html">Bahasa</option><option value="/de/oral-semaglutide-guide.html">Deutsch</option><option value="/nl/oral-semaglutide-guide.html">Nederlands</option><option value="/ar/oral-semaglutide-guide.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -710,6 +854,9 @@
 <p>Los resultados individuales varían significativamente en base a genética, estilo de vida, dosis, técnica de administración y estado de salud general. Esta guía no garantiza resultados específicos ni respalda ningún producto o proveedor en particular.</p>
 </section>
 <!-- Section 1: What is Oral Semaglutide -->
+<div class="quick-answer">
+<p>Análisis completo de formulaciones semaglutide orales, tecnología SNAC, protocolos de dosificación, y cómo los agonistas GLP-1 oral se comparan con alternativas inyectables. Oral semaglutide (Rybelsus) es un agonista GLP-1 tomado por vía oral utilizando la tecnología SNAC patentada para mejorar la absorción. Si bien la biodisponibilidad es significativamente menor que las formulaciones inyectables (aproximadamente 1% frente al 89%), el semaglutide oral ofrece comodidad y aborda las preocupaciones de las agujas. La introducción 2025-2026 de formulaciones de 25 mg y 50 mg ha mejorado la eficacia, haciendo que semaglutide oral sea una opción viable para la gestión de la pérdida de peso junto con GLP-1s inyectables tradicionales como semaglutide y tirzepatide. Los resultados individuales varían significativamente en base a genética, estilo de vida, dosis, técnica de administración y estado de salud general. Esta guía no garantiza resultados específicos ni respalda ningún producto o proveedor en particular. Oral semaglutide, comercializado bajo la marca Rybelsus, representa un avance significativo en la terapia agonista de los receptores GLP-1 ofreciendo una alternativa cómoda a base de tabletas a semaglutide inyectable semanal (Ozempic, Wegovy).</p>
+</div>
 <h2>¿Qué es Oral Semaglutide (Rybelsus) y cómo se diferencia de las fórmulas inyectables?</h2>
 <p>Oral semaglutide, comercializado bajo el nombre de marca Rybelsus, representa un avance significativo en la terapia agonista de receptores GLP-1 ofreciendo una alternativa cómoda a base de tabletas a semaglutide inyectable semanal (Ozempic, Wegovy). Ambas formulaciones contienen el mismo ingrediente farmacéutico activo —semaglutide— pero difieren sustancialmente en el mecanismo de entrega, la biodisponibilidad, los horarios de dosificación y la experiencia del paciente.</p>
 <p>Semaglutide es un peptide-1 (GLP-1) receptor agonista que imita la hormona natural GLP-1, que regula los niveles de glucosa en sangre y el apetito. Los receptores GLP-1 se distribuyen en todo el cerebro, el páncreas y el tracto gastrointestinal, haciéndolos altamente eficaces tanto para el control glucémico en la diabetes tipo 2 como para la gestión de la pérdida de peso. semaglutide inyectable fue aprobado por primera vez por la FDA en 2017 (Ozempic for diabetes) y posteriormente aprobado para la gestión de peso crónica en 2021 (Wegovy).</p>

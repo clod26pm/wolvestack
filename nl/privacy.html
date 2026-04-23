@@ -11,11 +11,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
 <meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://wolvestack.com/nl/privacy.html" rel="canonical"/>
-<title>Privacybeleid WolveStack</title>
+<title>Privacy Policy | WolveStack</title>
 <style>
     :root {
       --navy: #0a1628;
@@ -275,78 +274,224 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/privacy.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/privacy.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/privacy.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/privacy.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/privacy.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/privacy.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/privacy.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/privacy.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/privacy.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/privacy.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/privacy.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/privacy.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/privacy.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/privacy.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
 <div class="logo"><a href="/nl/index.html" style="text-decoration:none;color:inherit">Wolve<span>Stack</span></a></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/nl/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/nl/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/nl/tb-500-guide.html">TB-500</a></li>
+<li><a href="/nl/wolverine-stack.html">Stacks</a></li>
+<li><a href="/nl/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/privacy.html">English</a>
-<a href="/es/privacy.html">Español</a>
-<a href="/zh/privacy.html">中文</a>
-<a href="/ja/privacy.html">日本語</a>
-<a href="/pt/privacy.html">Português</a>
-<a href="/ru/privacy.html">Русский</a>
-<a href="/it/privacy.html">Italiano</a>
-<a href="/pl/privacy.html">Polski</a>
-<a href="/fr/privacy.html">Français</a>
-<a href="/id/privacy.html">Bahasa</a>
-<a href="/de/privacy.html">Deutsch</a>
-<a href="/nl/privacy.html" class="active">Nederlands</a>
-<a href="/ar/privacy.html">العربية</a>
+<a class="active" href="/nl/privacy.html">English</a>
+<a href="/nl/privacy.html">Español</a>
+<a href="/nl/privacy.html">中文</a>
+<a href="/nl/privacy.html">日本語</a>
+<a href="/nl/privacy.html">Português</a>
+<a href="/nl/privacy.html">Русский</a>
+<a href="/nl/privacy.html">Italiano</a>
+<a href="/nl/privacy.html">Polski</a>
+<a href="/nl/privacy.html">Français</a>
+<a href="/nl/privacy.html">Bahasa</a>
+<a href="/nl/privacy.html">Deutsch</a>
+<a href="/nl/privacy.html">Nederlands</a>
+<a href="/nl/privacy.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/nl/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/privacy.html">English</option><option value="/es/privacy.html">Español</option><option value="/zh/privacy.html">中文</option><option value="/ja/privacy.html">日本語</option><option value="/pt/privacy.html">Português</option><option value="/ru/privacy.html">Русский</option><option value="/it/privacy.html">Italiano</option><option value="/pl/privacy.html">Polski</option><option value="/fr/privacy.html">Français</option><option value="/id/privacy.html">Bahasa</option><option value="/de/privacy.html">Deutsch</option><option selected="" value="/nl/privacy.html">Nederlands</option><option value="/ar/privacy.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
 <div class="page-hero">
-<h1>Privacybeleid</h1>
-<p>Laatst bijgewerkt: 20 maart 2026</p>
+<h1>Privacy Policy</h1>
+<p>Last updated: March 2026</p>
 </div>
 <div class="content-wrap">
-<h2>Informatie die we verzamelen</h2>
-<p>We verzamelen geanonimiseerde analytics gegevens (paginaweergaven, verkeersbronnen) via privacy-respecterende analytics. Als u uw e-mail via ons nieuwsbrief formulier, slaan we het op om educatieve gidsen te sturen. Wij verkopen uw gegevens niet.</p>
+<h2>Information We Collect</h2>
+<p>We use Google Analytics (GA4) to understand how visitors use our site. This service collects anonymized data including pages visited, time on site, and general geographic region. Google Analytics uses cookies — you can opt out by installing the Google Analytics Opt-out Browser Add-on. For details, see Google's Privacy Policy at https://policies.google.com/privacy. If you submit your email via our newsletter form, we store it to send educational guides. We do not sell your data.</p>
 <h2>Cookies</h2>
-<p>We gebruiken minimale cookies voor analyses. Affiliate link klikken kunnen derde-partij cookies van leveranciers sites instellen, deze worden beheerst door het privacybeleid van deze leveranciers.</p>
-<h2>Affiliatelinks</h2>
-<p>Sommige links op deze site zijn affiliate links. Klik op hen kan een tracking cookie op de site van de verkoper. Wij ontvangen geen persoonlijke informatie van deze klikken buiten geaggregeerde commissiegegevens.</p>
-<h2>Diensten van derden</h2>
-<p>We kunnen Cloudflare gebruiken voor hosting (onder voorbehoud van hun privacybeleid) en e-mail bezorgdiensten voor nieuwsbrieven.</p>
-<h2>Uw rechten</h2>
-<p>U kunt te allen tijde verzoeken om verwijdering van uw e-mail uit onze lijst door te antwoorden op een nieuwsbrief e-mail.</p>
-<h2>Contactpersoon</h2>
-<p>Privacyvragen: wolvestack@pm.me</p>
+<p>We use Google Analytics cookies to track anonymized traffic data. Affiliate link clicks may set third-party cookies from vendor sites — these are governed by those vendors' privacy policies.</p>
+<h2>Affiliate Links</h2>
+<p>Some links on this site are affiliate links. Clicking them may set a tracking cookie on the vendor's site. We do not receive any personal information from these clicks beyond aggregate commission data.</p>
+<h2>Third-Party Services</h2>
+<p>We may use Cloudflare for hosting (subject to their privacy policy) and email delivery services for newsletters.</p>
+<h2>Your Rights</h2>
+<p>You may request deletion of your email from our list at any time by replying to any newsletter email.</p>
+<h2>Contact</h2>
+<p>Privacy questions: wolvestack@pm.me</p>
 </div>
 <div class="section-card cta-card">
-<h2>Onderzoek-Grade Sourcing</h2>
-<p>WolveStack partners met vertrouwde leveranciers voor onafhankelijk geteste onderzoeksverbindingen met gepubliceerde COA's.</p>
+<h2>Research-Grade Sourcing</h2>
+<p>WolveStack partners with trusted vendors for independently tested research compounds with published COAs.</p>
 <div class="cta-buttons">
-<a class="particle-btn particle-primary" href="https://particlepeptides.com/en/?refs=25135">Door Particle Peptides →</a>
-<a class="limitless-btn limitless-primary" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704">Blader grenzeloze biotech →</a>
+<a class="particle-btn particle-primary" href="https://particlepeptides.com/en/?refs=25135">Browse Particle Peptides →</a>
+<a class="limitless-btn limitless-primary" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704">Browse Limitless Biotech →</a>
 </div>
-<p class="cta-disclaimer">Alleen voor onderzoeksdoeleinden. Onthulling Affiliate: WolveStack verdient een commissie op gekwalificeerde aankopen zonder extra kosten voor u.</p>
+<p class="cta-disclaimer">For research purposes only. Affiliate disclosure: WolveStack earns a commission on qualifying purchases at no additional cost to you.</p>
 </div>
 <footer>
-<p><a href="/nl/about.html">Info</a><a href="/nl/privacy.html">Privacybeleid</a><a href="/nl/affiliate-disclosure.html">Openbaarmaking van verbonden ondernemingen</a><a href="/nl/disclaimer.html">Verklaring</a><a href="/nl/terms.html">Gebruiksvoorwaarden</a></p>
-<p style="margin-top:10px">© 2026 WolveStack · Onderzoek Peptide Intelligence</p>
+<p><a href="/nl/about.html">About</a><a href="/nl/privacy.html">Privacy Policy</a><a href="/nl/affiliate-disclosure.html">Affiliate Disclosure</a><a href="/nl/disclaimer.html">Disclaimer</a><a href="/nl/terms.html">Terms of Use</a></p>
+<p style="margin-top:10px">© 2026 WolveStack · Research Peptide Intelligence</p>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);

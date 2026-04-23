@@ -2,6 +2,7 @@
 
 <html lang="zh">
 <head>
+<link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" rel="canonical"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -11,12 +12,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>XTERMX000 完整指南:剂量、机制和研究WolveStack</title>
 <meta content="XTERMX000研究指南涵盖机理,半衰期优势于常规IGF-1,协议,癌症风险,以及它如何适合一个肽堆." name="description"/>
-<link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" rel="canonical"/>
+<link href="https://wolvestack.com/en/igf-1-lr3-guide.html" rel="canonical"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -31,7 +30,12 @@
     "url": "https://wolvestack.com"
   },
   "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15"
+  "dateModified": "2026-04-08",
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "WolveStack Research Team",
+    "url": "https://wolvestack.com/zh/about.html"
+  }
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -355,53 +359,199 @@
     }
   }
 
-  </style>
-<meta content="XTERMX000:机制、半生和协议指南" property="og:title">
-<meta content="XTERMX000研究指南涵盖机理,半衰期优势于常规IGF-1,协议,癌症风险,以及它如何适合一个肽堆." property="og:description">
-<meta content="https://wolvestack.com/zh/igf-1-lr3-guide.html" property="og:url">
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<meta content="XTERMX000:机制、半生和协议指南" property="og:title"/>
+<meta content="XTERMX000研究指南涵盖机理,半衰期优势于常规IGF-1,协议,癌症风险,以及它如何适合一个肽堆." property="og:description"/>
+<meta content="https://wolvestack.com/zh/igf-1-lr3-guide.html" property="og:url"/>
 <meta content="article" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="XTERMX000:机制、半生和协议指南" name="twitter:title"/>
 <meta content="XTERMX000研究指南涵盖机理,半衰期优势于常规IGF-1,协议,癌症风险,以及它如何适合一个肽堆." name="twitter:description"/>
-</meta></meta></meta><link href="https://wolvestack.com/en/igf-1-lr3-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/igf-1-lr3-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/igf-1-lr3-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/igf-1-lr3-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/igf-1-lr3-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/igf-1-lr3-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/igf-1-lr3-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/igf-1-lr3-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/igf-1-lr3-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/igf-1-lr3-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/igf-1-lr3-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/igf-1-lr3-guide.html" hreflang="x-default" rel="alternate"/></head>
+<link href="https://wolvestack.com/en/igf-1-lr3-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/igf-1-lr3-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/igf-1-lr3-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/igf-1-lr3-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/igf-1-lr3-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/igf-1-lr3-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/igf-1-lr3-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/igf-1-lr3-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/igf-1-lr3-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/igf-1-lr3-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/igf-1-lr3-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/igf-1-lr3-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/igf-1-lr3-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/igf-1-lr3-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
 <div class="logo">狼头<span>堆栈</span></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/zh/index.html">狼头<span>堆栈</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/zh/bpc-157-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/tb-500-guide.html">XTERMX000 (英语).</a></li>
+<li><a href="/zh/wolverine-stack.html">堆栈</a></li>
+<li><a href="/zh/peptide-sourcing-guide.html">供应商</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="搜索..." type="text"/>
+<button aria-label="搜索" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="选择语言" class="nav-lang-toggle">🌐<span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/igf-1-lr3-guide.html">English</a>
-<a href="/es/igf-1-lr3-guide.html">Español</a>
-<a href="/zh/igf-1-lr3-guide.html" class="active">中文</a>
-<a href="/ja/igf-1-lr3-guide.html">日本語</a>
-<a href="/pt/igf-1-lr3-guide.html">Português</a>
-<a href="/ru/igf-1-lr3-guide.html">Русский</a>
-<a href="/it/igf-1-lr3-guide.html">Italiano</a>
-<a href="/pl/igf-1-lr3-guide.html">Polski</a>
-<a href="/fr/igf-1-lr3-guide.html">Français</a>
-<a href="/id/igf-1-lr3-guide.html">Bahasa</a>
-<a href="/de/igf-1-lr3-guide.html">Deutsch</a>
-<a href="/nl/igf-1-lr3-guide.html">Nederlands</a>
-<a href="/ar/igf-1-lr3-guide.html">العربية</a>
+<a class="active" href="/zh/igf-1-lr3-guide.html">联合国</a>
+<a href="/zh/igf-1-lr3-guide.html">西班牙语Name</a>
+<a href="/zh/igf-1-lr3-guide.html">联合国</a>
+<a href="/zh/igf-1-lr3-guide.html">日本語</a>
+<a href="/zh/igf-1-lr3-guide.html">葡萄牙</a>
+<a href="/zh/igf-1-lr3-guide.html">Русский</a>
+<a href="/zh/igf-1-lr3-guide.html">意大利语Name</a>
+<a href="/zh/igf-1-lr3-guide.html">波尔斯基</a>
+<a href="/zh/igf-1-lr3-guide.html">法国语Name</a>
+<a href="/zh/igf-1-lr3-guide.html">巴哈萨</a>
+<a href="/zh/igf-1-lr3-guide.html">德国</a>
+<a href="/zh/igf-1-lr3-guide.html">荷兰</a>
+<a href="/zh/igf-1-lr3-guide.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/zh/peptide-beginners-guide.html">从这里开始</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/igf-1-lr3-guide.html">English</option><option value="/es/igf-1-lr3-guide.html">Español</option><option selected="" value="/zh/igf-1-lr3-guide.html">中文</option><option value="/ja/igf-1-lr3-guide.html">日本語</option><option value="/pt/igf-1-lr3-guide.html">Português</option><option value="/ru/igf-1-lr3-guide.html">Русский</option><option value="/it/igf-1-lr3-guide.html">Italiano</option><option value="/pl/igf-1-lr3-guide.html">Polski</option><option value="/fr/igf-1-lr3-guide.html">Français</option><option value="/id/igf-1-lr3-guide.html">Bahasa</option><option value="/de/igf-1-lr3-guide.html">Deutsch</option><option value="/nl/igf-1-lr3-guide.html">Nederlands</option><option value="/ar/igf-1-lr3-guide.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
@@ -418,8 +568,8 @@
 <div class="layout">
 <div class="content">
 <div class="quick-answer">
-      <p>深度潜入长效XTERMX000模拟器:机制,协议,风险,以及它为何与原生IGF-1和HGH不同。 这种延长的时间和IGFBP的抗药性使XTERMX000在组织上比原生的IGF-1大约强3x,即使剂量相等。 了解XTERMX000如何区别于其他激素至关重要. 详细情况如下:。 这种级联促进细胞生长、分化和生存: 通过ERK1/2激活的细胞扩散 基因表达式改变有利于增长 抗吸毒信号(细胞抵抗死亡)。 这使得新陈代谢比外来胰岛素更安全,但需要仔细监测.。 XTERMX000的大部分证据来自动物模型而不是人类RCT. 文献显示:。</p>
-    </div>
+<p>XTERMX000有一个ARG3替代品,可以防止对IGF绑定蛋白的束缚,将它的半衰期从~12小时延长至约120小时,使其组织中大约3x比原生的IGF-1更强. IGF-1 LR3通过绑定胰岛素类生长因子1受体(IGF1R)来施加其作用,这是在肌肉细胞,纤维起伏物及其他组织上发现的一种ty基酶受体. PI3K的激活导致Akt磷酸化,这反过来又激活mTOR——蛋白质合成的主调节器. 与异型类固醇(主要通过超营养增加纤维大小)不同,IGF-1 LR3独特的刺激了卫星细胞扩散,导致肌肉纤维数量的实际增加. IGF-1 LR3(英語:Insulin-like Growth Factor 1 Long Arg3)是原生IGF-1为研究目的开发的改进型模拟. 这种延长的时间和IGFBP-抗药性使IGF-1 LR3在组织上比原生的IGF-1大约强3x,即使在相等的摩尔剂量下也是如此.</p>
+</div>
 <h2>什么是IGF-1 LR3吗?</h2>
 <p>XTERMX000(英語:Insulin-like Growth Factor 1 Long Arg3)是原生IGF-1为研究目的开发的改进型模拟. 关键区别在于位置3的一个单氨基酸替代物——rg取代了内生IGF-1中发现的过量酸. 这种看似小的修改对肽的药效动力学和组织活动有着深远的影响.</p>
 <p>ARG3替代可以防止XTERMX000与IGF绑定的蛋白质(IGFBPs)绑定,后者通常调节原生IGF-1的半衰期和生物利用率. 因此,IGF-1 LR3的延长半衰期约为120小时(5天),而原生IGF-1的流通时间仅为12-15分钟。 在组织上,这种差异更为显著——局部IGF-1在被清除前只有12~15小时的活动时间,而IGF-1 LR3可以在几天内保持活动.</p>
@@ -587,13 +737,11 @@
 <p>在高慢性剂量下,XTERMX000可以刺激粘膜器官(肝,肾,心)的生长,导致器官过度营养. 骨骼变化也是可能的——下巴膨胀,手部增厚,脚部增长——类似于杂交. 这些变化更有可能是每日剂量超过50 mcg或周期超过8-10周。 这种影响在终止时可以部分逆转,但器官生长是有关的。</p>
 <h3>本地化 Lipohypertrophy (注射地点)</h3>
 <p>重复向同一肌肉注入IM会导致局部脂肪积累和美学畸形. 这实际上被一些人所追求(增强肌肉饱和度),但被其他人视为副作用. 旋转注射点有助于缓解这种情况。</p>
-
-    <!-- E-E-A-T: Enhanced Medical Disclaimer -->
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
-      <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Medical Disclaimer</p>
-      <p style="margin: 0;">For <strong>informational and educational purposes only</strong>. Not FDA-approved for human use. Consult a licensed healthcare professional. See full <a href="/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
-    </div>
-
+<!-- E-E-A-T: Enhanced Medical Disclaimer -->
+<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
+<p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">医疗免责声明</p>
+<p style="margin: 0;">这篇文章是为了<strong>仅供参考和教育目的</strong>并且不构成医疗建议。 讨论的化合物是研究化学物质<strong>未经林业发展局核准</strong>供人类使用。 在考虑任何恋童癖协议之前,请咨询有执照的保健专业人员。 XTERMX000没有医务人员,也没有诊断、治疗或开处方。 看我们的满<a href="/zh/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免责声明</a>。 。 。</p>
+</div>
 <div class="faq-item">
 <div class="faq-q">XTERMX000是否会导致低血糖?</div>
 <div class="faq-a">它的胰岛素受体活性比胰岛素本身更弱,但仍能推动葡萄糖进入肌肉组织,并可能导致低血糖——特别是在剂量超过30-40 XTERMX000或受碳水化合物限制的状态下. 始终保持足够的碳摄入量,并在研究期间拥有快速作用的碳水化合物.</div>
@@ -729,6 +877,7 @@
 <a class="related-card" href="/zh/wolverine-stack.html"><span>相关</span><strong>XTERMX000 号</strong></a>
 <a class="related-card" href="/zh/gh-peptide-timing.html"><span>相关</span><strong>GH 浸泡时间指南</strong></a>
 <a class="related-card" href="/zh/gh-peptides-igf1-monitoring.html"><span>相关</span><strong>GH Peptides 和 XTERMX000: 监测什么</strong></a>
+<a class="related-card" href="/zh/igf1-lr3-vs-cjc1295.html"><span>相关</span><strong>XTERMX000 vs CJC-1295:哪个构建了更多的肌肉?.</strong></a>
 </div>
 </div>
 </section>

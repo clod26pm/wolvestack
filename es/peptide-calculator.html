@@ -11,17 +11,15 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Calculadora de dosificación de péptidos — BPC-157, TB-500 &gt; Más  durable WolveStack</title>
 <meta content="Calculadora gratuita de dosificación de péptidos. Ingrese su tamaño vial y la dosis deseada para obtener matemáticas de reconstitución exacta para BPC-157, TB-500, y otros péptidos de investigación. Sin adivinanzas." name="description"/>
 <meta content="peptide dosing calculator, BPC-157 calculator, TB-500 calculator, reconstitution calculator, bacteriostatic water, peptide math" name="keywords"/>
 <link href="https://wolvestack.com/es/peptide-calculator.html" rel="canonical"/>
-<meta content="Calculadora de dosificación de péptidos — BPC-157, TB-500 &gt; Más  durable WolveStack" property="og:title">
-<meta content="Calculadora de dosificación de péptidos gratis. Obtenga matemáticas de reconstitución exacta — sin adivinanzas, sin errores." property="og:description">
-<meta content="https://wolvestack.com/es/peptide-calculator.html" property="og:url">
-<meta content="website" property="og:type">
+<meta content="Calculadora de dosificación de péptidos — BPC-157, TB-500 &gt; Más  durable WolveStack" property="og:title"/>
+<meta content="Calculadora de dosificación de péptidos gratis. Obtenga matemáticas de reconstitución exacta — sin adivinanzas, sin errores." property="og:description"/>
+<meta content="https://wolvestack.com/es/peptide-calculator.html" property="og:url"/>
+<meta content="website" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Cálculo de dosificación de péptidos" name="twitter:title"/>
@@ -328,43 +326,189 @@
     }
   }
 
-  </style>
-</meta></meta></meta></meta><link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-calculator.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-calculator.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-calculator.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-calculator.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-calculator.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-calculator.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-calculator.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-calculator.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-calculator.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-calculator.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-calculator.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-calculator.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-calculator.html" hreflang="x-default" rel="alternate"/></head>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-calculator.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-calculator.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-calculator.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-calculator.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-calculator.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-calculator.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-calculator.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-calculator.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-calculator.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-calculator.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-calculator.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-calculator.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-calculator.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/es/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/es/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/es/tb-500-guide.html">TB-500</a></li>
+<li><a href="/es/wolverine-stack.html">Stacks</a></li>
+<li><a href="/es/peptide-sourcing-guide.html">Vendedores</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Buscar..." type="text"/>
+<button aria-label="Búsqueda" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Seleccionar idioma" class="nav-lang-toggle">🌐<span class="arrow">.</span></button>
 <div class="nav-lang-menu">
-<a href="/peptide-calculator.html">English</a>
-<a href="/es/peptide-calculator.html" class="active">Español</a>
-<a href="/zh/peptide-calculator.html">中文</a>
-<a href="/ja/peptide-calculator.html">日本語</a>
-<a href="/pt/peptide-calculator.html">Português</a>
-<a href="/ru/peptide-calculator.html">Русский</a>
-<a href="/it/peptide-calculator.html">Italiano</a>
-<a href="/pl/peptide-calculator.html">Polski</a>
-<a href="/fr/peptide-calculator.html">Français</a>
-<a href="/id/peptide-calculator.html">Bahasa</a>
-<a href="/de/peptide-calculator.html">Deutsch</a>
-<a href="/nl/peptide-calculator.html">Nederlands</a>
-<a href="/ar/peptide-calculator.html">العربية</a>
+<a class="active" href="/es/peptide-calculator.html">Inglés</a>
+<a href="/es/peptide-calculator.html">Español</a>
+<a href="/es/peptide-calculator.html">中文</a>
+<a href="/es/peptide-calculator.html">日本語</a>
+<a href="/es/peptide-calculator.html">Português</a>
+<a href="/es/peptide-calculator.html">Русский</a>
+<a href="/es/peptide-calculator.html">Italiano</a>
+<a href="/es/peptide-calculator.html">Polski</a>
+<a href="/es/peptide-calculator.html">Français</a>
+<a href="/es/peptide-calculator.html">Bahasa</a>
+<a href="/es/peptide-calculator.html">Deutsch</a>
+<a href="/es/peptide-calculator.html">Nederlands</a>
+<a href="/es/peptide-calculator.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/es/peptide-beginners-guide.html">Inicio Aquí →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-calculator.html">English</option><option selected="" value="/es/peptide-calculator.html">Español</option><option value="/zh/peptide-calculator.html">中文</option><option value="/ja/peptide-calculator.html">日本語</option><option value="/pt/peptide-calculator.html">Português</option><option value="/ru/peptide-calculator.html">Русский</option><option value="/it/peptide-calculator.html">Italiano</option><option value="/pl/peptide-calculator.html">Polski</option><option value="/fr/peptide-calculator.html">Français</option><option value="/id/peptide-calculator.html">Bahasa</option><option value="/de/peptide-calculator.html">Deutsch</option><option value="/nl/peptide-calculator.html">Nederlands</option><option value="/ar/peptide-calculator.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
@@ -374,6 +518,11 @@
 </div>
 <div class="container">
 <div class="main">
+<!-- MEDICAL DISCLAIMER -->
+<div class="info-box amber" style="margin-bottom: 24px;">
+<div class="info-icon">NOVEDAD</div>
+<p><strong>Referencia de investigación Sólo...</strong>Esta calculadora es una herramienta de conversión matemática para fines educativos solamente. No constituye asesoramiento médico, diagnóstico o tratamiento. Los compuestos mencionados son productos químicos de investigación no aprobados por la FDA para uso humano. Nunca autoadministrar ninguna sustancia sin supervisión de un profesional sanitario licenciado. Ver todo<a href="/es/disclaimer.html" style="color: inherit; text-decoration: underline;">descargo</a>.</p>
+</div>
 <!-- MAIN CALCULATOR -->
 <div class="calc-card">
 <div class="calc-header">
@@ -708,6 +857,8 @@
 <a class="related-card" href="/es/bacteriostatic-water-guide.html"><span>Relacionados</span><strong>Agua Bacteriostática: Guía de Reconstitución Completa</strong></a>
 <a class="related-card" href="/es/peptide-half-life-guide.html"><span>Relacionados</span><strong>Guía de la mitad de la vida</strong></a>
 <a class="related-card" href="/es/peptide-beginners-guide.html"><span>Relacionados</span><strong>Peptide Beginners Guide</strong></a>
+<a class="related-card" href="/es/peptide-dosing-calculator-guide.html"><span>Relacionados</span><strong>Guía de cálculo de dosis de péptidos</strong></a>
+<a class="related-card" href="/es/peptide-storage-guide.html"><span>Relacionados</span><strong>Guía de almacenamiento de péptidos</strong></a>
 </div>
 </div>
 </section>

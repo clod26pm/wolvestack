@@ -2,22 +2,6 @@
 
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://wolvestack.com/en/best-peptides-muscle-growth.html">
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/best-peptides-muscle-growth.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/best-peptides-muscle-growth.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -192,6 +176,7 @@
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -339,6 +324,7 @@
   }
 
   
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -356,12 +342,131 @@
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</meta></meta></meta></head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+</meta></meta></meta><link href="https://wolvestack.com/en/best-peptides-muscle-growth.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/best-peptides-muscle-growth.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/best-peptides-muscle-growth.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/best-peptides-muscle-growth.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/best-peptides-muscle-growth.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/best-peptides-muscle-growth.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/best-peptides-muscle-growth.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/best-peptides-muscle-growth.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/best-peptides-muscle-growth.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/best-peptides-muscle-growth.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/best-peptides-muscle-growth.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/best-peptides-muscle-growth.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/best-peptides-muscle-growth.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/best-peptides-muscle-growth.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
 <li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
 <li><a href="/en/tb-500-guide.html">TB-500</a></li>
@@ -370,28 +475,37 @@
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a class="active" href="/en/best-peptides-muscle-growth.html">English</a>
+<a href="/en/best-peptides-muscle-growth.html">Español</a>
+<a href="/en/best-peptides-muscle-growth.html">中文</a>
+<a href="/en/best-peptides-muscle-growth.html">日本語</a>
+<a href="/en/best-peptides-muscle-growth.html">Português</a>
+<a href="/en/best-peptides-muscle-growth.html">Русский</a>
+<a href="/en/best-peptides-muscle-growth.html">Italiano</a>
+<a href="/en/best-peptides-muscle-growth.html">Polski</a>
+<a href="/en/best-peptides-muscle-growth.html">Français</a>
+<a href="/en/best-peptides-muscle-growth.html">Bahasa</a>
+<a href="/en/best-peptides-muscle-growth.html">Deutsch</a>
+<a href="/en/best-peptides-muscle-growth.html">Nederlands</a>
+<a href="/en/best-peptides-muscle-growth.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/best-peptides-muscle-growth.html">English</option><option value="/es/best-peptides-muscle-growth.html">Español</option><option value="/zh/best-peptides-muscle-growth.html">中文</option><option value="/ja/best-peptides-muscle-growth.html">日本語</option><option value="/pt/best-peptides-muscle-growth.html">Português</option><option value="/ru/best-peptides-muscle-growth.html">Русский</option><option value="/it/best-peptides-muscle-growth.html">Italiano</option><option value="/pl/best-peptides-muscle-growth.html">Polski</option><option value="/fr/best-peptides-muscle-growth.html">Français</option><option value="/id/best-peptides-muscle-growth.html">Bahasa</option><option value="/de/best-peptides-muscle-growth.html">Deutsch</option><option value="/nl/best-peptides-muscle-growth.html">Nederlands</option><option value="/ar/best-peptides-muscle-growth.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
@@ -414,8 +528,8 @@
 <p><strong>Research context only.</strong> The peptides discussed on WolveStack are research chemicals not approved for human use by the FDA. Nothing on this page constitutes medical advice. Consult a qualified healthcare professional before use.</p>
 </div>
 <div class="quick-answer">
-      <p>Top research peptides for muscle growth, hypertrophy, and lean mass — IGF-1 LR3, GH secretagogues, and follistatin ranked by evidence. The CJC-1295/Ipamorelin stack is the most accessible and widely used muscle-building peptide protocol. MK-677 (Ibutamoren) offers an oral alternative with similar IGF-1 elevation — mean IGF-1 increases of 40–89% have been demonstrated in clinical trials at 10–25 mg daily doses. IGF-1 LR3 (Long R3 IGF-1) is a modified form of insulin-like growth factor-1 with extended half-life (20–30 hours vs natural IGF-1's 30 minutes) and enhanced receptor binding affinity. IGF-1 has mitogenic (cell proliferation-stimulating) activity broadly, not just in muscle — concern about potential promotion of occult cancers is the primary caution. Research peptides occupy a distinct position relative to anabolic steroids for muscle building. For natural athletes or individuals seeking enhanced recovery and lean mass accretion without the risks of full androgen administration, GH secretagogues represent the most evidence-supported middle ground.</p>
-    </div>
+<p>Top research peptides for muscle growth, hypertrophy, and lean mass — IGF-1 LR3, GH secretagogues, and follistatin ranked by evidence. The CJC-1295/Ipamorelin stack is the most accessible and widely used muscle-building peptide protocol. MK-677 (Ibutamoren) offers an oral alternative with similar IGF-1 elevation — mean IGF-1 increases of 40–89% have been demonstrated in clinical trials at 10–25 mg daily doses. IGF-1 LR3 (Long R3 IGF-1) is a modified form of insulin-like growth factor-1 with extended half-life (20–30 hours vs natural IGF-1's 30 minutes) and enhanced receptor binding affinity. IGF-1 has mitogenic (cell proliferation-stimulating) activity broadly, not just in muscle — concern about potential promotion of occult cancers is the primary caution. Research peptides occupy a distinct position relative to anabolic steroids for muscle building. For natural athletes or individuals seeking enhanced recovery and lean mass accretion without the risks of full androgen administration, GH secretagogues represent the most evidence-supported middle ground.</p>
+</div>
 <div class="section-card">
 <h2>GH Secretagogues: The Accessible Muscle-Building Protocol</h2>
 <p>The CJC-1295/Ipamorelin stack is the most accessible and widely used muscle-building peptide protocol. By amplifying pulsatile GH release, these peptides drive IGF-1 production in liver and muscle tissue, which stimulates satellite cell activation (muscle stem cells), muscle protein synthesis, and recovery. The mechanism is indirect but genuine — the effects are modest compared to anabolic steroids but occur with far fewer health risks and no testosterone suppression.</p><p>MK-677 (Ibutamoren) offers an oral alternative with similar IGF-1 elevation — mean IGF-1 increases of 40–89% have been demonstrated in clinical trials at 10–25 mg daily doses. The 24-hour GH elevation of MK-677 differs from the pulsatile approach of injectable secretagogues; both produce meaningful increases in lean mass over 8–12 week cycles, particularly when combined with progressive resistance training and adequate protein intake.</p>
@@ -501,7 +615,13 @@
 <p>© 2026 WolveStack. For research and educational purposes only.</p>
 <p class="disclaimer">WolveStack publishes research summaries for educational purposes only. Nothing here constitutes medical advice. All peptides are for research use only.</p>
 
-
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/best-peptides-muscle-growth.html">English</option><option value="/es/best-peptides-muscle-growth.html">Español</option><option value="/zh/best-peptides-muscle-growth.html">中文</option><option value="/ja/best-peptides-muscle-growth.html">日本語</option><option value="/pt/best-peptides-muscle-growth.html">Português</option><option value="/ru/best-peptides-muscle-growth.html">Русский</option><option value="/it/best-peptides-muscle-growth.html">Italiano</option><option value="/pl/best-peptides-muscle-growth.html">Polski</option><option value="/fr/best-peptides-muscle-growth.html">Français</option><option value="/id/best-peptides-muscle-growth.html">Bahasa</option><option value="/de/best-peptides-muscle-growth.html">Deutsch</option><option value="/nl/best-peptides-muscle-growth.html">Nederlands</option><option value="/ar/best-peptides-muscle-growth.html">العربية</option>
+</select>
+</div>
 </footer>
 <section class="related-articles">
 <div class="related-inner">
@@ -511,42 +631,57 @@
 <a class="related-card" href="/en/wolverine-stack.html"><span>Related</span><strong>The Wolverine Stack</strong></a>
 <a class="related-card" href="/en/peptides-vs-hgh.html"><span>Related</span><strong>Peptides vs HGH</strong></a>
 <a class="related-card" href="/en/cjc-1295-ipamorelin-stack.html"><span>Related</span><strong>CJC-1295 + Ipamorelin Stack Guide</strong></a>
+<a class="related-card" href="/en/growth-hormone-peptide-guide.html"><span>Related</span><strong>Growth Hormone Peptides: Complete Guide to GH Secretagogues</strong></a>
+<a class="related-card" href="/en/peptide-stacking-guide.html"><span>Related</span><strong>Peptide Stacking Guide: Safe Combinations &amp; Protocols</strong></a>
+<a class="related-card" href="/en/cjc-1295-dac-guide.html"><span>Related</span><strong>CJC-1295 DAC Guide: Sustained GH Elevation</strong></a>
 </div>
 </div>
 </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>

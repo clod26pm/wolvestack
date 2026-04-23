@@ -2,14 +2,13 @@
 
 <html lang="ja">
 <head>
+<link href="https://wolvestack.com/ja/peptide-dosing-mistakes.html" rel="canonical"/>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>5つの一般的なペプチドは、みずを投与し、それらを避ける方法</title>
 <meta content="コストを無駄にし、結果を減らす最も一般的なペプチド投薬エラーを回避します。 適切な再構成数学、タイミング、サイクリング、ストレージ、および投薬戦略を学びます。" name="description"/>
 <meta content="index, follow" name="robots"/>
-<link href="https://wolvestack.com/ja/peptide-dosing-mistakes.html" rel="canonical"/>
+<link href="https://wolvestack.com/en/peptide-dosing-mistakes.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="5つの一般的なペプチドは、みずを投与し、それらを避ける方法" property="og:title"/>
@@ -371,44 +370,190 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/peptide-dosing-mistakes.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-dosing-mistakes.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-dosing-mistakes.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-dosing-mistakes.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-dosing-mistakes.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-dosing-mistakes.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-dosing-mistakes.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-dosing-mistakes.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-dosing-mistakes.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-dosing-mistakes.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-dosing-mistakes.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-dosing-mistakes.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-dosing-mistakes.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-dosing-mistakes.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/ja/index.html">ウルブ<span>スタック</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/ja/bpc-157-guide.html">BPC-157の特長</a></li>
+<li><a href="/ja/tb-500-guide.html">TB-500の特長</a></li>
+<li><a href="/ja/wolverine-stack.html">スタック</a></li>
+<li><a href="/ja/peptide-sourcing-guide.html">ベンダー</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="お問い合わせ" type="text"/>
+<button aria-label="インフォメーション" class="search-btn" type="submit">ログイン</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="言語を選択" class="nav-lang-toggle">ブーツ<span class="arrow"></span></button>
 <div class="nav-lang-menu">
-<a href="/peptide-dosing-mistakes.html">English</a>
-<a href="/es/peptide-dosing-mistakes.html">Español</a>
-<a href="/zh/peptide-dosing-mistakes.html">中文</a>
-<a href="/ja/peptide-dosing-mistakes.html" class="active">日本語</a>
-<a href="/pt/peptide-dosing-mistakes.html">Português</a>
-<a href="/ru/peptide-dosing-mistakes.html">Русский</a>
-<a href="/it/peptide-dosing-mistakes.html">Italiano</a>
-<a href="/pl/peptide-dosing-mistakes.html">Polski</a>
-<a href="/fr/peptide-dosing-mistakes.html">Français</a>
-<a href="/id/peptide-dosing-mistakes.html">Bahasa</a>
-<a href="/de/peptide-dosing-mistakes.html">Deutsch</a>
-<a href="/nl/peptide-dosing-mistakes.html">Nederlands</a>
-<a href="/ar/peptide-dosing-mistakes.html">العربية</a>
+<a class="active" href="/ja/peptide-dosing-mistakes.html">日本語 English</a>
+<a href="/ja/peptide-dosing-mistakes.html">スペイン語</a>
+<a href="/ja/peptide-dosing-mistakes.html">ニュース</a>
+<a href="/ja/peptide-dosing-mistakes.html">日本語 English</a>
+<a href="/ja/peptide-dosing-mistakes.html">お問い合わせ</a>
+<a href="/ja/peptide-dosing-mistakes.html">ありがたい</a>
+<a href="/ja/peptide-dosing-mistakes.html">所在地:東京都</a>
+<a href="/ja/peptide-dosing-mistakes.html">ポーランド</a>
+<a href="/ja/peptide-dosing-mistakes.html">フランチェスコ</a>
+<a href="/ja/peptide-dosing-mistakes.html">バハサ</a>
+<a href="/ja/peptide-dosing-mistakes.html">ドイツ</a>
+<a href="/ja/peptide-dosing-mistakes.html">日本語   English</a>
+<a href="/ja/peptide-dosing-mistakes.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/ja/peptide-beginners-guide.html">詳細はこちら →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-dosing-mistakes.html">English</option><option value="/es/peptide-dosing-mistakes.html">Español</option><option value="/zh/peptide-dosing-mistakes.html">中文</option><option selected="" value="/ja/peptide-dosing-mistakes.html">日本語</option><option value="/pt/peptide-dosing-mistakes.html">Português</option><option value="/ru/peptide-dosing-mistakes.html">Русский</option><option value="/it/peptide-dosing-mistakes.html">Italiano</option><option value="/pl/peptide-dosing-mistakes.html">Polski</option><option value="/fr/peptide-dosing-mistakes.html">Français</option><option value="/id/peptide-dosing-mistakes.html">Bahasa</option><option value="/de/peptide-dosing-mistakes.html">Deutsch</option><option value="/nl/peptide-dosing-mistakes.html">Nederlands</option><option value="/ar/peptide-dosing-mistakes.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Main Content -->
@@ -430,9 +575,8 @@
 <div class="article-meta">
 <div class="article-meta-item">
 <span>⊙ 読み取り時間:9分</span>
-
-      <span>✅ Last reviewed: April 2026</span>
-    </div>
+<span>✅ 最終レビュー: 4月 2026</span>
+</div>
 <div class="article-meta-item">
 <span>プロトコルガイド</span>
 </div>
@@ -443,13 +587,11 @@
 </div>
 </div>
 <!-- Warning Disclaimer -->
-
-    <!-- E-E-A-T: Enhanced Medical Disclaimer -->
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
-      <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Medical Disclaimer</p>
-      <p style="margin: 0;">For <strong>informational and educational purposes only</strong>. Not FDA-approved for human use. Consult a licensed healthcare professional. See full <a href="/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
-    </div>
-
+<!-- E-E-A-T: Enhanced Medical Disclaimer -->
+<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
+<p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">医療免責事項</p>
+<p style="margin: 0;">この記事は<strong>情報提供・教育目的のみ</strong>医療アドバイスを構成しない 議論された化合物は、研究化学物質である<strong>FDA 承認されていない</strong>人間の使用のため。 ペプチドプロトコルを検討する前に、必ず認定医療専門家に相談してください。 WolveStackに医学のスタッフがなく、診断、治療、または処方されていません。 お問い合わせ<a href="/ja/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免責事項</a>お問い合わせ</p>
+</div>
 <!-- Sidebar -->
 <div class="article-sidebar">
 <!-- Table of Contents -->
@@ -490,6 +632,9 @@
 </div>
 <!-- Vendor Affiliate Section -->
 <div class="vendor-section">
+<div class="quick-answer">
+<p>これら5つの誤差は、結果を減らし、さらに反発的である可能性があります。 BPC-157、CJC-1295、または他のどのペプチドを実行しているかにかかわらず、投薬の権利を得るのは半分の戦いです。 厳密な品質管理および第三者のテストが付いている良質のペプチッド。 持続可能な結果のためのサイクリングペプチドの芸術をマスターします。. 単一の偶発的な過剰摂取は、BPC-157やTB-500のようなほとんどの研究ペプチドの深刻な害を典型的な範囲(2-3倍の通常の線量)で引き起こすことは異様ではありません。 ほとんどのペプチドプロトコルは、平用量(例えば、体重に関係なくBPC-157の500 mcg /日)を使用し、これはユーザーの過半数のためにうまく機能します。 特定のプロトコルのBPC-157 Dosingガイド、または当社のインジェクションサイトガイドをご覧ください。 あなたは、フラッシュのような一時的な副作用を経験することができます, 軽度, または注射部位の刺激. 可能ですが、1つのセッション(単一出金)でバイアル全体を使用できる場合のみです。</p>
+</div>
 <h2>信頼できるペプチッド ベンダー</h2>
 <p style="margin-bottom: 2rem; color: var(--gray-700);">品質は、それがペプチドに来るときよりも価格よりも重要. これらのベンダーは、サードパーティ製のテスト製品を提供します。 すべてのリンクは、WolveStackをサポートするアフィリエイトリンクです。</p>
 <div class="vendor-grid">
@@ -629,9 +774,18 @@
 <a class="article-card-link" href="/ja/peptide-cycling-guide.html">ガイドを読む →</a>
 </div>
 </div>
+<!-- Related Article 5 -->
+<div class="article-card">
+<div class="article-card-image"></div>
+<div class="article-card-content">
+<div class="article-card-title">ペプチド投与計算機ガイド</div>
+<p class="article-card-excerpt">バイアル濃度とターゲット線量から正確なシリンジユニットを計算する方法 - 働いたBPC-157とTB-500の例。</p>
+<a class="article-card-link" href="/ja/peptide-dosing-calculator-guide.html">ガイドを読む →</a>
 </div>
 </div>
 </div>
+</div>
+
 <!-- Footer -->
 <footer>
 <div class="footer-content">
@@ -703,7 +857,11 @@
     "@type": "WebPage",
     "@id": "https://wolvestack.com/ja/peptide-dosing-mistakes.html"
   },
-    "reviewedBy": {"@type": "Organization", "name": "WolveStack Research Team", "url": "https://wolvestack.com/about.html"}
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "WolveStack Research Team",
+    "url": "https://wolvestack.com/ja/about.html"
+  }
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",

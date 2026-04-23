@@ -11,11 +11,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
 <meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://wolvestack.com/pl/affiliate-disclosure.html" rel="canonical"/>
-<title>Afiliate Disclosure WolveStack</title>
+<title>Affiliate Disclosure | WolveStack</title>
 <style>
     :root {
       --navy: #0a1628;
@@ -265,69 +264,217 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/affiliate-disclosure.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/affiliate-disclosure.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/affiliate-disclosure.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/affiliate-disclosure.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/affiliate-disclosure.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/affiliate-disclosure.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/affiliate-disclosure.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/affiliate-disclosure.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/affiliate-disclosure.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/affiliate-disclosure.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/affiliate-disclosure.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/affiliate-disclosure.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/affiliate-disclosure.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/affiliate-disclosure.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
-<div class="logo"><a href="/pl/index.html" style="text-decoration:none;color:inherit">Wilk<span>Stack</span></a></div>
+<div class="logo"><a href="/pl/index.html" style="text-decoration:none;color:inherit">Wolve<span>Stack</span></a></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/pl/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/pl/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/pl/tb-500-guide.html">TB-500</a></li>
+<li><a href="/pl/wolverine-stack.html">Stacks</a></li>
+<li><a href="/pl/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/affiliate-disclosure.html">English</a>
-<a href="/es/affiliate-disclosure.html">Español</a>
-<a href="/zh/affiliate-disclosure.html">中文</a>
-<a href="/ja/affiliate-disclosure.html">日本語</a>
-<a href="/pt/affiliate-disclosure.html">Português</a>
-<a href="/ru/affiliate-disclosure.html">Русский</a>
-<a href="/it/affiliate-disclosure.html">Italiano</a>
-<a href="/pl/affiliate-disclosure.html" class="active">Polski</a>
-<a href="/fr/affiliate-disclosure.html">Français</a>
-<a href="/id/affiliate-disclosure.html">Bahasa</a>
-<a href="/de/affiliate-disclosure.html">Deutsch</a>
-<a href="/nl/affiliate-disclosure.html">Nederlands</a>
-<a href="/ar/affiliate-disclosure.html">العربية</a>
+<a class="active" href="/pl/affiliate-disclosure.html">English</a>
+<a href="/pl/affiliate-disclosure.html">Español</a>
+<a href="/pl/affiliate-disclosure.html">中文</a>
+<a href="/pl/affiliate-disclosure.html">日本語</a>
+<a href="/pl/affiliate-disclosure.html">Português</a>
+<a href="/pl/affiliate-disclosure.html">Русский</a>
+<a href="/pl/affiliate-disclosure.html">Italiano</a>
+<a href="/pl/affiliate-disclosure.html">Polski</a>
+<a href="/pl/affiliate-disclosure.html">Français</a>
+<a href="/pl/affiliate-disclosure.html">Bahasa</a>
+<a href="/pl/affiliate-disclosure.html">Deutsch</a>
+<a href="/pl/affiliate-disclosure.html">Nederlands</a>
+<a href="/pl/affiliate-disclosure.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/pl/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/affiliate-disclosure.html">English</option><option value="/es/affiliate-disclosure.html">Español</option><option value="/zh/affiliate-disclosure.html">中文</option><option value="/ja/affiliate-disclosure.html">日本語</option><option value="/pt/affiliate-disclosure.html">Português</option><option value="/ru/affiliate-disclosure.html">Русский</option><option value="/it/affiliate-disclosure.html">Italiano</option><option selected="" value="/pl/affiliate-disclosure.html">Polski</option><option value="/fr/affiliate-disclosure.html">Français</option><option value="/id/affiliate-disclosure.html">Bahasa</option><option value="/de/affiliate-disclosure.html">Deutsch</option><option value="/nl/affiliate-disclosure.html">Nederlands</option><option value="/ar/affiliate-disclosure.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
 <div class="page-hero">
-<h1>Ujawnienie partnerskie</h1>
-<p>Przejrzystość zgodna z FTC na temat tego, w jaki sposób WolveStack uzyskuje przychody</p>
+<h1>Affiliate Disclosure</h1>
+<p>FTC-compliant transparency about how WolveStack earns revenue</p>
 </div>
 <div class="content-wrap">
-<h2>Co to znaczy?</h2>
-<p>WolveStack uczestniczy w programach partnerskich z wybranymi sprzedawcami peptydów. Po kliknięciu na link sprzedawcy i dokonać zakupu, możemy zarobić małą prowizję bez dodatkowych kosztów dla Ciebie.</p>
-<h2>Które linki są partnerskie</h2>
-<p>Linki Vendor w naszym przewodniku sourcing i poszczególnych artykułów bocznych karty sprzedawca może być linki partnerskie. Naznaczamy je tam, gdzie to możliwe.</p>
-<h2>Jak to wpływa na nasze opinie</h2>
-<p>Nie ma. Nasze rankingi sprzedawców opierają się na danych z badań czystości, dokumentacji COA trzeciej strony, reputacji społeczności i doświadczenia klienta - nie prowizji. Odrzuciliśmy sprzedawców, którzy nie poznali naszego baru.</p>
-<h2>Sprzedawcy, z którymi pracujemy</h2>
-<p>My tylko współpracujemy z dostawcami mamy niezależnie ocenione jako spełniające minimalne standardy jakości: HPLC-sprawdzona czystość, trzecie-testy stron, przejrzyste pozyskiwanie.</p>
-<h2>Zgodność FTC</h2>
-<p>Ujawnienie to jest zgodne z wytycznymi FTC dotyczącymi potwierdzeń i zeznań (16 CFR część 255).</p>
-<h2>Pytania</h2>
-<p>wolvestack @ pm.me</p>
+<h2>FTC Compliance Disclosure</h2>
+<p>In accordance with the Federal Trade Commission's 16 CFR Part 255, we disclose that WolveStack participates in affiliate programs. Links marked as affiliate links earn us a commission at no additional cost to you. Our editorial content is not influenced by affiliate partnerships.</p>
+<h2>What This Means</h2>
+<p>WolveStack participates in affiliate programs with select peptide vendors. When you click a vendor link and make a purchase, we may earn a small commission at no extra cost to you.</p>
+<h2>Which Links Are Affiliate Links</h2>
+<p>Vendor links in our sourcing guide and individual article sidebar vendor cards may be affiliate links. We label these where possible.</p>
+<h2>How This Affects Our Reviews</h2>
+<p>It doesn't. Our vendor rankings are based on purity testing data, third-party COA documentation, community reputation, and customer experience — not commission rates. We have turned down higher-commission vendors who didn't meet our quality bar.</p>
+<h2>Vendors We Work With</h2>
+<p>We only affiliate with vendors we have independently assessed as meeting minimum quality standards: HPLC-verified purity, third-party testing, transparent sourcing.</p>
+<h2>FTC Compliance</h2>
+<p>This disclosure complies with FTC guidelines on endorsements and testimonials (16 CFR Part 255).</p>
+<h2>Questions</h2>
+<p>wolvestack@pm.me</p>
 </div>
 <footer>
-<p><a href="/pl/about.html">O</a><a href="/pl/privacy.html">Polityka prywatności</a><a href="/pl/affiliate-disclosure.html">Ujawnienie partnerskie</a><a href="/pl/disclaimer.html">Zastrzeżenie</a><a href="/pl/terms.html">Warunki korzystania</a></p>
-<p style="margin-top:10px">© 2026 WolveStack · Badania Peptydowe Inteligencja</p>
+<p><a href="/pl/about.html">About</a><a href="/pl/privacy.html">Privacy Policy</a><a href="/pl/affiliate-disclosure.html">Affiliate Disclosure</a><a href="/pl/disclaimer.html">Disclaimer</a><a href="/pl/terms.html">Terms of Use</a></p>
+<p style="margin-top:10px">© 2026 WolveStack · Research Peptide Intelligence</p>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);

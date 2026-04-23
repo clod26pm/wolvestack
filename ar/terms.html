@@ -11,11 +11,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
 <meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://wolvestack.com/ar/terms.html" rel="canonical"/>
-<title>المصطلحات المستخدمة</title>
+<title>Terms of Use | WolveStack</title>
 <style>
     :root {
       --navy: #0a1628;
@@ -275,82 +274,230 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/terms.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/terms.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/terms.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/terms.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/terms.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/terms.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/terms.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/terms.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/terms.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/terms.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/terms.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/terms.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/terms.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/terms.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
-<div class="logo"><a href="/ar/index.html" style="text-decoration:none;color:inherit">الذئاب<span>Stack</span></a></div>
+<div class="logo"><a href="/ar/index.html" style="text-decoration:none;color:inherit">Wolve<span>Stack</span></a></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/ar/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/ar/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/ar/tb-500-guide.html">TB-500</a></li>
+<li><a href="/ar/wolverine-stack.html">Stacks</a></li>
+<li><a href="/ar/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/terms.html">English</a>
-<a href="/es/terms.html">Español</a>
-<a href="/zh/terms.html">中文</a>
-<a href="/ja/terms.html">日本語</a>
-<a href="/pt/terms.html">Português</a>
-<a href="/ru/terms.html">Русский</a>
-<a href="/it/terms.html">Italiano</a>
-<a href="/pl/terms.html">Polski</a>
-<a href="/fr/terms.html">Français</a>
-<a href="/id/terms.html">Bahasa</a>
-<a href="/de/terms.html">Deutsch</a>
-<a href="/nl/terms.html">Nederlands</a>
-<a href="/ar/terms.html" class="active">العربية</a>
+<a class="active" href="/ar/terms.html">English</a>
+<a href="/ar/terms.html">Español</a>
+<a href="/ar/terms.html">中文</a>
+<a href="/ar/terms.html">日本語</a>
+<a href="/ar/terms.html">Português</a>
+<a href="/ar/terms.html">Русский</a>
+<a href="/ar/terms.html">Italiano</a>
+<a href="/ar/terms.html">Polski</a>
+<a href="/ar/terms.html">Français</a>
+<a href="/ar/terms.html">Bahasa</a>
+<a href="/ar/terms.html">Deutsch</a>
+<a href="/ar/terms.html">Nederlands</a>
+<a href="/ar/terms.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/ar/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/terms.html">English</option><option value="/es/terms.html">Español</option><option value="/zh/terms.html">中文</option><option value="/ja/terms.html">日本語</option><option value="/pt/terms.html">Português</option><option value="/ru/terms.html">Русский</option><option value="/it/terms.html">Italiano</option><option value="/pl/terms.html">Polski</option><option value="/fr/terms.html">Français</option><option value="/id/terms.html">Bahasa</option><option value="/de/terms.html">Deutsch</option><option value="/nl/terms.html">Nederlands</option><option selected="" value="/ar/terms.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
 <div class="page-hero">
-<h1>مدة الاستخدام</h1>
-<p>آخر تحديث: آذار/مارس 2026</p>
+<h1>Terms of Use</h1>
+<p>Last updated: March 2026</p>
 </div>
 <div class="content-wrap">
-<h2>قبول</h2>
-<p>من خلال الوصول إلى XTERMX000، كنت توافق على هذه الشروط.</p>
-<h2>الاستخدام التعليمي فقط</h2>
-<p>ويتم توفير المحتوى لأغراض البحث التعليمي. قد لا تستخدم محتوى WolveStack لإسداء المشورة للآخرين بشأن استخدام الباتيد في قدرة مهنية أو طبية.</p>
-<h2>الملكية الفكرية</h2>
-<p>جميع المحتويات الأصلية على WolveStack يملكها WolveStack. يمكنك أن تقتبس ما يصل إلى 50 كلمة مع الإسناد وربطه بالمقال الأصلي والاستنساخ الكامل يتطلب إذنا كتابيا.</p>
-<h2>الروابط المنتسبة</h2>
-<p>ويتضمن الموقع وصلات منتسبة. شاهدوا إفشاءنا</p>
-<h2>لا مصاريف</h2>
-<p>WolveStack تم توفيره كما هو دون ضمان من أي نوع. نحن لا نستحق الدقة أو الإكمال أو اللياقة لغرض معين.</p>
-<h2>الحد من المسؤولية</h2>
+<h2>Acceptance</h2>
+<p>By accessing WolveStack, you agree to these terms.</p>
+<h2>Educational Use Only</h2>
+<p>Content is provided for educational research purposes. You may not use WolveStack content to advise others on peptide use in a professional or medical capacity.</p>
+<h2>Intellectual Property</h2>
+<p>All original content on WolveStack is owned by WolveStack. You may quote up to 50 words with attribution and a link back to the original article. Reproduction in full requires written permission.</p>
+<h2>Affiliate Links</h2>
+<p>The site contains affiliate links. See our Affiliate Disclosure.</p>
+<h2>No Warranties</h2>
+<p>WolveStack is provided "as is" without warranty of any kind. We do not warrant accuracy, completeness, or fitness for a particular purpose.</p>
+<h2>Limitation of Liability</h2>
 <p>WolveStack shall not be liable for any damages arising from your use of information on this site.</p>
-<h2>التغييرات</h2>
-<p>ونحن نحتفظ بالحق في تحديث هذه المصطلحات في أي وقت. ويشكل الاستخدام المستمر قبولا.</p>
-<h2>قانون الإدارة</h2>
-<p>وتخضع هذه الأحكام للقانون المنطبق.</p>
+<h2>Changes</h2>
+<p>We reserve the right to update these terms at any time. Continued use constitutes acceptance.</p>
+<h2>Governing Law</h2>
+<p>These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to conflict of law principles. Any disputes arising under these terms shall be resolved in the state or federal courts located in Delaware.</p>
+<h2>Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless WolveStack, its operators, contributors, and affiliates from any claims, damages, losses, or expenses (including reasonable attorney fees) arising from your use of this site, your violation of these terms, or your use of any information obtained from this site.</p>
 </div>
 <div class="section-card cta-card">
 <h2>Research-Grade Sourcing</h2>
-<p>XTERMX00 شريك مع بائعين موثوقين لمركّبات البحوث التي تم اختبارها بشكل مستقل، مع نشرات COAs.</p>
+<p>WolveStack partners with trusted vendors for independently tested research compounds with published COAs.</p>
 <div class="cta-buttons">
 <a class="particle-btn particle-primary" href="https://particlepeptides.com/en/?refs=25135">Browse Particle Peptides →</a>
 <a class="limitless-btn limitless-primary" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704">Browse Limitless Biotech →</a>
 </div>
-<p class="cta-disclaimer">لأغراض البحث فقط الإفصاح المنتسب: (XTERMX00) يكسب لجنة للمشتريات المؤهلة بدون تكلفة إضافية لك.</p>
+<p class="cta-disclaimer">For research purposes only. Affiliate disclosure: WolveStack earns a commission on qualifying purchases at no additional cost to you.</p>
 </div>
 <footer>
-<p><a href="/ar/about.html">حول</a><a href="/ar/privacy.html">سياسة الخصوصية</a><a href="/ar/affiliate-disclosure.html">الكشف عن المعلومات</a><a href="/ar/disclaimer.html">Disclaimer</a><a href="/ar/terms.html">مدة الاستخدام</a></p>
-<p style="margin-top:10px">0226 WolveStack · Research Peptide Intelligence</p>
+<p><a href="/ar/about.html">About</a><a href="/ar/privacy.html">Privacy Policy</a><a href="/ar/affiliate-disclosure.html">Affiliate Disclosure</a><a href="/ar/disclaimer.html">Disclaimer</a><a href="/ar/terms.html">Terms of Use</a></p>
+<p style="margin-top:10px">© 2026 WolveStack · Research Peptide Intelligence</p>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);

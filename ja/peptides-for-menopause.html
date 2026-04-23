@@ -2,14 +2,13 @@
 
 <html lang="ja">
 <head>
+<link href="https://wolvestack.com/ja/peptides-for-menopause.html" rel="canonical"/>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Menopauseのための最もよいペプチッド:ホルモンのバランス、睡眠および回復</title>
 <meta content="更年期症状緩和のためのペプチドを探索:CJC-1295、BPC-157、PT-141、Epithalon、GHK-Cu、および多く。 熱いフラッシュ、睡眠、関節の痛み、およびホルモンのバランスへの科学に裏付けられたアプローチ。" name="description"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
-<link href="https://wolvestack.com/ja/peptides-for-menopause.html" rel="canonical"/>
+<link href="https://wolvestack.com/en/peptides-for-menopause.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="Menopauseのための最もよいペプチッド:ホルモンのバランス、睡眠および回復" property="og:title"/>
@@ -960,44 +959,190 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/peptides-for-menopause.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptides-for-menopause.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptides-for-menopause.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptides-for-menopause.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptides-for-menopause.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptides-for-menopause.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptides-for-menopause.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptides-for-menopause.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptides-for-menopause.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptides-for-menopause.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptides-for-menopause.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptides-for-menopause.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptides-for-menopause.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptides-for-menopause.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/ja/index.html">ウルブ<span>スタック</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/ja/bpc-157-guide.html">BPC-157の特長</a></li>
+<li><a href="/ja/tb-500-guide.html">TB-500の特長</a></li>
+<li><a href="/ja/wolverine-stack.html">スタック</a></li>
+<li><a href="/ja/peptide-sourcing-guide.html">ベンダー</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="お問い合わせ" type="text"/>
+<button aria-label="インフォメーション" class="search-btn" type="submit">ログイン</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="言語を選択" class="nav-lang-toggle">ブーツ<span class="arrow"></span></button>
 <div class="nav-lang-menu">
-<a href="/peptides-for-menopause.html">English</a>
-<a href="/es/peptides-for-menopause.html">Español</a>
-<a href="/zh/peptides-for-menopause.html">中文</a>
-<a href="/ja/peptides-for-menopause.html" class="active">日本語</a>
-<a href="/pt/peptides-for-menopause.html">Português</a>
-<a href="/ru/peptides-for-menopause.html">Русский</a>
-<a href="/it/peptides-for-menopause.html">Italiano</a>
-<a href="/pl/peptides-for-menopause.html">Polski</a>
-<a href="/fr/peptides-for-menopause.html">Français</a>
-<a href="/id/peptides-for-menopause.html">Bahasa</a>
-<a href="/de/peptides-for-menopause.html">Deutsch</a>
-<a href="/nl/peptides-for-menopause.html">Nederlands</a>
-<a href="/ar/peptides-for-menopause.html">العربية</a>
+<a class="active" href="/ja/peptides-for-menopause.html">日本語 English</a>
+<a href="/ja/peptides-for-menopause.html">スペイン語</a>
+<a href="/ja/peptides-for-menopause.html">ニュース</a>
+<a href="/ja/peptides-for-menopause.html">日本語 English</a>
+<a href="/ja/peptides-for-menopause.html">お問い合わせ</a>
+<a href="/ja/peptides-for-menopause.html">ありがたい</a>
+<a href="/ja/peptides-for-menopause.html">所在地:東京都</a>
+<a href="/ja/peptides-for-menopause.html">ポーランド</a>
+<a href="/ja/peptides-for-menopause.html">フランチェスコ</a>
+<a href="/ja/peptides-for-menopause.html">バハサ</a>
+<a href="/ja/peptides-for-menopause.html">ドイツ</a>
+<a href="/ja/peptides-for-menopause.html">日本語   English</a>
+<a href="/ja/peptides-for-menopause.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/ja/peptide-beginners-guide.html">詳細はこちら →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptides-for-menopause.html">English</option><option value="/es/peptides-for-menopause.html">Español</option><option value="/zh/peptides-for-menopause.html">中文</option><option selected="" value="/ja/peptides-for-menopause.html">日本語</option><option value="/pt/peptides-for-menopause.html">Português</option><option value="/ru/peptides-for-menopause.html">Русский</option><option value="/it/peptides-for-menopause.html">Italiano</option><option value="/pl/peptides-for-menopause.html">Polski</option><option value="/fr/peptides-for-menopause.html">Français</option><option value="/id/peptides-for-menopause.html">Bahasa</option><option value="/de/peptides-for-menopause.html">Deutsch</option><option value="/nl/peptides-for-menopause.html">Nederlands</option><option value="/ar/peptides-for-menopause.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Main Content -->
@@ -1041,6 +1186,9 @@
 <article-layout>
 <!-- Main Article Body -->
 <article-body>
+<div class="quick-answer">
+<p>•CJC-1295 + Ipamorelin - 睡眠、皮膚、および体組成のための成長ホルモンの回復をサポートします。 •BPC-157 — 関節の痛みおよび腸の軸線のための炎症抑制サポート。 •GHK-Cu —ホルモンの低下の間のコラーゲンの回復そして皮の健康。 ペプチドは、ホルモン、成長因子、神経伝達物質の独自の生産を調節するために体を信号することができるアミノ酸の短い鎖です。 Ipamorelinは、ソマトスタチンを抑制することなくGHリリースを刺激するグレリン受容体アゴニストです。 BPC-157 (ボディ保護混合物-157)は胃ジュースから得られる15アミノ酸のペプチッドです。 PT-141、別名bremelanotideは、仮面およびpostmenopausal女性で性欲の無秩序(HSDD)のためのFDA公認のペプチッド薬だけです。 GHK-Cu (銅のペプチッド)はコラーゲンおよびエラスチンの生産の驚くべき効果のtripeptideの複合体(グリシンヒスチジン リンに結合される)です。 夜間の汗、頻繁な目覚め、翌日の疲労に苦しんでいる月経の女性のために、DSIPは非薬学的アプローチを提供します。</p>
+</div>
 <h2>更年期障害とペプチドが注目される理由</h2>
 <p>更年期障害は、女性が直面する最も重要な生物学的移行の1つです。 年齢 45 と 55 の間で, エストロゲンとプロゲステロンの生産を低下させると、古典的なホットフラッシュよりも遠くまで拡張する生理学的変化のカスケードを引き起こします.</p>
 <p>症状はよく説明されています:突然の熱波と夜の汗、睡眠の断片、気分の揺れ、脳の霧、腟の乾燥、加速された皮膚と髪の薄く、関節の痛み、骨密度の損失、および代謝シフト。 しかし、しばしば見落とされているのは、より広いホルモンの画像です。 エストロゲンとプロゲステロンは、単に生殖システムを調整しません。それは神経伝達物質、炎症マーカー、睡眠アーキテクチャ、コラーゲン合成、さらには腸のバリア機能に影響を与えます。</p>

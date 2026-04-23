@@ -2,22 +2,6 @@
 
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://wolvestack.com/en/peptides-for-tendinitis.html">
-<link rel="alternate" hreflang="en" href="https://wolvestack.com/en/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="es" href="https://wolvestack.com/es/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="zh" href="https://wolvestack.com/zh/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="ja" href="https://wolvestack.com/ja/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="pt" href="https://wolvestack.com/pt/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="ru" href="https://wolvestack.com/ru/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="it" href="https://wolvestack.com/it/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="pl" href="https://wolvestack.com/pl/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="fr" href="https://wolvestack.com/fr/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="id" href="https://wolvestack.com/id/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="de" href="https://wolvestack.com/de/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="nl" href="https://wolvestack.com/nl/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="ar" href="https://wolvestack.com/ar/peptides-for-tendinitis.html"/>
-<link rel="alternate" hreflang="x-default" href="https://wolvestack.com/en/peptides-for-tendinitis.html"/>
-
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -192,6 +176,7 @@
   }
 
 
+
   /* Search Bar Styles */
   .nav-search {
     position: relative;
@@ -339,6 +324,7 @@
   }
 
   
+  /* Nav Layout */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
@@ -356,12 +342,131 @@
   .nav-links a:hover { color: var(--teal-light); }
   .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
   .nav-cta:hover { background: var(--teal-light); }
-  </style>
-</meta></meta></meta></head>
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+</meta></meta></meta><link href="https://wolvestack.com/en/peptides-for-tendinitis.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptides-for-tendinitis.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptides-for-tendinitis.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptides-for-tendinitis.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptides-for-tendinitis.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptides-for-tendinitis.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptides-for-tendinitis.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptides-for-tendinitis.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptides-for-tendinitis.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptides-for-tendinitis.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptides-for-tendinitis.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptides-for-tendinitis.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptides-for-tendinitis.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptides-for-tendinitis.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
 <li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
 <li><a href="/en/tb-500-guide.html">TB-500</a></li>
@@ -370,28 +475,37 @@
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/en/bpc-157-guide.html" class="active">English</a>
-<a href="/es/bpc-157-guide.html">Español</a>
-<a href="/zh/bpc-157-guide.html">中文</a>
-<a href="/ja/bpc-157-guide.html">日本語</a>
-<a href="/pt/bpc-157-guide.html">Português</a>
-<a href="/ru/bpc-157-guide.html">Русский</a>
-<a href="/it/bpc-157-guide.html">Italiano</a>
-<a href="/pl/bpc-157-guide.html">Polski</a>
-<a href="/fr/bpc-157-guide.html">Français</a>
-<a href="/id/bpc-157-guide.html">Bahasa</a>
-<a href="/de/bpc-157-guide.html">Deutsch</a>
-<a href="/nl/bpc-157-guide.html">Nederlands</a>
-<a href="/ar/bpc-157-guide.html">العربية</a>
+<a class="active" href="/en/peptides-for-tendinitis.html">English</a>
+<a href="/en/peptides-for-tendinitis.html">Español</a>
+<a href="/en/peptides-for-tendinitis.html">中文</a>
+<a href="/en/peptides-for-tendinitis.html">日本語</a>
+<a href="/en/peptides-for-tendinitis.html">Português</a>
+<a href="/en/peptides-for-tendinitis.html">Русский</a>
+<a href="/en/peptides-for-tendinitis.html">Italiano</a>
+<a href="/en/peptides-for-tendinitis.html">Polski</a>
+<a href="/en/peptides-for-tendinitis.html">Français</a>
+<a href="/en/peptides-for-tendinitis.html">Bahasa</a>
+<a href="/en/peptides-for-tendinitis.html">Deutsch</a>
+<a href="/en/peptides-for-tendinitis.html">Nederlands</a>
+<a href="/en/peptides-for-tendinitis.html">العربية</a>
 </div>
 </div>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/peptides-for-tendinitis.html">English</option><option value="/es/peptides-for-tendinitis.html">Español</option><option value="/zh/peptides-for-tendinitis.html">中文</option><option value="/ja/peptides-for-tendinitis.html">日本語</option><option value="/pt/peptides-for-tendinitis.html">Português</option><option value="/ru/peptides-for-tendinitis.html">Русский</option><option value="/it/peptides-for-tendinitis.html">Italiano</option><option value="/pl/peptides-for-tendinitis.html">Polski</option><option value="/fr/peptides-for-tendinitis.html">Français</option><option value="/id/peptides-for-tendinitis.html">Bahasa</option><option value="/de/peptides-for-tendinitis.html">Deutsch</option><option value="/nl/peptides-for-tendinitis.html">Nederlands</option><option value="/ar/peptides-for-tendinitis.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
@@ -414,8 +528,8 @@
 <p><strong>Research context only.</strong> The peptides discussed on WolveStack are research chemicals not approved for human use by the FDA. Nothing on this page constitutes medical advice. Consult a qualified healthcare professional before use.</p>
 </div>
 <div class="quick-answer">
-      <p>BPC-157 and TB-500 for tendinitis — mechanisms, dosing protocols, and what the research actually shows for Achilles, elbow, and shoulder tendons. BPC-157's tendon-healing mechanism centres on its ability to upregulate tendon fibroblast activity and stimulate the expression of growth hormone receptors in tendon cells. For tendinitis (inflammation without complete rupture), BPC-157's additional anti-inflammatory effects — particularly modulation of the NO-cGMP pathway and reduction of inflammatory cytokine signalling — address the acute inflammatory component while simultaneously promoting structural repair. TB-500 (Thymosin Beta-4) works through an entirely different mechanism: regulation of actin polymerisation. TB-500 is always injected subcutaneously at any convenient site — typically abdomen or thigh — due to its systemic mechanism. For tendinitis, the evidence supports localised injection of BPC-157 near (not into) the tendon rather than distant subcutaneous injection. Products ship from the USA with published purity certificates.</p>
-    </div>
+<p>BPC-157 and TB-500 for tendinitis — mechanisms, dosing protocols, and what the research actually shows for Achilles, elbow, and shoulder tendons. BPC-157's tendon-healing mechanism centres on its ability to upregulate tendon fibroblast activity and stimulate the expression of growth hormone receptors in tendon cells. For tendinitis (inflammation without complete rupture), BPC-157's additional anti-inflammatory effects — particularly modulation of the NO-cGMP pathway and reduction of inflammatory cytokine signalling — address the acute inflammatory component while simultaneously promoting structural repair. TB-500 (Thymosin Beta-4) works through an entirely different mechanism: regulation of actin polymerisation. TB-500 is always injected subcutaneously at any convenient site — typically abdomen or thigh — due to its systemic mechanism. For tendinitis, the evidence supports localised injection of BPC-157 near (not into) the tendon rather than distant subcutaneous injection. Products ship from the USA with published purity certificates.</p>
+</div>
 <div class="section-card">
 <h2>How BPC-157 Repairs Tendons</h2>
 <p>BPC-157's tendon-healing mechanism centres on its ability to upregulate tendon fibroblast activity and stimulate the expression of growth hormone receptors in tendon cells. In multiple rodent models involving transected Achilles tendons and ruptured ligaments, BPC-157 produced dramatically faster functional recovery compared to controls — with histological analysis showing improved collagen organisation and greater tensile strength at equivalent timepoints.</p><p>The angiogenic component is critical for tendon healing specifically. Tendons are notoriously hypovascular — their poor blood supply is a primary reason they heal slowly. BPC-157's VEGFR2-mediated angiogenesis creates new vasculature in the healing tendon, improving oxygen and nutrient delivery throughout the repair process. This addresses a fundamental biological bottleneck that loading protocols and conventional therapy cannot overcome.</p><p>For tendinitis (inflammation without complete rupture), BPC-157's additional anti-inflammatory effects — particularly modulation of the NO-cGMP pathway and reduction of inflammatory cytokine signalling — address the acute inflammatory component while simultaneously promoting structural repair. This dual action is pharmacologically unusual and explains why it outperforms single-mechanism interventions.</p>
@@ -500,7 +614,13 @@
 <p>© 2026 WolveStack. For research and educational purposes only.</p>
 <p class="disclaimer">WolveStack publishes research summaries for educational purposes only. Nothing here constitutes medical advice. All peptides are for research use only.</p>
 
-
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option selected="" value="/en/peptides-for-tendinitis.html">English</option><option value="/es/peptides-for-tendinitis.html">Español</option><option value="/zh/peptides-for-tendinitis.html">中文</option><option value="/ja/peptides-for-tendinitis.html">日本語</option><option value="/pt/peptides-for-tendinitis.html">Português</option><option value="/ru/peptides-for-tendinitis.html">Русский</option><option value="/it/peptides-for-tendinitis.html">Italiano</option><option value="/pl/peptides-for-tendinitis.html">Polski</option><option value="/fr/peptides-for-tendinitis.html">Français</option><option value="/id/peptides-for-tendinitis.html">Bahasa</option><option value="/de/peptides-for-tendinitis.html">Deutsch</option><option value="/nl/peptides-for-tendinitis.html">Nederlands</option><option value="/ar/peptides-for-tendinitis.html">العربية</option>
+</select>
+</div>
 </footer>
 <section class="related-articles">
 <div class="related-inner">
@@ -515,37 +635,49 @@
 </section>
 <script src="/email-popup.js"></script>
 <script>
-// Language dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+  // Language dropdown toggle
+  (function() {
+    const navLang = document.querySelector('.nav-lang');
+    const navLangToggle = document.querySelector('.nav-lang-toggle');
+
+    if (navLangToggle) {
+      navLangToggle.addEventListener('click', function(e) {
+        navLang.classList.toggle('open');
+        e.stopPropagation();
+      });
+    }
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
+    document.addEventListener('click', function() {
+      if (navLang) navLang.classList.remove('open');
     });
-  }
+  })();
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
-});
+  // Search functionality
+  (function() {
+    const searchForm = document.querySelector('.nav-search form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = this.querySelector('.search-input').value;
+        if (query.trim()) {
+          // Determine the search URL based on current language
+          let currentLang = 'en';
+          const pathname = window.location.pathname;
+          const langMatch = pathname.match(/^\/([a-z]{2})\//);
+          if (langMatch) {
+            currentLang = langMatch[1];
+          }
+          const searchUrl = currentLang === 'en'
+            ? '/search.html?q=' + encodeURIComponent(query)
+            : '/' + currentLang + '/search.html?q=' + encodeURIComponent(query);
+          window.location.href = searchUrl;
+        }
+      });
+    }
+  })();
+
 </script>
-
 </body>
 </html>

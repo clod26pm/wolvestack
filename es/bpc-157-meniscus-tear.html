@@ -2,14 +2,13 @@
 
 <html lang="es">
 <head>
+<link href="https://wolvestack.com/es/bpc-157-meniscus-tear.html" rel="canonical"/>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>BPC-157 para Meniscus Tear: Lo que la investigación muestra</title>
 <meta content="Descubra cómo BPC-157 promueve la curación de meniscos a través de la reparación de fibrocartilación. Aprenda acerca de los desafíos de curación de zonas blancas vs rojas, protocolos basados en evidencia y expectativas realistas." name="description"/>
 <meta content="index, follow" name="robots"/>
-<link href="https://wolvestack.com/es/bpc-157-meniscus-tear.html" rel="canonical"/>
+<link href="https://wolvestack.com/en/bpc-157-meniscus-tear.html" rel="canonical"/>
 <meta content="BPC-157 para Meniscus Tear: Lo que la investigación muestra" property="og:title"/>
 <meta content="Guía respaldada por investigación para usar BPC-157 para lágrimas de menisco, incluyendo protocolos, dosificación y terapias combinadas." property="og:description"/>
 <meta content="article" property="og:type"/>
@@ -336,43 +335,189 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/bpc-157-meniscus-tear.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/bpc-157-meniscus-tear.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/bpc-157-meniscus-tear.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/bpc-157-meniscus-tear.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/bpc-157-meniscus-tear.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/bpc-157-meniscus-tear.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/bpc-157-meniscus-tear.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/bpc-157-meniscus-tear.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/bpc-157-meniscus-tear.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/bpc-157-meniscus-tear.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/bpc-157-meniscus-tear.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/bpc-157-meniscus-tear.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/bpc-157-meniscus-tear.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/bpc-157-meniscus-tear.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/es/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/es/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/es/tb-500-guide.html">TB-500</a></li>
+<li><a href="/es/wolverine-stack.html">Stacks</a></li>
+<li><a href="/es/peptide-sourcing-guide.html">Vendedores</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Buscar..." type="text"/>
+<button aria-label="Búsqueda" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Seleccionar idioma" class="nav-lang-toggle">🌐<span class="arrow">.</span></button>
 <div class="nav-lang-menu">
-<a href="/bpc-157-meniscus-tear.html">English</a>
-<a href="/es/bpc-157-meniscus-tear.html" class="active">Español</a>
-<a href="/zh/bpc-157-meniscus-tear.html">中文</a>
-<a href="/ja/bpc-157-meniscus-tear.html">日本語</a>
-<a href="/pt/bpc-157-meniscus-tear.html">Português</a>
-<a href="/ru/bpc-157-meniscus-tear.html">Русский</a>
-<a href="/it/bpc-157-meniscus-tear.html">Italiano</a>
-<a href="/pl/bpc-157-meniscus-tear.html">Polski</a>
-<a href="/fr/bpc-157-meniscus-tear.html">Français</a>
-<a href="/id/bpc-157-meniscus-tear.html">Bahasa</a>
-<a href="/de/bpc-157-meniscus-tear.html">Deutsch</a>
-<a href="/nl/bpc-157-meniscus-tear.html">Nederlands</a>
-<a href="/ar/bpc-157-meniscus-tear.html">العربية</a>
+<a class="active" href="/es/bpc-157-meniscus-tear.html">Inglés</a>
+<a href="/es/bpc-157-meniscus-tear.html">Español</a>
+<a href="/es/bpc-157-meniscus-tear.html">中文</a>
+<a href="/es/bpc-157-meniscus-tear.html">日本語</a>
+<a href="/es/bpc-157-meniscus-tear.html">Português</a>
+<a href="/es/bpc-157-meniscus-tear.html">Русский</a>
+<a href="/es/bpc-157-meniscus-tear.html">Italiano</a>
+<a href="/es/bpc-157-meniscus-tear.html">Polski</a>
+<a href="/es/bpc-157-meniscus-tear.html">Français</a>
+<a href="/es/bpc-157-meniscus-tear.html">Bahasa</a>
+<a href="/es/bpc-157-meniscus-tear.html">Deutsch</a>
+<a href="/es/bpc-157-meniscus-tear.html">Nederlands</a>
+<a href="/es/bpc-157-meniscus-tear.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/es/peptide-beginners-guide.html">Inicio Aquí →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/bpc-157-meniscus-tear.html">English</option><option selected="" value="/es/bpc-157-meniscus-tear.html">Español</option><option value="/zh/bpc-157-meniscus-tear.html">中文</option><option value="/ja/bpc-157-meniscus-tear.html">日本語</option><option value="/pt/bpc-157-meniscus-tear.html">Português</option><option value="/ru/bpc-157-meniscus-tear.html">Русский</option><option value="/it/bpc-157-meniscus-tear.html">Italiano</option><option value="/pl/bpc-157-meniscus-tear.html">Polski</option><option value="/fr/bpc-157-meniscus-tear.html">Français</option><option value="/id/bpc-157-meniscus-tear.html">Bahasa</option><option value="/de/bpc-157-meniscus-tear.html">Deutsch</option><option value="/nl/bpc-157-meniscus-tear.html">Nederlands</option><option value="/ar/bpc-157-meniscus-tear.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="article-container">
@@ -408,6 +553,9 @@
 <p style="margin: 0;">Este artículo es para<strong>con fines informativos y educativos únicamente</strong>y no constituye asesoramiento médico. Los compuestos discutidos son químicos de investigación que son<strong>no aprobado por la FDA</strong>para uso humano. Consulte siempre a un profesional de la salud con licencia antes de considerar cualquier protocolo de péptidos. WolveStack no tiene personal médico y no diagnostica, trata o prescribe. Ver todo<a href="/es/disclaimer.html" style="color: #991b1b; text-decoration: underline;">descargo</a>.</p>
 </div>
 <div class="vendor-section">
+<div class="quick-answer">
+<p>Comprender los desafíos de curación de meniscos, por qué BPC-157 muestra la promesa, y qué expectativas realistas parecen para la recuperación de rodillas. Péptidos de alta calidad con estrictos controles de calidad y pruebas de terceros. BPC-157 destaca en la promoción de la angiogénesis y la señalización del factor de crecimiento; TB-500 es fuerte en la modulación de la inflamación y la prevención de la fibrosis. La inyección local concentra el péptido en el sitio de la lesión, potencialmente maximizando la respuesta curativa local. La zona blanca no tiene esencialmente suministro de sangre, que es una barrera fundamental para la curación. Combinados, deben crear teóricamente un ambiente de curación más favorable. De hecho, algunos cirujanos e investigadores sugieren utilizar BPC-157 post-cirugía para mejorar los resultados de la reparación. Investigación completa, protocolos y evidencia en todos los tipos de tejidos. Vea a fondo el uso de BPC-157 para la recuperación del tendón de Aquiles, con protocolos y expectativas realistas. BPC-157 puede promover la angiogénesis y la señalización del factor de crecimiento, potencialmente mejorando las condiciones de curación, pero hay pruebas limitadas que puede superar un grave déficit estructural en una gran ruptura de la zona blanca.</p>
+</div>
 <h2>Proveedores BPC-157</h2>
 <p style="margin-bottom: 2rem; color: var(--gray-700);">Hemos analizado estos proveedores para calidad de producto y servicio al cliente. Todos los enlaces son enlaces de afiliados que soportan WolveStack:</p>
 <div class="vendor-grid">

@@ -11,11 +11,10 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
 <meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://wolvestack.com/it/disclaimer.html" rel="canonical"/>
-<title>Disclaimer medico e di ricerca | WolveStack</title>
+<title>Medical &amp; Research Disclaimer | WolveStack</title>
 <style>
     :root {
       --navy: #0a1628;
@@ -265,69 +264,215 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/disclaimer.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/disclaimer.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/disclaimer.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/disclaimer.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/disclaimer.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/disclaimer.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/disclaimer.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/disclaimer.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/disclaimer.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/disclaimer.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/disclaimer.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/disclaimer.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/disclaimer.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/disclaimer.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header>
 <div class="logo"><a href="/it/index.html" style="text-decoration:none;color:inherit">Wolve<span>Stack</span></a></div>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/it/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/it/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/it/tb-500-guide.html">TB-500</a></li>
+<li><a href="/it/wolverine-stack.html">Stacks</a></li>
+<li><a href="/it/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/disclaimer.html">English</a>
-<a href="/es/disclaimer.html">Español</a>
-<a href="/zh/disclaimer.html">中文</a>
-<a href="/ja/disclaimer.html">日本語</a>
-<a href="/pt/disclaimer.html">Português</a>
-<a href="/ru/disclaimer.html">Русский</a>
-<a href="/it/disclaimer.html" class="active">Italiano</a>
-<a href="/pl/disclaimer.html">Polski</a>
-<a href="/fr/disclaimer.html">Français</a>
-<a href="/id/disclaimer.html">Bahasa</a>
-<a href="/de/disclaimer.html">Deutsch</a>
-<a href="/nl/disclaimer.html">Nederlands</a>
-<a href="/ar/disclaimer.html">العربية</a>
+<a class="active" href="/it/disclaimer.html">English</a>
+<a href="/it/disclaimer.html">Español</a>
+<a href="/it/disclaimer.html">中文</a>
+<a href="/it/disclaimer.html">日本語</a>
+<a href="/it/disclaimer.html">Português</a>
+<a href="/it/disclaimer.html">Русский</a>
+<a href="/it/disclaimer.html">Italiano</a>
+<a href="/it/disclaimer.html">Polski</a>
+<a href="/it/disclaimer.html">Français</a>
+<a href="/it/disclaimer.html">Bahasa</a>
+<a href="/it/disclaimer.html">Deutsch</a>
+<a href="/it/disclaimer.html">Nederlands</a>
+<a href="/it/disclaimer.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/it/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/disclaimer.html">English</option><option value="/es/disclaimer.html">Español</option><option value="/zh/disclaimer.html">中文</option><option value="/ja/disclaimer.html">日本語</option><option value="/pt/disclaimer.html">Português</option><option value="/ru/disclaimer.html">Русский</option><option selected="" value="/it/disclaimer.html">Italiano</option><option value="/pl/disclaimer.html">Polski</option><option value="/fr/disclaimer.html">Français</option><option value="/id/disclaimer.html">Bahasa</option><option value="/de/disclaimer.html">Deutsch</option><option value="/nl/disclaimer.html">Nederlands</option><option value="/ar/disclaimer.html">العربية</option>
+</select>
 </div>
 </nav>
 </header>
 <div class="page-hero">
-<h1>Disclaimer di ricerca</h1>
-<p>Si prega di leggere prima di utilizzare qualsiasi informazione su questo sito</p>
+<h1>Research Disclaimer</h1>
+<p>Please read before using any information on this site</p>
 </div>
 <div class="content-wrap">
-<h2>Non Consigli medici</h2>
-<p>Niente su WolveStack costituisce consigli medici, diagnosi o raccomandazioni di trattamento. Tutti i contenuti sono a scopo educativo e informativo. Consultare sempre un medico qualificato prima di iniziare qualsiasi protocollo peptide.</p>
-<h2>Uso solo di ricerca</h2>
-<p>Tutti i peptidi discussi su questo sito sono prodotti chimici di ricerca. Essi non sono approvati dalla FDA, EMA, o altri organismi normativi per uso terapeutico umano. Sono venduti solo per scopi di ricerca.</p>
-<h2>Nessuna garanzia di accuratezza</h2>
-<p>Mentre ci sforziamo di accuratezza, la ricerca peptide si evolve rapidamente. Alcune informazioni possono diventare obsolete. Non garantiamo che tutti i contenuti siano attuali o completi.</p>
-<h2>Variazione individuale</h2>
-<p>I risultati della ricerca variano ampiamente tra modelli animali e individui. Nulla qui dovrebbe essere interpretato come una previsione dei risultati per qualsiasi persona specifica.</p>
-<h2>Rischi gravi</h2>
-<p>L'uso di peptide senza supervisione medica comporta rischi reali tra cui ma non limitati a: ipoglicemia, reazioni allergiche, infezione a siti di iniezione, rischio di cancro (per peptidi angiogeni), e effetti a lungo termine sconosciuti.</p>
-<h2>La vostra responsabilità</h2>
-<p>Utilizzando questo sito, si riconosce che si assume la piena responsabilità per le proprie decisioni di ricerca e salute.</p>
+<h2>Not Medical Advice</h2>
+<p>Nothing on WolveStack constitutes medical advice, diagnosis, or treatment recommendations. All content is for educational and informational purposes only. Always consult a qualified physician before beginning any peptide protocol.</p>
+<h2>Research Use Only</h2>
+<p>All peptides discussed on this site are research chemicals. They are not approved by the FDA, EMA, or other regulatory bodies for human therapeutic use. They are sold for research purposes only.</p>
+<h2>No Guarantee of Accuracy</h2>
+<p>While we strive for accuracy, peptide research evolves rapidly. Some information may become outdated. We do not guarantee that all content is current or complete.</p>
+<h2>Individual Variation</h2>
+<p>Research results vary widely between animal models and individuals. Nothing here should be interpreted as a prediction of outcomes for any specific person.</p>
+<h2>Serious Risks</h2>
+<p>Peptide use without medical supervision carries real risks including but not limited to: hypoglycemia, allergic reactions, infection at injection sites, cancer risk (for angiogenic peptides), and unknown long-term effects.</p>
+<h2>Your Responsibility</h2>
+<p>By using this site, you acknowledge that you take full responsibility for your own research and health decisions.</p>
 </div>
 <footer>
-<p><a href="/it/about.html">Informazioni su</a><a href="/it/privacy.html">Informativa sulla privacy</a><a href="/it/affiliate-disclosure.html">Divulgazione affiliata</a><a href="/it/disclaimer.html">Disclaimer</a><a href="/it/terms.html">Condizioni d'uso</a></p>
-<p style="margin-top:10px">© 2026 WolveStack · Ricerca Peptide Intelligence</p>
+<p><a href="/it/about.html">About</a><a href="/it/privacy.html">Privacy Policy</a><a href="/it/affiliate-disclosure.html">Affiliate Disclosure</a><a href="/it/disclaimer.html">Disclaimer</a><a href="/it/terms.html">Terms of Use</a></p>
+<p style="margin-top:10px">© 2026 WolveStack · Research Peptide Intelligence</p>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);

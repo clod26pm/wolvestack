@@ -20,8 +20,6 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
         gtag('config', 'G-MLF04PQ0JV');
     </script>
 <meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>研究Peptides vs Collagen Peptides: 完全不同的事物 WolveStack.</title>
 <meta content="学习研究peptides(XTERMX000,TB-500)与collagen peptides之间的临界差异. 理解为什么这些不能互换。" name="description"/>
@@ -726,7 +724,145 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/peptides-vs-collagen.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptides-vs-collagen.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptides-vs-collagen.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptides-vs-collagen.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptides-vs-collagen.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptides-vs-collagen.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptides-vs-collagen.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptides-vs-collagen.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptides-vs-collagen.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptides-vs-collagen.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptides-vs-collagen.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptides-vs-collagen.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptides-vs-collagen.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptides-vs-collagen.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Sticky Navigation -->
@@ -782,6 +918,9 @@ SEO: Includes JSON-LD structured data, Open Graph, Twitter Cards
 <p><strong>研究peptides和collagen peptides是根本不同的事物.</strong>如XTERMX000和TB-500等研究肽是合成氨基酸序列,旨在针对特定生物机制. 柯拉根 p(Collagen peptides)是从动物来源水解的柯拉根蛋白,作为膳食补充品销售. 它们有不同的结构、机制、规章,不能互换使用。</p>
 </div>
 <!-- Section 1: What Are Research Peptides? -->
+<div class="quick-answer">
+<p>尽管营销混乱往往模糊了它们之间的界限,但全面指南来理解为什么这些peptides服务于根本不同的目的. 研究peptides和collagen peptides是根本不同的事物. 如XTERMX000和TB-500等研究肽是合成氨基酸序列,旨在针对特定生物机制. 柯拉根 p(Collagen peptides)是从动物来源水解的柯拉根蛋白,作为膳食补充品销售. 研究peptides代表一类由氨基酸特定序列组成的合成化合物,被设计成针对特定生物途径和细胞机制. 这些偶联都有独特的分子结构,并有不同的拟议作用机制. 研究的peptides与其他化合物的区别在于它们的特异性. 研究肽是专门设计的合成化合物,具有精确的氨基酸序列. 研究peptides通过特定的受体相互作用和细胞信号途径运行. 这是一个普遍进程,而不是目标明确的进程。</p>
+</div>
 <h2>什么是研究Peptides?</h2>
 <p>研究peptides代表一类由氨基酸特定序列组成的合成化合物,被设计成针对特定生物途径和细胞机制. 与collagen peptides是天然蛋白质的破解版本不同,研究peptides是在具有精确分子结构的实验室中刻意构建的,旨在与特定的受体或生物系统相互作用.</p>
 <p>最常讨论的研究peptides包括:在胃肠汁中发现的XTERMX000(Body保护化合物-157),一种15-氨基酸peptiide;TB-500(Thymosin Beta-4),一种参与肌肉发育和伤口愈合的内生peptides的合成版本;CJC-1295,旨在刺激生长激素释放;和GHK-Cu,一种铜peptides,可促进碳素合成和组织修复.</p>

@@ -11,21 +11,20 @@
   gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
-
 <meta name="robots" content="noindex, nofollow">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Calculadora de dosagem de peptídeos — BPC-157, TB-500 &amp; More .</title>
-<meta content="Calculadora livre de dosagem de peptídeos. Insira o tamanho do frasco para injetáveis e a dose desejada para obter matemática exata de reconstituição para BPC-157, TB-500 e outros peptídeos de pesquisa. Sem palpites." name="description"/>
+<title>Peptide Dosing Calculator — BPC-157, TB-500 &amp; More | WolveStack</title>
+<meta content="Free peptide dosing calculator. Enter your vial size and desired dose to get exact reconstitution math for BPC-157, TB-500, and other research peptides. No guesswork." name="description"/>
 <meta content="peptide dosing calculator, BPC-157 calculator, TB-500 calculator, reconstitution calculator, bacteriostatic water, peptide math" name="keywords"/>
 <link href="https://wolvestack.com/pt/peptide-calculator.html" rel="canonical"/>
-<meta content="Calculadora de dosagem de peptídeos — BPC-157, TB-500 &amp; More ." property="og:title">
-<meta content="Calculadora livre de dosagem de peptídeos. Obtenha matemática exata de reconstituição — sem adivinhações, sem erros." property="og:description">
-<meta content="https://wolvestack.com/pt/peptide-calculator.html" property="og:url">
-<meta content="website" property="og:type">
+<meta content="Peptide Dosing Calculator — BPC-157, TB-500 &amp; More | WolveStack" property="og:title"/>
+<meta content="Free peptide dosing calculator. Get exact reconstitution math — no guesswork, no errors." property="og:description"/>
+<meta content="https://wolvestack.com/pt/peptide-calculator.html" property="og:url"/>
+<meta content="website" property="og:type"/>
 <meta content="WolveStack" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Calculadora de dosagem de peptídios" name="twitter:title"/>
-<meta content="Calculadora livre de dosagem de peptídeos para BPC-157, TB-500 e mais." name="twitter:description"/>
+<meta content="Peptide Dosing Calculator | WolveStack" name="twitter:title"/>
+<meta content="Free peptide dosing calculator for BPC-157, TB-500 and more." name="twitter:description"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -328,62 +327,213 @@
     }
   }
 
-  </style>
-</meta></meta></meta></meta><link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-calculator.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-calculator.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-calculator.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-calculator.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-calculator.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-calculator.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-calculator.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-calculator.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-calculator.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-calculator.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-calculator.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-calculator.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-calculator.html" hreflang="x-default" rel="alternate"/></head>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
+<link href="https://wolvestack.com/en/peptide-calculator.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-calculator.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-calculator.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-calculator.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-calculator.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-calculator.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-calculator.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-calculator.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-calculator.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-calculator.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-calculator.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-calculator.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-calculator.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-calculator.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/pt/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/pt/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/pt/tb-500-guide.html">TB-500</a></li>
+<li><a href="/pt/wolverine-stack.html">Stacks</a></li>
+<li><a href="/pt/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/peptide-calculator.html">English</a>
-<a href="/es/peptide-calculator.html">Español</a>
-<a href="/zh/peptide-calculator.html">中文</a>
-<a href="/ja/peptide-calculator.html">日本語</a>
-<a href="/pt/peptide-calculator.html" class="active">Português</a>
-<a href="/ru/peptide-calculator.html">Русский</a>
-<a href="/it/peptide-calculator.html">Italiano</a>
-<a href="/pl/peptide-calculator.html">Polski</a>
-<a href="/fr/peptide-calculator.html">Français</a>
-<a href="/id/peptide-calculator.html">Bahasa</a>
-<a href="/de/peptide-calculator.html">Deutsch</a>
-<a href="/nl/peptide-calculator.html">Nederlands</a>
-<a href="/ar/peptide-calculator.html">العربية</a>
+<a class="active" href="/pt/peptide-calculator.html">English</a>
+<a href="/pt/peptide-calculator.html">Español</a>
+<a href="/pt/peptide-calculator.html">中文</a>
+<a href="/pt/peptide-calculator.html">日本語</a>
+<a href="/pt/peptide-calculator.html">Português</a>
+<a href="/pt/peptide-calculator.html">Русский</a>
+<a href="/pt/peptide-calculator.html">Italiano</a>
+<a href="/pt/peptide-calculator.html">Polski</a>
+<a href="/pt/peptide-calculator.html">Français</a>
+<a href="/pt/peptide-calculator.html">Bahasa</a>
+<a href="/pt/peptide-calculator.html">Deutsch</a>
+<a href="/pt/peptide-calculator.html">Nederlands</a>
+<a href="/pt/peptide-calculator.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/pt/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-calculator.html">English</option><option value="/es/peptide-calculator.html">Español</option><option value="/zh/peptide-calculator.html">中文</option><option value="/ja/peptide-calculator.html">日本語</option><option selected="" value="/pt/peptide-calculator.html">Português</option><option value="/ru/peptide-calculator.html">Русский</option><option value="/it/peptide-calculator.html">Italiano</option><option value="/pl/peptide-calculator.html">Polski</option><option value="/fr/peptide-calculator.html">Français</option><option value="/id/peptide-calculator.html">Bahasa</option><option value="/de/peptide-calculator.html">Deutsch</option><option value="/nl/peptide-calculator.html">Nederlands</option><option value="/ar/peptide-calculator.html">العربية</option>
+</select>
 </div>
 </nav>
 <div class="hero">
-<div class="hero-badge">Ferramenta Livre</div>
-<h1>Calculadora de dosagem de peptídeos</h1>
-<p>Insira as especificações do frasco para injetáveis e a dose alvo. Obtenha matemática de reconstituição exata — sem adivinhações, sem erros de seringa.</p>
+<div class="hero-badge">Free Tool</div>
+<h1>Peptide Dosing Calculator</h1>
+<p>Enter your vial specs and target dose. Get exact reconstitution math — no guesswork, no syringe errors.</p>
 </div>
 <div class="container">
 <div class="main">
+<!-- MEDICAL DISCLAIMER -->
+<div class="info-box amber" style="margin-bottom: 24px;">
+<div class="info-icon">⚠️</div>
+<p><strong>Research Reference Only —</strong> This calculator is a mathematical conversion tool for educational purposes only. It does not constitute medical advice, diagnosis, or treatment. The compounds referenced are research chemicals not approved by the FDA for human use. Never self-administer any substance without supervision from a licensed healthcare professional. See our full <a href="/pt/disclaimer.html" style="color: inherit; text-decoration: underline;">disclaimer</a>.</p>
+</div>
 <!-- MAIN CALCULATOR -->
 <div class="calc-card">
 <div class="calc-header">
-<h2>Calculadora de reconstituição</h2>
-<p>Funciona para BPC-157, TB-500, CJC-1295, Ipamorelin, e qualquer peptídeo liofilizado</p>
+<h2>Reconstitution Calculator</h2>
+<p>Works for BPC-157, TB-500, CJC-1295, Ipamorelin, and any lyophilized peptide</p>
 </div>
 <div class="calc-body">
 <!-- PRESETS -->
 <div class="presets">
-<div class="presets-label">Predefinições Rápidas</div>
+<div class="presets-label">Quick Presets</div>
 <div class="preset-grid">
 <button class="preset-btn" onclick="loadPreset('bpc157_5mg')">BPC-157 5mg</button>
 <button class="preset-btn" onclick="loadPreset('bpc157_10mg')">BPC-157 10mg</button>
@@ -397,238 +547,238 @@
 <!-- INPUTS -->
 <div class="form-grid">
 <div class="form-group">
-<label>Tamanho do frasco (mg)</label>
-<input id="vialMg" min="0.1" placeholder="Por exemplo, 5" step="0.1" type="number" value=""/>
-<div class="unit">Miligramas totais no frasco para injectáveis</div>
+<label>Vial Size (mg)</label>
+<input id="vialMg" min="0.1" placeholder="e.g. 5" step="0.1" type="number" value=""/>
+<div class="unit">Total milligrams in the vial</div>
 </div>
 <div class="form-group">
-<label>Água bacteriana adicionada (mL)</label>
-<input id="bacWater" min="0.1" placeholder="Por exemplo, 2" step="0.1" type="number" value=""/>
-<div class="unit">Quanta água BAC você vai adicionar</div>
+<label>Bacteriostatic Water Added (mL)</label>
+<input id="bacWater" min="0.1" placeholder="e.g. 2" step="0.1" type="number" value=""/>
+<div class="unit">How much BAC water you'll add</div>
 </div>
 <div class="form-group">
-<label>Dose alvo (mcg)</label>
-<input id="doseMcg" min="1" placeholder="Por exemplo, 250" step="1" type="number" value=""/>
-<div class="unit">A sua dose pretendida em microgramas</div>
+<label>Target Dose (mcg)</label>
+<input id="doseMcg" min="1" placeholder="e.g. 250" step="1" type="number" value=""/>
+<div class="unit">Your intended dose in micrograms</div>
 </div>
 <div class="form-group">
-<label>Tipo de seringa</label>
+<label>Syringe Type</label>
 <select id="syringeType">
-<option value="100">Seringa de insulina - 100 unidades/mL</option>
-<option value="50">Seringa de insulina - 50 unidades/mL</option>
+<option value="100">Insulin syringe — 100 units/mL</option>
+<option value="50">Insulin syringe — 50 units/mL</option>
 </select>
-<div class="unit">A maioria dos usuários de peptídeos usam seringas U-100</div>
+<div class="unit">Most peptide users use U-100 syringes</div>
 </div>
 </div>
-<button class="calc-btn" onclick="calculate()">Calcular a minha dose →</button>
+<button class="calc-btn" onclick="calculate()">Calculate My Dose →</button>
 <!-- RESULTS -->
 <div class="results" id="results">
-<div class="results-title">Seus resultados de dosagem</div>
+<div class="results-title">Your Dosing Results</div>
 <div class="result-grid">
 <div class="result-box">
-<div class="r-label">Concentração</div>
+<div class="r-label">Concentration</div>
 <div class="r-value" id="res-conc">—</div>
-<div class="r-unit">mcg por mL</div>
+<div class="r-unit">mcg per mL</div>
 </div>
 <div class="result-box highlight">
-<div class="r-label">Desenhar o Volume</div>
+<div class="r-label">Draw Volume</div>
 <div class="r-value" id="res-ml">—</div>
-<div class="r-unit">mL por dose</div>
+<div class="r-unit">mL per dose</div>
 </div>
 <div class="result-box highlight">
-<div class="r-label">Unidades da seringa</div>
+<div class="r-label">Syringe Units</div>
 <div class="r-value" id="res-units">—</div>
-<div class="r-unit">unidades na seringa</div>
+<div class="r-unit">units on syringe</div>
 </div>
 <div class="result-box">
-<div class="r-label">Dose por frasco para injectáveis</div>
+<div class="r-label">Doses per Vial</div>
 <div class="r-value" id="res-doses">—</div>
-<div class="r-unit">Dose total</div>
+<div class="r-unit">total doses</div>
 </div>
 </div>
 <div class="instructions">
-<h4>Instruções passo a passo</h4>
+<h4>Step-by-Step Instructions</h4>
 <ol class="steps" id="steps-list"></ol>
 </div>
 <div class="info-box amber">
-<div class="info-icon">O que é isso?</div>
-<p><strong>Apenas uso de pesquisa.</strong>Estes cálculos são para referência educacional. Peptídeos são produtos químicos de pesquisa não programados, medicamentos não aprovados. Consulte um profissional médico qualificado antes de usar. WolveStack não fornece aconselhamento médico.</p>
+<div class="info-icon">⚠️</div>
+<p><strong>Research use only.</strong> These calculations are for educational reference. Peptides are unscheduled research chemicals, not approved medications. Consult a qualified medical professional before use. WolveStack does not provide medical advice.</p>
 </div>
 </div>
 </div>
 </div>
 <!-- REFERENCE TABLE -->
 <div class="ref-section">
-<h3>Dose Comum de Referência de Peptídeos</h3>
-<p class="sub">Baseado em protocolos comunitários discutidos em fóruns de pesquisa. Não é um conselho médico.</p>
+<h3>Common Peptide Reference Doses</h3>
+<p class="sub">Based on community protocols discussed in research forums. Not medical advice.</p>
 <table>
 <thead>
 <tr>
-<th>Peptídeo</th>
-<th>Intervalo Comum</th>
-<th>Frequência Típica</th>
-<th>Rota</th>
-<th>Complexidade</th>
+<th>Peptide</th>
+<th>Common Range</th>
+<th>Typical Frequency</th>
+<th>Route</th>
+<th>Complexity</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>BPC-157</strong></td>
 <td>200–500 mcg</td>
-<td>Uma ou duas vezes por dia</td>
-<td>SubQ ou IM</td>
-<td><span class="tag low">Baixo</span></td>
+<td>Once or twice daily</td>
+<td>SubQ or IM</td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>TB-500</strong></td>
 <td>2–5 mg</td>
-<td>2× semanal (carregamento), semanal (manutenção)</td>
-<td>SubQ ou IM</td>
-<td><span class="tag low">Baixo</span></td>
+<td>2× weekly (loading), weekly (maintenance)</td>
+<td>SubQ or IM</td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>Wolverine Stack</strong></td>
-<td>250 mcg BPC + 2,5 mg TB</td>
-<td>BPC diariamente, TB 2×/semana</td>
+<td>250 mcg BPC + 2.5 mg TB</td>
+<td>BPC daily, TB 2×/week</td>
 <td>SubQ</td>
-<td><span class="tag med">Médio</span></td>
+<td><span class="tag med">Medium</span></td>
 </tr>
 <tr>
-<td><strong>CJC-1295 (sem DAC)</strong></td>
+<td><strong>CJC-1295 (no DAC)</strong></td>
 <td>100–200 mcg</td>
-<td>3× diário (pulsado)</td>
+<td>3× daily (pulsed)</td>
 <td>SubQ</td>
-<td><span class="tag med">Médio</span></td>
+<td><span class="tag med">Medium</span></td>
 </tr>
 <tr>
 <td><strong>Ipamorelin</strong></td>
 <td>200–300 mcg</td>
-<td>3× diário (pulsado)</td>
+<td>3× daily (pulsed)</td>
 <td>SubQ</td>
-<td><span class="tag med">Médio</span></td>
+<td><span class="tag med">Medium</span></td>
 </tr>
 <tr>
 <td><strong>Selank</strong></td>
 <td>250–500 mcg</td>
-<td>Uma ou duas vezes por dia</td>
-<td>Intranasal ou SubQ</td>
-<td><span class="tag low">Baixo</span></td>
+<td>Once or twice daily</td>
+<td>Intranasal or SubQ</td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>PT-141</strong></td>
-<td>0,5–2 mg</td>
-<td>Se necessário (1-2 horas antes)</td>
+<td>0.5–2 mg</td>
+<td>As needed (1–2 hrs pre)</td>
 <td>SubQ</td>
-<td><span class="tag low">Baixo</span></td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>AOD-9604</strong></td>
 <td>300–500 mcg</td>
-<td>Uma vez por dia (rápido)</td>
+<td>Once daily (fasted)</td>
 <td>SubQ</td>
-<td><span class="tag low">Baixo</span></td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>GHK-Cu</strong></td>
 <td>1–3 mg</td>
-<td>Uma vez por dia</td>
-<td>SubQ ou tópico</td>
-<td><span class="tag low">Baixo</span></td>
+<td>Once daily</td>
+<td>SubQ or topical</td>
+<td><span class="tag low">Low</span></td>
 </tr>
 <tr>
 <td><strong>Epithalon</strong></td>
 <td>5–10 mg</td>
-<td>Uma vez por dia (ciclos)</td>
-<td>SubQ ou IM</td>
-<td><span class="tag med">Médio</span></td>
+<td>Once daily (cycles)</td>
+<td>SubQ or IM</td>
+<td><span class="tag med">Medium</span></td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- CONVERSION TABLE -->
 <div class="ref-section">
-<h3>Referência de conversão rápida da unidade</h3>
-<p class="sub">A matemática mcg → mL que viaja pela primeira vez.</p>
+<h3>Quick Unit Conversion Reference</h3>
+<p class="sub">The mcg → mL math that trips up first-timers.</p>
 <table>
 <thead>
 <tr>
-<th>Se o frasco for...</th>
-<th>Você adiciona 1 mL BAC água</th>
-<th>Você adiciona 2 mL BAC água</th>
-<th>Você adiciona 3 mL BAC água</th>
+<th>If your vial is…</th>
+<th>You add 1 mL BAC water</th>
+<th>You add 2 mL BAC water</th>
+<th>You add 3 mL BAC water</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>5 frasco para injectáveis de mg</strong></td>
-<td>5.000 mcg/mL → 250 mcg = 5 unidades</td>
-<td>2.500 mcg/mL → 250 mcg = 10 unidades</td>
-<td>1.667 mcg/mL → 250 mcg = 15 unidades</td>
+<td><strong>5 mg vial</strong></td>
+<td>5,000 mcg/mL → 250 mcg = 5 units</td>
+<td>2,500 mcg/mL → 250 mcg = 10 units</td>
+<td>1,667 mcg/mL → 250 mcg = 15 units</td>
 </tr>
 <tr>
-<td><strong>10 frasco para injectáveis de mg</strong></td>
-<td>10 000 mcg/mL → 250 mcg = 2, 5 unidades</td>
-<td>5.000 mcg/mL → 250 mcg = 5 unidades</td>
-<td>3,333 mcg/mL → 250 mcg = 7,5 unidades</td>
+<td><strong>10 mg vial</strong></td>
+<td>10,000 mcg/mL → 250 mcg = 2.5 units</td>
+<td>5,000 mcg/mL → 250 mcg = 5 units</td>
+<td>3,333 mcg/mL → 250 mcg = 7.5 units</td>
 </tr>
 <tr>
-<td><strong>2 frasco para injectáveis de mg</strong></td>
-<td>2000 mcg/mL → 200 mcg = 10 unidades</td>
-<td>1000 mcg/mL → 200 mcg = 20 unidades</td>
-<td>667 mcg/mL → 200 mcg = 30 unidades</td>
+<td><strong>2 mg vial</strong></td>
+<td>2,000 mcg/mL → 200 mcg = 10 units</td>
+<td>1,000 mcg/mL → 200 mcg = 20 units</td>
+<td>667 mcg/mL → 200 mcg = 30 units</td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- FAQ -->
 <div class="faq-section">
-<h3>Perguntas Frequentes da Calculadora</h3>
+<h3>Calculator FAQ</h3>
 <div class="faq-list">
 <div class="faq-item">
-<div class="faq-q">Por que todos usam água bacteriostática em vez de água estéril?</div>
-<p class="faq-a">A água bacteriostática contém 0,9% de álcool benzílico, que inibe o crescimento bacteriano no frasco após ter perfurado a rolha. Um frasco para injetáveis de peptídeo reconstituído pode ser perfurado várias vezes com segurança durante 4–6 semanas quando armazenado a 2–8°C em água BAC. A água estéril não tem conservantes, pelo que um frasco para injetáveis reconstituído deve ser idealmente utilizado dentro de 24-48 horas para minimizar o risco de contaminação. Para frascos multi-uso, a água BAC é a escolha padrão.</p>
+<div class="faq-q">Why does everyone use bacteriostatic water instead of sterile water?</div>
+<p class="faq-a">Bacteriostatic water contains 0.9% benzyl alcohol, which inhibits bacterial growth in the vial after you've punctured the stopper. A reconstituted peptide vial can be punctured multiple times safely over 4–6 weeks when stored at 2–8°C in BAC water. Sterile water has no preservative, so a reconstituted vial should ideally be used within 24–48 hours to minimize contamination risk. For multi-use vials, BAC water is the standard choice.</p>
 </div>
 <div class="faq-item">
-<div class="faq-q">Importa quanta água BAC eu acrescento?</div>
-<p class="faq-a">Apenas em termos da concentração resultante, que afecta quantas unidades desenha por dose. Mais água = menor concentração = mais unidades por dose. Nem é intrinsecamente melhor — a matemática é o que importa. Muitas pessoas preferem 2 mL por 5 frasco para injetáveis de mg porque dá números redondos em uma seringa U-100. Utilize esta calculadora para encontrar o que funciona para a seringa e o alvo da dose.</p>
+<div class="faq-q">Does it matter how much BAC water I add?</div>
+<p class="faq-a">Only in terms of the resulting concentration, which affects how many units you draw per dose. More water = lower concentration = more units per dose. Neither is intrinsically better — the math is what matters. Many people prefer 2 mL per 5 mg vial because it gives round numbers on a U-100 syringe. Use this calculator to find what works for your syringe and dose target.</p>
 </div>
 <div class="faq-item">
-<div class="faq-q">Qual é a diferença entre as seringas de insulina U-50 e U-100?</div>
-<p class="faq-a">Ambos possuem 1 mL de líquido, mas as graduações diferem. Uma seringa U-100 tem 100 unidades marcadas (cada unidade = 0,01 mL). Uma seringa U-50 tem 50 unidades (cada unidade = 0,02 mL). As seringas U-100 são o padrão para a maioria dos protocolos peptídicos, pois permitem medições mais precisas para pequenas doses. A calculadora conta para ambos — basta selecionar o seu no dropdown.</p>
+<div class="faq-q">What's the difference between U-50 and U-100 insulin syringes?</div>
+<p class="faq-a">Both hold 1 mL of liquid, but the graduations differ. A U-100 syringe has 100 units marked on it (each unit = 0.01 mL). A U-50 syringe has 50 units (each unit = 0.02 mL). U-100 syringes are the standard for most peptide protocols because they allow more precise measurement for small doses. The calculator accounts for both — just select yours in the dropdown.</p>
 </div>
 <div class="faq-item">
-<div class="faq-q">Como faço para converter microgramas (mcg) em miligramas (mg)?</div>
-<p class="faq-a">1 mg = 1.000 mcg. Assim, um frasco para injetáveis de 5 mg contém 5.000 mcg no total. Quando você vê doses peptídicas listadas como "250 mcg," que é 0,25 mg - uma fração do frasco total. Isto importa porque os tamanhos do frasco para injetáveis são tipicamente rotulados em mg (por exemplo, 5 mg, 10 mg) enquanto as doses individuais são descritas em mcg (por exemplo, 250 mcg, 500 mcg). A calculadora lida com esta conversão automaticamente.</p>
+<div class="faq-q">How do I convert micrograms (mcg) to milligrams (mg)?</div>
+<p class="faq-a">1 mg = 1,000 mcg. So a 5 mg vial contains 5,000 mcg total. When you see peptide doses listed as "250 mcg," that's 0.25 mg — a fraction of the total vial. This matters because vial sizes are typically labeled in mg (e.g., 5 mg, 10 mg) while individual doses are described in mcg (e.g., 250 mcg, 500 mcg). The calculator handles this conversion automatically.</p>
 </div>
 <div class="faq-item">
-<div class="faq-q">É seguro injectar bolhas de ar numa injecção subcutânea?</div>
-<p class="faq-a">As pequenas bolhas de ar nas injecções subcutâneas (SubQ) são geralmente consideradas benignas — as injecções de SubQ entram no tecido adiposo, não directamente numa veia. Dito isto, as melhores práticas são bater suavemente na seringa e empurrar ligeiramente o êmbolo para expulsar bolhas visíveis antes de injectar. As bolhas de ar em injeções intravenosas são uma matéria diferente e representam risco real, mas a maioria dos protocolos peptídicos usam injeção de SubQ no abdômen ou coxa.</p>
+<div class="faq-q">Is it safe to inject air bubbles in a subcutaneous injection?</div>
+<p class="faq-a">Small air bubbles in subcutaneous (SubQ) injections are generally considered benign — SubQ injections go into fat tissue, not directly into a vein. That said, best practice is to tap the syringe gently and push the plunger slightly to expel visible bubbles before injecting. Air bubbles in intravenous injections are a different matter and pose real risk, but most peptide protocols use SubQ injection into the abdomen or thigh.</p>
 </div>
 <div class="faq-item">
-<div class="faq-q">Quanto tempo dura um frasco de peptídeo reconstituído?</div>
-<p class="faq-a">Reconstituído em água bacteriostática e armazenado refrigerado a 2-8°C (36-46°F), a maioria dos peptídeos permanece estável por 4-6 semanas. Algumas fontes citam até 8 semanas para certos peptídeos, mas a degradação acelera com flutuações de temperatura. Nunca congelar um frasco para injectáveis reconstituído. Os peptídeos liofilizados (pó) armazenados num congelador a -20°C podem permanecer estáveis durante 12–24 meses antes da reconstituição.</p>
+<div class="faq-q">How long does a reconstituted peptide vial last?</div>
+<p class="faq-a">Reconstituted in bacteriostatic water and stored refrigerated at 2–8°C (36–46°F), most peptides remain stable for 4–6 weeks. Some sources cite up to 8 weeks for certain peptides, but degradation accelerates with temperature fluctuations. Never freeze a reconstituted vial. Lyophilized (powder) peptides stored in a freezer at -20°C can remain stable for 12–24 months before reconstitution.</p>
 </div>
 </div>
 </div>
 <div class="info-box blue" style="border-radius:12px; margin-bottom: 32px;">
-<div class="info-icon">□</div>
-<p><strong>Queres ir mais fundo?</strong>Leia o nosso<a href="/pt/peptide-reconstitution-guide.html" style="color:var(--blue);text-decoration:underline;">guia de reconstituição completo</a>para fotos passo a passo, dicas de armazenamento e técnica de injeção. Novo em peptídeos? Comece com o nosso<a href="/pt/peptide-beginners-guide.html" style="color:var(--blue);text-decoration:underline;">guia de principiante</a>.</p>
+<div class="info-icon">📚</div>
+<p><strong>Want to go deeper?</strong> Read our <a href="/pt/peptide-reconstitution-guide.html" style="color:var(--blue);text-decoration:underline;">complete reconstitution guide</a> for step-by-step photos, storage tips, and injection technique. New to peptides? Start with our <a href="/pt/peptide-beginners-guide.html" style="color:var(--blue);text-decoration:underline;">beginner's guide</a>.</p>
 </div>
 </div>
 </div>
 <footer>
 <div class="footer-links">
-<a href="/pt/index.html">Principal</a>
-<a href="/pt/peptide-beginners-guide.html">Iniciar Aqui</a>
-<a href="/pt/peptide-sourcing-guide.html">Produtores</a>
-<a href="/pt/about.html">Sobre</a>
-<a href="/pt/privacy.html">Privacidade</a>
-<a href="/pt/affiliate-disclosure.html">Divulgação</a>
+<a href="/pt/index.html">Home</a>
+<a href="/pt/peptide-beginners-guide.html">Start Here</a>
+<a href="/pt/peptide-sourcing-guide.html">Vendors</a>
+<a href="/pt/about.html">About</a>
+<a href="/pt/privacy.html">Privacy</a>
+<a href="/pt/affiliate-disclosure.html">Disclosure</a>
 <a href="/pt/disclaimer.html">Disclaimer</a>
-<a href="/pt/terms.html">Termos</a>
+<a href="/pt/terms.html">Terms</a>
 </div>
-<p>© 2026 WolveStack. Apenas para fins de investigação e educação.</p>
-<p class="disclaimer">WolveStack publica resumos de pesquisa apenas para fins educacionais. Nada aqui constitui aconselhamento médico. Todos os peptídeos são apenas para pesquisa.</p>
+<p>© 2026 WolveStack. For research and educational purposes only.</p>
+<p class="disclaimer">WolveStack publishes research summaries for educational purposes only. Nothing here constitutes medical advice. All peptides are for research use only.</p>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
@@ -702,12 +852,14 @@
 </script>
 <section class="related-articles">
 <div class="related-inner">
-<h3>Guias relacionados</h3>
+<h3>Related Guides</h3>
 <div class="related-grid">
-<a class="related-card" href="/pt/peptide-reconstitution-guide.html"><span>Relacionado</span><strong>Guia de reconstituição de peptídeos</strong></a>
-<a class="related-card" href="/pt/bacteriostatic-water-guide.html"><span>Relacionado</span><strong>Água Bacteriostática: Guia de Reconstituição Completa</strong></a>
-<a class="related-card" href="/pt/peptide-half-life-guide.html"><span>Relacionado</span><strong>Guia de semi- vida peptídeo</strong></a>
-<a class="related-card" href="/pt/peptide-beginners-guide.html"><span>Relacionado</span><strong>Guia de Iniciantes de Peptídeos</strong></a>
+<a class="related-card" href="/pt/peptide-reconstitution-guide.html"><span>Related</span><strong>Peptide Reconstitution Guide</strong></a>
+<a class="related-card" href="/pt/bacteriostatic-water-guide.html"><span>Related</span><strong>Bacteriostatic Water: Complete Reconstitution Guide</strong></a>
+<a class="related-card" href="/pt/peptide-half-life-guide.html"><span>Related</span><strong>Peptide Half-Life Guide</strong></a>
+<a class="related-card" href="/pt/peptide-beginners-guide.html"><span>Related</span><strong>Peptide Beginners Guide</strong></a>
+<a class="related-card" href="/pt/peptide-dosing-calculator-guide.html"><span>Related</span><strong>Peptide Dosing Calculator Guide</strong></a>
+<a class="related-card" href="/pt/peptide-storage-guide.html"><span>Related</span><strong>Peptide Storage Guide</strong></a>
 </div>
 </div>
 </section>

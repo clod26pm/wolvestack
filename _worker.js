@@ -35,12 +35,6 @@ const COUNTRY_TO_LANG = {
 
 const VALID_LANGS = new Set(['en','es','zh','ja','pt','ru','it','pl','fr','id','de','nl','ar']);
 
-// Known bot user-agents (Google, Bing, etc.)
-function isBot(userAgent) {
-  if (!userAgent) return false;
-  return /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebot|ia_archiver/i.test(userAgent);
-}
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -51,19 +45,6 @@ export default {
     if (langMatch) {
       return env.ASSETS.fetch(request);
     }
-
-    const userAgent = request.headers.get('User-Agent') || '';
-
-    // For bots: serve the root HTML directly (no redirect) so they see hreflang tags
-    // This prevents redirect loops and lets Google discover all language versions
-    if (isBot(userAgent) && path.endsWith('.html')) {
-      return env.ASSETS.fetch(request);
-    }
-    if (isBot(userAgent) && (path === '/' || path === '/index.html')) {
-      return env.ASSETS.fetch(new Request(`${url.origin}/index.html`, request));
-    }
-
-    // Human visitors below this point —
 
     // Check for language preference cookie
     const cookies = request.headers.get('Cookie') || '';
@@ -78,7 +59,8 @@ export default {
 
     // Root page: redirect to detected language
     if (path === '/' || path === '/index.html') {
-      return Response.redirect(`${url.origin}/${detectedLang}/index.html`, 302);
+      const response = Response.redirect(`${url.origin}/${detectedLang}/index.html`, 302);
+      return response;
     }
 
     // HTML page without language prefix: redirect

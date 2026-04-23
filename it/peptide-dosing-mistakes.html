@@ -2,24 +2,23 @@
 
 <html lang="it">
 <head>
-<meta charset="utf-8"/>
-
-<meta name="robots" content="noindex, nofollow">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>5 Errori di dosaggio del peptide comune e come evitarli</title>
-<meta content="Evitare gli errori di dosaggio peptide più comuni che spreca denaro e ridurre i risultati. Imparare la corretta ricostruzione matematica, tempistica, ciclismo, storage e strategie di dosaggio." name="description"/>
-<meta content="index, follow" name="robots"/>
 <link href="https://wolvestack.com/it/peptide-dosing-mistakes.html" rel="canonical"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>5 Common Peptide Dosing Mistakes and How to Avoid Them</title>
+<meta content="Avoid the most common peptide dosing errors that waste money and reduce results. Learn proper reconstitution math, timing, cycling, storage, and dosing strategies." name="description"/>
+<meta content="noindex, follow" name="robots"/>
+<link href="https://wolvestack.com/en/peptide-dosing-mistakes.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
-<meta content="5 Errori di dosaggio del peptide comune e come evitarli" property="og:title"/>
-<meta content="Evitare gli errori di dosaggio peptide più comuni che spreca denaro e ridurre i risultati. Imparare la corretta ricostruzione matematica, tempistica, ciclismo, storage e strategie di dosaggio." property="og:description"/>
+<meta content="5 Common Peptide Dosing Mistakes and How to Avoid Them" property="og:title"/>
+<meta content="Avoid the most common peptide dosing errors that waste money and reduce results. Learn proper reconstitution math, timing, cycling, storage, and dosing strategies." property="og:description"/>
 <meta content="https://wolvestack.com/it/peptide-dosing-mistakes.html" property="og:url"/>
 <meta content="WolveStack" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="5 Errori di dosaggio del peptide comune e come evitarli" name="twitter:title"/>
-<meta content="Evitare gli errori di dosaggio peptide più comuni che spreca denaro e ridurre i risultati. Imparare la corretta ricostruzione matematica, tempistica, ciclismo, storage e strategie di dosaggio." name="twitter:description"/>
+<meta content="5 Common Peptide Dosing Mistakes and How to Avoid Them" name="twitter:title"/>
+<meta content="Avoid the most common peptide dosing errors that waste money and reduce results. Learn proper reconstitution math, timing, cycling, storage, and dosing strategies." name="twitter:description"/>
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
@@ -371,44 +370,190 @@
     }
   }
 
-  </style>
+  
+  /* Nav Layout */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,115,119,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 64px;
+  }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* Search Bar Styles */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    transition: all 0.2s;
+  }
+  .nav-search form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--teal-light);
+    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 14px;
+    width: 140px;
+    padding: 6px 4px;
+    font-family: var(--font-main);
+  }
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .search-input:focus {
+    width: 180px;
+  }
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 4px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .search-btn:hover {
+    color: var(--teal-light);
+  }
+
+  /* Language Dropdown Styles */
+  .nav-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    transition: color 0.2s;
+  }
+  .nav-lang-toggle:hover {
+    color: var(--teal-light);
+  }
+  .nav-lang-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .nav-lang.open .nav-lang-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  .nav-lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 34, 64, 0.98);
+    border: 1px solid rgba(13, 115, 119, 0.4);
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .nav-lang.open .nav-lang-menu {
+    display: flex;
+  }
+  .nav-lang-menu a {
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  .nav-lang-menu a:hover {
+    background: rgba(13, 115, 119, 0.2);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+  .nav-lang-menu a.active {
+    background: rgba(13, 115, 119, 0.3);
+    color: var(--teal-light);
+    border-left-color: var(--teal-light);
+  }
+
+</style>
 <link href="https://wolvestack.com/en/peptide-dosing-mistakes.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-dosing-mistakes.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-dosing-mistakes.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-dosing-mistakes.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-dosing-mistakes.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-dosing-mistakes.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-dosing-mistakes.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-dosing-mistakes.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-dosing-mistakes.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-dosing-mistakes.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-dosing-mistakes.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-dosing-mistakes.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-dosing-mistakes.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-dosing-mistakes.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- Navigation -->
 <nav>
 <div class="nav-inner">
-<a class="logo" href="/">Wolve<span>Stack</span></a>
+<a class="logo" href="/it/index.html">Wolve<span>Stack</span></a>
 <ul class="nav-links">
-<li><a href="/bpc-157-guide.html">BPC-157</a></li>
-<li><a href="/tb-500-guide.html">TB-500</a></li>
-<li><a href="/wolverine-stack.html">Stacks</a></li>
-<li><a href="/peptide-sourcing-guide.html">Vendors</a></li>
+<li><a href="/it/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/it/tb-500-guide.html">TB-500</a></li>
+<li><a href="/it/wolverine-stack.html">Stacks</a></li>
+<li><a href="/it/peptide-sourcing-guide.html">Vendors</a></li>
 </ul>
 <div class="nav-search">
 <form>
-<input type="text" placeholder="Search..." class="search-input">
-<button type="submit" class="search-btn" aria-label="Search">🔍</button>
+<input class="search-input" placeholder="Search..." type="text"/>
+<button aria-label="Search" class="search-btn" type="submit">🔍</button>
 </form>
 </div>
 <div class="nav-lang">
-<button class="nav-lang-toggle" aria-label="Select language">🌐 <span class="arrow">▾</span></button>
+<button aria-label="Select language" class="nav-lang-toggle">🌐 <span class="arrow">▾</span></button>
 <div class="nav-lang-menu">
-<a href="/peptide-dosing-mistakes.html">English</a>
-<a href="/es/peptide-dosing-mistakes.html">Español</a>
-<a href="/zh/peptide-dosing-mistakes.html">中文</a>
-<a href="/ja/peptide-dosing-mistakes.html">日本語</a>
-<a href="/pt/peptide-dosing-mistakes.html">Português</a>
-<a href="/ru/peptide-dosing-mistakes.html">Русский</a>
-<a href="/it/peptide-dosing-mistakes.html" class="active">Italiano</a>
-<a href="/pl/peptide-dosing-mistakes.html">Polski</a>
-<a href="/fr/peptide-dosing-mistakes.html">Français</a>
-<a href="/id/peptide-dosing-mistakes.html">Bahasa</a>
-<a href="/de/peptide-dosing-mistakes.html">Deutsch</a>
-<a href="/nl/peptide-dosing-mistakes.html">Nederlands</a>
-<a href="/ar/peptide-dosing-mistakes.html">العربية</a>
+<a class="active" href="/it/peptide-dosing-mistakes.html">English</a>
+<a href="/it/peptide-dosing-mistakes.html">Español</a>
+<a href="/it/peptide-dosing-mistakes.html">中文</a>
+<a href="/it/peptide-dosing-mistakes.html">日本語</a>
+<a href="/it/peptide-dosing-mistakes.html">Português</a>
+<a href="/it/peptide-dosing-mistakes.html">Русский</a>
+<a href="/it/peptide-dosing-mistakes.html">Italiano</a>
+<a href="/it/peptide-dosing-mistakes.html">Polski</a>
+<a href="/it/peptide-dosing-mistakes.html">Français</a>
+<a href="/it/peptide-dosing-mistakes.html">Bahasa</a>
+<a href="/it/peptide-dosing-mistakes.html">Deutsch</a>
+<a href="/it/peptide-dosing-mistakes.html">Nederlands</a>
+<a href="/it/peptide-dosing-mistakes.html">العربية</a>
 </div>
 </div>
-<a class="nav-cta" href="/peptide-beginners-guide.html">Start Here →</a>
+<a class="nav-cta" href="/it/peptide-beginners-guide.html">Start Here →</a>
+</div>
+
+<div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
+<select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
+                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+                     font-family:var(--font-main,sans-serif);">
+<option value="/en/peptide-dosing-mistakes.html">English</option><option value="/es/peptide-dosing-mistakes.html">Español</option><option value="/zh/peptide-dosing-mistakes.html">中文</option><option value="/ja/peptide-dosing-mistakes.html">日本語</option><option value="/pt/peptide-dosing-mistakes.html">Português</option><option value="/ru/peptide-dosing-mistakes.html">Русский</option><option selected="" value="/it/peptide-dosing-mistakes.html">Italiano</option><option value="/pl/peptide-dosing-mistakes.html">Polski</option><option value="/fr/peptide-dosing-mistakes.html">Français</option><option value="/id/peptide-dosing-mistakes.html">Bahasa</option><option value="/de/peptide-dosing-mistakes.html">Deutsch</option><option value="/nl/peptide-dosing-mistakes.html">Nederlands</option><option value="/ar/peptide-dosing-mistakes.html">العربية</option>
+</select>
 </div>
 </nav>
 <!-- Main Content -->
@@ -417,257 +562,266 @@
 <div class="breadcrumb">
 <a href="/it/index.html">Home</a>
 <span class="breadcrumb-separator">/</span>
-<a href="/it/peptides.html">Peptidi</a>
+<a href="/it/peptides.html">Peptides</a>
 <span class="breadcrumb-separator">/</span>
-<span>Dosare errori</span>
+<span>Dosing Mistakes</span>
 </div>
 <!-- Article Hero -->
 <div class="article-hero">
 <div class="article-hero-content">
-<span class="article-tag">Guida del protocollo</span>
-<h1>5 Errori di dosaggio del peptide comune e come evitarli</h1>
-<p class="article-subtitle">Questi cinque errori sprecano denaro, riducono i risultati e possono anche essere controproducenti. Se si sta eseguendo BPC-157, CJC-1295, o qualsiasi altro peptide, ottenere il diritto dosaggio è metà della battaglia.</p>
+<span class="article-tag">Protocol Guide</span>
+<h1>5 Common Peptide Dosing Mistakes and How to Avoid Them</h1>
+<p class="article-subtitle">These five errors waste money, reduce results, and can even be counterproductive. Whether you're running BPC-157, CJC-1295, or any other peptide, getting the dosing right is half the battle.</p>
 <div class="article-meta">
 <div class="article-meta-item">
-<span>📖 Tempo di lettura: 9 min</span>
-
-      <span>✅ Last reviewed: April 2026</span>
-    </div>
-<div class="article-meta-item">
-<span>Guida al protocollo</span>
+<span>📖 Read time: 9 min</span>
+<span>✅ Last reviewed: April 2026</span>
 </div>
 <div class="article-meta-item">
-<span>⚠️ Non consulenza medica</span>
+<span>📊 Protocol Guide</span>
+</div>
+<div class="article-meta-item">
+<span>⚠️ Not medical advice</span>
 </div>
 </div>
 </div>
 </div>
 <!-- Warning Disclaimer -->
-
-    <!-- E-E-A-T: Enhanced Medical Disclaimer -->
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
-      <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Medical Disclaimer</p>
-      <p style="margin: 0;">For <strong>informational and educational purposes only</strong>. Not FDA-approved for human use. Consult a licensed healthcare professional. See full <a href="/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
-    </div>
-
+<!-- E-E-A-T: Enhanced Medical Disclaimer -->
+<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
+<p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">Medical Disclaimer</p>
+<p style="margin: 0;">This article is for <strong>informational and educational purposes only</strong> and does not constitute medical advice. The compounds discussed are research chemicals that are <strong>not FDA-approved</strong> for human use. Always consult a licensed healthcare professional before considering any peptide protocol. WolveStack has no medical staff and does not diagnose, treat, or prescribe. See our full <a href="/it/disclaimer.html" style="color: #991b1b; text-decoration: underline;">disclaimer</a>.</p>
+</div>
 <!-- Sidebar -->
 <div class="article-sidebar">
 <!-- Table of Contents -->
 <div class="sidebar-card toc">
-<h3>Tabella dei contenuti</h3>
+<h3>📋 Table of Contents</h3>
 <ol>
-<li><a href="#why">Perché gli errori sono comuni</a></li>
-<li><a href="#math">Errore 1: Recon Matematica</a></li>
-<li><a href="#timing">Errore 2: tempismo costante</a></li>
-<li><a href="#quitting">Mistake 3: smettere presto</a></li>
-<li><a href="#storage">Errore 4: Scarsa conservazione</a></li>
-<li><a href="#overdosing">Errore 5: Sovradosaggio</a></li>
-<li><a href="#bonus">Bonus Errori</a></li>
+<li><a href="#why">Why Mistakes Are Common</a></li>
+<li><a href="#math">Mistake 1: Recon Math</a></li>
+<li><a href="#timing">Mistake 2: Inconsistent Timing</a></li>
+<li><a href="#quitting">Mistake 3: Quitting Early</a></li>
+<li><a href="#storage">Mistake 4: Poor Storage</a></li>
+<li><a href="#overdosing">Mistake 5: Overdosing</a></li>
+<li><a href="#bonus">Bonus Mistakes</a></li>
 </ol>
 </div>
 <!-- Related Topics -->
 <div class="sidebar-card">
-<h3>📚 Lettura correlata</h3>
+<h3>📚 Related Reading</h3>
 <ul style="list-style: none; padding: 0;">
-<li><a href="/it/bpc-157-reconstitution.html">Guida alla ricostruzione</a></li>
-<li><a href="/it/bpc-157-dosage.html">BPC-157 Guida di dosaggio</a></li>
-<li><a href="/it/peptide-cycling-guide.html">Protocollo di ciclismo Peptide</a></li>
-<li><a href="/it/bpc-157-results-timeline.html">BPC-157 Risultati Timeline</a></li>
+<li><a href="/it/bpc-157-reconstitution.html">Reconstitution Guide</a></li>
+<li><a href="/it/bpc-157-dosage.html">BPC-157 Dosing Guide</a></li>
+<li><a href="/it/peptide-cycling-guide.html">Peptide Cycling Protocol</a></li>
+<li><a href="/it/bpc-157-results-timeline.html">BPC-157 Results Timeline</a></li>
 </ul>
 </div>
 <!-- Quick Facts -->
 <div class="sidebar-card">
-<h3>⚡ Riferimento rapido</h3>
+<h3>⚡ Quick Reference</h3>
 <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-<li>🧮<strong>Formula di ricognizione:</strong>(dose/totale) × unità</li>
-<li>⏰<strong>Timing:</strong>Stesso tempo quotidiano</li>
-<li>📅<strong>Il mio ciclo:</strong>6-8 settimane</li>
-<li>🌡️<strong>Stoccaggio:</strong>Frigorifero, 36-46°F</li>
-<li>📊<strong>Start Dose:</strong>Basso → moderato</li>
+<li>🧮 <strong>Recon Formula:</strong> (dose/total) × units</li>
+<li>⏰ <strong>Timing:</strong> Same time daily</li>
+<li>📅 <strong>Min Cycle:</strong> 6-8 weeks</li>
+<li>🌡️ <strong>Storage:</strong> Fridge, 36-46°F</li>
+<li>📊 <strong>Start Dose:</strong> Low → moderate</li>
 </ul>
 </div>
 </div>
 </div>
 <!-- Vendor Affiliate Section -->
 <div class="vendor-section">
-<h2>Rivenditori di Peptide affidabili</h2>
-<p style="margin-bottom: 2rem; color: var(--gray-700);">La qualità conta più del prezzo quando si tratta di peptidi. Questi fornitori forniscono prodotti testati di terze parti. Tutti i link sono link di affiliazione che supportano WolveStack:</p>
+<div class="quick-answer">
+<p>These five errors waste money, reduce results, and can even be counterproductive. Whether you're running BPC-157, CJC-1295, or any other peptide, getting the dosing right is half the battle. High-quality peptides with strict quality controls and third-party testing. Master the art of cycling peptides for sustained results. A single accidental overdose is unlikely to cause serious harm for most research peptides like BPC-157 or TB-500 at typical ranges (even 2-3x a normal dose). Most peptide protocols use flat doses (e.g., 500 mcg/day of BPC-157 regardless of body weight), and this works well for the majority of users. Check out our BPC-157 Dosing Guide for specific protocols, or our Injection Sites Guide to make sure you're rotating properly and maximizing absorption. You may experience temporary side effects like flushing, light-headedness, or injection site irritation. You can, but only if you'll use the entire vial in one session (single withdrawal).</p>
+</div>
+<h2>Trusted Peptide Vendors</h2>
+<p style="margin-bottom: 2rem; color: var(--gray-700);">Quality matters more than price when it comes to peptides. These vendors provide third-party tested products. All links are affiliate links that support WolveStack:</p>
 <div class="vendor-grid">
 <!-- Ascension Peptides -->
 <div class="vendor-card">
 <div class="vendor-logo">🧬</div>
-<div class="vendor-name">Peptidi di ascensione</div>
-<p class="vendor-description">Peptidi di alta qualità con controlli di qualità rigorosi e test di terze parti. Noto per affidabilità e servizio clienti.</p>
-<a class="vendor-btn" href="https://www.ascensionpeptides.com/?ref=wolvestack" rel="noopener noreferrer" target="_blank">Visita Ascensione</a>
+<div class="vendor-name">Ascension Peptides</div>
+<p class="vendor-description">High-quality peptides with strict quality controls and third-party testing. Known for reliability and customer service.</p>
+<a class="vendor-btn" href="https://www.ascensionpeptides.com/?ref=wolvestack" rel="noopener noreferrer" target="_blank">Visit Ascension</a>
 </div>
 <!-- Apollo Peptide Sciences -->
 <div class="vendor-card apollo-card">
 <div class="vendor-logo">🚀</div>
-<div class="vendor-name">Apollo Scienze del Peptide</div>
-<p class="vendor-description">Specializza i peptidi di ricerca con una garanzia di qualità completa. Spedizione veloce e supporto reattivo.</p>
-<a class="vendor-btn apollo-btn" href="https://apollopeptidesciences.com/?ref=wolvestack" rel="noopener noreferrer" target="_blank">Visita Apollo</a>
+<div class="vendor-name">Apollo Peptide Sciences</div>
+<p class="vendor-description">Specializes in research-grade peptides with comprehensive quality assurance. Fast shipping and responsive support.</p>
+<a class="vendor-btn apollo-btn" href="https://apollopeptidesciences.com/?ref=wolvestack" rel="noopener noreferrer" target="_blank">Visit Apollo</a>
 </div>
 <!-- Particle Peptides -->
 <div class="vendor-card particle-card">
 <div class="vendor-logo">⚛️</div>
 <div class="vendor-name">Particle Peptides</div>
-<p class="vendor-description">Venditore stabilito con qualità costante e prezzi competitivi. Fiduciata dalla comunità della ricerca.</p>
-<a class="vendor-btn particle-btn" href="https://particlepeptides.com/en/?refs=25135" rel="noopener noreferrer" target="_blank">Visita Particella</a>
+<p class="vendor-description">Established vendor with consistent quality and competitive pricing. Trusted by the research community.</p>
+<a class="vendor-btn particle-btn" href="https://particlepeptides.com/en/?refs=25135" rel="noopener noreferrer" target="_blank">Visit Particle</a>
 </div>
 <!-- Limitless Biotech -->
 <div class="vendor-card limitless-card">
 <div class="vendor-logo">∞</div>
-<div class="vendor-name">Biotecnologie senza limiti</div>
-<p class="vendor-description">Focus sui prodotti di bioottimizzazione con documentazione dettagliata. Buon per entrambi i nuovi arrivati e gli utenti esperti.</p>
-<a class="vendor-btn limitless-btn" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704" rel="noopener noreferrer" target="_blank">Visita senza limiti</a>
+<div class="vendor-name">Limitless Biotech</div>
+<p class="vendor-description">Focus on bio-optimization products with detailed documentation. Good for both newcomers and experienced users.</p>
+<a class="vendor-btn limitless-btn" href="https://www.limitlesslifenootropics.com/?_ef_transaction_id=&amp;oid=1&amp;affid=10704" rel="noopener noreferrer" target="_blank">Visit Limitless</a>
 </div>
 </div>
 <div class="callout">
-<strong>Nota del venditore:</strong>Uno dei più grandi "errori dosatori" è in realtà un problema di qualità del prodotto – peptidi sottovalutati o degradati da venditori non affidabili. Verificare sempre COA di terze parti (Certificati di Analisi) e acquistare da fonti consolidate.
-</div>
+<strong>Vendor Note:</strong> One of the biggest "dosing mistakes" is actually a product quality issue—underdosed or degraded peptides from unreliable vendors. Always verify third-party COAs (Certificates of Analysis) and buy from established sources.
+            </div>
 </div>
 <!-- Continue Reading Section -->
 <div class="continue-reading">
 <div class="continue-reading-content">
-<h3>Pronto a comporre nel tuo protocollo?</h3>
-<p>Scopri il nostro<a href="/it/bpc-157-dosage.html">BPC-157 Guida di dosaggio</a>per protocolli specifici, o i nostri<a href="/it/peptide-injection-sites.html">Guida ai siti di iniezione</a>per assicurarsi di girare correttamente e massimizzare l'assorbimento.</p>
+<h3>Ready to Dial In Your Protocol?</h3>
+<p>Check out our <a href="/it/bpc-157-dosage.html">BPC-157 Dosing Guide</a> for specific protocols, or our <a href="/it/peptide-injection-sites.html">Injection Sites Guide</a> to make sure you're rotating properly and maximizing absorption.</p>
 </div>
 </div>
 <!-- FAQ Section -->
 <div class="faq-section">
-<h2>Domande frequenti</h2>
+<h2>Frequently Asked Questions</h2>
 <div class="faq-list">
 <!-- FAQ 1 -->
 <div class="faq-item">
 <button class="faq-question" onclick="toggleFAQ(this)">
-<span>Cosa succede se iniettassi accidentalmente troppo peptide?</span>
+<span>What happens if I accidentally inject too much peptide?</span>
 <span class="faq-toggle">▼</span>
 </button>
 <div class="faq-answer">
-<p>Un singolo overdose accidentale è improbabile causare gravi danni per la maggior parte dei peptidi di ricerca come BPC-157 o TB-500 a intervalli tipici (anche 2-3x una dose normale). Si possono sperimentare effetti collaterali temporanei come il lavaggio, la testa leggera, o l'irritazione del sito di iniezione. Per le secretagoghe GH come MK-677, l'overdose può causare effetti più evidenti come la ritenzione idrica aumentata, la fame, o punte di zucchero nel sangue. Non cercare di "compensare" saltando la dose successiva, basta riprendere il normale programma di dosaggio. Se hai fatto un grande errore di matematica e iniettato significativamente più di quanto previsto, monitora te stesso e consulta un fornitore di assistenza sanitaria se si verificano sintomi insoliti.</p>
+<p>A single accidental overdose is unlikely to cause serious harm for most research peptides like BPC-157 or TB-500 at typical ranges (even 2-3x a normal dose). You may experience temporary side effects like flushing, light-headedness, or injection site irritation. For GH secretagogues like MK-677, overdosing can cause more noticeable effects like increased water retention, hunger, or blood sugar spikes. Don't try to "compensate" by skipping your next dose—just resume your normal dosing schedule. If you've made a large math error and injected significantly more than intended, monitor yourself and consult a healthcare provider if you experience unusual symptoms.</p>
 </div>
 </div>
 <!-- FAQ 2 -->
 <div class="faq-item">
 <button class="faq-question" onclick="toggleFAQ(this)">
-<span>Posso usare acqua sterile regolare invece di acqua batteriostatica?</span>
+<span>Can I use regular sterile water instead of bacteriostatic water?</span>
 <span class="faq-toggle">▼</span>
 </button>
 <div class="faq-answer">
-<p>È possibile, ma solo se si utilizza l'intera fiala in una sessione (prelievo singolo). L'acqua sterile manca del conservante dell'alcol benzyl trovato in acqua BAC, il che significa che i batteri possono crescere nella fiala dopo aver perforato il tappo. Poiché la maggior parte delle persone disegnano dosi multiple da una singola fiala durante giorni o settimane, l'acqua BAC è essenzialmente necessaria per la sicurezza. L'acqua BAC è poco costosa e ampiamente disponibile, non c'è una buona ragione per usare l'acqua sterile per le fiale multi-dose.</p>
+<p>You can, but only if you'll use the entire vial in one session (single withdrawal). Sterile water lacks the benzyl alcohol preservative found in BAC water, which means bacteria can grow in the vial after you puncture the stopper. Since most people draw multiple doses from a single vial over days or weeks, BAC water is essentially required for safety. BAC water is inexpensive and widely available—there's no good reason to use sterile water for multi-dose vials.</p>
 </div>
 </div>
 <!-- FAQ 3 -->
 <div class="faq-item">
 <button class="faq-question" onclick="toggleFAQ(this)">
-<span>La mia soluzione peptide sembra offuscata dopo la ricostituzione. E' ancora buono?</span>
+<span>My peptide solution looks cloudy after reconstitution. Is it still good?</span>
 <span class="faq-toggle">▼</span>
 </button>
 <div class="faq-answer">
-<p>Un peptide correttamente ricostituito dovrebbe essere chiaro e incolore. La nubicità di solito indica uno dei diversi problemi: il peptide è aggregato (denaturato), l'acqua è stata aggiunta troppo forzata o la fiala è stata scossa, o il peptide è stato degradato prima della ricostituzione (forse a causa dell'esposizione al calore durante la spedizione). Se l'irruzione dolce non risolve la nubicità in pochi minuti, è più sicuro scartare la fiala e ricostituire una fresca. Utilizzando peptidi degradati al meglio spreca i vostri soldi e nel peggiore dei casi potrebbe causare una reazione immunitaria o complicazioni del sito di iniezione.</p>
+<p>A properly reconstituted peptide should be clear and colorless. Cloudiness usually indicates one of several issues: the peptide has aggregated (denatured), the water was added too forcefully or the vial was shaken, or the peptide was degraded before reconstitution (possibly due to heat exposure during shipping). If gentle swirling doesn't resolve the cloudiness within a few minutes, it's safest to discard the vial and reconstitute a fresh one. Using degraded peptides at best wastes your money and at worst could cause an immune reaction or injection site complications.</p>
 </div>
 </div>
 <!-- FAQ 4 -->
 <div class="faq-item">
 <button class="faq-question" onclick="toggleFAQ(this)">
-<span>Dovrei dosare i peptidi per peso corporeo o usare una dose piatta?</span>
+<span>Should I dose peptides by body weight or use a flat dose?</span>
 <span class="faq-toggle">▼</span>
 </button>
 <div class="faq-answer">
-<p>La maggior parte dei protocolli peptide utilizzano dosi piatte (ad esempio, 500 mcg/giorno di BPC-157 indipendentemente dal peso corporeo), e questo funziona bene per la maggior parte degli utenti. Tuttavia, se sei significativamente superiore o inferiore al peso medio (sotto 130 lbs o oltre 220 lbs), regolare proporzionalmente può migliorare i risultati. La letteratura di ricerca sui peptidi nei modelli animali utilizza dosaggio basato sul peso (mcg/kg), quindi c'è una logica scientifica per questo approccio. Come una linea guida ruvida, gli individui più leggeri possono spesso ottenere buoni risultati alla fine bassa di dosaggi, mentre gli individui più pesanti possono beneficiare dell'estremità superiore.</p>
+<p>Most peptide protocols use flat doses (e.g., 500 mcg/day of BPC-157 regardless of body weight), and this works well for the majority of users. However, if you're significantly above or below average weight (under 130 lbs or over 220 lbs), adjusting proportionally may improve results. The research literature on peptides in animal models uses weight-based dosing (mcg/kg), so there's scientific rationale for this approach. As a rough guideline, lighter individuals can often get good results at the low end of dosing ranges, while heavier individuals may benefit from the higher end.</p>
 </div>
 </div>
 <!-- FAQ 5 -->
 <div class="faq-item">
 <button class="faq-question" onclick="toggleFAQ(this)">
-<span>Come faccio a sapere se il mio peptide è degradato in frigo?</span>
+<span>How do I know if my peptide has degraded in the fridge?</span>
 <span class="faq-toggle">▼</span>
 </button>
 <div class="faq-answer">
-<p>L'ispezione visiva è la vostra prima linea di difesa: cercare la nubesia, le particelle, i cambiamenti di colore, o viscosità insolita. Tuttavia, i peptidi possono degradare parzialmente senza cambiamenti visibili, potresti semplicemente notare una ridotta efficacia nel tempo. Le migliori pratiche per evitare questo includono l'etichettatura di fiale con la data di ricostituzione e lo scarto dopo 30 giorni, mantenendo la fiala sul retro del frigorifero (non la porta), riducendo al minimo il numero di volte che fori il tappo (ogni foratura introduce potenziali contaminanti), e non toccando mai il tappo con le dita dopo la pulizia con alcol.</p>
+<p>Visual inspection is your first line of defense: look for cloudiness, particles, color changes, or unusual viscosity. However, peptides can partially degrade without visible changes—you might just notice reduced effectiveness over time. Best practices to prevent this include labeling vials with the reconstitution date and discarding after 30 days, keeping the vial in the back of the fridge (not the door), minimizing the number of times you puncture the stopper (each puncture introduces potential contaminants), and never touching the stopper with your fingers after cleaning it with alcohol.</p>
 </div>
 </div>
 </div>
 </div>
 <!-- Related Articles -->
 <div class="related-articles">
-<h2>Altre guide del protocollo Peptide</h2>
+<h2>More Peptide Protocol Guides</h2>
 <div class="article-grid">
 <!-- Related Article 1 -->
 <div class="article-card">
 <div class="article-card-image">🧬</div>
 <div class="article-card-content">
-<div class="article-card-title">Guida alla ricostruzione del Peptide</div>
-<p class="article-card-excerpt">Istruzioni passo per la ricostituzione di peptidi liofilizzati. Esempi di matematica, volumi di acqua BAC e consigli di stoccaggio.</p>
-<a class="article-card-link" href="/it/bpc-157-reconstitution.html">Guida di lettura →</a>
+<div class="article-card-title">Peptide Reconstitution Guide</div>
+<p class="article-card-excerpt">Step-by-step instructions for reconstituting lyophilized peptides. Math examples, BAC water volumes, and storage tips.</p>
+<a class="article-card-link" href="/it/bpc-157-reconstitution.html">Read Guide →</a>
 </div>
 </div>
 <!-- Related Article 2 -->
 <div class="article-card">
 <div class="article-card-image">📊</div>
 <div class="article-card-content">
-<div class="article-card-title">BPC-157 Risultati Timeline</div>
-<p class="article-card-excerpt">Ripartizione settimanale di cosa aspettarsi da BPC-157. Termini realistici per diverse condizioni e dosi.</p>
-<a class="article-card-link" href="/it/bpc-157-results-timeline.html">Guida di lettura →</a>
+<div class="article-card-title">BPC-157 Results Timeline</div>
+<p class="article-card-excerpt">Week-by-week breakdown of what to expect from BPC-157. Realistic timelines for different conditions and doses.</p>
+<a class="article-card-link" href="/it/bpc-157-results-timeline.html">Read Guide →</a>
 </div>
 </div>
 <!-- Related Article 3 -->
 <div class="article-card">
 <div class="article-card-image">💉</div>
 <div class="article-card-content">
-<div class="article-card-title">I migliori siti di iniezione per Peptidi</div>
-<p class="article-card-excerpt">Guida completa ai siti di iniezione SubQ e IM con strategia di rotazione, consigli di tecnica e risoluzione dei problemi.</p>
-<a class="article-card-link" href="/it/peptide-injection-sites.html">Guida di lettura →</a>
+<div class="article-card-title">Best Injection Sites for Peptides</div>
+<p class="article-card-excerpt">Complete guide to SubQ and IM injection sites with rotation strategy, technique tips, and troubleshooting.</p>
+<a class="article-card-link" href="/it/peptide-injection-sites.html">Read Guide →</a>
 </div>
 </div>
 <!-- Related Article 4 -->
 <div class="article-card">
 <div class="article-card-image">🔄</div>
 <div class="article-card-content">
-<div class="article-card-title">Peptide Ciclismo: protocolli Questo lavoro</div>
-<p class="article-card-excerpt">Padroneggiare l'arte dei piedini per ciclismo per risultati sostenuti. Protocolli on/off, sensibilità dei recettori e strategie a lungo termine.</p>
-<a class="article-card-link" href="/it/peptide-cycling-guide.html">Guida di lettura →</a>
+<div class="article-card-title">Peptide Cycling: Protocols That Work</div>
+<p class="article-card-excerpt">Master the art of cycling peptides for sustained results. On/off protocols, receptor sensitivity, and long-term strategies.</p>
+<a class="article-card-link" href="/it/peptide-cycling-guide.html">Read Guide →</a>
+</div>
+</div>
+<!-- Related Article 5 -->
+<div class="article-card">
+<div class="article-card-image">🧮</div>
+<div class="article-card-content">
+<div class="article-card-title">Peptide Dosing Calculator Guide</div>
+<p class="article-card-excerpt">How to calculate exact syringe units from vial concentration and target dose — with worked BPC-157 and TB-500 examples.</p>
+<a class="article-card-link" href="/it/peptide-dosing-calculator-guide.html">Read Guide →</a>
 </div>
 </div>
 </div>
 </div>
-</div>
+
 <!-- Footer -->
 <footer>
 <div class="footer-content">
 <div class="footer-section">
 <h4>WolveStack</h4>
-<p>Guide supportate dalla ricerca per peptidi, prestazioni e biohacking.</p>
+<p>Research-backed guides to peptides, performance, and biohacking.</p>
 </div>
 <div class="footer-section">
-<h4>Risorse</h4>
+<h4>Resources</h4>
 <ul class="footer-links">
-<li><a href="/it/bpc-157-guide.html">Guida di BPC-157</a></li>
-<li><a href="/it/tb-500-guide.html">Guida di TB-500</a></li>
+<li><a href="/it/bpc-157-guide.html">BPC-157 Guide</a></li>
+<li><a href="/it/tb-500-guide.html">TB-500 Guide</a></li>
 <li><a href="/it/peptide-stacks.html">Peptide Stacks</a></li>
-<li><a href="/it/vendors.html">Venditore</a></li>
+<li><a href="/it/vendors.html">Vendors</a></li>
 </ul>
 </div>
 <div class="footer-section">
-<h4>Imparare</h4>
+<h4>Learn</h4>
 <ul class="footer-links">
-<li><a href="/it/start-here.html">Inizia qui</a></li>
-<li><a href="/it/research.html">Ricerca</a></li>
+<li><a href="/it/start-here.html">Start Here</a></li>
+<li><a href="/it/research.html">Research</a></li>
 <li><a href="/it/faq.html">FAQ</a></li>
-<li><a href="/it/contact.html">Contatto</a></li>
+<li><a href="/it/contact.html">Contact</a></li>
 </ul>
 </div>
 <div class="footer-section">
-<h4>Legale</h4>
+<h4>Legal</h4>
 <ul class="footer-links">
-<li><a href="/it/privacy.html">Informativa sulla privacy</a></li>
-<li><a href="/it/terms.html">Termini di servizio</a></li>
-<li><a href="/it/disclaimer.html">Disclaimer medico</a></li>
+<li><a href="/it/privacy.html">Privacy Policy</a></li>
+<li><a href="/it/terms.html">Terms of Service</a></li>
+<li><a href="/it/disclaimer.html">Medical Disclaimer</a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2026 WolveStack. Tutti i diritti riservati. I peptidi discussi sono composti di ricerca e non sono approvati dalla FDA per uso umano.</p>
+<p>© 2026 WolveStack. All rights reserved. Peptides discussed are research compounds and are not approved by the FDA for human use.</p>
 </div>
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
@@ -682,8 +836,8 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "5 Errori di dosaggio del peptide comune e come evitarli",
-  "description": "Evitare gli errori di dosaggio peptide più comuni che spreca denaro e ridurre i risultati. Imparare la corretta ricostruzione matematica, tempistica, ciclismo, storage e strategie di dosaggio.",
+  "headline": "5 Common Peptide Dosing Mistakes and How to Avoid Them",
+  "description": "Avoid the most common peptide dosing errors that waste money and reduce results. Learn proper reconstitution math, timing, cycling, storage, and dosing strategies.",
   "image": "https://wolvestack.com/images/peptide-dosing-mistakes.jpg",
   "datePublished": "2026-03-26",
   "dateModified": "2026-04-08",
@@ -703,7 +857,11 @@
     "@type": "WebPage",
     "@id": "https://wolvestack.com/it/peptide-dosing-mistakes.html"
   },
-    "reviewedBy": {"@type": "Organization", "name": "WolveStack Research Team", "url": "https://wolvestack.com/about.html"}
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "WolveStack Research Team",
+    "url": "https://wolvestack.com/it/about.html"
+  }
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -718,13 +876,13 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Peptidi",
+      "name": "Peptides",
       "item": "https://wolvestack.com/it/peptides.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Dosare errori",
+      "name": "Dosing Mistakes",
       "item": "https://wolvestack.com/it/peptide-dosing-mistakes.html"
     }
   ]
@@ -735,42 +893,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Cosa succede se iniettassi accidentalmente troppo peptide?",
+      "name": "What happens if I accidentally inject too much peptide?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un singolo overdose accidentale è improbabile causare gravi danni per la maggior parte dei peptidi di ricerca come BPC-157 o TB-500. Si può sperimentare effetti collaterali temporanei. Riprendi il tuo normale programma di dosaggio."
+        "text": "A single accidental overdose is unlikely to cause serious harm for most research peptides like BPC-157 or TB-500. You may experience temporary side effects. Resume your normal dosing schedule."
       }
     },
     {
       "@type": "Question",
-      "name": "Posso usare acqua sterile regolare invece di acqua batteriostatica?",
+      "name": "Can I use regular sterile water instead of bacteriostatic water?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Solo per uso singolo. L'acqua sterile manca del conservante che impedisce la crescita batterica. Poiché la maggior parte delle persone disegnano dosi multiple da una fiala, l'acqua BAC è necessaria per la sicurezza."
+        "text": "Only for single-use. Sterile water lacks the preservative that prevents bacterial growth. Since most people draw multiple doses from a vial, BAC water is required for safety."
       }
     },
     {
       "@type": "Question",
-      "name": "La mia soluzione peptide sembra offuscata dopo la ricostituzione. E' ancora buono?",
+      "name": "My peptide solution looks cloudy after reconstitution. Is it still good?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un peptide correttamente ricostituito dovrebbe essere chiaro e incolore. La nubicità di solito indica il degrado o la manipolazione impropria. È più sicuro scartare soluzioni cloudy."
+        "text": "A properly reconstituted peptide should be clear and colorless. Cloudiness usually indicates degradation or improper handling. It's safest to discard cloudy solutions."
       }
     },
     {
       "@type": "Question",
-      "name": "Dovrei dosare i peptidi per peso corporeo o usare una dose piatta?",
+      "name": "Should I dose peptides by body weight or use a flat dose?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La maggior parte dei protocolli utilizzano dosi piatte e questo funziona bene per la maggior parte degli utenti. Se sei significativamente superiore o inferiore al peso medio, regolare proporzionalmente può migliorare i risultati."
+        "text": "Most protocols use flat doses and this works well for most users. If you're significantly above or below average weight, adjusting proportionally may improve results."
       }
     },
     {
       "@type": "Question",
-      "name": "Come faccio a sapere se il mio peptide è degradato in frigo?",
+      "name": "How do I know if my peptide has degraded in the fridge?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cerca la nubesia, le particelle, i cambiamenti di colore, o la viscosità insolita. Scartare i peptidi ricostituiti dopo 30 giorni. Tenere le fiale sul retro del frigorifero, non la porta."
+        "text": "Look for cloudiness, particles, color changes, or unusual viscosity. Discard reconstituted peptides after 30 days. Keep vials in the back of the fridge, not the door."
       }
     }
   ]
