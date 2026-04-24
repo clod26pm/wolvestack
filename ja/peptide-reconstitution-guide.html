@@ -20,10 +20,10 @@
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MLF04PQ0JV');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -38,435 +38,434 @@
 <meta content="ペプチドを再構成する方法: 混合するステップバイステップガイド, ストレージ &amp; 計算用量" name="twitter:title"/>
 <meta content="凍結乾燥させた研究のペプチッドを構成する完全な実用的なガイド。 細菌性水、適切な再構成技術、線量の計算、貯蔵および注入の基礎を学びます。" name="twitter:description"/>
 <meta content="https://wolvestack.com/og-image-reconstitution.jpg" name="twitter:image"/>
-<link href="https://wolvestack.com/en/peptide-reconstitution-guide.html" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
-    --teal-pale: #e8f4f5; --accent: #f0a500;
-    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
-    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
-    --white: #ffffff;
-    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+ :root {
+  --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+  --teal-pale: #e8f4f5; --accent: #f0a500;
+  --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+  --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+  --white: #ffffff;
+  --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
 
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(13,115,119,0.3);
-  }
-  .nav-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 24px; height: 64px;
-  }
-  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
-  .logo span { color: var(--teal-light); }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
-  .nav-links a:hover { color: var(--teal-light); }
-  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
-  .nav-cta:hover { background: var(--teal-light); }
+ nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,34,64,0.97); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(13,115,119,0.3);
+ }
+ .nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 64px;
+ }
+ .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+ .logo span { color: var(--teal-light); }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+ .nav-links a:hover { color: var(--teal-light); }
+ .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+ .nav-cta:hover { background: var(--teal-light); }
 
-  .article-hero {
-    background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
-    padding: 64px 24px 56px; position: relative; overflow: hidden;
-  }
-  .article-hero::before {
-    content: ''; position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
-  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
-  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  .breadcrumb a:hover { color: var(--teal-light); }
-  .breadcrumb span { color: rgba(255,255,255,0.3); }
-  .breadcrumb .current { color: rgba(255,255,255,0.75); }
-  .article-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4);
-    color: var(--teal-light); padding: 5px 14px; border-radius: 100px;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px;
-  }
-  .article-hero h1 {
-    font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px);
-    font-weight: 700; color: var(--white); line-height: 1.2;
-    letter-spacing: -1px; margin-bottom: 16px;
-  }
-  .article-hero h1 em { color: var(--teal-light); font-style: normal; }
-  .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
-  .article-meta span { font-size: 13px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 6px; }
+ .article-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%);
+  padding: 64px 24px 56px; position: relative; overflow: hidden;
+ }
+ .article-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d7377' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+ }
+ .article-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+ .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
+ .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+ .breadcrumb a:hover { color: var(--teal-light); }
+ .breadcrumb span { color: rgba(255,255,255,0.3); }
+ .breadcrumb .current { color: rgba(255,255,255,0.75); }
+ .article-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4);
+  color: var(--teal-light); padding: 5px 14px; border-radius: 100px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px;
+ }
+ .article-hero h1 {
+  font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700; color: var(--white); line-height: 1.2;
+  letter-spacing: -1px; margin-bottom: 16px;
+ }
+ .article-hero h1 em { color: var(--teal-light); font-style: normal; }
+ .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
+ .article-meta span { font-size: 13px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 6px; }
 
-  .article-layout {
-    max-width: 1100px; margin: 0 auto; padding: 64px 24px;
-    display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start;
-  }
-  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+ .article-layout {
+  max-width: 1100px; margin: 0 auto; padding: 64px 24px;
+  display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start;
+ }
+ @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
 
-  .article-body { min-width: 0; }
-  .article-body h2 {
-    font-family: var(--font-display); font-size: 26px; font-weight: 700;
-    color: var(--navy); margin: 48px 0 16px; line-height: 1.3;
-    padding-top: 8px; border-top: 2px solid var(--teal-pale);
-  }
-  .article-body h2:first-child { margin-top: 0; border-top: none; }
-  .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
-  .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
-  .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
-  .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
-  .article-body strong { color: var(--navy); font-weight: 600; }
-  .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+ .article-body { min-width: 0; }
+ .article-body h2 {
+  font-family: var(--font-display); font-size: 26px; font-weight: 700;
+  color: var(--navy); margin: 48px 0 16px; line-height: 1.3;
+  padding-top: 8px; border-top: 2px solid var(--teal-pale);
+ }
+ .article-body h2:first-child { margin-top: 0; border-top: none; }
+ .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+ .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+ .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+ .article-body li { font-size: 16px; color: #374151; line-height: 1.75; margin-bottom: 8px; }
+ .article-body strong { color: var(--navy); font-weight: 600; }
+ .article-body a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 
-  .callout {
-    background: var(--teal-pale); border-left: 4px solid var(--teal);
-    padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0;
-  }
-  .callout.warning { background: #fef3c7; border-color: #f59e0b; }
-  .callout.research { background: #eff6ff; border-color: #3b82f6; }
-  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-  .callout.warning .callout-label { color: #92400e; }
-  .callout.research .callout-label { color: #1d4ed8; }
-  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+ .callout {
+  background: var(--teal-pale); border-left: 4px solid var(--teal);
+  padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 32px 0;
+ }
+ .callout.warning { background: #fef3c7; border-color: #f59e0b; }
+ .callout.research { background: #eff6ff; border-color: #3b82f6; }
+ .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+ .callout.warning .callout-label { color: #92400e; }
+ .callout.research .callout-label { color: #1d4ed8; }
+ .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
 
-  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
-  .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
-  .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
-  .data-table tr:last-child td { border-bottom: none; }
-  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+ .data-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+ .data-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+ .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+ .data-table tr:last-child td { border-bottom: none; }
+ .data-table tr:nth-child(even) td { background: var(--gray-50); }
 
-  .sidebar { position: sticky; top: 84px; }
-  .toc {
-    background: var(--gray-50); border: 1px solid var(--gray-200);
-    border-radius: 12px; padding: 24px;
-  }
-  .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .toc ol { margin: 0; padding-left: 20px; }
-  .toc li { margin-bottom: 10px; }
-  .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
-  .toc a:hover { color: var(--teal); }
-  .sidebar-card {
-    background: linear-gradient(135deg, var(--navy), #0a3d5c);
-    border-radius: 12px; padding: 24px; margin-top: 24px; color: white;
-  }
-  .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
-  .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
-  .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
-  .sidebar-card a:hover { background: var(--teal-light); }
+ .sidebar { position: sticky; top: 84px; }
+ .toc {
+  background: var(--gray-50); border: 1px solid var(--gray-200);
+  border-radius: 12px; padding: 24px;
+ }
+ .toc-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+ .toc ol { margin: 0; padding-left: 20px; }
+ .toc li { margin-bottom: 10px; }
+ .toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; line-height: 1.5; }
+ .toc a:hover { color: var(--teal); }
+ .sidebar-card {
+  background: linear-gradient(135deg, var(--navy), #0a3d5c);
+  border-radius: 12px; padding: 24px; margin-top: 24px; color: white;
+ }
+ .sidebar-card h4 { font-family: var(--font-display); font-size: 16px; margin-bottom: 12px; color: var(--teal-light); }
+ .sidebar-card p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+ .sidebar-card a { display: block; background: var(--teal); color: white; text-align: center; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
+ .sidebar-card a:hover { background: var(--teal-light); }
 
-  .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
-  .related-inner { max-width: 1100px; margin: 0 auto; }
-  .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
-  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-  .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
-  .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
-  .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-  .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
-  .related-card p { font-size: 13px; color: var(--gray-600); }
-
-
-    .apollo-card { border-top: 3px solid #7c3aed !important; background: #f8f7ff !important; }
-    .apollo-card h2 { border-top: none !important; margin-top: 0 !important; }
-    .apollo-btn { display: inline-block; background: #1e3a5f; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
-    .apollo-btn:hover { background: #7c3aed !important; }
-    .apollo-btn.apollo-primary { background: #7c3aed; }
-
-  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
-  footer a { color: var(--teal-light); text-decoration: none; }
-
-  .faq-list { display: flex; flex-direction: column; gap: 0; }
-  .faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
-  .faq-item:first-child { border-top: 1px solid var(--gray-200); }
-  .faq-q { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-  .faq-a { font-size: 16px; color: #374151; line-height: 1.7; margin: 0; }
-    .particle-card { border-top: 3px solid #8b2fc9 !important; }
-    .particle-card h2 { border-top: none !important; margin-top: 0 !important; }
-    .particle-btn { display: inline-block; background: #6b21a8; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
-    .particle-btn:hover { background: #8b2fc9 !important; }
-    .particle-btn.particle-primary { background: #8b2fc9; }
-      .limitless-card { border-top: 3px solid #0891b2 !important; }
-    .limitless-card h2 { border-top: none !important; margin-top: 0 !important; }
-    .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
-    .limitless-btn:hover { background: #0891b2 !important; }
-    .limitless-btn.limitless-primary { background: #0891b2; }
-  
-  .quick-answer {
-    background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
-    border: 2px solid var(--teal, #0d7377);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin: 0 0 32px 0;
-    position: relative;
-  }
-  .quick-answer::before {
-    content: '⚡ Quick Answer';
-    display: block;
-    font-family: var(--font-display, 'Space Grotesk', sans-serif);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--teal, #0d7377);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-  }
-  .quick-answer p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #1e293b !important;
-    margin-bottom: 0 !important;
-  }
+ .related-articles { background: var(--gray-50); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+ .related-inner { max-width: 1100px; margin: 0 auto; }
+ .related-inner h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+ .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+ .related-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; display: block; transition: all .2s; }
+ .related-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+ .related-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+ .related-card h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+ .related-card p { font-size: 13px; color: var(--gray-600); }
 
 
-  /* Search Bar Styles */
-  .nav-search {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .nav-search form {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(13, 115, 119, 0.4);
-    border-radius: 6px;
-    padding: 2px 8px;
-    transition: all 0.2s;
-  }
-  .nav-search form:focus-within {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--teal-light);
-    box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
-  }
+  .apollo-card { border-top: 3px solid #7c3aed !important; background: #f8f7ff !important; }
+  .apollo-card h2 { border-top: none !important; margin-top: 0 !important; }
+  .apollo-btn { display: inline-block; background: #1e3a5f; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+  .apollo-btn:hover { background: #7c3aed !important; }
+  .apollo-btn.apollo-primary { background: #7c3aed; }
+
+ footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+ footer a { color: var(--teal-light); text-decoration: none; }
+
+ .faq-list { display: flex; flex-direction: column; gap: 0; }
+ .faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+ .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+ .faq-q { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+ .faq-a { font-size: 16px; color: #374151; line-height: 1.7; margin: 0; }
+  .particle-card { border-top: 3px solid #8b2fc9 !important; }
+  .particle-card h2 { border-top: none !important; margin-top: 0 !important; }
+  .particle-btn { display: inline-block; background: #6b21a8; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+  .particle-btn:hover { background: #8b2fc9 !important; }
+  .particle-btn.particle-primary { background: #8b2fc9; }
+   .limitless-card { border-top: 3px solid #0891b2 !important; }
+  .limitless-card h2 { border-top: none !important; margin-top: 0 !important; }
+  .limitless-btn { display: inline-block; background: #0e7490; color: #fff !important; padding: 11px 18px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 13px; transition: background 0.2s; margin: 0 8px 8px 0; }
+  .limitless-btn:hover { background: #0891b2 !important; }
+  .limitless-btn.limitless-primary { background: #0891b2; }
+ 
+ .quick-answer {
+  background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%);
+  border: 2px solid var(--teal, #0d7377);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 0 0 32px 0;
+  position: relative;
+ }
+ .quick-answer::before {
+  content: '⚡ Quick Answer';
+  display: block;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal, #0d7377);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+ }
+ .quick-answer p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: #1e293b !important;
+  margin-bottom: 0 !important;
+ }
+
+
+ /* Search Bar Styles */
+ .nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+ }
+ .nav-search form {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(13, 115, 119, 0.4);
+  border-radius: 6px;
+  padding: 2px 8px;
+  transition: all 0.2s;
+ }
+ .nav-search form:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--teal-light);
+  box-shadow: 0 0 12px rgba(20, 189, 172, 0.1);
+ }
+ .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 14px;
+  width: 140px;
+  padding: 6px 4px;
+  font-family: var(--font-main);
+ }
+ .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+ }
+ .search-input:focus {
+  width: 180px;
+ }
+ .search-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 4px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+ }
+ .search-btn:hover {
+  color: var(--teal-light);
+ }
+
+ /* Language Dropdown Styles */
+ .nav-lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+ }
+ .nav-lang-toggle {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  transition: color 0.2s;
+ }
+ .nav-lang-toggle:hover {
+  color: var(--teal-light);
+ }
+ .nav-lang-toggle .arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 12px;
+ }
+ .nav-lang.open .nav-lang-toggle .arrow {
+  transform: rotate(180deg);
+ }
+ .nav-lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(15, 34, 64, 0.98);
+  border: 1px solid rgba(13, 115, 119, 0.4);
+  border-radius: 6px;
+  margin-top: 4px;
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+ }
+ .nav-lang.open .nav-lang-menu {
+  display: flex;
+ }
+ .nav-lang-menu a {
+  padding: 10px 16px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+ }
+ .nav-lang-menu a:hover {
+  background: rgba(13, 115, 119, 0.2);
+  color: var(--teal-light);
+  border-left-color: var(--teal-light);
+ }
+ .nav-lang-menu a.active {
+  background: rgba(13, 115, 119, 0.3);
+  color: var(--teal-light);
+  border-left-color: var(--teal-light);
+ }
+
+ /* Mobile Responsive - Nav Search */
+ @media (max-width: 768px) {
   .search-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--white);
-    font-size: 14px;
-    width: 140px;
-    padding: 6px 4px;
-    font-family: var(--font-main);
-  }
-  .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+   width: 100px;
   }
   .search-input:focus {
-    width: 180px;
-  }
-  .search-btn {
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.6);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 4px 4px;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-  }
-  .search-btn:hover {
-    color: var(--teal-light);
-  }
-
-  /* Language Dropdown Styles */
-  .nav-lang {
-    position: relative;
-    display: flex;
-    align-items: center;
+   width: 130px;
   }
   .nav-lang-toggle {
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 6px 8px;
-    transition: color 0.2s;
+   padding: 4px 6px;
   }
-  .nav-lang-toggle:hover {
-    color: var(--teal-light);
+ }
+ @media (max-width: 600px) {
+  .nav-search form {
+   padding: 2px 6px;
   }
-  .nav-lang-toggle .arrow {
-    display: inline-block;
-    transition: transform 0.2s;
-    font-size: 12px;
+  .search-input {
+   width: 80px;
+   font-size: 13px;
   }
-  .nav-lang.open .nav-lang-toggle .arrow {
-    transform: rotate(180deg);
-  }
-  .nav-lang-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(15, 34, 64, 0.98);
-    border: 1px solid rgba(13, 115, 119, 0.4);
-    border-radius: 6px;
-    margin-top: 4px;
-    min-width: 160px;
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-  .nav-lang.open .nav-lang-menu {
-    display: flex;
-  }
-  .nav-lang-menu a {
-    padding: 10px 16px;
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: all 0.2s;
-    border-left: 3px solid transparent;
-  }
-  .nav-lang-menu a:hover {
-    background: rgba(13, 115, 119, 0.2);
-    color: var(--teal-light);
-    border-left-color: var(--teal-light);
-  }
-  .nav-lang-menu a.active {
-    background: rgba(13, 115, 119, 0.3);
-    color: var(--teal-light);
-    border-left-color: var(--teal-light);
-  }
-
-  /* Mobile Responsive - Nav Search */
-  @media (max-width: 768px) {
-    .search-input {
-      width: 100px;
-    }
-    .search-input:focus {
-      width: 130px;
-    }
-    .nav-lang-toggle {
-      padding: 4px 6px;
-    }
-  }
-  @media (max-width: 600px) {
-    .nav-search form {
-      padding: 2px 6px;
-    }
-    .search-input {
-      width: 80px;
-      font-size: 13px;
-    }
-  }
+ }
 
 </style>
 <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "ペプチドを再構成する方法: 混合するステップバイステップガイド, ストレージ & 計算用量",
-  "description": "凍結乾燥させた研究のペプチッドを構成する完全な実用的なガイド。 細菌性水、適切な再構成技術、線量の計算、貯蔵および注入の基礎を学びます。",
-  "datePublished": "2026-03-10",
-  "dateModified": "2026-04-08",
-  "author": {
-    "@type": "Organization",
-    "name": "WolveStack",
-    "url": "https://wolvestack.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "WolveStack",
-    "url": "https://wolvestack.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://wolvestack.com/ja/logo.png",
-      "width": 250,
-      "height": 60
-    }
-  },
-  "reviewedBy": {
-    "@type": "Organization",
-    "name": "WolveStack Research Team",
-    "url": "https://wolvestack.com/ja/about.html"
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "ペプチドを再構成する方法: 混合するステップバイステップガイド, ストレージ & 計算用量",
+ "description": "凍結乾燥させた研究のペプチッドを構成する完全な実用的なガイド。 細菌性水、適切な再構成技術、線量の計算、貯蔵および注入の基礎を学びます。",
+ "datePublished": "2026-03-10",
+ "dateModified": "2026-04-08",
+ "author": {
+  "@type": "Organization",
+  "name": "WolveStack",
+  "url": "https://wolvestack.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "WolveStack",
+  "url": "https://wolvestack.com",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://wolvestack.com/ja/logo.png",
+   "width": 250,
+   "height": 60
   }
+ },
+ "reviewedBy": {
+  "@type": "Organization",
+  "name": "WolveStack Research Team",
+  "url": "https://wolvestack.com/ja/about.html"
+ }
 }</script>
 <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://wolvestack.com"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "ガイド",
-      "item": "https://wolvestack.com/ja/guides"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "再構成ガイド",
-      "item": "https://wolvestack.com/ja/en/peptide-reconstitution-guide.html"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wolvestack.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "ガイド",
+   "item": "https://wolvestack.com/ja/guides"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "再構成ガイド",
+   "item": "https://wolvestack.com/ja/en/peptide-reconstitution-guide.html"
+  }
+ ]
 }</script>
 <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "BPC-157 を整形するにはどうすればよいですか?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "BPC-157のreconstitutionは凍結乾燥させた粉のガラスびんに生殖不能の細菌水を加えることを含みます。 典型的な5mgガラスびんのために、2.5mg/mLの集中を作成するためにBAC水2mLを加えて下さい。 70%のアルコールが付いているガラスびんの上を振り、そしてゆっくりとガラスびんの側面の45度の角度で水を注入して下さい。 完全に分解されるまで30-60秒の穏やかに渦巻く(決して振動)。 日付と濃度でバイアルをラベル付け、すぐに2〜8°Cで冷凍します。 再構成された解決は4-6週のために安定した残ります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "殺菌水とは何ですか、なぜペプチドに使用されますか?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "細菌性水は保存剤として0.9%のベンジルアルコールを含む生殖不能水です。 再構成されたペプチッド解決の細菌そして真菌成長を防ぎま、冷凍されたとき4-6週に棚の生命を拡張します。 Benzylアルコールは希釈された集中の注入のための薬剤等級そして安全です。 この防腐剤なしで、明白な生殖不能水はわずか1-2週に使用可能な生命を限る汚染に対して保護を提供します。 BAC水は研究のペプチッドのための標準的な選択ですそれは最低の苛立ちの危険の安定性のバランスをとるので。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "冷蔵庫でBPC-157を長持ちさせるには?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "細菌静水でBPC-157を再構成することは、通常2-8°C(標準的な冷却装置温度)で貯えられたとき4-6週持続します。 BPC-157は安定した化合物であり、このウィンドウを通して効力を十分に維持します。 貯蔵の生命はライト、温度の変動およびドア区域から離れた適切な冷凍によって決まります。 劣化の兆候は、色変化(黄色または濃縮)、曇り、異常な匂い、または粒子形成を含みます。 これらのいずれかが発生した場合は、すぐにバイアルを破棄してください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "どのように私は私のペプチドの用量を計算しますか?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ペプチッド投薬は方式を使用します: 集中(mg/mL) = 総ペプチッド固まり(mg) ÷ 総容積(mL)。 例えば、2mL BAC水=2.5 mg/mL濃度の5mgのペプチッド。 それからあなたのターゲット線量を定める: 0.1mL (100 単位の注射器) = この集中の 250 マイクログラム。 再構成直後にバイアルラベルにこれらの計算を必ず書きます。 注入する前にあなたの数学を二重チェックします。, 投薬のエラーは、ペプチドの使用の最も一般的な間違いであるため."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "混合するときにペプチドバイアルを揺れますか?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "いいえ、あなたは決してペプチドバイアルを活発に揺らすべきではありません。 シェーキングは、アミノ酸ボンドを破壊することにより、泡と積極的な曝気を作り出します。 常に穏やかな渦巻きの動きを代わりに使用してください。 粉末が30〜60秒後に完全に溶解しない場合は、15分間冷蔵し、再び渦巻きます。 この忍耐ベースのアプローチは、繊細なペプチド分子を損なうことなく完全な再構成を確保しながら泡立ちを防ぎます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "ペプチド注射に必要な注射のサイズは?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "研究のペプチッドを注入する両方のための27-29のゲージの針が付いている1mLのスポイトを使用して下さい。 1mLの注射器は典型的な研究のペプチッド線量(通常注入ごとの0.1-1mL)のための精密な測定を提供します。 27-29 ゲージの針のサイズは安全な subcutaneous の注入のために十分に耐久である間注射の苦痛を最小にするのに十分薄いです。 非常に小さな線量(0.05mL未満)のために、一部のユーザーは、標準1mLの注射がほとんどのプロトコルに適しているにもかかわらず、より細かい増加のためのインシュリン注射を好む。"
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "BPC-157 を整形するにはどうすればよいですか?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "BPC-157のreconstitutionは凍結乾燥させた粉のガラスびんに生殖不能の細菌水を加えることを含みます。 典型的な5mgガラスびんのために、2.5mg/mLの集中を作成するためにBAC水2mLを加えて下さい。 70%のアルコールが付いているガラスびんの上を振り、そしてゆっくりとガラスびんの側面の45度の角度で水を注入して下さい。 完全に分解されるまで30-60秒の穏やかに渦巻く(決して振動)。 日付と濃度でバイアルをラベル付け、すぐに2〜8°Cで冷凍します。 再構成された解決は4-6週のために安定した残ります。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "殺菌水とは何ですか、なぜペプチドに使用されますか?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "細菌性水は保存剤として0.9%のベンジルアルコールを含む生殖不能水です。 再構成されたペプチッド解決の細菌そして真菌成長を防ぎま、冷凍されたとき4-6週に棚の生命を拡張します。 Benzylアルコールは希釈された集中の注入のための薬剤等級そして安全です。 この防腐剤なしで、明白な生殖不能水はわずか1-2週に使用可能な生命を限る汚染に対して保護を提供します。 BAC水は研究のペプチッドのための標準的な選択ですそれは最低の苛立ちの危険の安定性のバランスをとるので。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "冷蔵庫でBPC-157を長持ちさせるには?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "細菌静水でBPC-157を再構成することは、通常2-8°C(標準的な冷却装置温度)で貯えられたとき4-6週持続します。 BPC-157は安定した化合物であり、このウィンドウを通して効力を十分に維持します。 貯蔵の生命はライト、温度の変動およびドア区域から離れた適切な冷凍によって決まります。 劣化の兆候は、色変化(黄色または濃縮)、曇り、異常な匂い、または粒子形成を含みます。 これらのいずれかが発生した場合は、すぐにバイアルを破棄してください。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "どのように私は私のペプチドの用量を計算しますか?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "ペプチッド投薬は方式を使用します: 集中(mg/mL) = 総ペプチッド固まり(mg) ÷ 総容積(mL)。 例えば、2mL BAC水=2.5 mg/mL濃度の5mgのペプチッド。 それからあなたのターゲット線量を定める: 0.1mL (100 単位の注射器) = この集中の 250 マイクログラム。 再構成直後にバイアルラベルにこれらの計算を必ず書きます。 注入する前にあなたの数学を二重チェックします。, 投薬のエラーは、ペプチドの使用の最も一般的な間違いであるため."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "混合するときにペプチドバイアルを揺れますか?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "いいえ、あなたは決してペプチドバイアルを活発に揺らすべきではありません。 シェーキングは、アミノ酸ボンドを破壊することにより、泡と積極的な曝気を作り出します。 常に穏やかな渦巻きの動きを代わりに使用してください。 粉末が30〜60秒後に完全に溶解しない場合は、15分間冷蔵し、再び渦巻きます。 この忍耐ベースのアプローチは、繊細なペプチド分子を損なうことなく完全な再構成を確保しながら泡立ちを防ぎます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "ペプチド注射に必要な注射のサイズは?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "研究のペプチッドを注入する両方のための27-29のゲージの針が付いている1mLのスポイトを使用して下さい。 1mLの注射器は典型的な研究のペプチッド線量(通常注入ごとの0.1-1mL)のための精密な測定を提供します。 27-29 ゲージの針のサイズは安全な subcutaneous の注入のために十分に耐久である間注射の苦痛を最小にするのに十分薄いです。 非常に小さな線量(0.05mL未満)のために、一部のユーザーは、標準1mLの注射がほとんどのプロトコルに適しているにもかかわらず、より細かい増加のためのインシュリン注射を好む。"
+   }
+  }
+ ]
 }</script>
 <link href="https://wolvestack.com/en/peptide-reconstitution-guide.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/peptide-reconstitution-guide.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/peptide-reconstitution-guide.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/peptide-reconstitution-guide.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/peptide-reconstitution-guide.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/peptide-reconstitution-guide.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/peptide-reconstitution-guide.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/peptide-reconstitution-guide.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/peptide-reconstitution-guide.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/peptide-reconstitution-guide.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/peptide-reconstitution-guide.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/peptide-reconstitution-guide.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/peptide-reconstitution-guide.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/peptide-reconstitution-guide.html" hreflang="x-default" rel="alternate"/></head>
 <body>
@@ -499,7 +498,7 @@
 <a href="/ja/bpc-157-guide.html">フランチェスコ</a>
 <a href="/ja/bpc-157-guide.html">バハサ</a>
 <a href="/ja/bpc-157-guide.html">ドイツ</a>
-<a href="/ja/bpc-157-guide.html">日本語   English</a>
+<a href="/ja/bpc-157-guide.html">日本語  English</a>
 <a href="/ja/bpc-157-guide.html">العربية</a>
 </div>
 </div>
@@ -507,8 +506,8 @@
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
+           border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+           font-family:var(--font-main,sans-serif);">
 <option value="/en/peptide-reconstitution-guide.html">English</option><option value="/es/peptide-reconstitution-guide.html">Español</option><option value="/zh/peptide-reconstitution-guide.html">中文</option><option selected="" value="/ja/peptide-reconstitution-guide.html">日本語</option><option value="/pt/peptide-reconstitution-guide.html">Português</option><option value="/ru/peptide-reconstitution-guide.html">Русский</option><option value="/it/peptide-reconstitution-guide.html">Italiano</option><option value="/pl/peptide-reconstitution-guide.html">Polski</option><option value="/fr/peptide-reconstitution-guide.html">Français</option><option value="/id/peptide-reconstitution-guide.html">Bahasa</option><option value="/de/peptide-reconstitution-guide.html">Deutsch</option><option value="/nl/peptide-reconstitution-guide.html">Nederlands</option><option value="/ar/peptide-reconstitution-guide.html">العربية</option>
 </select>
 </div>
@@ -539,19 +538,19 @@
 <!-- E-E-A-T: Enhanced Medical Disclaimer -->
 <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b; line-height: 1.7;">
 <p style="font-weight: 700; margin: 0 0 8px; font-size: 14px;">医療免責事項</p>
-<p style="margin: 0;">この記事は<strong>情報提供・教育目的のみ</strong>医療アドバイスを構成しない 議論された化合物は、研究化学物質である<strong>FDA 承認されていない</strong>人間の使用のため。 ペプチドプロトコルを検討する前に、必ず認定医療専門家に相談してください。 WolveStackに医学のスタッフがなく、診断、治療、または処方されていません。 お問い合わせ<a href="/ja/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免責事項</a>お問い合わせ</p>
+<p style="margin: 0;">この記事は <strong>情報提供・教育目的のみ</strong> であり、医療アドバイスを構成しない 議論された化合物は、研究化学物質である <strong>FDA 承認されていない</strong> 人間の使用のため。 ペプチドプロトコルを検討する前に、必ず認定医療専門家に相談してください。 WolveStackに医学のスタッフがなく、診断、治療、または処方されていません。 お問い合わせ<a href="/ja/disclaimer.html" style="color: #991b1b; text-decoration: underline;">免責事項</a>お問い合わせ</p>
 </div>
 <h2 id="side-effects">ペプチド再構成のための安全配慮</h2>
-<p><strong>汚染リスク:</strong>再構成プロセスはペプチッド準備の汚染のための最も重要なポイントです。 細菌を導入し、再構成中に物質やエンドトキシンを粒子状にし、注射部位の感染から全身性セプシウムに至るまで、深刻な副作用をもたらすことができます。 すべてのステップは、手洗いを含む厳密な無菌技術に従わなければなりません, きれいな表面に取り組んでいます, アルコールですべてのバイアルストッパーを旋回します, そして、滅菌針と注射を使用して.</p>
+<p><strong>汚染リスク:</strong> 再構成プロセスはペプチッド準備の汚染のための最も重要なポイントです。 細菌を導入し、再構成中に物質やエンドトキシンを粒子状にし、注射部位の感染から全身性セプシウムに至るまで、深刻な副作用をもたらすことができます。 すべてのステップは、手洗いを含む厳密な無菌技術に従わなければなりません, きれいな表面に取り組んでいます, アルコールですべてのバイアルストッパーを旋回します, そして、滅菌針と注射を使用して.</p>
 <p><strong>一般的な再構成エラーとその結果:</strong></p>
 <ul style="margin: 16px 0 20px 24px; line-height: 1.8;">
-<li><strong>バイアルを揺す:</strong>粘性シェーキングは、その結束構造を破壊することにより、変性ペプチドを否定することができます。 Denaturedのペプチッドは生物的に非活動的か、または免疫の応答を誘発するかもしれません。 常に穏やかにまたはあなたの手のひら間のガラスびんを転がして下さい。</li>
-<li><strong>粉末に直接水を注入する:</strong>凍結乾燥させたペプチッド ケーキへの再構成水の強制的な注入は機械denaturationを引き起こすことができます。 水の流出をバイアルの内部の壁に指示し、それをゆっくりと粉末を溶かすことを可能にします。</li>
-<li><strong>間違った希釈剤を使用して:</strong>細菌性水が必要である場合の生殖不能水を使用して(複数の線量の使用のために)微生物成長に対する防腐剤を除去します。 逆に、いくつかのペプチドは、細菌性水にベンジルアルコールと互換性がないかもしれません。</li>
-<li><strong>誤ったボリューム計算:</strong>余りに多くを加えるか、余りに小さい再構成水は単位の容積ごとの集中を変えます、投薬の間違いに導きます。 再構成前のボリュームを常に計算し、検証します。</li>
+<li><strong>バイアルを揺す:</strong> 粘性シェーキングは、その結束構造を破壊することにより、変性ペプチドを否定することができます。 Denaturedのペプチッドは生物的に非活動的か、または免疫の応答を誘発するかもしれません。 常に穏やかにまたはあなたの手のひら間のガラスびんを転がして下さい。</li>
+<li><strong>粉末に直接水を注入する:</strong> 凍結乾燥させたペプチッド ケーキへの再構成水の強制的な注入は機械denaturationを引き起こすことができます。 水の流出をバイアルの内部の壁に指示し、それをゆっくりと粉末を溶かすことを可能にします。</li>
+<li><strong>間違った希釈剤を使用して:</strong> 細菌性水が必要である場合の生殖不能水を使用して(複数の線量の使用のために)微生物成長に対する防腐剤を除去します。 逆に、いくつかのペプチドは、細菌性水にベンジルアルコールと互換性がないかもしれません。</li>
+<li><strong>誤ったボリューム計算:</strong> 余りに多くを加えるか、余りに小さい再構成水は単位の容積ごとの集中を変えます、投薬の間違いに導きます。 再構成前のボリュームを常に計算し、検証します。</li>
 </ul>
-<p><strong>安定性の心配:</strong>再構成されたペプチッドは凍結乾燥させた粉よりより少し安定です。 溶液で一度、ペプチドは加水分解、酸化、凝集によって劣化し始めます。 貯蔵条件は重要になります — ほとんどの再構成されたペプチッドは2-8°Cで冷やされ、2-4週以内に使用されるべきです。 凍結の再構成された解決は一般に氷の水晶形成がペプチッド構造を損なうことができるので推薦されません。</p>
-<p><strong>エンドトキシンおよびPyrogenの危険:</strong>研究等級のペプチッドは製造業プロセスからの跡のエンドトキシンを含んでいるかもしれません。 凍結乾燥させた粉が比較的安定している間、化学水または非生殖不能のガラスびんのアクセスからのエンドトキシンの汚染は注入の熱、唐辛子、低張力および重症の場合の無菌衝撃を引き起こします。</p>
+<p><strong>安定性の心配:</strong> 再構成されたペプチッドは凍結乾燥させた粉よりより少し安定です。 溶液で一度、ペプチドは加水分解、酸化、凝集によって劣化し始めます。 貯蔵条件は重要になります — ほとんどの再構成されたペプチッドは2-8°Cで冷やされ、2-4週以内に使用されるべきです。 凍結の再構成された解決は一般に氷の水晶形成がペプチッド構造を損なうことができるので推薦されません。</p>
+<p><strong>エンドトキシンおよびPyrogenの危険:</strong> 研究等級のペプチッドは製造業プロセスからの跡のエンドトキシンを含んでいるかもしれません。 凍結乾燥させた粉が比較的安定している間、化学水または非生殖不能のガラスびんのアクセスからのエンドトキシンの汚染は注入の熱、唐辛子、低張力および重症の場合の無菌衝撃を引き起こします。</p>
 <div class="callout warning">
 <span class="callout-label">重要な免責事項</span>
 <p>適切な再構成技術は注射可能なペプチッドの安全そして効力のために必要です。 このガイドは教育目的のみです。 再構成の誤差は、汚染、誤った投与、またはペプチドの劣化を引き起こす可能性があります。 注射可能な化合物を準備し、管理する前に、医療提供者または認定研究者に相談してください。</p>
@@ -612,8 +611,8 @@
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
+           border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+           font-family:var(--font-main,sans-serif);">
 <option value="/en/peptide-reconstitution-guide.html">English</option><option value="/es/peptide-reconstitution-guide.html">Español</option><option value="/zh/peptide-reconstitution-guide.html">中文</option><option selected="" value="/ja/peptide-reconstitution-guide.html">日本語</option><option value="/pt/peptide-reconstitution-guide.html">Português</option><option value="/ru/peptide-reconstitution-guide.html">Русский</option><option value="/it/peptide-reconstitution-guide.html">Italiano</option><option value="/pl/peptide-reconstitution-guide.html">Polski</option><option value="/fr/peptide-reconstitution-guide.html">Français</option><option value="/id/peptide-reconstitution-guide.html">Bahasa</option><option value="/de/peptide-reconstitution-guide.html">Deutsch</option><option value="/nl/peptide-reconstitution-guide.html">Nederlands</option><option value="/ar/peptide-reconstitution-guide.html">العربية</option>
 </select>
 </div>
@@ -622,33 +621,33 @@
 <script>
 // Language dropdown toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const navLangToggle = document.querySelector('.nav-lang-toggle');
-  const navLang = document.querySelector('.nav-lang');
+ const navLangToggle = document.querySelector('.nav-lang-toggle');
+ const navLang = document.querySelector('.nav-lang');
 
-  if (navLangToggle) {
-    navLangToggle.addEventListener('click', function() {
-      navLang.classList.toggle('open');
-    });
+ if (navLangToggle) {
+  navLangToggle.addEventListener('click', function() {
+   navLang.classList.toggle('open');
+  });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navLang.contains(event.target)) {
-        navLang.classList.remove('open');
-      }
-    });
-  }
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+   if (!navLang.contains(event.target)) {
+    navLang.classList.remove('open');
+   }
+  });
+ }
 
-  // Search form - redirect to search.html with query parameter
-  const searchForm = document.querySelector('.nav-search form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const query = document.querySelector('.search-input').value.trim();
-      if (query) {
-        window.location.href = '/search.html?q=' + encodeURIComponent(query);
-      }
-    });
-  }
+ // Search form - redirect to search.html with query parameter
+ const searchForm = document.querySelector('.nav-search form');
+ if (searchForm) {
+  searchForm.addEventListener('submit', function(e) {
+   e.preventDefault();
+   const query = document.querySelector('.search-input').value.trim();
+   if (query) {
+    window.location.href = '/search.html?q=' + encodeURIComponent(query);
+   }
+  });
+ }
 });
 </script>
 </body>

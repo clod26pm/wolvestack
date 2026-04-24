@@ -19,55 +19,54 @@
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MLF04PQ0JV');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-MLF04PQ0JV');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TB-500 Guía de almacenamiento y reconstrucción</title>
 <meta content="TB-500 almacenamiento adecuado, protocolos de reconstitución, estabilidad y prevención de contaminación. Guía completa de preparación." name="description"/>
-<link href="https://wolvestack.com/en/tb-500-storage.html" rel="canonical"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-  :root { --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac; --accent: #f0a500; --gray-800: #1e293b; --white: #ffffff; --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif; }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
-  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); border-bottom: 1px solid rgba(13,115,119,0.3); }
-  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
-  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; }
-  .logo span { color: var(--teal-light); }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
-  .nav-links a:hover { color: var(--teal-light); }
-  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 64px 24px 56px; }
-  .article-hero-inner { max-width: 800px; margin: 0 auto; }
-  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
-  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  .breadcrumb .current { color: rgba(255,255,255,0.75); }
-  .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-bottom: 20px; }
-  .article-hero h1 { font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 16px; }
-  .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); }
-  .article-layout { max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; }
-  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
-  .article-body h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
-  .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
-  .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
-  .quick-answer { background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%); border: 2px solid var(--teal); border-radius: 12px; padding: 24px 28px; margin: 0 0 32px 0; }
-  .quick-answer::before { content: '⚡ Quick Answer'; display: block; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); text-transform: uppercase; margin-bottom: 10px; }
-  .quick-answer p { font-size: 16px !important; line-height: 1.7 !important; color: #1e293b !important; margin-bottom: 0 !important; }
-  .vendor-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 32px 0; }
-  .apollo-card, .particle-card, .limitless-card { border: 2px solid #0d7377; border-radius: 12px; padding: 24px; background: #f8fafc; }
-  .apollo-card h4, .particle-card h4, .limitless-card h4 { color: var(--navy); font-size: 18px; margin-bottom: 12px; font-weight: 700; }
-  .apollo-card p, .particle-card p, .limitless-card p { font-size: 14px; color: #475569; margin-bottom: 16px; }
-  .apollo-btn, .particle-btn, .limitless-btn { display: inline-block; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; border: none; cursor: pointer; }
-  .apollo-btn { background: #0d7377; color: white; }
-  .particle-btn { background: #7c3aed; color: white; }
-  .limitless-btn { background: #06b6d4; color: white; }
+ :root { --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac; --accent: #f0a500; --gray-800: #1e293b; --white: #ffffff; --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+ nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); border-bottom: 1px solid rgba(13,115,119,0.3); }
+ .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+ .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; }
+ .logo span { color: var(--teal-light); }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+ .nav-links a:hover { color: var(--teal-light); }
+ .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 64px 24px 56px; }
+ .article-hero-inner { max-width: 800px; margin: 0 auto; }
+ .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 13px; }
+ .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+ .breadcrumb .current { color: rgba(255,255,255,0.75); }
+ .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-bottom: 20px; }
+ .article-hero h1 { font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 16px; }
+ .article-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); }
+ .article-layout { max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; }
+ @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
+ .article-body h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
+ .article-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+ .article-body p { margin-bottom: 20px; font-size: 17px; color: #374151; line-height: 1.8; }
+ .quick-answer { background: linear-gradient(135deg, #e8f4f5 0%, #f0fdf9 100%); border: 2px solid var(--teal); border-radius: 12px; padding: 24px 28px; margin: 0 0 32px 0; }
+ .quick-answer::before { content: '⚡ Quick Answer'; display: block; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); text-transform: uppercase; margin-bottom: 10px; }
+ .quick-answer p { font-size: 16px !important; line-height: 1.7 !important; color: #1e293b !important; margin-bottom: 0 !important; }
+ .vendor-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 32px 0; }
+ .apollo-card, .particle-card, .limitless-card { border: 2px solid #0d7377; border-radius: 12px; padding: 24px; background: #f8fafc; }
+ .apollo-card h4, .particle-card h4, .limitless-card h4 { color: var(--navy); font-size: 18px; margin-bottom: 12px; font-weight: 700; }
+ .apollo-card p, .particle-card p, .limitless-card p { font-size: 14px; color: #475569; margin-bottom: 16px; }
+ .apollo-btn, .particle-btn, .limitless-btn { display: inline-block; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; border: none; cursor: pointer; }
+ .apollo-btn { background: #0d7377; color: white; }
+ .particle-btn { background: #7c3aed; color: white; }
+ .limitless-btn { background: #06b6d4; color: white; }
 </style>
 <link href="https://wolvestack.com/en/tb-500-storage.html" hreflang="en" rel="alternate"/><link href="https://wolvestack.com/es/tb-500-storage.html" hreflang="es" rel="alternate"/><link href="https://wolvestack.com/zh/tb-500-storage.html" hreflang="zh" rel="alternate"/><link href="https://wolvestack.com/ja/tb-500-storage.html" hreflang="ja" rel="alternate"/><link href="https://wolvestack.com/pt/tb-500-storage.html" hreflang="pt" rel="alternate"/><link href="https://wolvestack.com/ru/tb-500-storage.html" hreflang="ru" rel="alternate"/><link href="https://wolvestack.com/it/tb-500-storage.html" hreflang="it" rel="alternate"/><link href="https://wolvestack.com/pl/tb-500-storage.html" hreflang="pl" rel="alternate"/><link href="https://wolvestack.com/fr/tb-500-storage.html" hreflang="fr" rel="alternate"/><link href="https://wolvestack.com/id/tb-500-storage.html" hreflang="id" rel="alternate"/><link href="https://wolvestack.com/de/tb-500-storage.html" hreflang="de" rel="alternate"/><link href="https://wolvestack.com/nl/tb-500-storage.html" hreflang="nl" rel="alternate"/><link href="https://wolvestack.com/ar/tb-500-storage.html" hreflang="ar" rel="alternate"/><link href="https://wolvestack.com/tb-500-storage.html" hreflang="x-default" rel="alternate"/></head>
 <body>
@@ -84,8 +83,8 @@
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
+           border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+           font-family:var(--font-main,sans-serif);">
 <option value="/en/tb-500-storage.html">English</option><option selected="" value="/es/tb-500-storage.html">Español</option><option value="/zh/tb-500-storage.html">中文</option><option value="/ja/tb-500-storage.html">日本語</option><option value="/pt/tb-500-storage.html">Português</option><option value="/ru/tb-500-storage.html">Русский</option><option value="/it/tb-500-storage.html">Italiano</option><option value="/pl/tb-500-storage.html">Polski</option><option value="/fr/tb-500-storage.html">Français</option><option value="/id/tb-500-storage.html">Bahasa</option><option value="/de/tb-500-storage.html">Deutsch</option><option value="/nl/tb-500-storage.html">Nederlands</option><option value="/ar/tb-500-storage.html">العربية</option>
 </select>
 </div>
@@ -111,35 +110,35 @@
 <article class="article-body">
 <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 13px; color: #991b1b;">
 <p style="font-weight: 700; margin: 0 0 8px;">Reclamación médica</p>
-<p style="margin: 0;"><strong>Para fines informativos y educativos únicamente</strong>No aprobado por la FDA para uso humano. Consulte a un profesional de la salud con licencia.</p>
+<p style="margin: 0;"><strong>Para fines informativos y educativos únicamente</strong> No aprobado por la FDA para uso humano. Consulte a un profesional de la salud con licencia.</p>
 </div>
 <div class="quick-answer">TB-500 requiere un almacenamiento adecuado a 2-8°C en condiciones estériles para mantener la potencia. La reconstitución con agua bacteriostática crea una solución estable de 2-4 semanas. Los ciclos de congelación deben evitarse a medida que reducen la integridad y eficacia del péptidos.
 </div>
 <h2>¿Qué es TB-500?</h2>
-<p>TB-500 almacenamiento adecuado, protocolos de reconstitución, estabilidad y prevención de contaminación. Guía completa de preparación. El péptido ha sido ampliamente estudiado en modelos animales y contextos de investigación, demostrando efectos robustos en múltiples tipos de tejidos y mecanismos de curación. Esta guía amplia examina las pruebas actuales de investigación, los mecanismos propuestos, las aplicaciones prácticas y las limitaciones importantes.</p>
+<p>TB-500 almacenamiento adecuado, protocolos de reconstitución, estabilidad y prevención de contaminación. Guía completa de preparación. El péptido ha sido ampliamente estudiado en mode los animales y contextos de investigación, demostrando efectos robustos en múltiples tipos de tejidos y mecanismos de curación. Esta guía amplia examina las pruebas actuales de investigación, los mecanismos propuestos, las aplicaciones prácticas y las limitaciones importantes.</p>
 <h2>Principales efectos de investigación</h2>
-<p>El foco de investigación principal para este péptido se centra en la regeneración del tejido, la aceleración curativa de la herida y los efectos sistémicos en la inflamación y la función vascular. Múltiples vías de mecanismo se han documentado en los modelos animales: mayor migración celular y proliferación, regulación de los factores de crecimiento (VEGF, HGF, FGF), mejora de la angiogénesis y señalización antiinflamatoria. Estos mecanismos funcionan sinérgicamente para crear condiciones favorables para la reparación de tejidos a través de tipos de lesiones.</p>
+<p>El foco de investigación principal para este péptido se centra en la regeneración del tejido, la aceleración curativa de la herida y los efectos sistémicos en la inflamación y la función vascular. Múltiples vías de mecanismo se han documentado en los mode los animales: mayor migración celular y proliferación, regulación de los factores de crecimiento (VEGF, HGF, FGF), mejora de la angiogénesis y señalización antiinflamatoria. Estos mecanismos funcionan sinérgicamente para crear condiciones favorables para la reparación de tejidos a través de tipos de lesiones.</p>
 <p>La amplitud de los efectos distingue este péptido de terapias monomecánicas. En lugar de apuntar a una vía, orquesta múltiples cascadas de reparación simultáneamente, explicando su eficacia a través de diversos tipos de tejidos incluyendo la piel, músculo, hueso, cartílago, tendón y tejido neurológico.</p>
 <h2>Curación de heridos y reparación de tejidos</h2>
-<p>Uno de los beneficios más estudiados implica la curación de la herida acelerada en varios tipos de tejido. En los modelos animales, la administración reduce el tiempo de curación en un 20-40% en comparación con los controles, con mejoras observadas en las tres fases curativas: hemostasis, fase inflamatoria y remodelación de tejidos. El mecanismo implica una mayor migración de fibroblastos, una síntesis de colágeno regulada, una mejor epitelialización y una angiogénesis promovida para asegurar un suministro sanguíneo adecuado.</p>
+<p>Uno de los beneficios más estudiados implica la curación de la herida acelerada en varios tipos de tejido. En los mode los animales, la administración reduce el tiempo de curación en un 20-40% en comparación con los controles, con mejoras observadas en las tres fases curativas: hemostasis, fase inflamatoria y remodelación de tejidos. El mecanismo implica una mayor migración de fibroblastos, una síntesis de colágeno regulada, una mejor epitelialización y una angiogénesis promovida para asegurar un suministro sanguíneo adecuado.</p>
 <p>Los hallazgos particularmente relevantes incluyen beneficios en las heridas crónicas, difíciles de curar — heridas diabéticas, úlceras de presión y heridas isquémicas— donde la curación estándar se deteriora. El péptido parece "restart" procesos de curación estancados abordando las barreras bioquímicas (déficit de crecimiento, inflamación) evitando la recuperación normal.</p>
 <h2>Recuperación de lesiones musculares</h2>
-<p>El daño muscular por lesión aguda, cepa o exceso de uso muestra una recuperación acelerada con este péptido. La proliferación y diferenciación mioblast se potencian, promoviendo una regeneración más rápida de las fibras musculares. En los modelos roedores de lesión muscular aguda, el péptido reduce el tiempo de regreso a funcionamiento de 4-8 semanas a 2-4 semanas. El efecto combina la activación mioblast directa con la inflamación secundaria reducida y el flujo sanguíneo mejorado para recuperar tejido.</p>
+<p>El daño muscular por lesión aguda, cepa o exceso de uso muestra una recuperación acelerada con este péptido. La proliferación y diferenciación mioblast se potencian, promoviendo una regeneración más rápida de las fibras musculares. En los mode los roedores de lesión muscular aguda, el péptido reduce el tiempo de regreso a funcionamiento de 4-8 semanas a 2-4 semanas. El efecto combina la activación mioblast directa con la inflamación secundaria reducida y el flujo sanguíneo mejorado para recuperar tejido.</p>
 <p>La pérdida muscular relacionada con la edad (sarcopenia) muestra beneficios teóricos a través de los efectos del péptido sobre la activación de las células satélites y la señalización antiinflamatoria, aunque los ensayos humanos en las poblaciones de envejecimiento siguen ausentes. Los atletas y los individuos que se recuperan de trauma o cirugía representan a las poblaciones primarias candidatas.</p>
 <h2>Protección conjunta de salud y cartílago</h2>
-<p>Los efectos sanitarios conjuntos se centran en la prevención de la degeneración del cartílago y la promoción de la salud condrociada. En los modelos de osteoartritis, el péptido reduce la pérdida de cartílago y la producción inflamatoria de citoquinas al tiempo que mejora la movilidad articular. Los mecanismos incluyen la condroprotección directa (reducción de la muerte celular), la migración mejorada de condrocitos, la lubricación mejorada y la reducción de la carga inflamatoria.</p>
+<p>Los efectos sanitarios conjuntos se centran en la prevención de la degeneración del cartílago y la promoción de la salud condrociada. En los mode los de osteoartritis, el péptido reduce la pérdida de cartílago y la producción inflamatoria de citoquinas al tiempo que mejora la movilidad articular. Los mecanismos incluyen la condroprotección directa (reducción de la muerte celular), la migración mejorada de condrocitos, la lubricación mejorada y la reducción de la carga inflamatoria.</p>
 <p>El beneficio se aplica tanto a las lesiones articulares agudas como a las condiciones crónicas degenerativas. Al promover la proliferación de condrocitos —importante porque el cartílago maduro tiene una capacidad de auto-reparación limitada— y mejorar la angiogénesis en las interfaces de tejido crítico, el péptido puede retrasar la progresión de la enfermedad articular degenerativa.</p>
 <h2>Reparación de tenencia y ligamento</h2>
-<p>Tendons and ligaments heal slow due to low cellularity and limited blood supply. Este péptido aborda ambas limitaciones mediante la migración de tenocitos, la síntesis de colágeno mejorada (Tipo I y III), y la angiogénesis mejorada. En los modelos de ratas de ruptura del tendón de Aquiles y lesión de ACL, el péptido acelera la deposición del colágeno y la recuperación de la fuerza mecánica en un 30-50% en comparación con los controles.</p>
+<p>Tendons and ligaments heal slow due to low cellularity and limited blood supply. Este péptido aborda ambas limitaciones mediante la migración de tenocitos, la síntesis de colágeno mejorada (Tipo I y III), y la angiogénesis mejorada. En los mode los de ratas de ruptura del tendón de Aquiles y lesión de ACL, el péptido acelera la deposición del colágeno y la recuperación de la fuerza mecánica en un 30-50% en comparación con los controles.</p>
 <p>El beneficio se extiende a los trastornos crónicos del tendón y la degeneración relacionada con la edad, donde la combinación de efectos antiinflamatorios, el aumento del factor de crecimiento y la perfusión mejorada aborda múltiples barreras curativas simultáneamente.</p>
 <h2>Angiogénesis y Formación Vascular</h2>
-<p>La promoción de la nueva formación de vasos sanguíneos (angiogénesis) representa un mecanismo de curación crítico. El péptido regula el VEGF, FGF y HGF, factores pro-angiógenos clave, y realza directamente la migración celular endotelial y la formación de tubos. En los modelos de tejido isquémico, el tratamiento restaura la perfusión más rápido que los controles, lo que permite la recuperación en áreas con el suministro de sangre comprometido.</p>
+<p>La promoción de la nueva formación de vasos sanguíneos (angiogénesis) representa un mecanismo de curación crítico. El péptido regula el VEGF, FGF y HGF, factores pro-angiógenos clave, y realza directamente la migración celular endotelial y la formación de tubos. En los mode los de tejido isquémico, el tratamiento restaura la perfusión más rápido que los controles, lo que permite la recuperación en áreas con el suministro de sangre comprometido.</p>
 <p>Este mecanismo beneficia a las condiciones isquémicas crónicas (complicaciones diabéticas, enfermedad vascular periférica) y lesiones agudas donde el suministro de sangre es el factor limitante en la curación. La perfusión mejorada soporta la función metabólica a lo largo de la recuperación del tejido.</p>
 <h2>Efectos antiinflamatorios e inmunomoduladores</h2>
 <p>La inflamación excesiva perjudica la curación del tejido. El peptide modula las respuestas inflamatorias a través de la inhibición de las citoquinas pro-inflamatorias (TNF-α, IL-6, IL-1β), la regulación de los mediadores antiinflamatorios y la infiltración de neutrófilo reducida. Esta supresión "inteligentemente temporizada" —reducir la inflamación excesiva mientras mantiene las respuestas inmunitarias necesarias— optimiza los plazos de curación.</p>
 <p>La estabilización de las células de Mast reduce la liberación de mediadores inflamatorios, nuevas cascadas inflamatorias. Combinado con efectos pro-sanación, esto crea un microambiente de tejido favorable para la reparación en contextos de lesión.</p>
 <h2>Sanación de huesos y recuperación de fracturas</h2>
-<p>La curación del hueso se mejora mediante la actividad osteoblast promovida, la expresión de fosfatasa alcalina aumentada y la mineralización. En los modelos de fractura, el péptido acelera la formación de callos, aumenta la densidad ósea y mejora la recuperación de la fuerza mecánica. Efectos sinérgicos con angiogénesis mejoran el suministro de sangre apoyando la función osteoblast y la remodelación ósea.</p>
+<p>La curación del hueso se mejora mediante la actividad osteoblast promovida, la expresión de fosfatasa alcalina aumentada y la mineralización. En los mode los de fractura, el péptido acelera la formación de callos, aumenta la densidad ósea y mejora la recuperación de la fuerza mecánica. Efectos sinérgicos con angiogénesis mejoran el suministro de sangre apoyando la función osteoblast y la remodelación ósea.</p>
 <p>Los beneficios se extienden a la integración biomaterial ósea relevante para implantes dentales, injertos óseos e implantes ortopédicos. La osseointegración mejorada puede mejorar la estabilidad del implante y la longevidad, especialmente importante para el envejecimiento de las poblaciones y los pacientes con enfermedad ósea metabólica.</p>
 <h2>Mecanismos y efectos celulares</h2>
 <p>El péptido opera a través de múltiples mecanismos sinérgicos en lugar de una sola vía. El secuestro de G-actina aumentada afecta a la organización citosceletal y la motilidad celular, crítica para la migración de fibroblasto, mioblasto, endotelial y condrocito. La regulación del factor de crecimiento (VEGF, HGF, FGF) promueve la proliferación, la diferenciación y la supervivencia celular. La desregulación de la señalización inflamatoria reduce el daño causado por el tejido inmune. El efecto combinado es acelerado, organizado curación a través de tipos de tejido.</p>
@@ -149,7 +148,7 @@
 <p>Este péptido se compara a menudo con BPC-157, otro péptido regenerativo. Ambos promueven la curación mediante la regulación del factor de crecimiento y la migración celular, pero muestran diferentes perfiles de fuerza. Este péptido destaca en la angiogénesis y la migración general de células con la aplicabilidad del tejido más amplia (bone, cartílago, piel, músculo, tendón), mientras que BPC-157 muestra una fuerza particular en contextos gastrointestinales y neurológicos. La terapia de combinación teóricamente ofrece beneficios aditivos pero sigue sin probarse en humanos.</p>
 <h2>Preguntas frecuentes</h2>
 <h3>¿Cuán rápido muestra este péptido beneficios?</h3>
-<p>Los efectos iniciales (expresión de factor de crecimiento creciente, migración celular) aparecen dentro de horas a 1-2 días en modelos animales. Las mejoras funcionales (dolor reducido, movilidad mejorada) suelen surgir en 2-4 semanas. La remodelación estructural completa (organización de colágeno, fuerza mecánica) tarda 4-12 semanas dependiendo de la gravedad de las lesiones, la edad y los factores metabólicos. Los plazos individuales varían considerablemente.</p>
+<p>Los efectos iniciales (expresión de factor de crecimiento creciente, migración celular) aparecen dentro de horas a 1-2 días en mode los animales. Las mejoras funcionales (dolor reducido, movilidad mejorada) suelen surgir en 2-4 semanas. La remodelación estructural completa (organización de colágeno, fuerza mecánica) tarda 4-12 semanas dependiendo de la gravedad de las lesiones, la edad y los factores metabólicos. Los plazos individuales varían considerablemente.</p>
 <h3>¿Se puede utilizar para lesiones crónicas o solo heridas agudas?</h3>
 <p>Este péptido muestra beneficios en ambos contextos. Para lesiones agudas, acelera los plazos de curación estándar. Para las heridas crónicas, difíciles de curar y las lesiones de curación lenta, parece "reconectar" el proceso de curación. Sin embargo, no puede superar el daño estructural permanente o la disfunción biomecánica grave. Las condiciones crónicas muestran una mejora más lenta que las lesiones agudas.</p>
 <h3>¿Es seguro para uso a largo plazo?</h3>
@@ -196,8 +195,8 @@
 
 <div class="lang-switcher" style="position:relative;display:inline-block;margin-left:12px;">
 <select onchange="window.location.href=this.value" style="background:rgba(255,255,255,0.1);color:inherit;border:1px solid rgba(255,255,255,0.2);
-                     border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
-                     font-family:var(--font-main,sans-serif);">
+           border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer;
+           font-family:var(--font-main,sans-serif);">
 <option value="/en/tb-500-storage.html">English</option><option selected="" value="/es/tb-500-storage.html">Español</option><option value="/zh/tb-500-storage.html">中文</option><option value="/ja/tb-500-storage.html">日本語</option><option value="/pt/tb-500-storage.html">Português</option><option value="/ru/tb-500-storage.html">Русский</option><option value="/it/tb-500-storage.html">Italiano</option><option value="/pl/tb-500-storage.html">Polski</option><option value="/fr/tb-500-storage.html">Français</option><option value="/id/tb-500-storage.html">Bahasa</option><option value="/de/tb-500-storage.html">Deutsch</option><option value="/nl/tb-500-storage.html">Nederlands</option><option value="/ar/tb-500-storage.html">العربية</option>
 </select>
 </div>
