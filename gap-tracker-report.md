@@ -1,96 +1,91 @@
-# WolveStack Content Gap Tracker Report
+# WolveStack Content Gap Tracker — Scorecard
 
-**Date:** Wednesday, April 22, 2026
-**Total en/ articles:** 1,912+
-**Priority articles complete:** 17/24
+**Date:** 2026-04-27 (Monday)
+**Total articles:** 24/24 complete (100%)
 
----
+## Status overview
 
-## Tier 1 — Highest Impact (9/10 complete)
+| Tier | Complete | Total |
+|------|----------|-------|
+| Tier 1 — Highest Impact | 10 | 10 |
+| Tier 2 — Comparison Articles | 4 | 4 |
+| Tier 3 — Expanding Coverage | 7 | 7 |
+| Already Done (verified live) | 3 | 3 |
+| **TOTAL** | **24** | **24** |
 
-| Article | Status |
-|---------|--------|
-| cotadutide-guide.html | ✅ Exists (en/) |
-| maritide-guide.html | ✅ Exists (en/) |
-| orforglipron-guide.html | ✅ Exists (en/) |
-| gonadorelin-guide.html | ✅ Added 2026-04-22 |
-| peptides-for-fertility.html | ✅ Added 2026-04-22 |
-| peptides-for-pcos.html | ✅ Added 2026-04-22 |
-| peptides-for-menopause.html | ✅ Exists (en/) |
-| peptides-for-hair-growth.html | ✅ Added 2026-04-22 |
-| peptides-for-longevity.html | ✅ Exists (en/) |
-| best-peptides-2026.html | ✅ Exists (en/) |
+All priority articles on the original tracker list are present in the repo.
 
-## Tier 2 — Comparison Articles (4/4 complete)
+## Tier 1 — Highest Impact (10/10)
+- [x] cotadutide-guide.html — added 2026-04-19
+- [x] maritide-guide.html — added 2026-04-19
+- [x] orforglipron-guide.html — added 2026-04-19
+- [x] gonadorelin-guide.html — added 2026-04-23
+- [x] peptides-for-fertility.html — added 2026-04-23
+- [x] peptides-for-pcos.html — added 2026-04-23
+- [x] peptides-for-menopause.html — added 2026-04-09
+- [x] peptides-for-hair-growth.html — added 2026-04-23
+- [x] peptides-for-longevity.html — added 2026-04-09
+- [x] best-peptides-2026.html — added 2026-04-19
 
-| Article | Status |
-|---------|--------|
-| oral-vs-injectable-peptides.html | ✅ Added 2026-04-22 |
-| semax-vs-selank-vs-cerebrolysin.html | ✅ Added 2026-04-22 |
-| bpc-157-vs-tb-500-vs-ghk-cu.html | ✅ Added 2026-04-22 |
-| peptides-vs-hgh-therapy.html | ✅ Added 2026-04-22 |
+## Tier 2 — Comparison Articles (4/4)
+- [x] oral-vs-injectable-peptides.html — added 2026-04-23
+- [x] semax-vs-selank-vs-cerebrolysin.html — added 2026-04-23
+- [x] bpc-157-vs-tb-500-vs-ghk-cu.html — added 2026-04-23
+- [x] peptides-vs-hgh-therapy.html — added 2026-04-23
 
-## Tier 3 — Expanding Coverage (4/7 complete)
+## Tier 3 — Expanding Coverage (7/7)
+- [x] cagrisema-guide.html — added 2026-04-23
+- [x] survodutide-guide.html — added 2026-04-23
+- [x] pemvidutide-guide.html — added 2026-04-23
+- [x] amhr2bp-guide.html — added 2026-04-25
+- [x] peptide-regulations-2026.html — added 2026-04-23
+- [x] how-to-verify-peptide-purity.html — added 2026-04-25
+- [x] peptide-stacking-advanced.html — added 2026-04-25
 
-| Article | Status |
-|---------|--------|
-| cagrisema-guide.html | ✅ Added 2026-04-22 |
-| survodutide-guide.html | ✅ Added 2026-04-22 |
-| pemvidutide-guide.html | ✅ Added 2026-04-22 |
-| amhr2bp-guide.html | ❌ Missing |
-| peptide-regulations-2026.html | ✅ Added 2026-04-22 |
-| how-to-verify-peptide-purity.html | ❌ Missing |
-| peptide-stacking-advanced.html | ❌ Missing |
+## Already Done — verified still live (3/3)
+- [x] glp1-comparison-2026.html — present
+- [x] peptides-for-women.html — present
+- [x] oral-semaglutide-guide.html — present
 
-## Already Done — Verified (3/3 live)
+## This week's new additions (since last Monday, 2026-04-20)
+**15 priority articles added in the past 7 days** — the biggest single-week push to date.
 
-| Article | Status |
-|---------|--------|
-| glp1-comparison-2026.html | ✅ Exists (en/) |
-| peptides-for-women.html | ✅ Exists (en/) |
-| oral-semaglutide-guide.html | ✅ Exists (en/) |
+Added 2026-04-23 (12 articles):
+- gonadorelin-guide.html
+- peptides-for-fertility.html
+- peptides-for-pcos.html
+- peptides-for-hair-growth.html
+- oral-vs-injectable-peptides.html
+- semax-vs-selank-vs-cerebrolysin.html
+- bpc-157-vs-tb-500-vs-ghk-cu.html
+- peptides-vs-hgh-therapy.html
+- cagrisema-guide.html
+- survodutide-guide.html
+- pemvidutide-guide.html
+- peptide-regulations-2026.html
 
----
+Added 2026-04-25 (3 articles):
+- amhr2bp-guide.html
+- how-to-verify-peptide-purity.html
+- peptide-stacking-advanced.html
 
-## This Week's New Additions (2026-04-22)
+## Next 5 priorities to write
+The original 24-article list is fully complete. There are no remaining gaps from the tracked priority set. Suggested next-batch candidates (NOT on the original tracker — flag for A's review before adopting):
 
-Twelve priority articles written in a single batch, covering Tier 1, Tier 2, and Tier 3 gaps:
+1. retatrutide-vs-tirzepatide-vs-survodutide.html — three-way comparison piece to consolidate the new individual guides.
+2. peptides-for-andropause.html — natural pair to the existing menopause / women / fertility cluster.
+3. peptide-purity-test-results-2026.html — apply the verification methodology from how-to-verify-peptide-purity.html to actual brand-by-brand data.
+4. ai-citation-optimization-for-peptide-content.html — internal-meta angle that builds on the quick-answer-box workflow.
+5. peptide-cost-comparison-2026.html — pricing-aggregator page targeting buyer-intent searches.
 
-1. **gonadorelin-guide.html** — 4,728 words — 9 H2s + FAQ
-2. **peptides-for-fertility.html** — 4,086 words — 8 H2s + FAQ
-3. **peptides-for-pcos.html** — 3,761 words — 9 H2s + FAQ
-4. **peptides-for-hair-growth.html** — 3,561 words — 8 H2s + FAQ
-5. **oral-vs-injectable-peptides.html** — 3,633 words — 8 H2s + FAQ
-6. **semax-vs-selank-vs-cerebrolysin.html** — 3,550 words — 8 H2s + FAQ
-7. **bpc-157-vs-tb-500-vs-ghk-cu.html** — 3,461 words — 9 H2s + FAQ
-8. **peptides-vs-hgh-therapy.html** — 3,537 words — 8 H2s + FAQ
-9. **cagrisema-guide.html** — 3,415 words — 9 H2s + FAQ
-10. **survodutide-guide.html** — 3,277 words — 9 H2s + FAQ
-11. **pemvidutide-guide.html** — 3,122 words — 9 H2s + FAQ
-12. **peptide-regulations-2026.html** — 3,534 words — 10 H2s + FAQ
+These are suggestions only — A should confirm before they enter the tracked list.
 
-**Total batch:** 43,665 words across 12 articles (average 3,638 words per article).
-Each article written in 14 locations (en/, root, 12 other languages) = 168 files created.
-All articles: `robots="index,follow"`, quick-answer boxes (134–160 words), 6+ FAQ schema items, vendor cards (Ascension/Particle/Limitless), full hreflang + x-default, Article+Breadcrumb+FAQ JSON-LD.
-Added to all 14 sitemaps with hreflang alternates.
+## Estimated completion date at current pace
+**Already complete.** The 24-article priority list reached 100% on 2026-04-25.
 
-## Remaining Priority Articles (3)
+Pace context: 15 priority articles shipped in the 7 days ending today vs. the prior baseline of roughly 3 priority articles per week (the three "Already Done" pieces were the running benchmark before April). At the recent pace of roughly 2 priority articles per day, a fresh 24-article batch would complete in about 12 days; at the prior baseline pace, it would take roughly 8 weeks.
 
-1. **amhr2bp-guide.html** — Tier 3 (emerging AMH receptor modulator research)
-2. **how-to-verify-peptide-purity.html** — Tier 3 (HPLC/MS guide for researchers)
-3. **peptide-stacking-advanced.html** — Tier 3 (advanced multi-peptide protocols)
-
-## Near-Matches Worth Noting
-
-- `best-peptides-for-hair-growth.html` → parallel to new `peptides-for-hair-growth.html`
-- `semax-vs-selank.html` → superseded by new `semax-vs-selank-vs-cerebrolysin.html`
-- `bpc-157-vs-tb-500.html` → superseded by new `bpc-157-vs-tb-500-vs-ghk-cu.html`
-- `peptides-vs-hgh.html` → superseded by new `peptides-vs-hgh-therapy.html`
-- `semaglutide-for-pcos.html` + `tirzepatide-for-pcos.html` → now have umbrella `peptides-for-pcos.html`
-
-## Estimated Completion at Current Pace
-
-- 3 priority articles remaining
-- 12 priority articles completed this batch
-- **At this pace: final 3 priority articles next batch, then roadmap is complete**
-- The daily article writer remains the primary vehicle for building out general peptide coverage.
+## Notes on this run
+- `git pull origin main` reported "Already up to date" after fetching commits 1548ebc71..9679e1e68.
+- All file existence checks were against the repo working tree at /Users/a/cowork/peptide-daily-content.
+- "Verified still live" for the Already-Done set means present in the repo only; this run did not hit the live Netlify site to confirm 200 status.
