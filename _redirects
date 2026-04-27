@@ -80,10 +80,16 @@
 
 # ===== Root English pages → /en/ equivalents (SEO consolidation) =====
 # Keep these pages at root (passthrough) — they must NOT redirect
-/index.html         /index.html                            200
-/search.html        /search.html                           200
-/app/*              /app/:splat                            200
-/category/*         /category/:splat                       200
+/index.html             /index.html                        200
+/search.html            /search.html                       200
+/404.html               /404.html                          200
+/ARTICLE-TEMPLATE.html  /ARTICLE-TEMPLATE.html             200
+/app/*                  /app/:splat                        200
+/category/*             /category/:splat                   200
 
-# Catch-all: redirect ALL other root .html pages to /en/ versions
-/*.html             /en/:splat.html                        301
+# Catch-all: force-redirect ALL other root .html pages to /en/ versions.
+# The `!` (force) flag overrides Netlify's "file exists, serve file" default —
+# without it, the existing root .html files would win and the redirect never fires.
+# This is what was wrong: Google saw root + /en/ as duplicates and sometimes
+# picked root despite our canonical tags pointing to /en/.
+/*.html                 /en/:splat.html                    301!
