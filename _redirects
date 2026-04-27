@@ -88,8 +88,10 @@
 /category/*             /category/:splat                   200
 
 # Catch-all: force-redirect ALL other root .html pages to /en/ versions.
+# Uses :slug placeholder to match a single path segment (root-level only).
 # The `!` (force) flag overrides Netlify's "file exists, serve file" default —
 # without it, the existing root .html files would win and the redirect never fires.
-# This is what was wrong: Google saw root + /en/ as duplicates and sometimes
-# picked root despite our canonical tags pointing to /en/.
-/*.html                 /en/:splat.html                    301!
+# This was the root cause of GSC "Duplicate, Google chose different canonical" for
+# 334 EN pages: Google saw root + /en/ as duplicates and sometimes picked root
+# despite our canonical tags pointing to /en/.
+/:slug.html             /en/:slug.html                     301!
