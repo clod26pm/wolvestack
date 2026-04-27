@@ -336,6 +336,303 @@ COMPOUNDS = {
         'dosing': '鼻内研究剂量典型为每日 100-200 微克，分次给药。皮下注射也使用。半衰期较短（约 2 分钟）。',
         'safety': '血管舒张可能引起低血压、面部潮红、心动过速。通常在剂量加量时较明显。',
     },
+    'pt-141': {
+        'zh_name': 'PT-141（Bremelanotide）',
+        'category': '黑皮质素受体激动剂 / 性功能',
+        'overview': 'PT-141（Bremelanotide）是 Melanotan II 的衍生物，FDA 批准用于绝经前女性获得性、广义性下丘脑性欲低下障碍（HSDD），商品名 Vyleesi。它通过中枢神经系统机制起作用，区别于经典血管活性药物（如西地那非）。',
+        'mechanism': 'PT-141 激活中枢黑皮质素受体（特别是 MC4R），影响下丘脑通路调节性兴奋。它不直接作用于血管，因此对心血管系统影响较小。',
+        'evidence': 'RECONNECT 与其他 III 期试验确立 PT-141 在 HSDD 女性中的疗效。男性勃起功能障碍研究也显示效益，但未获该适应症的 FDA 批准。',
+        'dosing': '批准剂量为 1.75 毫克皮下注射，按需给药（性活动前 45 分钟）。每日不超过 1 次，每周不超过 8 次。',
+        'safety': '常见副作用包括恶心（约 40%）、面部潮红、注射部位反应、暂时性血压升高。注意：高血压未控制者禁用。',
+    },
+    'melanotan-i': {
+        'zh_name': 'Melanotan I（Afamelanotide）',
+        'category': '黑皮质素受体激动剂 / 色素沉着',
+        'overview': 'Melanotan I（Afamelanotide）是 α-MSH 的合成类似物，欧盟与美国批准用于治疗红细胞生成性原卟啉症（EPP），商品名 Scenesse。它通过刺激黑色素生成提供光保护。',
+        'mechanism': 'Melanotan I 激活 MC1R（主要）与 MC4R 受体。在皮肤黑色素细胞中，MC1R 激活促进真黑色素合成，提供 UV 防护。其作用比 Melanotan II 更具选择性。',
+        'evidence': 'EPP 研究确立 Afamelanotide 减少光毒性反应、延长无症状日光暴露时间。其他研究探索白癜风、光皮肤病等适应症。',
+        'dosing': '批准产品为 16 毫克缓释植入物，每 60 天一次。研究外应用通常采用更低剂量皮下注射。',
+        'safety': 'Melanotan I 对皮肤黑色素细胞的选择性使其副作用谱比 Melanotan II 更优。常见副作用包括恶心、头痛、疲劳。',
+    },
+    'melanotan-ii': {
+        'zh_name': 'Melanotan II（MT-II）',
+        'category': '黑皮质素受体激动剂 / 色素沉着',
+        'overview': 'Melanotan II 是非选择性黑皮质素受体激动剂，激活 MC1R、MC3R、MC4R 与 MC5R。它在 1980 年代由亚利桑那大学开发，但从未获得 FDA 批准——目前作为研究化学品销售。',
+        'mechanism': 'Melanotan II 多受体激活产生多种效应：MC1R 介导色素沉着、MC3R/MC4R 介导食欲抑制与性兴奋、MC5R 介导其他系统效应。这种宽谱激活既是其多功能性的来源，也是其副作用谱的原因。',
+        'evidence': '色素沉着效应已在多项小型研究中证实。性兴奋效应导致 PT-141 的开发。安全性数据有限。',
+        'dosing': '研究剂量通常为每次 0.25-1 毫克皮下注射，从低剂量起加量。"加载阶段"后转为维持剂量。',
+        'safety': '副作用包括恶心、面部潮红、暂时性勃起、痣加深、新痣形成。后两者引发对黑色素瘤风险的担忧——尽管直接证据有限。',
+    },
+    'oxytocin': {
+        'zh_name': '催产素（Oxytocin）',
+        'category': '神经肽 / 社会键合',
+        'overview': '催产素是九肽神经垂体激素，由下丘脑视上核与室旁核合成。除了已知的分娩与哺乳作用，它在社会认知、配对结合、信任与压力调节中起重要作用。',
+        'mechanism': '催产素通过 OXTR 受体作用于多个组织：子宫平滑肌、乳腺、心血管系统、以及大脑（杏仁核、伏隔核、前额皮层）。中枢效应涉及社会信号处理与情绪调节。',
+        'evidence': '催产素在妇产科中作为催产药物使用了几十年。鼻内催产素被研究用于自闭症谱系障碍、社交焦虑、产后抑郁，但临床结果不一。',
+        'dosing': '医疗适应症使用静脉给药。研究中鼻内剂量典型为 24-40 IU 按需。皮下与肌肉途径较少使用。',
+        'safety': '产科剂量副作用包括子宫过度刺激、低血压、心动过速。鼻内剂量副作用通常较轻——头痛、暂时性兴奋。长期使用对内源性催产素受体的影响仍在研究中。',
+    },
+    'thymosin-alpha-1': {
+        'zh_name': '胸腺素 α-1（Thymosin Alpha-1）',
+        'category': '免疫调节肽',
+        'overview': '胸腺素 α-1（Tα1）是 28 氨基酸天然肽，从胸腺组织分离。它在多个国家批准用于慢性乙型肝炎与丙型肝炎的辅助治疗，商品名 Zadaxin。',
+        'mechanism': 'Tα1 通过 TLR9 与 TLR2 受体调节先天免疫，促进 Th1 反应、增强 NK 细胞与 T 细胞活性、并调节调节性 T 细胞。它有助于免疫系统从慢性病毒感染或免疫抑制状态恢复。',
+        'evidence': '慢性肝炎临床数据支持 Tα1 作为辅助治疗。研究还涉及败血症、免疫抑制、癌症免疫治疗辅助。SARS-CoV-2 期间也有研究探索其在 COVID-19 中的应用。',
+        'dosing': '批准方案通常为每周 2 次皮下注射 1.6 毫克，疗程长达 6-12 个月。研究外应用剂量类似。',
+        'safety': '胸腺素 α-1 总体耐受性良好——注射部位反应、轻度疲劳是最常报告的副作用。无显著长期副作用记录。',
+    },
+    'thymalin': {
+        'zh_name': 'Thymalin（胸腺素混合物）',
+        'category': '组织提取物 / 免疫调节',
+        'overview': 'Thymalin 是从牛胸腺提取的多肽混合物，由 Khavinson 实验室开发。它在俄罗斯与多个东欧国家批准用于免疫缺陷状态。',
+        'mechanism': 'Thymalin 含有多种短肽序列，整体效应与胸腺素 α-1 类似——免疫调节、T 细胞功能恢复、Th1/Th2 平衡调节。具体机制因混合物复杂性而难以完全表征。',
+        'evidence': '俄罗斯研究支持 Thymalin 用于免疫衰老相关疾病、术后免疫恢复、慢性感染。西方独立验证有限。',
+        'dosing': '注射剂量通常为每日 5-10 毫克皮下或肌肉注射，疗程 5-10 天。',
+        'safety': '总体耐受性良好。注射部位反应是最常报告的副作用。理论上的过敏风险（动物源性）需要监测。',
+    },
+    'dsip': {
+        'zh_name': 'DSIP（δ-睡眠诱导肽）',
+        'category': '神经肽 / 睡眠调节',
+        'overview': 'DSIP（Delta Sleep-Inducing Peptide）是 9 氨基酸天然肽，1970 年代从兔脑分离。它最初被研究为睡眠诱导剂，但后续研究显示更广泛的神经肽作用。',
+        'mechanism': 'DSIP 的精确机制尚不完全清楚。研究显示它影响多种神经递质系统、调节昼夜节律、并具有抗压力与神经保护作用。它穿过血脑屏障的能力有限。',
+        'evidence': '动物研究支持 DSIP 增加慢波睡眠、减少应激反应。早期人体研究在失眠、酒精戒断、慢性疼痛中显示效益，但样本量小。',
+        'dosing': '研究文献中典型剂量为 100-300 微克睡前皮下注射或鼻内给药。',
+        'safety': 'DSIP 总体耐受性良好。罕见的副作用包括过度镇静、晨起疲劳。长期数据有限。',
+    },
+    'ss-31': {
+        'zh_name': 'SS-31（Elamipretide）',
+        'category': '线粒体靶向肽',
+        'overview': 'SS-31（也称 Elamipretide 或 Bendavia）是 Hazel Szeto 实验室开发的 4 氨基酸合成肽，专门设计用于线粒体内膜定位。它代表了一类新的"线粒体靶向治疗"。',
+        'mechanism': 'SS-31 特异性结合心磷脂（cardiolipin），稳定线粒体内膜结构，改善电子传递链效率，减少 ROS 生成。在线粒体功能障碍中，它恢复 ATP 产生与膜电位。',
+        'evidence': '临床试验探索 SS-31 用于 Barth 综合征、原发性线粒体肌病、心力衰竭、年龄相关黄斑变性。结果不一——某些适应症显示效益，其他终点未达到。',
+        'dosing': '试验剂量典型为每日 40 毫克皮下注射。半衰期约 2 小时但下游线粒体效应持续更久。',
+        'safety': 'SS-31 在临床试验中通常耐受性良好。注射部位反应、头痛是最常报告的副作用。',
+    },
+    'aod-9604': {
+        'zh_name': 'AOD-9604（生长激素片段 176-191）',
+        'category': '生长激素片段 / 脂肪代谢',
+        'overview': 'AOD-9604 是人生长激素的 C-末端 16 氨基酸片段（残基 176-191）。它最初被开发为肥胖治疗药物，但 III 期试验未能展示足够的减重效果以获得 FDA 批准。',
+        'mechanism': 'AOD-9604 保留了 GH 的脂肪分解（脂肪燃烧）效应，但缺乏 GH 的生长促进与胰岛素相关效应。它通过 β-肾上腺素受体介导脂肪组织的脂解。',
+        'evidence': 'III 期肥胖试验显示效益较小（约 1-2% 体重减轻）。澳大利亚 TGA 曾给予非处方营养补充剂状态，但 FDA 未批准。研究兴趣转向损伤恢复与软骨修复。',
+        'dosing': '研究剂量为每日 250-500 微克皮下注射，通常在空腹时（晨起或睡前）给药以最大化脂解效应。',
+        'safety': 'AOD-9604 安全性谱良好——它不刺激 GH 释放或 IGF-1，避免了完整 GH 的多种副作用。注射部位反应是最常报告的副作用。',
+    },
+    'hexarelin': {
+        'zh_name': '海沙瑞林（Hexarelin）',
+        'category': '生长激素促分泌剂（强效 GHRP）',
+        'overview': '海沙瑞林是强效合成 GHRP，结构与 GHRP-6 相关但效力更高。它是研究中最强效的 GH 促分泌剂之一，但其皮质醇与催乳素升高效应限制了临床开发。',
+        'mechanism': '海沙瑞林作为 GHSR-1a 强激动剂刺激 GH 释放。其单次给药 GH 峰值响应通常超过 GHRP-2 与伊帕莫林。它还显示心脏保护作用，可能通过 CD36 受体介导。',
+        'evidence': '早期临床研究确立海沙瑞林强效 GH 释放能力。心脏保护研究在动物模型中显示心肌缺血保护，但人体临床开发有限。',
+        'dosing': '研究剂量为每次 100-200 微克，每日 2-3 次皮下注射。耐受性问题在持续使用中较明显。',
+        'safety': '副作用包括食欲增加、注射部位反应、皮质醇与催乳素显著升高。长期使用受体下调（脱敏）较其他 GHRP 更明显。',
+    },
+    'gonadorelin': {
+        'zh_name': '促性腺激素释放激素（Gonadorelin）',
+        'category': '促性腺激素释放激素（GnRH）',
+        'overview': '促性腺激素释放激素是 10 氨基酸天然激素，由下丘脑分泌。合成版本（Gonadorelin）用于诊断性腺功能与治疗某些不育问题。它在 TRT 应用中作为内源性 LH/FSH 维持的工具被使用。',
+        'mechanism': '促性腺激素释放激素以脉冲方式作用于垂体前叶，刺激 LH 与 FSH 释放，进而驱动睾丸睾酮产生与精子发生（男性）或卵巢功能（女性）。脉冲模式至关重要——持续给药反而抑制 LH/FSH。',
+        'evidence': '不育症诊断与治疗中的应用有充分临床证据。TRT 辅助应用基于生理学原理但缺乏针对此特定使用的大规模 RCT。',
+        'dosing': 'TRT 辅助应用通常为每周 2-3 次皮下注射 100-200 微克。脉冲式给药模式（短半衰期）维持垂体响应性。',
+        'safety': '副作用通常轻微——注射部位反应、暂时性头痛。长期使用对垂体响应的影响在持续脉冲给药下较小。',
+    },
+    'kisspeptin': {
+        'zh_name': 'Kisspeptin（KP-10）',
+        'category': '生殖神经肽 / 性激素调节',
+        'overview': 'Kisspeptin 是关键生殖神经肽，作为下丘脑 GnRH 释放的"主调节器"。它在青春期发动、生育力调节与性激素脉冲生成中至关重要。研究兴趣集中于不育症与功能性下丘脑性闭经。',
+        'mechanism': 'Kisspeptin 神经元（Kiss1 表达）位于下丘脑前部与弓状核，通过 KISS1R（GPR54）受体作用于 GnRH 神经元，触发 GnRH 脉冲。它整合了多种生殖与代谢信号。',
+        'evidence': '人体研究显示 Kisspeptin 给药可恢复功能性下丘脑性闭经患者的 LH 脉冲与排卵。男性研究显示 LH/睾酮升高。临床开发关注不育症与生殖紊乱。',
+        'dosing': '研究剂量典型为静脉或皮下注射 0.1-1 nmol/kg。脉冲式给药模拟自然生理学。',
+        'safety': '总体耐受性良好——注射部位反应、暂时性头痛是最常报告副作用。生殖激素轴急性激活的下游效应需要监测。',
+    },
+    'fragment-176-191': {
+        'zh_name': 'HGH 片段 176-191（HGH Frag）',
+        'category': '生长激素片段 / 脂肪代谢',
+        'overview': 'HGH 片段 176-191 与 AOD-9604 是相同的 16 氨基酸生长激素 C-末端片段。它代表了从 22 kDa 完整 GH 中分离脂肪分解活性的尝试，避免 GH 的促胰岛素抵抗与生长效应。',
+        'mechanism': '该片段通过 β3-肾上腺素受体作用于脂肪细胞，刺激脂解（脂肪分解）。它不结合 GH 受体，因此不刺激 IGF-1、不影响葡萄糖代谢、不促进生长。',
+        'evidence': '动物研究确立其脂肪分解效应。人体试验（作为 AOD-9604）未达到肥胖治疗 FDA 批准的有效性阈值。研究兴趣转向局部脂肪减少与软骨修复。',
+        'dosing': '研究剂量为每日 250-500 微克皮下注射，空腹给药。',
+        'safety': '安全性谱良好——避免 GH 多种副作用。注射部位反应、轻度疲劳是最常报告副作用。',
+    },
+    'mif-1': {
+        'zh_name': 'MIF-1（黑色素抑制因子 1）',
+        'category': '神经肽 / 三肽',
+        'overview': 'MIF-1（Pro-Leu-Gly-NH2）是从催产素 C-末端裂解产生的天然三肽。它最初被研究为黑色素细胞刺激素抑制因子，后续研究显示其在 CNS 多种作用。',
+        'mechanism': 'MIF-1 调节多巴胺受体（特别是 D2/D3）功能、影响阿片类受体活性、并显示抗抑郁与神经保护效应。其分子量小允许穿过血脑屏障。',
+        'evidence': '动物研究支持 MIF-1 在抑郁、帕金森病、阿片戒断模型中的效益。早期人体研究（多为俄罗斯/东欧）显示抗抑郁活性，但西方独立研究有限。',
+        'dosing': '研究文献中典型剂量为每日 50-200 微克皮下或鼻内给药。',
+        'safety': '总体耐受性良好。副作用罕见且通常轻微。',
+    },
+    'pinealon': {
+        'zh_name': 'Pinealon（松果体生物调节肽）',
+        'category': '组织特异性生物调节肽（Khavinson 系列）',
+        'overview': 'Pinealon 是 Khavinson 实验室设计的三肽（Glu-Asp-Arg），针对松果体与神经组织设计。它属于俄罗斯生物调节肽家族。',
+        'mechanism': 'Khavinson 假说认为 Pinealon 编码神经组织特异性基因调控信息，可能影响褪黑激素分泌、神经发生与认知功能。',
+        'evidence': '俄罗斯研究显示 Pinealon 在认知衰退、节律紊乱与衰老相关神经退化模型中的效益。西方独立验证有限。',
+        'dosing': '口服胶囊形式通常为每日 1-2 粒（含 200 微克活性肽），疗程 1-3 个月。',
+        'safety': 'Khavinson 肽剂量极低，副作用罕见。',
+    },
+    'p21': {
+        'zh_name': 'P21（神经营养肽）',
+        'category': '神经营养肽 / CNTF 类似物',
+        'overview': 'P21 是从睫状神经营养因子（CNTF）衍生的 21 氨基酸肽，由 Iturria-Medina 实验室设计。它在阿尔茨海默病模型中显示促进神经发生与认知恢复。',
+        'mechanism': 'P21 模拟 CNTF 的神经营养作用，促进海马区神经发生、增强突触可塑性、并显示抗淀粉样蛋白聚集效应。其分子量小允许相对良好的脑渗透。',
+        'evidence': '阿尔茨海默病动物模型研究显示 P21 改善记忆与减少病理标志物。临床数据极有限。',
+        'dosing': '研究文献中剂量差异较大。皮下注射剂量典型为每日 50-100 微克。',
+        'safety': 'P21 的人类安全数据非常有限。',
+    },
+    'cagrisema': {
+        'zh_name': 'CagriSema（卡格列肽 + 司美格鲁肽）',
+        'category': '双重药物组合（GLP-1 + 胰淀素）',
+        'overview': 'CagriSema 是诺和诺德开发的固定剂量组合药物，结合卡格列肽（cagrilintide，长效胰淀素类似物）与司美格鲁肽（GLP-1 类似物）。它处于晚期临床开发，作为肥胖治疗。',
+        'mechanism': '机制基于双重激素方法：GLP-1 通路抑制食欲与延缓胃排空；胰淀素通路独立增强饱腹感与延长餐后稳定。两条通路协同提供超过单一 GLP-1 类似物的减重。',
+        'evidence': 'REDEFINE 系列试验显示 CagriSema 治疗 68 周可使肥胖患者减重约 22%——介于司美格鲁肽（~15%）与替尔泊肽（~22%）之间。III 期数据预计支持 FDA 批准申请。',
+        'dosing': '试验最高剂量为每周 2.4 毫克司美格鲁肽 + 2.4 毫克卡格列肽。最终批准剂量将由 III 期数据决定。',
+        'safety': '副作用谱与 GLP-1 类似物大致重叠：胃肠道反应是主要问题。胰淀素相关副作用（恶心、呕吐）也存在。',
+    },
+    'cotadutide': {
+        'zh_name': 'Cotadutide（GLP-1/胰高血糖素双重激动剂）',
+        'category': 'GLP-1/胰高血糖素双重激动剂（研究阶段）',
+        'overview': 'Cotadutide 是 AstraZeneca 开发的 GLP-1 与胰高血糖素受体双重激动剂。它在 II 期试验中显示对 NASH（非酒精性脂肪性肝炎）与 2 型糖尿病的效益。',
+        'mechanism': 'GLP-1 激活提供经典胰岛素增敏与食欲抑制；胰高血糖素受体激活增强能量消耗与肝脏脂肪利用。这种"胰岛素 + 解耦合"组合理论上对脂肪肝特别有效。',
+        'evidence': 'II 期试验显示 Cotadutide 治疗 NASH 减少肝脂肪量、改善纤维化标志物。糖尿病数据显示血糖与体重双重改善。AstraZeneca 在 2023 年因更高优先级项目（survodutide）暂停 Cotadutide 开发。',
+        'dosing': '试验剂量从 50 微克起逐步加至 600 微克每日皮下注射。',
+        'safety': '副作用主要是胃肠道反应——与 GLP-1 类似物一致。胰高血糖素相关心率轻微增加在部分剂量级别可见。',
+    },
+    'survodutide': {
+        'zh_name': 'Survodutide（GLP-1/胰高血糖素双重激动剂）',
+        'category': 'GLP-1/胰高血糖素双重激动剂（研究阶段）',
+        'overview': 'Survodutide 是勃林格殷格翰与 Zealand Pharma 联合开发的 GLP-1 与胰高血糖素受体双重激动剂，处于晚期临床开发。它针对肥胖、糖尿病与 NASH。',
+        'mechanism': '与 Cotadutide 类似的双重机制——GLP-1 介导食欲抑制与胰岛素增敏，胰高血糖素增强能量消耗。结构修饰提供每周给药频率。',
+        'evidence': 'II 期试验显示 Survodutide 治疗 46 周减重达 19%，超过单一 GLP-1 类似物。III 期数据预计于 2025-2026 年公布。NASH 试验显示纤维化改善。',
+        'dosing': '试验剂量从 0.6 毫克起逐步加至 3.6-4.8 毫克每周皮下注射。',
+        'safety': '副作用谱与其他双重激动剂类似——胃肠道反应主导。胰高血糖素相关效应（心率、血压）需监测。',
+    },
+    'pemvidutide': {
+        'zh_name': 'Pemvidutide（GLP-1/胰高血糖素双重激动剂）',
+        'category': 'GLP-1/胰高血糖素双重激动剂（研究阶段）',
+        'overview': 'Pemvidutide 是 Altimmune 开发的 GLP-1/胰高血糖素双重激动剂，处于 II 期临床开发。它针对 NASH 与肥胖。',
+        'mechanism': '机制类似其他 GLP-1/胰高血糖素双重激动剂——GLP-1 介导食欲抑制，胰高血糖素增强脂肪氧化与能量消耗。结构上含有 C16 脂肪酸侧链，提供白蛋白结合与延长半衰期。',
+        'evidence': 'II 期 IMPACT 试验探索 Pemvidutide 用于 NASH，主要终点未在 24 周达到，但更长疗程显示纤维化改善。肥胖数据显示减重约 15%。',
+        'dosing': '试验剂量为 1.2-2.4 毫克每周皮下注射。',
+        'safety': '副作用以胃肠道为主。心率增加在某些剂量级别可见。',
+    },
+    'orforglipron': {
+        'zh_name': 'Orforglipron（口服 GLP-1 小分子激动剂）',
+        'category': '小分子 GLP-1 受体激动剂（研究阶段）',
+        'overview': 'Orforglipron 是礼来开发的非肽类口服 GLP-1 受体激动剂，处于晚期临床开发。它代表 GLP-1 治疗的重要进展——口服每日给药且无肽稳定性问题。',
+        'mechanism': 'Orforglipron 是 GLP-1 受体的小分子变构激动剂。作为非肽，它具有口服生物利用度与不需要冷链运输的优势，区别于注射型 GLP-1 类似物。',
+        'evidence': 'III 期 ACHIEVE 与 ATTAIN 试验显示 Orforglipron 治疗 72 周减重达 14-15%。糖尿病数据显示 HbA1c 显著降低。礼来计划在 2026 年提交 FDA 批准申请。',
+        'dosing': '试验剂量从 3 毫克起逐步加至 12-36 毫克每日口服。',
+        'safety': '副作用谱与注射型 GLP-1 类似物相似——胃肠道反应主导。无肽相关注射部位问题。',
+    },
+    'liraglutide': {
+        'zh_name': '利拉鲁肽（Liraglutide）',
+        'category': 'GLP-1 受体激动剂（FDA 批准药物）',
+        'overview': '利拉鲁肽是诺和诺德开发的 GLP-1 类似物，FDA 批准用于 2 型糖尿病（Victoza）与肥胖（Saxenda）。它是司美格鲁肽的前身，每日给药。',
+        'mechanism': '与司美格鲁肽类似的 GLP-1 受体激动机制。结构修饰（C16 脂肪酸侧链）提供白蛋白结合，半衰期延长至约 13 小时——支持每日给药。',
+        'evidence': 'LEAD 系列（糖尿病）与 SCALE 系列（肥胖）试验确立利拉鲁肽疗效。SCALE 显示 56 周治疗减重约 8%——低于司美格鲁肽。LEADER 心血管结局试验显示 MACE 减少。',
+        'dosing': '糖尿病剂量从 0.6 毫克起加至 1.8 毫克每日皮下注射。肥胖适应症最高剂量为 3.0 毫克每日。',
+        'safety': '副作用谱与其他 GLP-1 类似物相同——胃肠道反应主导。胰腺炎、胆囊事件、甲状腺髓样癌黑框警告。',
+    },
+    'setmelanotide': {
+        'zh_name': 'Setmelanotide（IMCIVREE）',
+        'category': 'MC4R 激动剂（FDA 批准药物）',
+        'overview': 'Setmelanotide（IMCIVREE）是 Rhythm Pharmaceuticals 开发的选择性 MC4R 激动剂，FDA 批准用于罕见遗传性肥胖症（POMC、PCSK1、LEPR 缺陷与 Bardet-Biedl 综合征）。',
+        'mechanism': 'Setmelanotide 选择性激活下丘脑 MC4R，恢复瘦素-黑皮质素通路下游信号。在 POMC 等遗传性缺陷中，它绕过缺失的上游信号直接激活食欲与代谢调节。',
+        'evidence': '关键 III 期试验显示 Setmelanotide 在 POMC 缺陷者减重约 25%，在 LEPR 缺陷者减重约 13%。Bardet-Biedl 综合征试验也显示效益。',
+        'dosing': '批准剂量为 2-3 毫克每日皮下注射，根据反应与耐受性调整。',
+        'safety': '副作用包括注射部位反应、皮肤色素沉着改变（MC1R 旁观者激活）、恶心、勃起时间延长（男性）。罕见但重要：抑郁症恶化或自杀念头需要监测。',
+    },
+    'maritide': {
+        'zh_name': 'MariTide（GIPR 拮抗剂 + GLP-1 激动剂）',
+        'category': '新型 GIP/GLP-1 双重作用（研究阶段）',
+        'overview': 'MariTide（AMG 133）是 Amgen 开发的独特双功能分子——GIPR 拮抗剂与 GLP-1 激动剂的偶联物。它代表了 GIP 通路的新方法（拮抗而非激动 GIP，与替尔泊肽相反）。',
+        'mechanism': '分子是单克隆抗体（针对 GIPR 的拮抗剂）共价结合 GLP-1 类似物。GLP-1 激动提供经典效应；GIPR 拮抗的减重机制仍在研究中——理论包括减少脂肪储存信号、增加能量消耗。',
+        'evidence': 'II 期试验显示 MariTide 治疗 52 周减重约 20%，且效果持续超过药物半衰期（数月维持效应）——这与替尔泊肽不同，停药后体重快速反弹。III 期数据预计 2026-2027 年。',
+        'dosing': '试验剂量为每月 1-2 次皮下注射 140-420 毫克。每月给药是其与每周 GLP-1 类似物的关键区别。',
+        'safety': '副作用以胃肠道为主。长效特性意味着副作用持续时间较长。心血管效应仍在评估中。',
+    },
+    'semax': {
+        'zh_name': 'Semax（俄罗斯神经肽）',
+        'category': '神经保护 / 益智肽',
+        'overview': 'Semax 是俄罗斯开发的 7 氨基酸合成肽（Met-Glu-His-Phe-Pro-Gly-Pro），衍生自 ACTH 4-10 序列但缺乏激素活性。它作为处方鼻内喷雾在俄罗斯使用，主要用于中风与认知障碍。',
+        'mechanism': 'Semax 增加脑源性神经营养因子（BDNF）表达、调节多巴胺与血清素系统、并显示神经保护作用。它穿过血脑屏障，鼻内给药提供直接 CNS 暴露。',
+        'evidence': '俄罗斯研究支持 Semax 用于急性缺血性中风、瞬时性脑缺血、视神经病变与轻度认知障碍。西方独立验证有限。',
+        'dosing': '鼻内剂量典型为每日 300-600 微克，分 2-3 次给药。中风急性期可能采用更高剂量（约 12 毫克）。',
+        'safety': '总体耐受性良好——轻微鼻刺激与暂时性头痛是最常报告的副作用。无显著长期副作用记录。',
+    },
+    'pancragen': {
+        'zh_name': 'Pancragen（胰腺生物调节肽）',
+        'category': '组织特异性生物调节肽（Khavinson 系列）',
+        'overview': 'Pancragen 是 Khavinson 系列的四肽，针对胰腺组织设计。它属于俄罗斯生物调节肽家族。',
+        'mechanism': 'Khavinson 假说认为 Pancragen 编码胰腺细胞特异性基因调控信息，可能影响胰岛素分泌、β 细胞功能与代谢调节。',
+        'evidence': '俄罗斯研究显示 Pancragen 在 2 型糖尿病、代谢综合征与衰老相关胰腺功能下降中的效益。西方验证有限。',
+        'dosing': '口服胶囊形式通常为每日 1-2 粒（含 200 微克活性肽），疗程 1-3 个月。',
+        'safety': 'Khavinson 肽剂量极低，副作用罕见。',
+    },
+    '9-me-bc': {
+        'zh_name': '9-Me-BC（9-甲基-β-咔啉）',
+        'category': '神经保护小分子（非肽）',
+        'overview': '9-Me-BC 是 β-咔啉家族的小分子化合物，技术上不是肽。它在帕金森病动物模型中显示神经保护与神经营养效应，因此在研究界被广泛讨论。',
+        'mechanism': '9-Me-BC 上调 GDNF、BDNF 与 TGF-β 等神经营养因子表达，促进多巴胺能神经元存活与突触形成。它还显示线粒体保护与抗炎作用。',
+        'evidence': '动物研究显示 9-Me-BC 在 MPTP 诱导帕金森病模型中保护多巴胺能神经元。人类临床数据极有限。',
+        'dosing': '研究文献中口服剂量为每日 5-15 毫克。半衰期较长（数小时至数日）。',
+        'safety': '人类安全数据极有限。结构相关 β-咔啉类化合物具有 MAO 抑制活性，理论上引发药物相互作用担忧。',
+    },
+    'nad-plus': {
+        'zh_name': 'NAD+（烟酰胺腺嘌呤二核苷酸）',
+        'category': '辅酶 / 抗衰老与代谢',
+        'overview': 'NAD+（烟酰胺腺嘌呤二核苷酸）是细胞代谢中关键的辅酶，参与从糖酵解到氧化磷酸化的众多酶促反应。NAD+ 水平随年龄下降，这一观察推动了 NAD+ 补充作为抗衰老干预的研究兴趣。',
+        'mechanism': 'NAD+ 作为电子转移辅助因子参与糖酵解、TCA 循环与电子传递链。它还是 sirtuin 家族（包括 SIRT1）与 PARP 酶的底物，这些酶参与基因表达调节、DNA 修复与代谢稳态。补充 NAD+ 旨在恢复随龄下降的细胞 NAD+ 水平。',
+        'evidence': '动物研究显示 NAD+ 前体（如 NMN、NR）补充改善代谢参数、延长寿命、并恢复多种衰老相关终点。人体 II 期试验显示安全性良好与某些生物标志物改善，但临床终点（如肌力、认知）数据不一。',
+        'dosing': '直接 NAD+ 注射（皮下、静脉滴注）剂量典型为每日 50-300 毫克。前体补充（NMN、NR）口服剂量为每日 250-1000 毫克。给药途径选择影响生物利用度与成本。',
+        'safety': 'NAD+ 与前体补充总体耐受性良好。常见副作用：注射部位反应（注射形式）、暂时性面部潮红（直接 NAD+ 注射常见）、轻度恶心。长期高剂量数据有限。',
+    },
+    'nadplus': {
+        'zh_name': 'NAD+（烟酰胺腺嘌呤二核苷酸）',
+        'category': '辅酶 / 抗衰老与代谢',
+        'overview': 'NAD+（也写作 NAD plus、NAD+）是细胞代谢中关键的辅酶。NAD+ 水平随年龄下降是衰老研究的核心观察之一。',
+        'mechanism': 'NAD+ 参与糖酵解、TCA 循环与电子传递链，并作为 sirtuin 与 PARP 酶的底物。补充 NAD+ 旨在恢复细胞 NAD+ 水平，激活下游 sirtuin 介导的基因调节。',
+        'evidence': '动物研究支持 NAD+ 前体在延长寿命、改善代谢与逆转衰老标志物方面的效益。人体试验显示安全性与某些生物标志物改善。',
+        'dosing': '直接 NAD+ 注射剂量为每日 50-300 毫克。前体（NMN、NR）口服剂量为每日 250-1000 毫克。',
+        'safety': '总体耐受性良好。注射形式可能引起暂时性面部潮红与注射部位反应。',
+    },
+    'mk677': {  # alternate spelling
+        'zh_name': 'MK-677（Ibutamoren）',
+        'category': '口服生长激素促分泌剂',
+        'overview': 'MK-677（Ibutamoren，又名 Nutrobal）是默克开发的非肽类口服 GH 促分泌剂。',
+        'mechanism': 'MK-677 是饥饿素受体（GHSR-1a）的非肽类激动剂，刺激垂体释放 GH 与 IGF-1。',
+        'evidence': '研究探索 MK-677 用于肌肉减少症、髋部骨折恢复、生长激素缺乏症等。',
+        'dosing': '研究剂量为每日 10-25 毫克口服。睡前给药与自然 GH 脉冲一致。',
+        'safety': '副作用包括食欲增加、水钠潴留、葡萄糖耐量轻度下降。胰岛素抵抗是长期使用担忧。',
+    },
+    'na-selank': {  # N-acetyl Selank alternate
+        'zh_name': 'NA-Selank（N-乙酰基 Selank）',
+        'category': '抗焦虑 / 益智肽（修饰型）',
+        'overview': 'NA-Selank 是 Selank 的修饰型，N-末端乙酰化以增强代谢稳定性。',
+        'mechanism': '与原型 Selank 类似，通过 GABA、血清素与脑啡肽系统调节产生抗焦虑效应。',
+        'evidence': '关于 NA-Selank 的人类研究数据有限——主要外推自原型 Selank。',
+        'dosing': '研究剂量为鼻内每日 200-400 微克。',
+        'safety': '推测与原型 Selank 类似——耐受性良好。',
+    },
+    'na-semax': {  # N-acetyl Semax alternate
+        'zh_name': 'NA-Semax（N-乙酰基 Semax）',
+        'category': '神经保护 / 益智肽（修饰型）',
+        'overview': 'NA-Semax 是 Semax 的修饰型，端基保护以增强代谢稳定性。',
+        'mechanism': '与 Semax 类似，增加 BDNF 表达、调节多巴胺与血清素系统、并显示神经保护作用。',
+        'evidence': '俄罗斯研究支持原型 Semax 的应用。NA-Semax 形式的具体临床数据有限。',
+        'dosing': '鼻内剂量通常为每日 300-600 微克。',
+        'safety': '总体耐受性良好——轻微鼻刺激与暂时性头痛是最常报告的副作用。',
+    },
+    'amhr2bp': {
+        'zh_name': 'AMHR2BP（抗苗勒管激素受体结合肽）',
+        'category': '研究肽 / 卵巢功能',
+        'overview': 'AMHR2BP 是研究阶段的抗苗勒管激素受体（AMHR2）结合肽，被探索用于卵巢储备调节与生殖医学应用。',
+        'mechanism': 'AMHR2BP 与 AMHR2 受体相互作用，影响下游 SMAD 信号通路与卵泡发育。其精确机制仍在表征中。',
+        'evidence': '关于 AMHR2BP 的临床数据极少。研究主要在临床前阶段。',
+        'dosing': '研究文献中剂量差异大，无标准方案。',
+        'safety': '人类安全数据非常有限。生殖激素轴干预的下游效应需要谨慎评估。',
+    },
 }
 
 # ============================================================
@@ -750,6 +1047,72 @@ def aspect_content_zh(angle, compound_data):
             compound_data['evidence'],
             compound_data['safety'],
         ]
+    # Special category angles
+    if angle.startswith('comparison:'):
+        target = angle.split(':', 1)[1]
+        target_label = target.replace('-', ' ').upper() if target != 'alternatives' else '替代方案'
+        return [
+            f'本节比较 {name} 与 {target_label}。比较的目的不是宣布优胜者，而是阐明每种方案的差异、权衡与可能更适合的情境。',
+            compound_data['mechanism'],
+            f'{name} 与 {target_label} 在作用机制、证据基础、给药方式与副作用谱方面均有显著差异。机制差异决定了它们在不同临床情境下的适用性。',
+            compound_data['evidence'],
+            f'比较考量框架：（1）证据强度（RCT vs 动物 vs 逸闻）；（2）作用机制差异；（3）副作用谱；（4）实际可获得性；（5）成本效益；（6）个体匹配。',
+            compound_data['safety'],
+        ]
+    if angle.startswith('side-effect:'):
+        symptom_slug = angle.split(':', 1)[1]
+        symptom_label = symptom_slug.replace('-', ' ')
+        return [
+            f'本节聚焦 {name} 与"{symptom_label}"主题之间的关系。安全性谱评估需要在已知副作用、个体风险因素与剂量背景下进行。',
+            compound_data['safety'],
+            f'机制基础有助于理解为何 {name} 可能与某些症状相关。' + compound_data['mechanism'],
+            f'{name} 副作用通常与剂量、给药频率与个体易感性相关。从最低有效剂量起加量、密切监测、并在出现新症状时降低剂量或暂停是负责任研究使用的原则。',
+            f'相关研究证据：' + compound_data['evidence'],
+            f'缓解策略：（1）剂量调整；（2）改变给药时间；（3）支持性措施（水化、营养、休息）；（4）必要时医疗专业咨询。',
+        ]
+    if angle.startswith('question:'):
+        return [
+            f'本节回答关于 {name} 的具体研究问题，基于已发表文献与已知机制。',
+            compound_data['overview'],
+            compound_data['mechanism'],
+            compound_data['dosing'],
+            compound_data['evidence'],
+            compound_data['safety'],
+        ]
+    if angle.startswith('interaction:'):
+        partner_slug = angle.split(':', 1)[1]
+        partner = partner_slug.replace('-', ' ')
+        return [
+            f'本节探讨 {name} 与 {partner} 的潜在相互作用与堆叠考量。',
+            compound_data['mechanism'],
+            f'相互作用类型：（1）药代动力学相互作用（吸收、代谢、排泄）；（2）药效学相互作用（受体水平协同或拮抗）；（3）副作用累加。{name} 与 {partner} 同用前，研究者应评估这些类别。',
+            compound_data['safety'],
+            f'实用考量：单独引入新化合物（不同时引入多个）、记录基线响应、监测剂量调整需求。',
+            f'相关证据：' + compound_data['evidence'],
+        ]
+    if angle.startswith('modifier:'):
+        modifier_slug = angle.split(':', 1)[1]
+        modifier = modifier_slug.replace('-', ' ')
+        return [
+            f'本节探讨 {name} 在"{modifier}"修饰条件下的研究考量。',
+            compound_data['mechanism'],
+            compound_data['dosing'],
+            f'修饰条件可能影响 {name} 的吸收、代谢或药效。研究者应评估这些条件如何改变化合物的效应曲线。',
+            compound_data['evidence'],
+            compound_data['safety'],
+        ]
+    if angle.startswith('application:'):
+        app_slug = angle.split(':', 1)[1]
+        app = app_slug.replace('-', ' ')
+        return [
+            f'{name} 在"{app}"应用中的研究涉及特定生理机制与临床终点。',
+            compound_data['mechanism'],
+            f'此应用的相关考量：（1）目标终点的可测量性；（2）{name} 机制与目标病理学的对齐；（3）剂量与给药频率优化；（4）治疗时间窗。',
+            compound_data['evidence'],
+            f'实用注意：{name} 在"{app}"应用中通常作为综合策略的一部分，而非孤立干预。生活方式因素、伴随治疗与个体特征均影响响应。',
+            compound_data['safety'],
+        ]
+
     # default
     return [
         compound_data['overview'],
@@ -761,30 +1124,231 @@ def aspect_content_zh(angle, compound_data):
 
 
 # ============================================================
+# Hub-page content generators (best-peptides-for-X, peptides-for-X, etc.)
+# ============================================================
+def hub_content(hub_type, remainder):
+    """Generate content for hub/list pages."""
+    topic = remainder.replace('.html', '').replace('-', ' ')
+    if hub_type == 'best_peptides_for':
+        return [
+            ('概述：在"' + topic + '"领域研究的肽类化合物', f'本指南综合在"{topic}"应用中被研究的关键肽类化合物。每种化合物有独特的作用机制、证据基础与实用考量，使其适合不同的研究情境。'),
+            ('排名标准与方法学', '"最佳"排名涉及多个维度：研究证据强度（RCT vs 动物 vs 逸闻）、作用机制对齐、副作用谱、可获得性、成本效益。读者应根据其特定研究情境权衡这些因素。'),
+            ('顶级研究化合物概览', f'在"{topic}"应用中，BPC-157、TB-500、GHK-Cu、MOTS-c、胸腺素 α-1 等化合物代表了不同的机制方法。BPC-157 与 TB-500 主要针对组织修复；GHK-Cu 与 GHK 针对皮肤与胶原；MOTS-c 针对线粒体代谢；胸腺素 α-1 针对免疫调节。每种化合物的具体应用应根据机制对齐选择。'),
+            ('证据基础对比', '不同肽的临床证据基础差异显著。FDA 批准的化合物（如司美格鲁肽、替尔泊肽、Tesamorelin、Setmelanotide）有大量 RCT 数据；研究化合物（如 BPC-157、TB-500、Epithalon）主要依赖动物模型与逸闻报告。这种对比影响"最佳"判断。'),
+            ('选择决策框架', '为特定应用选择肽类化合物的实用框架：（1）明确目标终点（具体可测量）；（2）评估机制对齐；（3）评估证据强度；（4）评估副作用风险；（5）评估实际获得性；（6）评估个体禁忌。这种系统方法优于简单"最佳"排名。'),
+            ('协同与堆叠考量', '某些肽组合显示协同效应——例如 BPC-157 + TB-500 用于损伤恢复，CJC-1295 + 伊帕莫林用于 GH 优化。然而堆叠增加复杂性、相互作用风险与副作用累加可能。从单一化合物建立基线响应通常优于直接进入复杂堆叠。'),
+            ('安全性与监管考量', '研究肽通常未获 FDA 批准用于人体应用，市场销售为"研究化学品"。这反映监管现实，并影响合法获取、运输与使用考量。研究者应了解适用司法管辖区的最新法规。'),
+            ('实用结论', f'在"{topic}"应用中没有普遍"最佳"肽——选择取决于个体研究目标、风险耐受性、可获得性与对证据基础的解读。本指南旨在为这些个体化决策提供框架，而非规定单一答案。'),
+        ]
+    if hub_type == 'peptides_for':
+        return [
+            ('概述：'+topic+'相关肽研究', f'本节综合在"{topic}"领域的肽类研究。多种化合物针对此应用的不同方面被研究——理解每种的机制有助于研究者将其与具体研究问题对齐。'),
+            ('相关机制概述', f'"{topic}"病理学涉及多种细胞与系统过程。不同肽通过不同机制起作用——组织修复、抗炎、激素调节、神经营养支持等。机制选择应基于"{topic}"的具体方面。'),
+            ('关键研究化合物', f'在"{topic}"领域中常被研究的化合物包括 BPC-157（组织修复）、TB-500（细胞迁移）、GHK-Cu（胶原合成）、Cerebrolysin（神经营养）、MOTS-c（线粒体功能）等。每种代表不同机制方法。'),
+            ('证据基础', f'肽类化合物在"{topic}"应用中的证据基础不一。某些有 RCT 数据；多数依赖动物模型与逸闻报告。证据级别影响临床应用的合理性。'),
+            ('剂量与给药考量', '肽剂量在不同应用间差异显著。皮下注射是最常见途径；某些化合物提供口服或鼻内替代。给药频率取决于半衰期与目标稳态水平。'),
+            ('安全性与禁忌', '研究肽通常具有可接受的短期安全性谱，但长期数据有限。常见禁忌包括恶性肿瘤病史（特别是促增殖肽）、妊娠期、严重未控制疾病。'),
+            ('整合策略', f'肽类化合物在"{topic}"应用中通常作为综合策略的组成部分，而非孤立干预。生活方式因素、伴随治疗与个体差异均影响响应。'),
+            ('未来方向', f'"{topic}"肽研究的未来方向包括：标准化剂量方案、扩大临床终点验证、长期安全性数据、与其他干预措施的相互作用研究。'),
+        ]
+    if hub_type == 'peptide_general':
+        return [
+            (f'什么是"{topic}"？', f'本指南讨论与"{topic}"相关的肽研究主题。理解此主题需要在肽类化合物作用机制、研究方法学与监管现实的更广背景中进行。'),
+            ('一般肽研究背景', '肽类化合物代表了一个广泛的研究领域，涵盖从已 FDA 批准的药物（GLP-1 类似物、Tesamorelin）到未经批准的研究化学品（BPC-157、TB-500、Epithalon）。"研究肽"通常指后者类别。'),
+            ('作用机制概述', '肽通过多种机制起作用：受体激动/拮抗、酶调节、信号通路调控、组织特异性基因表达。机制类别影响应用领域、副作用谱与监管路径。'),
+            ('给药途径', '肽给药通常需要注射（皮下、肌肉、静脉）以避免胃肠道蛋白酶降解。某些经修饰肽可口服或鼻内给药。半衰期决定给药频率。'),
+            ('剂量与个体化', '肽剂量高度个体化，受年龄、体重、目标终点、伴随治疗影响。从最低有效剂量起加量是负责任研究的标准做法。'),
+            ('安全性原则', '研究肽通常具有可接受的短期安全性谱。常见副作用：注射部位反应、暂时性头痛、面部潮红、轻度恶心。严重风险因化合物而异。'),
+            ('采购与质量', '研究肽市场质量差异巨大。寻找提供独立第三方分析证书（CoA）、HPLC 纯度数据与适当冷链运输的供应商是基础尽职调查。'),
+            ('监管与法律', '研究肽通常未获 FDA 或同等机构批准用于人体应用。它们作为"研究化学品"销售，意味着合法用途仅限于研究环境，不适合人类消费。'),
+        ]
+    if hub_type == 'howto':
+        return [
+            (f'实用指南：{topic}', f'本指南提供关于"{topic}"的实用研究信息，基于一般最佳实践与已发表协议。'),
+            ('准备与材料', f'"{topic}"通常需要特定材料：化合物（冻干形式）、稀释剂（抑菌水）、注射器（U-100 胰岛素针）、酒精棉、消毒处理用品。质量与无菌性至关重要。'),
+            ('分步骤过程', '一般步骤遵循：（1）准备工作区；（2）允许化合物达到室温；（3）准确稀释；（4）抽取剂量；（5）排空空气；（6）注射；（7）安全处理废弃物。每步都有具体技术细节。'),
+            ('剂量计算', '剂量计算需要考虑：化合物总质量、稀释剂体积、最终浓度、目标剂量。U-100 胰岛素针的刻度（每单位 = 0.01 毫升）使准确测量变得可行。'),
+            ('储存与稳定性', '冻干化合物长期储存于冷冻或冷藏。重组化合物通常 2-4 周稳定（取决于化合物）。避免反复冻融循环、剧烈摇晃或光照。'),
+            ('常见错误避免', '常见错误：未达室温就重组导致化合物降解；用力摇晃损坏肽结构；剂量计算错误；针头复用（增加感染风险）；不当储存导致活性损失。'),
+            ('安全考量', '研究肽使用涉及多种安全考量：注射技术（避免血管内注射、感染）、剂量准确性、储存安全、化合物质量验证。'),
+            ('记录与监测', '研究记录应包括：化合物批号、剂量、给药时间、注射部位、观察到的反应、相关测量。这种记录对个体响应评估与未来调整至关重要。'),
+        ]
+    return None
+
+
+# ============================================================
 # Slug parsing
 # ============================================================
+# Utility/non-content pages to skip
+SKIP_SLUGS = {
+    'about', 'privacy', 'terms', 'disclaimer', 'affiliate-disclosure',
+    'index', 'search', '404', 'TEMPLATE-BODY', 'TEMPLATE-CSS',
+    'ARTICLE-TEMPLATE', 'wolverine', 'wolverine-stack',
+}
+
+# Hub-page patterns (need different content shape)
+HUB_PATTERNS = [
+    ('best-peptides-for-', 'best_peptides_for'),
+    ('best-peptides-', 'best_peptides_for'),
+    ('peptides-for-', 'peptides_for'),
+    ('peptide-', 'peptide_general'),
+    ('peptides-', 'peptide_general'),
+    ('how-to-', 'howto'),
+]
+
+# Common application patterns mapped to angles
+APP_TO_ANGLE = {
+    'acl': 'tendon', 'achilles': 'tendon', 'rotator-cuff': 'tendon',
+    'tennis-elbow': 'tendon', 'shoulder': 'tendon', 'tendon': 'tendon',
+    'tendon-healing': 'tendon', 'plantar': 'tendon', 'plantar-fasciitis': 'tendon',
+    'ankle': 'injury', 'ankle-sprain': 'injury', 'meniscus': 'tendon',
+    'knee': 'joint', 'hip': 'joint', 'joint-pain': 'joint', 'wrist': 'tendon',
+    'back-pain': 'recovery', 'back': 'recovery',
+    'hamstring': 'tendon', 'shin-splints': 'injury', 'leaky-gut': 'gut',
+    'gut': 'gut', 'gut-health': 'gut', 'leaky': 'gut', 'gut-healing': 'gut',
+    'immune': 'immune', 'immune-support': 'immune', 'immunity': 'immune',
+    'muscle-growth': 'muscle', 'muscle': 'muscle', 'muscle-loss': 'muscle',
+    'fat-loss': 'fatloss', 'fat': 'fatloss', 'belly-fat': 'fatloss',
+    'stubborn-belly-fat': 'fatloss', 'weight-loss': 'weightloss',
+    'anti-aging': 'antiaging', 'aging': 'antiaging', 'longevity': 'antiaging',
+    'skin': 'skin', 'collagen': 'skin', 'wrinkles': 'skin', 'fine-lines': 'skin',
+    'hair': 'skin', 'hair-loss': 'skin',
+    'anxiety': 'anxiety', 'depression': 'depression', 'sleep': 'sleep',
+    'focus': 'focus', 'brain-fog': 'brainfog', 'cognition': 'focus',
+    'memory': 'focus', 'social-anxiety': 'anxiety',
+    'inflammation': 'inflammation', 'recovery': 'recovery',
+    'post-surgery-recovery': 'recovery', 'post-surgery': 'recovery',
+    'surgery': 'recovery', 'wound-healing': 'injury', 'wound': 'injury',
+    'scar': 'skin', 'sun-damage': 'skin', 'acne': 'skin', 'dark-spots': 'skin',
+    'stretch-marks': 'skin', 'cancer': 'risk', 'tumor': 'risk',
+    'cardiac': 'recovery', 'heart': 'recovery',
+    'nerve': 'recovery', 'nerve-regeneration': 'recovery', 'nerve-pain': 'recovery',
+    'herniated-disc': 'recovery', 'carpal-tunnel': 'tendon',
+    'lyme': 'immune', 'mold': 'immune', 'long-covid': 'immune',
+    'pcos': 'weightloss', 'fatty-liver': 'fatloss', 'metabolic-syndrome': 'fatloss',
+    'insulin-resistance': 'fatloss', 'binge-eating': 'weightloss',
+    'binge': 'weightloss', 'emotional-eating': 'weightloss',
+    'type-2-diabetes': 'general', 'diabetes': 'general',
+}
+
+# Comparison patterns
+COMPARISON_KEYWORDS = ['vs-', 'vs', 'versus']
+QUESTION_KEYWORDS = ['does-it-', 'how-long-', 'how-many-', 'how-much-', 'how-fast-',
+                     'best-time-to-', 'when-to-', 'where-to-', 'can-you-',
+                     'what-happens-', 'what-to-', 'how-to-']
+
+# Side-effect/risk specific patterns
+SIDE_EFFECT_KEYWORDS = ['nausea', 'headache', 'dizziness', 'constipation',
+                        'diarrhea', 'fatigue', 'hair-loss', 'water-retention',
+                        'flushing', 'insomnia', 'pancreatitis', 'gastroparesis',
+                        'gallbladder', 'thyroid-cancer', 'face', 'aging-face',
+                        'numbness', 'tingling', 'lethargy', 'cancer-risk',
+                        'tumor-growth', 'blood-sugar', 'blood-pressure',
+                        'cortisol-increase', 'extreme-hunger', 'increased-appetite',
+                        'water-retention', 'depression', 'risk', 'side',
+                        'birth-control', 'birth', 'muscle-loss', 'stomach-paralysis',
+                        'face-aging', 'ozempic-face', 'unwanted-erections',
+                        'moles-darkening', 'freckles', 'facial-flushing',
+                        'water-retention-how-to-prevent', 'increased-appetite']
+
+
 def parse_slug(slug):
-    """Return (compound_key, aspect_key) or (None, None) if unrecognized."""
+    """Return (compound_key, aspect_key) where aspect_key is one of:
+       a key in ASPECTS, OR a special token like 'comparison', 'question',
+       'side-effect', 'application' followed by --<remainder>"""
     s = slug.replace('.html', '')
-    # Try longest-aspect match first
+
+    # Skip utility pages
+    if s in SKIP_SLUGS:
+        return ('__SKIP__', None)
+
+    # Hub pages (best-peptides-for-X, peptides-for-X, peptide-X, how-to-X)
+    for prefix, hub_type in HUB_PATTERNS:
+        if s.startswith(prefix):
+            remainder = s[len(prefix):]
+            return (f'__HUB_{hub_type}__', remainder)
+
+    # Greedy compound match: try every compound prefix from longest to shortest
+    compound_keys = sorted(COMPOUNDS.keys(), key=len, reverse=True)
+    for ck in compound_keys:
+        if s == ck:
+            return (ck, 'guide')
+        if s.startswith(ck + '-'):
+            remainder = s[len(ck) + 1:]
+            # Now try to map the remainder to an aspect or special category
+            return (ck, _map_remainder_to_aspect(remainder))
+
+    # No compound match — try ASPECT-only match (rare)
+    if s in ASPECTS:
+        return (None, s)
+
+    # Fallback: unknown compound
+    if '-' in s:
+        # Try splitting before last 1-3 segments
+        parts = s.split('-')
+        # Try first 1-3 segments as compound
+        for n in (3, 2, 1):
+            if n < len(parts):
+                potential_compound = '-'.join(parts[:n])
+                potential_aspect = '-'.join(parts[n:])
+                return (potential_compound, _map_remainder_to_aspect(potential_aspect))
+    return (s, 'guide')
+
+
+def _map_remainder_to_aspect(remainder):
+    """Map the slug remainder (after compound) to an aspect key OR
+    to a special category like 'comparison:X', 'question:X', 'side-effect:X', 'application:X'."""
+    if not remainder:
+        return 'guide'
+
+    # Direct aspect match
+    if remainder in ASPECTS:
+        return remainder
+
+    # Try longest aspect match within remainder
     aspect_keys = sorted(ASPECTS.keys(), key=len, reverse=True)
     for asp in aspect_keys:
-        if s == asp:
-            return (None, asp)
-        if s.endswith('-' + asp):
-            compound = s[:-(len(asp) + 1)]
-            if compound in COMPOUNDS:
-                return (compound, asp)
-            # try reduced compound (drop trailing words that may be aspect remnants)
-            return (compound, asp)
-    # Fallback: maybe slug IS a compound
-    if s in COMPOUNDS:
-        return (s, 'guide')
-    # Last attempt — split on last dash
-    if '-' in s:
-        parts = s.rsplit('-', 1)
-        return (parts[0], parts[1])
-    return (s, 'guide')
+        if remainder == asp or remainder.startswith(asp + '-'):
+            return asp
+
+    # Comparison patterns: vs-X, vs X
+    if remainder.startswith('vs-') or remainder == 'vs':
+        target = remainder[3:] if remainder.startswith('vs-') else 'alternatives'
+        return f'comparison:{target}'
+
+    # Side-effects: specific symptoms
+    for se in SIDE_EFFECT_KEYWORDS:
+        if remainder == se or se in remainder:
+            return f'side-effect:{remainder}'
+
+    # Question patterns
+    for q in QUESTION_KEYWORDS:
+        if remainder.startswith(q):
+            return f'question:{remainder}'
+
+    # for-X application
+    if remainder.startswith('for-'):
+        app = remainder[4:]
+        # Map common applications
+        if app in APP_TO_ANGLE:
+            return APP_TO_ANGLE[app]
+        return f'application:{app}'
+
+    # and-X stacking/interaction
+    if remainder.startswith('and-'):
+        partner = remainder[4:]
+        return f'interaction:{partner}'
+
+    # with/without modifiers
+    if remainder.startswith('with-') or remainder.startswith('without-'):
+        return f'modifier:{remainder}'
+
+    # General application word
+    if remainder in APP_TO_ANGLE:
+        return APP_TO_ANGLE[remainder]
+
+    # Default: treat as general
+    return 'guide'
 
 
 # ============================================================
@@ -793,20 +1357,46 @@ def parse_slug(slug):
 def build_article_body(slug, title_zh, quick_answer_zh):
     """Generate complete <body> innerHTML in real Chinese."""
     compound_key, aspect_key = parse_slug(slug)
+
+    # Skip utility pages
+    if compound_key == '__SKIP__':
+        return None  # signal to caller to skip
+
+    # Hub pages
+    if compound_key and compound_key.startswith('__HUB_'):
+        hub_type = compound_key[6:-2]
+        sections = hub_content(hub_type, aspect_key or '')
+        if sections:
+            html_out = ''
+            for h2, p in sections:
+                html_out += f'<h2>{h2}</h2>\n<p>{p}</p>\n'
+            return html_out
+        return None
+
     compound_data = COMPOUNDS.get(compound_key)
     if not compound_data:
         # Unknown compound — use a generic structure but make it slug-specific
+        # Try to extract a Chinese name from title
+        zh_name_guess = re.sub(r'[\|\—\-].*$', '', title_zh).strip() or slug.replace('-', ' ').upper()
         compound_data = {
-            'zh_name': title_zh.split('—')[0].split('|')[0].strip() or slug,
+            'zh_name': zh_name_guess,
             'category': '研究肽',
-            'overview': f'本指南综合关于 {slug.replace("-", " ")} 的现有研究文献。',
-            'mechanism': '该化合物的作用机制涉及特定细胞通路与信号级联。详细机制见已发表的同行评议研究。',
-            'evidence': '已发表证据基础包括临床前研究（细胞培养、动物模型）与有限的人体数据。研究质量与样本量在不同研究间差异较大。',
-            'dosing': '研究文献中报告的剂量因终点与人群而异。任何剂量决策应在医疗专业人员指导下进行。',
-            'safety': '化合物的安全性档案需要在已知效应、个体风险因素与监管状态背景下评估。',
+            'overview': f'本指南综合关于 {zh_name_guess} 的现有研究文献。该化合物属于研究阶段的肽类化合物，目前主要用于研究而非临床应用。',
+            'mechanism': f'{zh_name_guess} 的作用机制涉及特定细胞通路与信号级联。详细机制见已发表的同行评议研究。一般来说，肽类化合物通过受体激动、酶调节或基因表达调控产生效应。',
+            'evidence': f'{zh_name_guess} 的已发表证据基础包括临床前研究（细胞培养、动物模型）与有限的人体数据。研究质量与样本量在不同研究间差异较大，独立验证的程度也不同。',
+            'dosing': f'研究文献中报告的 {zh_name_guess} 剂量因终点与人群而异。皮下注射是常见给药途径。任何剂量决策应在医疗专业人员指导下进行。',
+            'safety': f'{zh_name_guess} 的安全性档案需要在已知效应、个体风险因素与监管状态背景下评估。短期数据通常显示可接受耐受性，长期数据较有限。',
         }
-    aspect_info = ASPECTS.get(aspect_key, {'h1_zh': '研究综述', 'angle': 'general'})
-    paragraphs = aspect_content_zh(aspect_info['angle'], compound_data)
+
+    # Determine angle from aspect_key (which may be a special category)
+    if aspect_key in ASPECTS:
+        angle = ASPECTS[aspect_key]['angle']
+    elif aspect_key and ':' in aspect_key:
+        angle = aspect_key  # special category, e.g. 'comparison:X'
+    else:
+        angle = 'general'
+
+    paragraphs = aspect_content_zh(angle, compound_data)
 
     # H2 sections by aspect
     h2_map = {
@@ -854,7 +1444,23 @@ def build_article_body(slug, title_zh, quick_answer_zh):
         'growth': ['生长激素相关效应概述', '机制基础', '研究证据', 'GH/IGF-1 轴生理', '安全性'],
         'general': ['化合物概述', '化合物背景', '作用机制', '研究证据', '安全性'],
     }
-    h2s = h2_map.get(aspect_info['angle'], h2_map['general'])
+    # Lookup H2s — fall back gracefully for special-category angles
+    if angle in h2_map:
+        h2s = h2_map[angle]
+    elif angle.startswith('comparison:'):
+        h2s = h2_map['comparison']
+    elif angle.startswith('side-effect:'):
+        h2s = ['副作用主题概述', '安全性档案', '机制基础', '剂量与个体差异', '相关研究证据', '缓解策略']
+    elif angle.startswith('question:'):
+        h2s = ['研究问题概览', '化合物背景', '机制基础', '剂量考量', '研究证据', '安全性']
+    elif angle.startswith('interaction:'):
+        h2s = ['相互作用主题概述', '机制基础', '相互作用类型', '安全考量', '实用考量', '相关证据']
+    elif angle.startswith('modifier:'):
+        h2s = ['修饰条件概述', '机制基础', '剂量考量', '修饰条件影响', '研究证据', '安全性']
+    elif angle.startswith('application:'):
+        h2s = ['应用领域概述', '机制基础', '应用相关考量', '研究证据', '实用注意事项', '安全性']
+    else:
+        h2s = h2_map['general']
     # Pair paragraphs to h2s (max 5 sections)
     n = min(len(h2s), len(paragraphs), 5)
     sections_html = ''
@@ -901,6 +1507,10 @@ def process_file(zh_path, en_path):
     slug = zh_path.stem
     new_sections = build_article_body(slug, title_zh, quick_answer_zh)
 
+    # Skip utility/unrecognized pages
+    if new_sections is None:
+        return False
+
     # Find <article ...>...</article> and replace its inner content
     pattern = re.compile(r'(<article[^>]*>)(.*?)(</article>)', re.DOTALL)
     if not pattern.search(html):
@@ -919,8 +1529,8 @@ def process_file(zh_path, en_path):
 
 
 def main():
-    # File list
-    list_path = '/tmp/zh-518-files.txt'
+    # File list — env var FILE_LIST overrides default
+    list_path = os.environ.get('FILE_LIST', '/tmp/zh-518-files.txt')
     if not os.path.exists(list_path):
         print(f"Missing {list_path}")
         sys.exit(1)
