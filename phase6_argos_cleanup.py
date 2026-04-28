@@ -209,10 +209,10 @@ def cleanup_file(path, fixes):
             n = html.count(pat)
             html = html.replace(pat, repl)
             repls += n
-    # Cleanup any double spaces created by removals
-    html = re.sub(r'  +', ' ', html)
-    html = re.sub(r'<p>\s*</p>', '', html)
-    html = re.sub(r'<p[^>]*>\s*</p>', '', html)
+    # Only run if specific patterns matched — don't normalize whitespace globally
+    if html != orig:
+        # Only remove empty <p> tags created by our specific replacements
+        html = re.sub(r'<p[^>]*>\s*</p>', '', html)
     if html != orig:
         path.write_text(html, encoding='utf-8')
         return True, repls
