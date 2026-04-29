@@ -547,12 +547,17 @@ def build():
         "your jurisdiction.",
         kind='warning'))
     story.append(Paragraph("BPC-157 protocols seen in the literature", style_h2))
+    _cell = ParagraphStyle('DoseCell', parent=style_body, fontSize=9, leading=12,
+                           spaceAfter=0, alignment=TA_LEFT)
+    _hdr = ParagraphStyle('DoseHdr', parent=_cell, fontName='Helvetica-Bold',
+                          textColor=colors.white)
+    def _P(t, h=False): return Paragraph(t, _hdr if h else _cell)
     bpc_data = [
-        ['Phase', 'Daily dose (research range)', 'Frequency', 'Duration'],
-        ['Loading (acute injury)', '500 mcg', '2× daily SC', '2 weeks'],
-        ['Standard', '250-500 mcg total', '1-2× daily SC', '4-8 weeks'],
-        ['Maintenance', '200-250 mcg', '1× daily SC', '4-12 weeks'],
-        ['Oral (gut focus)', '250-500 mcg', '1-2× daily', '4-8 weeks'],
+        [_P('Phase', True), _P('Daily dose (research range)', True), _P('Frequency', True), _P('Duration', True)],
+        [_P('Loading (acute injury)'), _P('500 mcg'), _P('2× daily SC'), _P('2 weeks')],
+        [_P('Standard'), _P('250-500 mcg total'), _P('1-2× daily SC'), _P('4-8 weeks')],
+        [_P('Maintenance'), _P('200-250 mcg'), _P('1× daily SC'), _P('4-12 weeks')],
+        [_P('Oral (gut focus)'), _P('250-500 mcg'), _P('1-2× daily'), _P('4-8 weeks')],
     ]
     bpc_table = Table(bpc_data, colWidths=[1.6*inch, 2.0*inch, 1.4*inch, 1.4*inch])
     bpc_table.setStyle(TableStyle([
@@ -573,10 +578,10 @@ def build():
                            style_caption))
     story.append(Paragraph("TB-500 protocols seen in the literature", style_h2))
     tb_data = [
-        ['Phase', 'Weekly dose (research range)', 'Schedule', 'Duration'],
-        ['Loading (acute injury)', '10-15 mg total', '2-2.5 mg daily SC × 1 week', '1 week'],
-        ['Loading continuation', '4-5 mg total', 'Split 2× weekly SC', '4-6 weeks'],
-        ['Maintenance', '2 mg total', '1× weekly SC', '4-12 weeks'],
+        [_P('Phase', True), _P('Weekly dose (research range)', True), _P('Schedule', True), _P('Duration', True)],
+        [_P('Loading (acute injury)'), _P('10-15 mg total'), _P('2-2.5 mg daily SC × 1 week'), _P('1 week')],
+        [_P('Loading continuation'), _P('4-5 mg total'), _P('Split 2× weekly SC'), _P('4-6 weeks')],
+        [_P('Maintenance'), _P('2 mg total'), _P('1× weekly SC'), _P('4-12 weeks')],
     ]
     tb_table = Table(tb_data, colWidths=[1.6*inch, 2.0*inch, 1.7*inch, 1.1*inch])
     tb_table.setStyle(TableStyle([
@@ -607,14 +612,24 @@ def build():
         "or you're early in a repair window; taper as you build toward maintenance.",
         style_body))
     story.append(Paragraph("Typical 12-week cycle structure", style_h2))
+    # Cell text that needs to wrap is wrapped in Paragraph; ReportLab Tables won't
+    # auto-wrap raw strings, which would push long Notes content off the page.
+    cell_style = ParagraphStyle('TableCell', parent=style_body,
+                                fontSize=9, leading=12, spaceAfter=0,
+                                alignment=TA_LEFT)
+    header_style = ParagraphStyle('TableHeader', parent=cell_style,
+                                  fontName='Helvetica-Bold',
+                                  textColor=colors.white)
+    def P(t, header=False):
+        return Paragraph(t, header_style if header else cell_style)
     cycle_data = [
-        ['Week', 'BPC-157', 'TB-500', 'Notes'],
-        ['1-2 (Loading)', '500 mcg 2×/day SC', '2-2.5 mg daily SC', 'Acute phase. Dose at injection site or near it for local effect, plus contralateral systemic.'],
-        ['3-6 (Build)', '250-500 mcg 1-2×/day SC', '4-5 mg/week (split 2×)', 'Most repair work happens here. Watch for diminishing-return signals.'],
-        ['7-12 (Maintenance)', '250 mcg 1×/day SC', '2 mg 1×/week SC', 'Tapered support. Many protocols stop the stack at week 8 if the endpoint is hit.'],
-        ['Off-cycle', '6-8 weeks', '6-8 weeks', 'Wash-out before considering another cycle. No data supports back-to-back continuous use.'],
+        [P('Week', True), P('BPC-157', True), P('TB-500', True), P('Notes', True)],
+        [P('1-2 (Loading)'), P('500 mcg 2×/day SC'), P('2-2.5 mg daily SC'), P('Acute phase. Dose at injection site or near it for local effect, plus contralateral systemic.')],
+        [P('3-6 (Build)'), P('250-500 mcg 1-2×/day SC'), P('4-5 mg/week (split 2×)'), P('Most repair work happens here. Watch for diminishing-return signals.')],
+        [P('7-12 (Maintenance)'), P('250 mcg 1×/day SC'), P('2 mg 1×/week SC'), P('Tapered support. Many protocols stop the stack at week 8 if the endpoint is hit.')],
+        [P('Off-cycle'), P('6-8 weeks'), P('6-8 weeks'), P('Wash-out before considering another cycle. No data supports back-to-back continuous use.')],
     ]
-    cycle_table = Table(cycle_data, colWidths=[1.2*inch, 1.7*inch, 1.5*inch, 2.0*inch])
+    cycle_table = Table(cycle_data, colWidths=[1.1*inch, 1.6*inch, 1.4*inch, 2.3*inch])
     cycle_table.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), NAVY),
         ('TEXTCOLOR', (0,0), (-1,0), colors.white),
