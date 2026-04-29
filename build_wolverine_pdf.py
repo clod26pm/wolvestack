@@ -102,7 +102,8 @@ style_body = ParagraphStyle(
     fontName='Helvetica',
     fontSize=11, leading=17,
     textColor=colors.HexColor('#1e293b'),
-    alignment=TA_JUSTIFY,
+    alignment=TA_LEFT,  # left-aligned (not justified) — avoids massive gaps when
+                        # hyphenated peptide sequences create unbreakable long words
     spaceAfter=10,
 )
 style_body_indent = ParagraphStyle(
