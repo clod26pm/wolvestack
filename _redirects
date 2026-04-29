@@ -87,6 +87,16 @@
 /app/*                  /app/:splat                        200
 /category/*             /category/:splat                   200
 
+# Lead-magnet PDF — stays at root, with fallback rules for common URL variations
+# (the email worker sends users to one of several plausible paths)
+/wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  200
+/en/wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  301
+/pdf/wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  301
+/downloads/wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  301
+/guides/wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  301
+/wolverine-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  301
+/wolverine-stack.pdf  /wolverine-stack-protocol-guide.pdf  301
+
 # Catch-all: force-redirect ALL other root .html pages to /en/ versions.
 # Uses :slug placeholder to match a single path segment (root-level only).
 # The `!` (force) flag overrides Netlify's "file exists, serve file" default —
