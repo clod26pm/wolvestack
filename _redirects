@@ -87,6 +87,12 @@
 /app/*                  /app/:splat                        200
 /category/*             /category/:splat                   200
 
+# IIAS (Is It A Scam? iOS app) marketing/support/privacy — root-only, no /en/ version
+# Required for App Store Connect submission (Apple checks Support and Marketing URLs).
+/isitascam.html         /isitascam.html                    200
+/isitascam-support.html /isitascam-support.html            200
+/isitascam-privacy.html /isitascam-privacy.html            200
+
 # Lead-magnet PDF — stays at root, with fallback rules for common URL variations
 # (the email worker sends users to one of several plausible paths)
 /wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  200
