@@ -92,6 +92,7 @@
 /isitascam.html         /isitascam.html                    200
 /isitascam-support.html /isitascam-support.html            200
 /isitascam-privacy.html /isitascam-privacy.html            200
+/isitascam-terms.html   /isitascam-terms.html              200
 
 # Lead-magnet PDF — stays at root, with fallback rules for common URL variations
 # (the email worker sends users to one of several plausible paths)
