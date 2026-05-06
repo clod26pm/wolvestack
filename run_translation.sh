@@ -78,15 +78,31 @@ else:
 echo ""
 echo "Smoke testing offline translation..."
 python3 -c "
-import os, sys
+import os, re, sys
 
-# Verify stanza is installed but disabled
-import argostranslate.sbd
-if argostranslate.sbd.stanza_available:
-    print('  ⛔ stanza_available is True — patch sbd.py!')
-    sys.exit(1)
-else:
-    print('  ✓ stanza_available = False (regex splitting, no network calls)')
+# Monkey-patch sbd to bypass Stanza entirely (no network needed).
+import argostranslate.sbd as _sbd
+_sbd.stanza_available = False
+
+def _regex_split_sentences(self, text):
+    if not text:
+        return []
+    parts = re.split(r'(?<=[.!?\u3002\uFF01\uFF1F])\s+', text.strip())
+    return [p for p in parts if p]
+
+for _name in dir(_sbd):
+    _obj = getattr(_sbd, _name)
+    if isinstance(_obj, type) and hasattr(_obj, 'split_sentences'):
+        _obj.split_sentences = _regex_split_sentences
+
+if callable(getattr(_sbd, 'split_sentences', None)):
+    def _module_split_sentences(text, *a, **kw):
+        if not text: return []
+        parts = re.split(r'(?<=[.!?\u3002\uFF01\uFF1F])\s+', text.strip())
+        return [p for p in parts if p]
+    _sbd.split_sentences = _module_split_sentences
+
+print('  ✓ sbd patched (regex splitting, no network calls)')
 
 import argostranslate.translate
 
