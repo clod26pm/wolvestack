@@ -1,0 +1,79 @@
+1777288689	33228	28831	es/5-amino-1mq-before-and-after.html
+1777288692	48074	41918	es/5-amino-1mq-benefits.html
+1777288696	55996	48920	es/5-amino-1mq-faq.html
+1777288699	57344	50102	es/5-amino-1mq-dosage.html
+1777288756	37710	32540	es/5-amino-1mq-for-stubborn-belly-fat.html
+1777288761	74899	64792	es/5-amino-1mq-for-body-composition.html
+1777288762	76285	66008	es/5-amino-1mq-for-women.html
+1777288763	80627	69839	es/5-amino-1mq-for-weight-loss.html
+1777288766	106409	92642	es/5-amino-1mq-half-life.html
+1777288768	125166	109003	es/5-amino-1mq-results-timeline.html
+1777288769	132723	115536	es/5-amino-1mq-research.html
+1777288770	146777	127631	es/5-amino-1mq-reconstitution.html
+1777288772	160082	139144	es/5-amino-1mq-safety.html
+1777288772	161383	140249	es/5-amino-1mq-side-effects.html
+1777288774	172090	149650	es/5-amino-1mq-how-it-works.html
+1777288775	173554	150979	es/5-amino-1mq-stacking.html
+1777288777	183093	159296	es/5-amino-1mq-storage.html
+1777288778	184518	160589	es/5-amino-1mq-where-to-buy.html
+1777288839	24941	21127	es/5-amino-1mq-for-beginners.html
+1777288840	33390	28444	es/5-amino-1mq-injection-guide.html
+1777288841	48460	41426	es/5-amino-1mq-cycle.html
+1777288842	53500	45634	es/5-amino-1mq-for-men.html
+1777288842	58624	49919	es/5-amino-1mq-for-fat-loss.html
+1777288843	61373	52389	es/5-amino-1mq-guide.html
+1777288844	68387	58157	es/5-amino-1mq-reviews.html
+1777288844	68387	58157	es/5-amino-1mq-legal.html
+1777288846	83012	70419	es/9-me-bc-benefits.html
+1777288846	84311	71516	es/9-me-bc-before-and-after.html
+1777288847	91560	77682	es/9-me-bc-dosage.html
+1777288849	107163	91084	es/9-me-bc-cycle.html
+1777288849	109998	93616	es/9-me-bc-faq.html
+1777288849	115164	98175	es/9-me-bc-for-anxiety.html
+1777288850	126844	108286	es/9-me-bc-for-beginners.html
+1777288850	129301	110385	es/9-me-bc-for-brain-fog.html
+1777288851	134264	114681	es/9-me-bc-for-depression.html
+1777288852	137945	117878	es/9-me-bc-for-men.html
+1777288853	139344	119119	es/9-me-bc-for-focus.html
+1777288895	7443	6149	es/9-me-bc-for-women.html
+1777288898	24246	20683	es/9-me-bc-half-life.html
+1777288898	25637	21922	es/9-me-bc-guide.html
+1777288899	28188	24180	es/9-me-bc-how-it-works.html
+1777288901	33059	28165	es/9-me-bc-injection-guide.html
+1777288902	37678	32041	es/9-me-bc-legal.html
+1777288905	52088	44287	es/9-me-bc-reconstitution.html
+1777288906	54512	46357	es/9-me-bc-results-timeline.html
+1777288906	57051	48588	es/9-me-bc-research.html
+1777288907	58215	49589	es/9-me-bc-reviews.html
+1777288911	63055	53835	es/9-me-bc-safety.html
+1777288921	74721	63601	es/9-me-bc-where-to-buy.html
+1777288921	79635	67775	es/9-me-bc-storage.html
+1777288926	95387	81625	es/aod-9604-cycle.html
+1777288965	19123	16007	es/9-me-bc-stacking.html
+1777288965	22892	19330	es/9-me-bc-side-effects.html
+1777288965	26636	22592	es/aod-9604-dosage.html
+1777288966	28028	23834	es/aod-9604-benefits.html
+1777288967	32013	27350	es/amhr2bp-guide.html
+1777288968	35408	30261	es/aod-9604-before-and-after.html
+1777288970	40086	34266	es/aod-9604-faq.html
+1777288971	43583	37277	es/aod-9604-for-beginners.html
+1777288973	56196	48465	es/aod-9604-for-body-composition.html
+1777288974	60438	52227	es/aod-9604-for-fat-loss.html
+1777288984	20140	17546	es/aod-9604-how-it-works.html
+1777288984	21584	18826	es/aod-9604-for-men.html
+1777288985	26899	23451	es/aod-9604-for-weight-loss.html
+1777288986	29455	25695	es/aod-9604-half-life.html
+1777288987	32085	27987	es/aod-9604-for-women.html
+1777288992	46863	40457	es/aod-9604-injection-guide.html
+1777288992	52087	45182	es/aod-9604-legal.html
+1777288994	57599	50070	es/aod-9604-research.html
+1777290000	manual	manual	es/peptide-beginners-guide.html (manual session polish)
+1777291000	manual	manual	es/bpc-157-guide.html (manual session polish ~85%)
+1777292000	manual	manual	es/tb-500-guide.html (manual session polish, key sections)
+1777292500	manual	manual	es/wolverine-stack-guide.html (manual session polish, key sections)
+1777293000	manual	manual	es/semaglutide-guide.html (manual hero+title polish)
+1777293000	manual	manual	es/tirzepatide-guide.html (manual hero+title polish)
+1777293000	manual	manual	es/retatrutide-guide.html (manual hero+title polish)
+1777293000	manual	manual	es/peptide-sourcing-guide.html (manual hero+title polish)
+1777293000	manual	manual	es/peptides-for-women.html (manual hero+title polish)
+1777293000	manual	manual	es/best-peptides-2026.html (manual hero+title polish)

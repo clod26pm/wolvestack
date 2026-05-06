@@ -44,16 +44,39 @@ from pathlib import Path
 from html.parser import HTMLParser
 
 # ─── Disable Stanza in argostranslate ────────────────────────────────────────
-# Stanza is installed (argostranslate requires it to import) but sbd.py is
-# patched to set stanza_available = False, so it uses regex sentence splitting
-# instead. No import hooks needed — just let it import harmlessly.
-#
-# If sbd.py isn't patched yet, force it here:
+# argostranslate's sbd.py uses Stanza for sentence splitting, which tries to
+# download models from the network. Setting stanza_available=False alone is
+# NOT enough — split_sentences() still calls lazy_pipeline() unconditionally.
+# We monkey-patch split_sentences on every class in argostranslate.sbd to
+# use a regex splitter. This survives pip reinstalls (no need to edit sbd.py).
 try:
-    import argostranslate.sbd
-    argostranslate.sbd.stanza_available = False
-except Exception:
-    pass
+    import argostranslate.sbd as _sbd
+
+    _sbd.stanza_available = False  # for any code that checks the flag
+
+    def _regex_split_sentences(self, text):
+        if not text:
+            return []
+        # Split on sentence-ending punctuation followed by whitespace.
+        # Handles ASCII (.!?) and CJK (。!?) full-stops.
+        parts = re.split(r'(?<=[.!?\u3002\uFF01\uFF1F])\s+', text.strip())
+        return [p for p in parts if p]
+
+    for _name in dir(_sbd):
+        _obj = getattr(_sbd, _name)
+        if isinstance(_obj, type) and hasattr(_obj, 'split_sentences'):
+            _obj.split_sentences = _regex_split_sentences
+
+    # Module-level fallback in case argostranslate calls sbd.split_sentences directly.
+    if callable(getattr(_sbd, 'split_sentences', None)):
+        def _module_split_sentences(text, *args, **kwargs):
+            if not text:
+                return []
+            parts = re.split(r'(?<=[.!?\u3002\uFF01\uFF1F])\s+', text.strip())
+            return [p for p in parts if p]
+        _sbd.split_sentences = _module_split_sentences
+except Exception as _e:
+    print(f"  ⚠ Could not patch argostranslate.sbd: {_e}", file=sys.stderr)
 # ─────────────────────────────────────────────────────────────────────────────
 
 from bs4 import BeautifulSoup, NavigableString, Comment, Doctype
