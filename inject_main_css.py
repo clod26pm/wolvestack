@@ -37,9 +37,10 @@ SKIP = {
 # Inject CSS just BEFORE </head> (so it loads before the body renders)
 # Skip pages that already have .nav-inner OR .article-hero rule (they have CSS).
 def needs_inject(html: str) -> bool:
+    # `.nav-inner` is the canary class for the canonical site template.
+    # Pages with stripped-down inline CSS may have `.article-hero {` but
+    # not `.nav-inner` — those still need the canonical CSS injected.
     if '.nav-inner' in html:
-        return False
-    if re.search(r'\.article-hero\s*\{', html):
         return False
     return '</head>' in html
 
