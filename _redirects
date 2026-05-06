@@ -94,6 +94,9 @@
 /isitascam-privacy.html /isitascam-privacy.html            200
 /isitascam-terms.html   /isitascam-terms.html              200
 
+# Cookie consent banner — must be served at root, not redirected to /en/
+/cookie-banner.js       /cookie-banner.js                  200
+
 # Lead-magnet PDF — stays at root, with fallback rules for common URL variations
 # (the email worker sends users to one of several plausible paths)
 /wolverine-stack-protocol-guide.pdf  /wolverine-stack-protocol-guide.pdf  200
