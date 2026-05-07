@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://wolvestack.com/compatibility/privacy.html"/>
+<title>Compatibility — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Compatibility iOS app. Local-first by design. We don't sell your data. We don't track you across apps." />
+<style>
+  :root {
+    --bg: #0A1428; --gold: #E5B871; --text: #F4F1E8; --text-muted: #9CA3B5;
+    --indigo: #2A1F4A; --border: rgba(244, 241, 232, 0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(180deg, #0A1428 0%, #1B1640 50%, #2A1F4A 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px; line-height: 1.7; min-height: 100vh;
+  }
+  a { color: var(--gold); }
+  .container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 32px 0; border-bottom: 1px solid var(--border); }
+  .brand { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 20px; color: var(--gold); text-decoration: none; }
+  h1 { font-family: 'Fraunces', Georgia, serif; font-size: 48px; line-height: 1.1; font-weight: 500; margin: 56px 0 16px; }
+  .updated { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; color: var(--gold); font-weight: 600; }
+  p { margin-bottom: 14px; color: var(--text); }
+  ul { margin: 8px 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  .summary {
+    background: rgba(229, 184, 113, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0 40px;
+  }
+  .summary h2 { margin-top: 0; }
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--border); margin-top: 80px; color: var(--text-muted); font-size: 13px; }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+<header><a href="/" class="brand">Compatibility ✦</a></header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Effective May 6, 2026.</p>
+
+<div class="summary">
+<h2>Plain-English summary</h2>
+<ul>
+<li>Your birth data and your saved matches' data <strong>stay on your phone</strong>. We never store them on our servers.</li>
+<li>The only thing that hits our servers is the text of your conversations with Vela (the AI), processed in real time and not retained for training.</li>
+<li>We don't sell your data. We don't track you across apps. We don't show ads.</li>
+<li>You can delete everything by deleting the app. There's no separate account to wipe.</li>
+</ul>
+</div>
+
+<h2>1. Who we are</h2>
+<p>Compatibility is an iOS app developed by Mintaka Media Group Inc. ("we," "us"). Contact: <a href="mailto:compatibility2@pm.me">compatibility2@pm.me</a>.</p>
+
+<h2>2. What we collect</h2>
+<p><strong>On your device only (never sent to us):</strong></p>
+<ul>
+<li>Your birth date, birth time (if you provided it), and birth city.</li>
+<li>The names, birthdays, and (if you provided them) birth times and cities of any matches you save.</li>
+<li>Your conversation history with Vela.</li>
+<li>App preferences (notification settings, etc.).</li>
+</ul>
+<p><strong>Sent to our servers (only when you actively use the AI feature):</strong></p>
+<ul>
+<li>Your typed message to Vela, plus a derived structured summary of the relevant chart data (planet positions, aspects). This goes to our Cloudflare Worker, which forwards it to Anthropic's Claude API for analysis. The response is returned to your phone.</li>
+<li>This data is processed in real time. We do not log message content. Per Anthropic's commercial terms, content sent through their API is not used to train their models.</li>
+</ul>
+<p><strong>Sent to third parties for sub management:</strong></p>
+<ul>
+<li>Apple processes your subscription payment (we never see card data).</li>
+<li>RevenueCat receives an anonymous user ID + your subscription receipt to manage entitlement state.</li>
+</ul>
+
+<h2>3. Geocoding (looking up birth city → coordinates)</h2>
+<p>When you enter a birth city, we look up its latitude/longitude and timezone. We try iOS's native MapKit first (no network call). If that fails, we send the city name to <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo's</a> free geocoding API. We don't include any user identifier in this lookup; it's just the city name. Results are cached on your device.</p>
+
+<h2>4. Why we collect it</h2>
+<p><strong>Legitimate interests:</strong> running the service, computing astrological charts, providing AI conversation.</p>
+<p><strong>Performance of contract:</strong> if you subscribe, we process the receipt to give you premium access.</p>
+
+<h2>5. Cookies and tracking</h2>
+<p>The Compatibility iOS app does not use cookies. It does not include any analytics SDK, advertising SDK, or cross-app tracking. There is no Google Analytics, Firebase Analytics, Facebook SDK, AppsFlyer, Adjust, or similar tooling in the app.</p>
+
+<h2>6. Your rights</h2>
+<p>Email <a href="mailto:compatibility2@pm.me">compatibility2@pm.me</a> with the subject "Data Subject Request" to exercise the rights below.</p>
+<ul>
+<li><strong>EU/UK (GDPR):</strong> access, rectification, erasure, restriction, portability, objection, and the right to lodge a complaint with your supervisory authority. To erase data: simply delete the app — all on-device data is removed.</li>
+<li><strong>California (CCPA/CPRA):</strong> right to know, delete, correct, opt out of sale/sharing (we don't sell or share for cross-context advertising), and non-discrimination.</li>
+<li><strong>Brazil (LGPD), Canada (PIPEDA), Australia (Privacy Act):</strong> equivalent rights honored on request.</li>
+</ul>
+
+<h2>7. International transfers</h2>
+<p>Our AI proxy is hosted on Cloudflare (global). The Anthropic API and RevenueCat are US-based. Transfers from the EU/UK are protected by the EU-US Data Privacy Framework (Anthropic) or Standard Contractual Clauses.</p>
+
+<h2>8. Data retention</h2>
+<p>On-device data: until you delete the app or wipe it from Settings. Subscription receipt at RevenueCat: as long as your sub is active, plus their standard retention period. AI request payloads at our proxy and Anthropic: not retained beyond the request (no logs of message content).</p>
+
+<h2>9. Children</h2>
+<p>This app is for adults aged 18 and over. We do not knowingly collect data from children under 16.</p>
+
+<h2>10. Changes</h2>
+<p>If we change this policy materially, we'll flag it in the app before the change takes effect.</p>
+
+<h2>11. Contact</h2>
+<p>Questions: <a href="mailto:compatibility2@pm.me">compatibility2@pm.me</a></p>
+
+<footer>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="mailto:compatibility2@pm.me">Contact</a>
+</div>
+<p style="margin-top: 24px;">© 2026 Mintaka Media Group Inc.</p>
+</footer>
+</div>
+</body>
+</html>
