@@ -22,7 +22,7 @@ PEPTIDE_DATA = {
         "legal_status": "Not FDA-approved. Available as a research chemical. Not scheduled or controlled.",
         "stacking": "Pairs synergistically with TB-500 in the 'Wolverine Stack' for comprehensive tissue repair — BPC-157 handles gut and tendon healing while TB-500 addresses systemic inflammation and cardiac repair.",
         "unique_angle": "One of the few peptides with over 100 published preclinical studies, and the only peptide derived from human gastric juice with demonstrated tissue-protective effects across virtually every organ system studied.",
-        "vendors": {"Ascension": "https://www.ascensionresearch.co/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://limitlesslifenootropics.com/product/bpc-157/?affid=10704"},
+        "vendors": {"Ascension": "https://ascensionpeptides.com/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704"},
     },
     "TB-500": {
         "full_name": "Thymosin Beta-4 Fragment (TB-500)",
@@ -41,7 +41,7 @@ PEPTIDE_DATA = {
         "legal_status": "Not FDA-approved. Available as a research chemical. Banned by WADA in athletic competition.",
         "stacking": "Pairs powerfully with BPC-157 in the 'Wolverine Stack' — TB-500 handles systemic inflammation and cardiac repair while BPC-157 targets gut and connective tissue. Also stacks well with GHK-Cu for skin and wound healing.",
         "unique_angle": "The only peptide present in virtually every cell of the human body, with a decades-long safety record in equine veterinary medicine providing real-world long-term data unavailable for most peptides.",
-        "vendors": {"Ascension": "https://www.ascensionresearch.co/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://limitlesslifenootropics.com/?affid=10704"},
+        "vendors": {"Ascension": "https://ascensionpeptides.com/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704"},
     },
     "CJC-1295": {
         "full_name": "CJC-1295 (Modified GRF 1-29)",
@@ -60,7 +60,7 @@ PEPTIDE_DATA = {
         "legal_status": "Not FDA-approved. Research chemical status. Banned by WADA.",
         "stacking": "The gold standard stack is CJC-1295 + Ipamorelin — GHRH + GHRP together produce GH pulses far greater than either alone, through synergistic pituitary stimulation via two distinct receptor pathways.",
         "unique_angle": "The 'no DAC' version is preferred over CJC-1295 DAC because it preserves natural pulsatile GH release rather than creating a sustained elevation that can desensitize receptors and suppress feedback loops.",
-        "vendors": {"Ascension": "https://www.ascensionresearch.co/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://limitlesslifenootropics.com/?affid=10704"},
+        "vendors": {"Ascension": "https://ascensionpeptides.com/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704"},
     },
     "Ipamorelin": {
         "full_name": "Ipamorelin",
@@ -79,7 +79,7 @@ PEPTIDE_DATA = {
         "legal_status": "Not FDA-approved. Research chemical. Banned by WADA.",
         "stacking": "Best paired with CJC-1295 no DAC for synergistic GH release — the GHRH + GHRP combination amplifies GH pulse amplitude beyond what either achieves alone. This is the most widely recommended beginner GH peptide stack.",
         "unique_angle": "The most selective GH secretagogue available — the only GHRP that doesn't meaningfully raise cortisol, prolactin, or appetite at therapeutic doses, making it the safest entry point for GH optimization.",
-        "vendors": {"Ascension": "https://www.ascensionresearch.co/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://limitlesslifenootropics.com/?affid=10704"},
+        "vendors": {"Ascension": "https://ascensionpeptides.com/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704"},
     },
     "GHK-Cu": {
         "full_name": "GHK-Cu (Copper Peptide)",
@@ -98,7 +98,7 @@ PEPTIDE_DATA = {
         "legal_status": "Not regulated as a drug. Available as a research chemical and widely used in cosmetic formulations. One of the most accessible peptides legally.",
         "stacking": "Pairs naturally with TB-500 for wound healing (GHK-Cu for skin/collagen, TB-500 for systemic inflammation) and with retinoids and vitamin C in topical skincare protocols.",
         "unique_angle": "The only peptide documented to modulate over 4,000 human genes, with the unique property of declining naturally with age — making supplementation a form of restoring youthful gene expression patterns rather than introducing something foreign.",
-        "vendors": {"Ascension": "https://www.ascensionresearch.co/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://limitlesslifenootropics.com/product/ghk-cu-copper-peptide/?affid=10704"},
+        "vendors": {"Ascension": "https://ascensionpeptides.com/?ref=wolvestack", "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135", "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704"},
     },
     "5-Amino-1MQ": {
         "full_name": "5-Amino-1-Methyl-Quinolinium",

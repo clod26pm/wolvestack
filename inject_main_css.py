@@ -51,7 +51,11 @@ for lang in LANGS:
 
 injected = 0
 for p in files:
-    if p.name in SKIP or "isitascam" in p.name or p.name.endswith("-legal.html"):
+    # 2026-05-31: Re-enabled -legal.html injection. The skip was a stale
+    # exception from the May 6 sweep — legal pages need canonical CSS too,
+    # they have a `<nav class="nav-inner">` element that goes unstyled
+    # without it.
+    if p.name in SKIP or "isitascam" in p.name:
         continue
     try:
         html = p.read_text(encoding="utf-8")

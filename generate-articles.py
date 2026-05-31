@@ -23,12 +23,15 @@ DATE_TODAY = datetime.now().strftime("%Y-%m-%d")
 sys.path.insert(0, SCRIPT_DIR)
 from peptide_knowledge_base import PEPTIDE_DATA, DEFAULT_PEPTIDE_DATA
 
-# Affiliate links
+# Affiliate links — canonical, verified live (2026-05-31).
+# Particle + Limitless URL formats confirmed to preserve affid through redirects.
+# Ascension domain corrected from ascensionresearch.co (404) to ascensionpeptides.com (live).
+# Apollo domain corrected from apolloresearchcompounds.com (404) to apollopeptidesciences.com (live).
 AFFILIATE_LINKS = {
-    "Ascension": "https://www.ascensionresearch.co/?ref=wolvestack",
     "Particle": "https://particlepeptides.com/en/16-buy-peptides?refs=25135",
-    "Limitless": "https://limitlesslifenootropics.com/?affid=10704",
-    "Apollo": "https://apolloresearchcompounds.com/?rfsn=9022946",
+    "Limitless": "https://www.limitlesslifenootropics.com/?_ef_transaction_id=&oid=1&affid=10704",
+    "Ascension": "https://ascensionpeptides.com/?ref=wolvestack",
+    "Apollo": "https://apollopeptidesciences.com/?rfsn=9022946",
 }
 
 # ============================================================
@@ -1926,10 +1929,10 @@ def generate_article(article_data, template):
     # Replace affiliate CTA vendor links
     vlinks = vendor_links_html(peptide, pdata if pdata else {}, vendors)
     # Replace the default vendor link in the template
-    default_link = f'<p><a href="https://www.ascensionresearch.co/?ref=wolvestack" target="_blank" rel="nofollow sponsored">Ascension Research → Browse {peptide}</a></p>'
+    default_link = f'<p><a href="https://ascensionpeptides.com/?ref=wolvestack" target="_blank" rel="nofollow sponsored">Ascension Peptides → Browse {peptide}</a></p>'
     html = html.replace(default_link, vlinks)
     # Also try the unicode arrow version
-    default_link2 = f'<p><a href="https://www.ascensionresearch.co/?ref=wolvestack" target="_blank" rel="nofollow sponsored">Ascension Research &rarr; Browse {peptide}</a></p>'
+    default_link2 = f'<p><a href="https://ascensionpeptides.com/?ref=wolvestack" target="_blank" rel="nofollow sponsored">Ascension Peptides &rarr; Browse {peptide}</a></p>'
     if default_link2 in html:
         html = html.replace(default_link2, vlinks)
 
