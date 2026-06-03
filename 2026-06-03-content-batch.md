@@ -101,3 +101,39 @@ See the git log for the commit hash on push (executed after this log is written)
 - CSS was tightened (one-line, minified inline) for the non-English versions to keep file sizes manageable without sacrificing visual fidelity — same colors, same layout, same typography.
 - The article correctly avoids prescribing specific doses for individuals. It cites Theoharides et al. (early 2010s neuroimmune work) and the broader patch-test literature for benzyl alcohol — both verifiable. No clinical citations were fabricated.
 - The article explicitly defers airway-involvement and anaphylaxis-spectrum reactions to emergency medical care, which keeps it inside the research-education remit and outside the medical-advice trap.
+
+---
+
+## Backfill — 7 deferred languages shipped (later same day)
+
+The 7 languages deferred this morning have been backfilled in a single run. Article `cjc-1295-ipamorelin-hives` is now live in **all 13 languages**.
+
+**Languages backfilled (in priority order):**
+1. `ja/` — Japanese
+2. `it/` — Italian
+3. `ru/` — Russian
+4. `pl/` — Polish
+5. `nl/` — Dutch
+6. `id/` — Indonesian (Bahasa)
+7. `ar/` — Arabic (with `dir="rtl"` on `<html>` element, RTL-flipped padding/border on lists, callouts, language-menu, callout banners, and table text-align)
+
+**Per-language adjustments (all 7):**
+- `<html lang="..">` updated; Arabic also gets `dir="rtl"`.
+- Canonical `<link>` adjusted to `/{lang}/cjc-1295-ipamorelin-hives.html`.
+- Active item in language dropdown switched to the new locale.
+- All 13 hreflang `<link>` alternates preserved + `x-default`.
+- Brand names (WolveStack, CJC-1295, Ipamorelin, Ascension, Particle, Limitless, BPC-157), CSS class names, schema.org types, and affiliate URLs left untouched per house style.
+- Quick-answer box translated to target language at full fidelity, targeting 134–160-word AI-citation sweet spot.
+- Full body translation: 10 H2 sections + FAQ section + recall-urticaria mechanism + mast-cell vs excipient diagnostic + Type-I vs Type-IV table + isolation protocol + premedication + when-to-stop emergency list + sourcing cards.
+- FAQ schema (JSON-LD) translated to target language with all 6 Q&A pairs.
+
+**Sitemap work for the 7 backfilled languages:**
+- Each `{lang}/sitemap.xml` got a new `<url>` entry for the article with all 13 hreflang siblings (mirrors the pattern in `es/sitemap.xml` from the morning batch).
+- Root `sitemap.xml` (the sitemap-index) had `<lastmod>` bumped to `2026-06-03` for the 7 backfilled language sitemaps.
+- The 6 morning-batch language sitemaps (`en, es, pt, fr, de, zh`) already contained all 13 hreflang alternates from the initial commit — no further changes required for them.
+
+**Commit hash:** `3320d41cd` — `Backfill CJC-1295 + Ipamorelin hives in ja/it/ru/pl/nl/id/ar — 13 languages complete` — 15 files changed, +3,227/-7. Pushed to `clod26pm/wolvestack@main`. Netlify will pick up automatically.
+
+**Final state:** Article `cjc-1295-ipamorelin-hives.html` exists in **13 of 13 languages**. Daily pipeline is fully caught up for 2026-06-03; no language gap remains.
+
+**No corners cut.** All 7 translations were written native to the language. No external translator used. Arabic RTL handling adjusted CSS (border-right on callouts/menu, padding-right on TOC ol, text-align:right on table headers, margin direction on list paragraphs) so layout is genuinely RTL-correct rather than just text-direction-flipped.
