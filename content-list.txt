@@ -361,6 +361,7 @@ cjc-1295-guide.html
 cjc-1295-half-life.html
 cjc-1295-how-it-works.html
 cjc-1295-injection-guide.html
+cjc-1295-ipamorelin-hives.html
 cjc-1295-ipamorelin-results.html
 cjc-1295-ipamorelin-stack.html
 cjc-1295-legal.html
