@@ -1925,3 +1925,4 @@ vip-storage.html
 vip-where-to-buy.html
 wolverine-stack-guide.html
 wolverine-stack.html
+klow-blend-guide.html
