@@ -40,3 +40,10 @@ npm-debug.log
 
 # Build artifacts
 *.log
+
+# Outreach drafts/logs — NEVER publish to the live site
+quora*
+reddit-drafts*
+medium-drafts/
+medium-log*
+pinterest-pins-log*
