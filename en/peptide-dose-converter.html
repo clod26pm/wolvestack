@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://wolvestack.com/en/peptide-dose-converter.html" rel="canonical"/>
+<!-- Google Consent Mode v2 — default deny until user accepts -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'functionality_storage': 'granted',
+  'security_storage': 'granted',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peptide Dose Converter: mg, mcg &amp; Units | WolveStack</title>
+<meta content="Free peptide dose converter. Convert between mg, mcg, mL and U-100 insulin syringe units for any concentration, with the formulas shown. Educational arithmetic tool." name="description"/>
+<meta content="Peptide Dose Converter: mg, mcg & Units" property="og:title"/>
+<meta content="Convert between mg, mcg, mL and U-100 insulin syringe units for any concentration. Formulas shown. Educational arithmetic tool." property="og:description"/>
+<meta content="https://wolvestack.com/en/peptide-dose-converter.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="https://wolvestack.com/images/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Peptide Dose Converter: mg, mcg & Units" name="twitter:title"/>
+<meta content="Convert between mg, mcg, mL and U-100 insulin syringe units for any concentration." name="twitter:description"/>
+<meta content="https://wolvestack.com/images/logo.png" name="twitter:image"/>
+<link href="https://wolvestack.com/en/peptide-dose-converter.html" hreflang="en" rel="alternate"/>
+<link href="https://wolvestack.com/en/peptide-dose-converter.html" hreflang="x-default" rel="alternate"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Peptide Dose Converter",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "url": "https://wolvestack.com/en/peptide-dose-converter.html",
+    "description": "An educational unit converter that translates user-entered values between milligrams, micrograms, millilitres and U-100 insulin syringe units for a given concentration.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "WolveStack", "url": "https://wolvestack.com/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 3, "name": "Peptide Dose Converter", "item": "https://wolvestack.com/en/peptide-dose-converter.html" }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+    --teal-pale: #e8f4f5; --accent: #f0a500;
+    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(13,115,119,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+
+  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 56px 24px 48px; position: relative; }
+  .article-hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 18px; font-size: 13px; flex-wrap: wrap; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
+  .breadcrumb span { color: rgba(255,255,255,0.3); }
+  .breadcrumb .current { color: rgba(255,255,255,0.75); }
+  .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 18px; }
+  .article-hero h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -1px; margin-bottom: 14px; }
+  .article-hero p.sub { color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.7; }
+
+  .tool-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+  .disclaimer { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 18px 22px; margin: 0 0 32px; font-size: 13px; color: #991b1b; line-height: 1.7; }
+  .disclaimer p { margin: 0; }
+  .disclaimer strong { font-weight: 700; }
+
+  .calc-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px; margin-bottom: 28px; }
+  .calc-card h3.block-title { font-family: var(--font-display); font-size: 16px; color: var(--navy); margin-bottom: 16px; }
+  .field { margin-bottom: 4px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .field .hint { font-weight: 400; color: var(--gray-400); font-size: 12px; }
+  .input-row { display: flex; gap: 8px; }
+  .field input[type=number] { flex: 1; width: 100%; font-family: var(--font-main); font-size: 16px; padding: 11px 12px; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); }
+  .field input[type=number]:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,115,119,0.12); }
+  .field select { font-family: var(--font-main); font-size: 15px; padding: 0 10px; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); min-width: 78px; }
+  .field select:focus { outline: none; border-color: var(--teal); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+
+  .conv-out { background: var(--teal-pale); border: 2px solid var(--teal); border-radius: 12px; padding: 18px 20px; margin-top: 18px; }
+  .conv-out .result-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .conv-out .result-val { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .conv-out .result-val small { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+  .conv-extra { font-size: 13px; color: var(--gray-600); margin-top: 8px; }
+  .err { color: #b91c1c; font-size: 13px; margin-top: 12px; }
+
+  h2.sec { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--navy); margin: 44px 0 14px; padding-top: 8px; border-top: 2px solid var(--teal-pale); }
+  .body-copy p { font-size: 16px; color: #374151; margin-bottom: 18px; }
+  .body-copy strong { color: var(--navy); }
+  .formula { background: var(--navy); color: #e6f6f5; border-radius: 10px; padding: 14px 18px; font-family: var(--font-display); font-size: 15px; margin: 14px 0; overflow-x: auto; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 8px 0 0; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 11px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .tool-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+  .tool-link-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all .2s; display: block; }
+  .tool-link-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .tool-link-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); }
+  .tool-link-card h4 { font-family: var(--font-display); font-size: 16px; color: var(--navy); margin: 6px 0; }
+  .tool-link-card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
+<ul class="nav-links">
+<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/en/tb-500-guide.html">TB-500</a></li>
+<li><a href="/en/peptide-reconstitution-guide.html">Reconstitution</a></li>
+<li><a href="/en/peptide-sourcing-guide.html">Vendors</a></li>
+</ul>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+</nav>
+
+<div class="article-hero">
+<div class="article-hero-inner">
+<div class="breadcrumb">
+<a href="/en/index.html">Home</a><span>/</span><a href="/en/index.html">Tools</a><span>/</span><span class="current">Dose Converter</span>
+</div>
+<div class="article-tag">🔁 Free Interactive Tool</div>
+<h1>Peptide Dose Converter</h1>
+<p class="sub">Convert any amount between milligrams, micrograms, millilitres and U-100 insulin syringe units. Set your concentration once and the conversions update as you type, with every formula shown below.</p>
+</div>
+</div>
+
+<div class="tool-wrap">
+<div class="disclaimer">
+<p><strong>Educational tool — not medical advice.</strong> This converter only performs unit arithmetic on numbers <strong>you</strong> enter. It does not recommend any dose, compound, or protocol. The peptides referenced across this site are research chemicals <strong>not approved for human use</strong> by the FDA or any major regulator. Always consult a licensed healthcare professional. See our full <a href="/en/disclaimer.html" style="color:#991b1b;text-decoration:underline;">disclaimer</a>.</p>
+</div>
+
+<!-- Block A: mg <-> mcg -->
+<div class="calc-card">
+<h3 class="block-title">1 · Convert mg ⇄ mcg</h3>
+<div class="grid2">
+  <div class="field">
+    <label for="amtVal">Amount</label>
+    <div class="input-row">
+      <input type="number" id="amtVal" value="0.25" min="0" step="0.01" inputmode="decimal"/>
+      <select id="amtUnit">
+        <option value="mg" selected>mg</option>
+        <option value="mcg">mcg</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label>Conversion</label>
+    <div class="conv-out" style="margin-top:0;">
+      <div class="result-label">Equals</div>
+      <div class="result-val" id="mgmcgOut">—</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Block B: mass <-> volume <-> units via concentration -->
+<div class="calc-card">
+<h3 class="block-title">2 · Convert mass ⇄ mL ⇄ U-100 units (needs concentration)</h3>
+<div class="grid2">
+  <div class="field">
+    <label for="concVal">Vial concentration <span class="hint">(mg per mL)</span></label>
+    <input type="number" id="concVal" value="2.5" min="0.0001" step="0.1" inputmode="decimal"/>
+    <div class="conv-extra" id="concMcgLine">= 2500 mcg/mL · 1 unit = 0.01 mL = 25 mcg</div>
+  </div>
+  <div class="field">
+    <label for="qVal">Value to convert</label>
+    <div class="input-row">
+      <input type="number" id="qVal" value="20" min="0" step="0.1" inputmode="decimal"/>
+      <select id="qUnit">
+        <option value="units" selected>units</option>
+        <option value="ml">mL</option>
+        <option value="mg">mg</option>
+        <option value="mcg">mcg</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div id="errBox" class="err" style="display:none;"></div>
+<div class="grid2" style="margin-top:18px;">
+  <div class="conv-out" style="margin-top:0;">
+    <div class="result-label">Volume</div>
+    <div class="result-val"><span id="outMl">—</span> <small>mL</small></div>
+    <div class="conv-extra"><span id="outUnits">—</span> units on a U-100 syringe</div>
+  </div>
+  <div class="conv-out" style="margin-top:0;">
+    <div class="result-label">Mass</div>
+    <div class="result-val"><span id="outMg">—</span> <small>mg</small></div>
+    <div class="conv-extra"><span id="outMcg">—</span> mcg</div>
+  </div>
+</div>
+</div>
+
+<h2 class="sec">The conversion formulas</h2>
+<div class="body-copy">
+<div class="formula">1 mg = 1000 mcg&nbsp;&nbsp;|&nbsp;&nbsp;1 mcg = 0.001 mg</div>
+<div class="formula">Volume (mL) = Mass (mg) ÷ Concentration (mg/mL)</div>
+<div class="formula">Units (U-100) = Volume (mL) × 100</div>
+<div class="formula">Mass (mg) = Volume (mL) × Concentration (mg/mL)&nbsp;&nbsp;|&nbsp;&nbsp;mL = Units ÷ 100</div>
+<p><strong>The unit-to-mL bridge.</strong> A U-100 insulin syringe simply divides a 1&nbsp;mL barrel into 100 equal marks, so <strong>1 unit = 0.01&nbsp;mL</strong>. That single fact lets you move freely between the syringe scale and real volume; the concentration then connects volume to mass. No insulin is involved — the "units" are just fine gradations.</p>
+</div>
+
+<h2 class="sec">Quick mg ⇄ mcg reference</h2>
+<table class="data-table">
+<thead><tr><th>Micrograms (mcg)</th><th>Milligrams (mg)</th></tr></thead>
+<tbody>
+<tr><td>100 mcg</td><td>0.1 mg</td></tr>
+<tr><td>250 mcg</td><td>0.25 mg</td></tr>
+<tr><td>500 mcg</td><td>0.5 mg</td></tr>
+<tr><td>1000 mcg</td><td>1 mg</td></tr>
+<tr><td>2500 mcg</td><td>2.5 mg</td></tr>
+<tr><td>5000 mcg</td><td>5 mg</td></tr>
+</tbody>
+</table>
+
+<h2 class="sec">Related tools &amp; guides</h2>
+<div class="tool-links">
+  <a class="tool-link-card" href="/en/peptide-reconstitution-calculator.html">
+    <span class="tag">Tool</span><h4>Reconstitution Calculator</h4>
+    <p>Turn vial size, water and dose into concentration and syringe units, with a fill indicator.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-half-life-calculator.html">
+    <span class="tag">Tool</span><h4>Half-Life Calculator</h4>
+    <p>Plot exponential decay and see time to 50/25/10/5% remaining.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-reconstitution-guide.html">
+    <span class="tag">Guide</span><h4>Reconstitution Guide</h4>
+    <p>Step-by-step aseptic technique and the science behind mixing peptides.</p>
+  </a>
+  <a class="tool-link-card" href="/en/bacteriostatic-water-guide.html">
+    <span class="tag">Guide</span><h4>Bacteriostatic Water Guide</h4>
+    <p>What it is, why it is used for reconstitution, and storage notes.</p>
+  </a>
+</div>
+</div>
+
+<footer>
+<p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+Peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+<a href="/en/index.html">Home</a> · <a href="/en/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/en/peptide-sourcing-guide.html">Vendors</a><br/>
+<a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy</a> · <a href="/en/disclaimer.html">Disclaimer</a> · <a href="/en/terms.html">Terms</a><br/><br/>
+© 2026 WolveStack. For research and educational purposes only.</p>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  function fmt(n,d){ if(!isFinite(n)) return '—'; return Number(n.toFixed(d)).toString(); }
+
+  // Block A: mg <-> mcg
+  var amtVal=$('amtVal'), amtUnit=$('amtUnit');
+  function doMgMcg(){
+    var v=parseFloat(amtVal.value);
+    if(!(v>=0)||isNaN(v)){ $('mgmcgOut').textContent='—'; return; }
+    if(amtUnit.value==='mg'){ $('mgmcgOut').innerHTML = fmt(v*1000,3)+' <small>mcg</small>'; }
+    else { $('mgmcgOut').innerHTML = fmt(v/1000,5)+' <small>mg</small>'; }
+  }
+  [amtVal,amtUnit].forEach(function(e){ e.addEventListener('input',doMgMcg); e.addEventListener('change',doMgMcg); });
+
+  // Block B: concentration-based
+  var concVal=$('concVal'), qVal=$('qVal'), qUnit=$('qUnit');
+  function doConc(){
+    var conc=parseFloat(concVal.value);     // mg/mL
+    var q=parseFloat(qVal.value);
+    var err=$('errBox');
+    $('concMcgLine').textContent = (conc>0)? ('= '+fmt(conc*1000,0)+' mcg/mL · 1 unit = 0.01 mL = '+fmt(conc*10,3)+' mcg') : '';
+    if(!(conc>0)){
+      err.style.display='block'; err.textContent='Enter a concentration greater than zero (mg/mL) to convert.';
+      ['outMl','outUnits','outMg','outMcg'].forEach(function(id){ $(id).textContent='—'; }); return;
+    }
+    if(!(q>=0)||isNaN(q)){
+      err.style.display='none';
+      ['outMl','outUnits','outMg','outMcg'].forEach(function(id){ $(id).textContent='—'; }); return;
+    }
+    err.style.display='none';
+    var ml;
+    switch(qUnit.value){
+      case 'units': ml = q/100; break;
+      case 'ml':    ml = q; break;
+      case 'mg':    ml = q/conc; break;
+      case 'mcg':   ml = (q/1000)/conc; break;
+    }
+    var units=ml*100;
+    var mg=ml*conc;
+    var mcg=mg*1000;
+    $('outMl').textContent=fmt(ml,4);
+    $('outUnits').textContent=fmt(units,2);
+    $('outMg').textContent=fmt(mg,4);
+    $('outMcg').textContent=fmt(mcg,1);
+  }
+  [concVal,qVal,qUnit].forEach(function(e){ e.addEventListener('input',doConc); e.addEventListener('change',doConc); });
+
+  doMgMcg(); doConc();
+})();
+</script>
+</body>
+</html>

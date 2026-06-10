@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://wolvestack.com/en/peptide-half-life-calculator.html" rel="canonical"/>
+<!-- Google Consent Mode v2 — default deny until user accepts -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'functionality_storage': 'granted',
+  'security_storage': 'granted',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peptide Half-Life Calculator &amp; Decay Curve | WolveStack</title>
+<meta content="Free peptide half-life calculator. Pick a compound or enter a custom half-life to plot an exponential decay curve and see time to 50/25/10/5% remaining plus steady-state notes." name="description"/>
+<meta content="Peptide Half-Life Calculator & Decay Curve" property="og:title"/>
+<meta content="Pick a compound or enter a custom half-life to plot exponential decay and see time to 50/25/10/5% remaining plus a steady-state accumulation note." property="og:description"/>
+<meta content="https://wolvestack.com/en/peptide-half-life-calculator.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="https://wolvestack.com/images/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Peptide Half-Life Calculator & Decay Curve" name="twitter:title"/>
+<meta content="Pick a compound or enter a custom half-life to plot exponential decay and see time to 50/25/10/5% remaining." name="twitter:description"/>
+<meta content="https://wolvestack.com/images/logo.png" name="twitter:image"/>
+<link href="https://wolvestack.com/en/peptide-half-life-calculator.html" hreflang="en" rel="alternate"/>
+<link href="https://wolvestack.com/en/peptide-half-life-calculator.html" hreflang="x-default" rel="alternate"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Peptide Half-Life Calculator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "url": "https://wolvestack.com/en/peptide-half-life-calculator.html",
+    "description": "An educational calculator that plots an exponential decay curve from a selected or custom half-life and reports the time to reach 50, 25, 10 and 5 percent remaining.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "WolveStack", "url": "https://wolvestack.com/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 3, "name": "Peptide Half-Life Calculator", "item": "https://wolvestack.com/en/peptide-half-life-calculator.html" }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+    --teal-pale: #e8f4f5; --accent: #f0a500;
+    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(13,115,119,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+
+  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 56px 24px 48px; position: relative; }
+  .article-hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 18px; font-size: 13px; flex-wrap: wrap; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
+  .breadcrumb span { color: rgba(255,255,255,0.3); }
+  .breadcrumb .current { color: rgba(255,255,255,0.75); }
+  .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 18px; }
+  .article-hero h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -1px; margin-bottom: 14px; }
+  .article-hero p.sub { color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.7; }
+
+  .tool-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+  .disclaimer { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 18px 22px; margin: 0 0 32px; font-size: 13px; color: #991b1b; line-height: 1.7; }
+  .disclaimer p { margin: 0; }
+  .disclaimer strong { font-weight: 700; }
+
+  .calc-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px; margin-bottom: 28px; }
+  .calc-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; }
+  @media (max-width: 680px) { .calc-grid { grid-template-columns: 1fr; } }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .field .hint { font-weight: 400; color: var(--gray-400); font-size: 12px; }
+  .field input, .field select { width: 100%; font-family: var(--font-main); font-size: 15px; padding: 11px 12px; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,115,119,0.12); }
+  .input-row { display: flex; gap: 8px; }
+  .input-row input { flex: 1; }
+  .input-row select { min-width: 90px; }
+  .src-note { font-size: 12px; color: var(--gray-600); margin-top: 12px; }
+
+  .chart-wrap { background: var(--white); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px; margin-bottom: 28px; }
+  .chart-wrap svg { width: 100%; height: auto; }
+
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .result-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px 18px; }
+  .result-box.hi { border: 2px solid var(--teal); background: var(--teal-pale); }
+  .result-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 5px; }
+  .result-val { font-family: var(--font-display); font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .result-note { font-size: 12px; color: var(--gray-600); margin-top: 3px; }
+
+  .callout { background: var(--teal-pale); border-left: 4px solid var(--teal); padding: 18px 22px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+  .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; color: #374151; }
+  .callout strong { color: var(--navy); }
+
+  h2.sec { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--navy); margin: 44px 0 14px; padding-top: 8px; border-top: 2px solid var(--teal-pale); }
+  .body-copy p { font-size: 16px; color: #374151; margin-bottom: 18px; }
+  .body-copy strong { color: var(--navy); }
+  .formula { background: var(--navy); color: #e6f6f5; border-radius: 10px; padding: 14px 18px; font-family: var(--font-display); font-size: 15px; margin: 14px 0; overflow-x: auto; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 8px 0 0; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 11px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .tool-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+  .tool-link-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all .2s; display: block; }
+  .tool-link-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .tool-link-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); }
+  .tool-link-card h4 { font-family: var(--font-display); font-size: 16px; color: var(--navy); margin: 6px 0; }
+  .tool-link-card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
+<ul class="nav-links">
+<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/en/tb-500-guide.html">TB-500</a></li>
+<li><a href="/en/peptide-reconstitution-guide.html">Reconstitution</a></li>
+<li><a href="/en/peptide-sourcing-guide.html">Vendors</a></li>
+</ul>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+</nav>
+
+<div class="article-hero">
+<div class="article-hero-inner">
+<div class="breadcrumb">
+<a href="/en/index.html">Home</a><span>/</span><a href="/en/index.html">Tools</a><span>/</span><span class="current">Half-Life Calculator</span>
+</div>
+<div class="article-tag">📉 Free Interactive Tool</div>
+<h1>Peptide Half-Life Calculator</h1>
+<p class="sub">Choose a common compound or enter your own half-life. The tool plots an exponential decay curve over five half-lives and shows how long it takes to fall to 50%, 25%, 10% and 5% of the starting amount, plus a note on steady-state accumulation for repeat dosing.</p>
+</div>
+</div>
+
+<div class="tool-wrap">
+<div class="disclaimer">
+<p><strong>Educational tool — not medical advice.</strong> Half-life figures are <strong>approximate literature/community values for general reference</strong> and vary by source, individual physiology and assay. This tool only models exponential decay from the number you select or enter; it does not recommend any dose, compound, schedule or protocol. The peptides referenced are research chemicals <strong>not approved for human use</strong> by the FDA or any major regulator. Always consult a licensed healthcare professional. See our full <a href="/en/disclaimer.html" style="color:#991b1b;text-decoration:underline;">disclaimer</a>.</p>
+</div>
+
+<div class="calc-card">
+<div class="calc-grid">
+  <div class="field">
+    <label for="cmp">Compound</label>
+    <select id="cmp"></select>
+  </div>
+  <div class="field">
+    <label for="hlVal">Half-life</label>
+    <div class="input-row">
+      <input type="number" id="hlVal" value="6" min="0.01" step="0.1" inputmode="decimal"/>
+      <select id="hlUnit">
+        <option value="min">min</option>
+        <option value="hr" selected>hours</option>
+        <option value="day">days</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label for="interval">Dosing interval <span class="hint">(for steady-state note)</span></label>
+    <div class="input-row">
+      <input type="number" id="interval" value="24" min="0" step="0.5" inputmode="decimal"/>
+      <select id="intUnit">
+        <option value="min">min</option>
+        <option value="hr" selected>hours</option>
+        <option value="day">days</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="src-note" id="srcNote"></div>
+</div>
+
+<div class="chart-wrap">
+<svg id="chart" viewBox="0 0 760 360" role="img" aria-label="Exponential decay curve of the selected compound over five half-lives">
+  <!-- axes & gridlines drawn by JS into these groups -->
+  <g id="grid" stroke="#e2e8f0" stroke-width="1"></g>
+  <g id="axisLabels" font-family="Inter, sans-serif" font-size="11" fill="#475569"></g>
+  <line id="xaxis" x1="60" y1="300" x2="730" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <line id="yaxis" x1="60" y1="30" x2="60" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <path id="curve" fill="none" stroke="#0d7377" stroke-width="3"/>
+  <path id="curveFill" fill="#14bdac" opacity="0.12"/>
+  <g id="markers"></g>
+  <text x="395" y="345" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#475569">Time since dose</text>
+  <text x="20" y="165" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#475569" transform="rotate(-90 20 165)">% of dose remaining</text>
+</svg>
+</div>
+
+<div class="results">
+  <div class="result-box hi"><div class="result-label">50% remaining</div><div class="result-val" id="t50">—</div><div class="result-note">one half-life</div></div>
+  <div class="result-box"><div class="result-label">25% remaining</div><div class="result-val" id="t25">—</div><div class="result-note">two half-lives</div></div>
+  <div class="result-box"><div class="result-label">10% remaining</div><div class="result-val" id="t10">—</div><div class="result-note">~3.32 half-lives</div></div>
+  <div class="result-box"><div class="result-label">5% remaining</div><div class="result-val" id="t5">—</div><div class="result-note">~4.32 half-lives</div></div>
+  <div class="result-box"><div class="result-label">~Cleared (&lt;1%)</div><div class="result-val" id="t1">—</div><div class="result-note">~6.6 half-lives</div></div>
+</div>
+
+<div class="callout">
+<div class="callout-label">📈 Steady-state accumulation</div>
+<p id="ssText">—</p>
+</div>
+
+<h2 class="sec">How exponential decay works</h2>
+<div class="body-copy">
+<p>A half-life is the time for the amount of a substance in circulation to fall by half. Because each half-life removes the same <em>fraction</em> (not the same amount), the decline follows an exponential curve — fast at first, then ever slower.</p>
+<div class="formula">Fraction remaining = (1/2) ^ (t ÷ half-life)</div>
+<div class="formula">Time to reach fraction f = half-life × log₂(1 ÷ f)</div>
+<p>That is why the milestones land where they do: 50% after 1 half-life, 25% after 2, about 10% after 3.32, about 5% after 4.32, and under 1% after roughly 6.6 half-lives — the point most pharmacology references treat as functionally cleared.</p>
+<div class="formula">Steady-state accumulation factor = 1 ÷ (1 − (1/2)^(interval ÷ half-life))</div>
+<p><strong>Repeated dosing.</strong> If a compound is re-dosed before it fully clears, levels build up until the amount cleared each interval equals the amount added. The shorter the interval relative to the half-life, the higher this plateau. The accumulation factor above estimates the trough multiple versus a single dose, and it generally takes about five half-lives to approach that steady state.</p>
+</div>
+
+<h2 class="sec">Reference half-lives used by this tool</h2>
+<p style="font-size:15px;color:var(--gray-600);margin-bottom:4px;">Approximate values for general reference only; sources and individuals vary. Many peptides have a short <em>circulating</em> half-life yet far longer <em>tissue or biological</em> effects — see each compound's full guide for nuance.</p>
+<table class="data-table">
+<thead><tr><th>Compound</th><th>Approx. half-life (this tool)</th><th>Note</th></tr></thead>
+<tbody id="refTable"></tbody>
+</table>
+
+<h2 class="sec">Related tools &amp; guides</h2>
+<div class="tool-links">
+  <a class="tool-link-card" href="/en/peptide-reconstitution-calculator.html">
+    <span class="tag">Tool</span><h4>Reconstitution Calculator</h4>
+    <p>Turn vial size, water and dose into concentration and syringe units.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-dose-converter.html">
+    <span class="tag">Tool</span><h4>Dose Converter</h4>
+    <p>Convert between mg, mcg, mL and U-100 syringe units for any concentration.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-half-life-guide.html">
+    <span class="tag">Guide</span><h4>Peptide Half-Life Guide</h4>
+    <p>The science of pharmacokinetics, tissue persistence and dosing frequency.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-half-life-chart.html">
+    <span class="tag">Reference</span><h4>Half-Life Chart</h4>
+    <p>A side-by-side chart of published half-lives across common peptides.</p>
+  </a>
+</div>
+</div>
+
+<footer>
+<p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+Peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+<a href="/en/index.html">Home</a> · <a href="/en/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/en/peptide-sourcing-guide.html">Vendors</a><br/>
+<a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy</a> · <a href="/en/disclaimer.html">Disclaimer</a> · <a href="/en/terms.html">Terms</a><br/><br/>
+© 2026 WolveStack. For research and educational purposes only.</p>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  // half-life stored in hours; values are approximate references (some verified vs site articles)
+  var COMPOUNDS = [
+    { name:'Custom (enter your own)', hr:null, note:'Enter any half-life above.' },
+    { name:'Semaglutide', hr:168, note:'~7 days (site article: 7 days, ~97 h range 84–108 h).' },
+    { name:'Tirzepatide', hr:120, note:'~5 days (site article: ~5 days).' },
+    { name:'Retatrutide', hr:132, note:'~5.5 days (site article: ~5–6 days).' },
+    { name:'CJC-1295 DAC', hr:168, note:'~7 days (site article: 6–8 days).' },
+    { name:'CJC-1295 (no DAC / mod GRF 1-29)', hr:7, note:'Plasma; site article states 6–8 h circulating (literature often cites ~30 min for mod GRF 1-29).' },
+    { name:'Melanotan II', hr:33, note:'~33 h (literature reference).' },
+    { name:'MK-677 (ibutamoren)', hr:5, note:'~4–6 h plasma (site article); some references cite ~24 h.' },
+    { name:'PT-141 (bremelanotide)', hr:2.5, note:'~2–3 h (site article); product labels cite ~11 h.' },
+    { name:'BPC-157', hr:4, note:'~4 h circulating (site article); tissue effects last longer.' },
+    { name:'TB-500', hr:1, note:'~60 min circulating (site article); tissue effects persist 7–14 days.' },
+    { name:'Ipamorelin', hr:2, note:'~2 h (site article).' },
+    { name:'GHK-Cu', hr:1, note:'~1 h plasma (literature reference).' },
+    { name:'Tesamorelin', hr:0.55, note:'~25–40 min (literature reference).' },
+    { name:'Sermorelin', hr:0.07, note:'~4 min plasma (site article); effects persist longer.' },
+    { name:'Semax', hr:0.05, note:'~minutes (very short plasma; literature reference).' }
+  ];
+
+  // populate dropdown + reference table
+  var cmp=$('cmp'), refTable=$('refTable');
+  COMPOUNDS.forEach(function(c,i){
+    var o=document.createElement('option'); o.value=i; o.textContent=c.name; cmp.appendChild(o);
+    if(c.hr!==null){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>'+c.name+'</td><td>'+prettyHr(c.hr)+'</td><td>'+c.note+'</td>';
+      refTable.appendChild(tr);
+    }
+  });
+  // default to BPC-157 for an illustrative ~4h curve
+  var defIdx = COMPOUNDS.findIndex(function(c){return c.name==='BPC-157';});
+  cmp.value = defIdx;
+
+  var hlVal=$('hlVal'), hlUnit=$('hlUnit'), interval=$('interval'), intUnit=$('intUnit');
+
+  function unitFactor(u){ return u==='min'?(1/60):(u==='day'?24:1); } // -> hours
+  function hrToUnitValue(hr,u){ return u==='min'?hr*60:(u==='day'?hr/24:hr); }
+
+  function prettyHr(hr){
+    if(hr<1) return Math.round(hr*60)+' min';
+    if(hr<48) return (Number.isInteger(hr)?hr:hr.toFixed(1))+' h';
+    return (hr/24).toFixed(hr%24===0?0:1)+' days';
+  }
+  function fmtDuration(hrs){
+    if(!isFinite(hrs)||hrs<=0) return '—';
+    if(hrs<1) return (hrs*60).toFixed(hrs*60<10?1:0)+' min';
+    if(hrs<48) return hrs.toFixed(hrs<10?1:0)+' h';
+    return (hrs/24).toFixed(1)+' days';
+  }
+
+  function setFromCompound(){
+    var c=COMPOUNDS[parseInt(cmp.value,10)];
+    if(c.hr!==null){
+      // choose a sensible display unit
+      var u = c.hr<1?'min':(c.hr>=48?'day':'hr');
+      hlUnit.value=u;
+      hlVal.value = Number(hrToUnitValue(c.hr,u).toFixed(2));
+    }
+    render();
+  }
+
+  function render(){
+    var c=COMPOUNDS[parseInt(cmp.value,10)];
+    var hl = parseFloat(hlVal.value)*unitFactor(hlUnit.value); // hours
+    $('srcNote').textContent = c.note ? ('Reference: '+c.note) : '';
+
+    if(!(hl>0)){
+      ['t50','t25','t10','t5','t1'].forEach(function(id){$(id).textContent='—';});
+      $('ssText').textContent='Enter a positive half-life to model decay.';
+      $('curve').setAttribute('d',''); $('curveFill').setAttribute('d',''); $('markers').innerHTML='';
+      return;
+    }
+
+    // milestone times (hours)
+    var t50=hl, t25=hl*Math.log2(1/0.25), t10=hl*Math.log2(1/0.10), t5=hl*Math.log2(1/0.05), t1=hl*Math.log2(1/0.01);
+    $('t50').textContent=fmtDuration(t50);
+    $('t25').textContent=fmtDuration(t25);
+    $('t10').textContent=fmtDuration(t10);
+    $('t5').textContent=fmtDuration(t5);
+    $('t1').textContent=fmtDuration(t1);
+
+    drawChart(hl);
+
+    // steady-state
+    var iv = parseFloat(interval.value)*unitFactor(intUnit.value);
+    if(iv>0){
+      var ratio = iv/hl;
+      var rem = Math.pow(0.5, ratio);
+      var acc = 1/(1-rem);
+      var toSS = 5*hl;
+      $('ssText').innerHTML = 'Re-dosing every <strong>'+fmtDuration(iv)+'</strong> with a <strong>'+fmtDuration(hl)+'</strong> half-life means each interval is '+ratio.toFixed(2)+' half-lives. About <strong>'+(rem*100).toFixed(0)+'%</strong> of a dose remains when the next is due, so trough levels build to roughly <strong>'+acc.toFixed(1)+'×</strong> a single dose at steady state, typically reached after ~<strong>'+fmtDuration(toSS)+'</strong> (about five half-lives). Longer intervals relative to the half-life mean little to no accumulation.';
+    } else {
+      $('ssText').textContent='Enter a dosing interval above to estimate steady-state accumulation for repeated dosing.';
+    }
+  }
+
+  function drawChart(hl){
+    // plot 0 .. 5 half-lives on x; 0..100% on y
+    var x0=60,x1=730,y0=300,y1=30;
+    var tMax=5*hl;
+    function px(t){ return x0 + (x1-x0)*(t/tMax); }
+    function py(p){ return y0 + (y1-y0)*(p/100); }
+
+    // gridlines & labels
+    var grid=$('grid'), lab=$('axisLabels');
+    grid.innerHTML=''; lab.innerHTML='';
+    // horizontal gridlines at 0,25,50,75,100
+    [0,25,50,75,100].forEach(function(p){
+      var y=py(p);
+      var ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+      ln.setAttribute('x1',x0); ln.setAttribute('x2',x1); ln.setAttribute('y1',y); ln.setAttribute('y2',y);
+      grid.appendChild(ln);
+      var tx=document.createElementNS('http://www.w3.org/2000/svg','text');
+      tx.setAttribute('x',x0-8); tx.setAttribute('y',y+4); tx.setAttribute('text-anchor','end'); tx.textContent=p+'%';
+      lab.appendChild(tx);
+    });
+    // vertical gridlines at each half-life
+    for(var k=0;k<=5;k++){
+      var t=k*hl, x=px(t);
+      var ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+      ln.setAttribute('x1',x); ln.setAttribute('x2',x); ln.setAttribute('y1',y1); ln.setAttribute('y2',y0);
+      ln.setAttribute('stroke', k===0?'#94a3b8':'#eef2f6');
+      grid.appendChild(ln);
+      var tx=document.createElementNS('http://www.w3.org/2000/svg','text');
+      tx.setAttribute('x',x); tx.setAttribute('y',y0+16); tx.setAttribute('text-anchor','middle');
+      tx.textContent = k===0?'0' : (k+'×t½');
+      lab.appendChild(tx);
+    }
+
+    // curve path
+    var d='', df='M'+px(0)+' '+y0+' ';
+    for(var i=0;i<=120;i++){
+      var t=(tMax)*(i/120);
+      var p=100*Math.pow(0.5, t/hl);
+      var X=px(t), Y=py(p);
+      d += (i===0?'M':'L')+X.toFixed(1)+' '+Y.toFixed(1)+' ';
+      df += 'L'+X.toFixed(1)+' '+Y.toFixed(1)+' ';
+    }
+    df += 'L'+px(tMax)+' '+y0+' Z';
+    $('curve').setAttribute('d', d);
+    $('curveFill').setAttribute('d', df);
+
+    // milestone dots at 50/25/10/5%
+    var mk=$('markers'); mk.innerHTML='';
+    [[50,'50%'],[25,'25%'],[10,'10%'],[5,'5%']].forEach(function(pair){
+      var p=pair[0]; var t=hl*Math.log2(100/p);
+      if(t>tMax) return;
+      var X=px(t), Y=py(p);
+      var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',X); c.setAttribute('cy',Y); c.setAttribute('r',4); c.setAttribute('fill','#0f2240');
+      mk.appendChild(c);
+      var tx=document.createElementNS('http://www.w3.org/2000/svg','text');
+      tx.setAttribute('x',X+6); tx.setAttribute('y',Y-6); tx.setAttribute('font-family','Inter, sans-serif');
+      tx.setAttribute('font-size','11'); tx.setAttribute('fill','#0f2240'); tx.textContent=pair[1];
+      mk.appendChild(tx);
+    });
+  }
+
+  cmp.addEventListener('change', setFromCompound);
+  [hlVal,hlUnit,interval,intUnit].forEach(function(e){
+    e.addEventListener('input', function(){ // editing half-life means custom unless still matching
+      render();
+    });
+    e.addEventListener('change', render);
+  });
+
+  setFromCompound();
+})();
+</script>
+</body>
+</html>

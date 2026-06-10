@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://wolvestack.com/en/peptide-reconstitution-calculator.html" rel="canonical"/>
+<!-- Google Consent Mode v2 — default deny until user accepts -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'functionality_storage': 'granted',
+  'security_storage': 'granted',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLF04PQ0JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MLF04PQ0JV');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peptide Reconstitution Calculator | WolveStack</title>
+<meta content="Free peptide reconstitution calculator. Enter vial amount, bacteriostatic water and desired dose to get concentration, U-100 syringe units to draw, and doses per vial." name="description"/>
+<meta content="Peptide Reconstitution Calculator" property="og:title"/>
+<meta content="Enter vial amount, bacteriostatic water and desired dose to get concentration, syringe units, and doses per vial. Educational arithmetic tool." property="og:description"/>
+<meta content="https://wolvestack.com/en/peptide-reconstitution-calculator.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WolveStack" property="og:site_name"/>
+<meta content="https://wolvestack.com/images/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Peptide Reconstitution Calculator" name="twitter:title"/>
+<meta content="Enter vial amount, bacteriostatic water and desired dose to get concentration, syringe units, and doses per vial." name="twitter:description"/>
+<meta content="https://wolvestack.com/images/logo.png" name="twitter:image"/>
+<link href="https://wolvestack.com/en/peptide-reconstitution-calculator.html" hreflang="en" rel="alternate"/>
+<link href="https://wolvestack.com/en/peptide-reconstitution-calculator.html" hreflang="x-default" rel="alternate"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Peptide Reconstitution Calculator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "url": "https://wolvestack.com/en/peptide-reconstitution-calculator.html",
+    "description": "An educational calculator that converts user-entered vial amount, bacteriostatic water volume and desired dose into concentration, U-100 insulin syringe units, and doses per vial.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "WolveStack", "url": "https://wolvestack.com/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wolvestack.com/" },
+      { "@type": "ListItem", "position": 3, "name": "Peptide Reconstitution Calculator", "item": "https://wolvestack.com/en/peptide-reconstitution-calculator.html" }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --navy: #0f2240; --teal: #0d7377; --teal-light: #14bdac;
+    --teal-pale: #e8f4f5; --accent: #f0a500;
+    --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+    --gray-400: #94a3b8; --gray-600: #475569; --gray-800: #1e293b;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-main); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,34,64,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(13,115,119,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--teal-light); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal-light); }
+  .nav-cta { background: var(--teal); color: var(--white); padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--teal-light); }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+
+  .article-hero { background: linear-gradient(135deg, var(--navy) 0%, #0a3d5c 50%, #0d5c5a 100%); padding: 56px 24px 48px; position: relative; }
+  .article-hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 18px; font-size: 13px; flex-wrap: wrap; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal-light); }
+  .breadcrumb span { color: rgba(255,255,255,0.3); }
+  .breadcrumb .current { color: rgba(255,255,255,0.75); }
+  .article-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(13,115,119,0.3); border: 1px solid rgba(20,189,172,0.4); color: var(--teal-light); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 18px; }
+  .article-hero h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -1px; margin-bottom: 14px; }
+  .article-hero p.sub { color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.7; }
+
+  .tool-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+  .disclaimer { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 18px 22px; margin: 0 0 32px; font-size: 13px; color: #991b1b; line-height: 1.7; }
+  .disclaimer p { margin: 0; }
+  .disclaimer strong { font-weight: 700; }
+
+  .calc-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px; margin-bottom: 32px; }
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .field .hint { font-weight: 400; color: var(--gray-400); font-size: 12px; }
+  .input-row { display: flex; gap: 8px; }
+  .field input[type=number] { flex: 1; width: 100%; font-family: var(--font-main); font-size: 16px; padding: 11px 12px; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); }
+  .field input[type=number]:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,115,119,0.12); }
+  .field select { font-family: var(--font-main); font-size: 15px; padding: 0 10px; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); }
+  .field select:focus { outline: none; border-color: var(--teal); }
+
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 28px; }
+  .result-box { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 18px 20px; }
+  .result-box.hero-result { border: 2px solid var(--teal); background: var(--teal-pale); }
+  .result-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .result-val { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .result-val small { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+  .result-note { font-size: 12px; color: var(--gray-600); margin-top: 4px; }
+
+  .syringe-wrap { margin-top: 28px; text-align: center; }
+  .syringe-wrap h3 { font-family: var(--font-display); font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .syringe-wrap .syr-cap { font-size: 12px; color: var(--gray-600); margin-bottom: 12px; }
+  .err { color: #b91c1c; font-size: 13px; margin-top: 14px; }
+
+  .data-table { width: 100%; border-collapse: collapse; margin: 8px 0 0; font-size: 15px; }
+  .data-table th { background: var(--navy); color: white; padding: 11px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+  .data-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+  .data-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  h2.sec { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--navy); margin: 44px 0 14px; padding-top: 8px; border-top: 2px solid var(--teal-pale); }
+  .body-copy p { font-size: 16px; color: #374151; margin-bottom: 18px; }
+  .body-copy strong { color: var(--navy); }
+  .formula { background: var(--navy); color: #e6f6f5; border-radius: 10px; padding: 16px 20px; font-family: var(--font-display); font-size: 15px; margin: 18px 0; overflow-x: auto; }
+
+  .tool-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+  .tool-link-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all .2s; display: block; }
+  .tool-link-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .tool-link-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); }
+  .tool-link-card h4 { font-family: var(--font-display); font-size: 16px; color: var(--navy); margin: 6px 0; }
+  .tool-link-card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.7; }
+  footer a { color: var(--teal-light); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="/en/index.html">Wolve<span>Stack</span></a>
+<ul class="nav-links">
+<li><a href="/en/bpc-157-guide.html">BPC-157</a></li>
+<li><a href="/en/tb-500-guide.html">TB-500</a></li>
+<li><a href="/en/peptide-reconstitution-guide.html">Reconstitution</a></li>
+<li><a href="/en/peptide-sourcing-guide.html">Vendors</a></li>
+</ul>
+<a class="nav-cta" href="/en/peptide-beginners-guide.html">Start Here →</a>
+</div>
+</nav>
+
+<div class="article-hero">
+<div class="article-hero-inner">
+<div class="breadcrumb">
+<a href="/en/index.html">Home</a><span>/</span><a href="/en/index.html">Tools</a><span>/</span><span class="current">Reconstitution Calculator</span>
+</div>
+<div class="article-tag">🧮 Free Interactive Tool</div>
+<h1>Peptide Reconstitution Calculator</h1>
+<p class="sub">Enter the peptide amount in your vial, how much bacteriostatic water you add, and your desired dose. The tool returns the concentration, how many units to draw on a U-100 insulin syringe, and how many doses the vial holds.</p>
+</div>
+</div>
+
+<div class="tool-wrap">
+<div class="disclaimer">
+<p><strong>Educational tool — not medical advice.</strong> This calculator only performs arithmetic on numbers <strong>you</strong> enter. It does not recommend any dose, compound, or protocol. The peptides referenced across this site are research chemicals <strong>not approved for human use</strong> by the FDA or any major regulator. Always consult a licensed healthcare professional. See our full <a href="/en/disclaimer.html" style="color:#991b1b;text-decoration:underline;">disclaimer</a>.</p>
+</div>
+
+<div class="calc-card">
+<div class="calc-grid">
+  <div class="field">
+    <label for="vialMg">Peptide in vial <span class="hint">(mg)</span></label>
+    <input type="number" id="vialMg" value="5" min="0" step="0.1" inputmode="decimal"/>
+  </div>
+  <div class="field">
+    <label for="waterMl">Bacteriostatic water added <span class="hint">(mL)</span></label>
+    <input type="number" id="waterMl" value="2" min="0.01" step="0.1" inputmode="decimal"/>
+  </div>
+  <div class="field">
+    <label for="doseVal">Desired dose</label>
+    <div class="input-row">
+      <input type="number" id="doseVal" value="250" min="0" step="1" inputmode="decimal"/>
+      <select id="doseUnit">
+        <option value="mcg" selected>mcg</option>
+        <option value="mg">mg</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label for="syrSize">Insulin syringe size <span class="hint">(U-100)</span></label>
+    <select id="syrSize" style="width:100%;height:44px;">
+      <option value="100">1 mL / 100 units</option>
+      <option value="50" selected>0.5 mL / 50 units</option>
+      <option value="30">0.3 mL / 30 units</option>
+    </select>
+  </div>
+</div>
+
+<div id="errBox" class="err" style="display:none;"></div>
+
+<div class="results" id="results">
+  <div class="result-box hero-result">
+    <div class="result-label">Units to draw</div>
+    <div class="result-val" id="rUnits">—</div>
+    <div class="result-note" id="rUnitsNote">on a U-100 insulin syringe</div>
+  </div>
+  <div class="result-box">
+    <div class="result-label">Concentration</div>
+    <div class="result-val" id="rConcMg">—</div>
+    <div class="result-note" id="rConcMcg">—</div>
+  </div>
+  <div class="result-box">
+    <div class="result-label">Volume per dose</div>
+    <div class="result-val" id="rMl">—</div>
+    <div class="result-note">mL drawn per dose</div>
+  </div>
+  <div class="result-box">
+    <div class="result-label">Doses per vial</div>
+    <div class="result-val" id="rDoses">—</div>
+    <div class="result-note">full doses available</div>
+  </div>
+</div>
+
+<div class="syringe-wrap">
+  <h3>Syringe fill indicator</h3>
+  <div class="syr-cap" id="syrCap">—</div>
+  <svg id="syringe" viewBox="0 0 520 90" width="100%" style="max-width:520px;" role="img" aria-label="Insulin syringe fill level">
+    <!-- barrel -->
+    <rect x="40" y="28" width="420" height="34" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <!-- fill -->
+    <rect id="fillRect" x="42" y="30" width="0" height="30" rx="2" fill="#14bdac" opacity="0.85"/>
+    <!-- plunger flange -->
+    <rect x="460" y="20" width="10" height="50" rx="2" fill="#475569"/>
+    <rect x="470" y="32" width="18" height="26" rx="2" fill="#475569"/>
+    <!-- needle -->
+    <rect x="12" y="43" width="28" height="4" rx="2" fill="#94a3b8"/>
+    <line x1="4" y1="45" x2="12" y2="45" stroke="#94a3b8" stroke-width="2"/>
+    <!-- tick marks 0..100 -->
+    <g id="ticks" stroke="#cbd5e1" stroke-width="1"></g>
+  </svg>
+</div>
+</div>
+
+<h2 class="sec">The formulas this calculator uses</h2>
+<div class="body-copy">
+<p>Reconstitution is just arithmetic once you know your three inputs. The tool applies the relationships below to whatever numbers you type.</p>
+<div class="formula">Concentration (mg/mL) = Peptide in vial (mg) ÷ Water added (mL)</div>
+<div class="formula">Volume per dose (mL) = Dose (mg) ÷ Concentration (mg/mL)</div>
+<div class="formula">Units to draw = Volume per dose (mL) × 100&nbsp;&nbsp;(because a U-100 syringe = 100 units per mL)</div>
+<div class="formula">Doses per vial = Peptide in vial (mg) ÷ Dose (mg)</div>
+<p><strong>Why 100 units per mL?</strong> A standard U-100 insulin syringe is graduated so that the full 1&nbsp;mL barrel reads as 100 units. Each unit therefore equals 0.01&nbsp;mL. That is why "units" and "mL" are interchangeable once you multiply or divide by 100 — no insulin is involved, the gradations are simply a convenient fine scale.</p>
+</div>
+
+<h2 class="sec">Common water volume reference table</h2>
+<p style="font-size:15px;color:var(--gray-600);margin-bottom:4px;">For your current vial size (<span id="tblMg">5</span>&nbsp;mg) and dose (<span id="tblDose">250 mcg</span>), here is what different water volumes would give you. These columns update automatically as you change the inputs above.</p>
+<table class="data-table">
+<thead><tr><th>Water added</th><th>Concentration</th><th>Units to draw (U-100)</th><th>Doses per vial</th></tr></thead>
+<tbody id="refBody"></tbody>
+</table>
+
+<h2 class="sec">Related tools &amp; guides</h2>
+<div class="tool-links">
+  <a class="tool-link-card" href="/en/peptide-dose-converter.html">
+    <span class="tag">Tool</span><h4>Peptide Dose Converter</h4>
+    <p>Convert between mg, mcg, mL and U-100 syringe units for any concentration.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-half-life-calculator.html">
+    <span class="tag">Tool</span><h4>Half-Life Calculator</h4>
+    <p>Plot exponential decay and see time to 50/25/10/5% remaining.</p>
+  </a>
+  <a class="tool-link-card" href="/en/peptide-reconstitution-guide.html">
+    <span class="tag">Guide</span><h4>Reconstitution Guide</h4>
+    <p>Step-by-step aseptic technique and the science behind mixing peptides.</p>
+  </a>
+  <a class="tool-link-card" href="/en/bacteriostatic-water-guide.html">
+    <span class="tag">Guide</span><h4>Bacteriostatic Water Guide</h4>
+    <p>What it is, why it is used for reconstitution, and storage notes.</p>
+  </a>
+</div>
+</div>
+
+<footer>
+<p>WolveStack is an independent, educational resource. We are not medical professionals. Nothing on this site constitutes medical advice.<br/>
+Peptides discussed here are research chemicals not approved for human use by the FDA.<br/>
+<a href="/en/index.html">Home</a> · <a href="/en/peptide-beginners-guide.html">Beginner's Guide</a> · <a href="/en/peptide-sourcing-guide.html">Vendors</a><br/>
+<a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy</a> · <a href="/en/disclaimer.html">Disclaimer</a> · <a href="/en/terms.html">Terms</a><br/><br/>
+© 2026 WolveStack. For research and educational purposes only.</p>
+</footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var vialEl=$('vialMg'), waterEl=$('waterMl'), doseEl=$('doseVal'), unitEl=$('doseUnit'), syrEl=$('syrSize');
+
+  // build ticks once (0..100 across barrel 42..458 -> width 416)
+  var ticks=$('ticks'), x0=42, x1=458;
+  for(var u=0; u<=100; u+=10){
+    var x=x0 + (x1-x0)*(u/100);
+    var ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',x); ln.setAttribute('x2',x); ln.setAttribute('y1', u%50===0?22:26); ln.setAttribute('y2',68);
+    ticks.appendChild(ln);
+  }
+
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return Number(n.toFixed(d)).toString(); }
+
+  function compute(){
+    var vial=parseFloat(vialEl.value);
+    var water=parseFloat(waterEl.value);
+    var dose=parseFloat(doseEl.value);
+    var doseMg = (unitEl.value==='mcg') ? dose/1000 : dose;
+    var syr=parseFloat(syrEl.value); // capacity in units (100/50/30)
+
+    var err=$('errBox');
+    if(!(vial>0) || !(water>0) || !(dose>0)){
+      err.style.display='block';
+      err.textContent='Enter positive numbers for vial amount, water and dose to see results.';
+      ['rUnits','rConcMg','rConcMcg','rMl','rDoses'].forEach(function(id){ $(id).textContent='—'; });
+      $('rConcMcg').textContent='—'; $('syrCap').textContent='—'; $('fillRect').setAttribute('width',0);
+      buildTable(vial,doseMg,dose,unitEl.value); return;
+    }
+    err.style.display='none';
+
+    var concMg = vial/water;            // mg/mL
+    var concMcg = concMg*1000;          // mcg/mL
+    var mlPerDose = doseMg/concMg;      // mL
+    var units = mlPerDose*100;          // U-100 units
+    var doses = vial/doseMg;
+
+    $('rConcMg').innerHTML = fmt(concMg,3)+' <small>mg/mL</small>';
+    $('rConcMcg').textContent = fmt(concMcg,0)+' mcg/mL';
+    $('rMl').innerHTML = fmt(mlPerDose,3)+' <small>mL</small>';
+    $('rUnits').textContent = fmt(units,1);
+    $('rDoses').textContent = Math.floor(doses);
+
+    // unit warning vs syringe capacity
+    var note='on a U-100 insulin syringe';
+    if(units>syr){ note='⚠ exceeds your '+syr+'-unit syringe — split or use a larger barrel'; }
+    $('rUnitsNote').textContent=note;
+
+    // syringe fill: scale fill to the selected barrel capacity
+    var frac = Math.max(0, Math.min(1, units/syr));
+    var fullW = (458-42);
+    $('fillRect').setAttribute('width', (fullW*frac).toFixed(1));
+    $('syrCap').textContent = fmt(units,1)+' units of '+syr+' ('+fmt(frac*100,0)+'% of barrel)';
+
+    buildTable(vial,doseMg,dose,unitEl.value);
+  }
+
+  function buildTable(vial,doseMg,doseRaw,unit){
+    $('tblMg').textContent = isFinite(vial)? fmt(vial,2):'—';
+    $('tblDose').textContent = (isFinite(doseRaw)? fmt(doseRaw,2):'—')+' '+unit;
+    var vols=[0.5,1,2,3];
+    var rows='';
+    vols.forEach(function(w){
+      if(vial>0 && doseMg>0){
+        var c=vial/w; var ml=doseMg/c; var u=ml*100; var d=Math.floor(vial/doseMg);
+        rows+='<tr><td>'+w+' mL</td><td>'+fmt(c,2)+' mg/mL ('+fmt(c*1000,0)+' mcg/mL)</td><td>'+fmt(u,1)+' units</td><td>'+d+'</td></tr>';
+      } else {
+        rows+='<tr><td>'+w+' mL</td><td>—</td><td>—</td><td>—</td></tr>';
+      }
+    });
+    $('refBody').innerHTML=rows;
+  }
+
+  [vialEl,waterEl,doseEl,unitEl,syrEl].forEach(function(el){
+    el.addEventListener('input', compute);
+    el.addEventListener('change', compute);
+  });
+  compute();
+})();
+</script>
+</body>
+</html>
